@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+    <fieldset>
+        <legend>
+            测试Web Api - /app/v1/rest/---项目用IIS Express运行后， 在地址栏里单独输入这个文件的本地路径即可测试
+        </legend>
+        <a href="javascript:add()">添加(post)</a>
+        <a href="javascript:update(1)">更新(put)</a>
+        <a href="javascript:deletes(1)">删除(delete需授权)</a>
+        <a href="javascript:get('')">列表(Get)</a>
+        <a href="javascript:get(1)">实体(Get)</a>
+        <a href="javascript:exists('Batman')">验证(Get)</a>
+        <a href="javascript:deletesSync(1)">同步/异步</a>
+        <a href="javascript:testGetMoreThanOneParam(1 , 3)">Get传多个参数</a>
+    </fieldset>
+    <script>
+
+        var siteLinkUrl = "http://localhost:56018/"; //端口需改
+    //验证 //GET api/Rest/{id}
+    function exists(name) {
+        debugger;
+        $.ajax({
+            //http://localhost:56018/api/rest/Exists?name=Batman
+            url: siteLinkUrl + "api/rest/Exists?name=" + name,
+            type: "GET",
+            data: {},
+            success: function (data) {
+                alert(JSON.stringify(data));
+            },
+            error: function (error) {
+                alert("错误:" + error.responseJSON.Message + ", " + error.responseJSON.MessageDetail);
+            }
+        });
+    }
+
+    //列表  //GET api/Rest?name={name}
+        function get(id) {
+            debugger;
+            var requestLinkUrl = "";
+            if (id == "") {
+                requestLinkUrl = siteLinkUrl + "api/rest/Get";
+            }
+            else
+            {
+                requestLinkUrl = siteLinkUrl + "api/rest/Get?id=" + id;
+            }
+
+        $.ajax({
+            url: requestLinkUrl,
+            type: "GET",
+            data: {},
+            success: function (data) {
+                alert(JSON.stringify(data));
+            },
+            error: function (error) {
+                alert("错误:" + error.responseJSON.Message + ", " + error.responseJSON.MessageDetail);
+            }
+        });
+    }
+
+    //添加 //POST api/Rest //POst只传实体
+        function add() {
+            debugger;
+        $.ajax({
+            url: siteLinkUrl + "api/rest/AddNewItem",
+            type: "POST",
+            data: { "UserID": 4, "UserName": "test", "UserEmail": "Parry@cnblogs.com" },
+            success: function (data)
+            {
+                alert(JSON.stringify(data));
+            },
+            error: function (error) {
+                alert("错误:" + error.responseJSON.Message + ", " + error.responseJSON.MessageDetail);
+            }
+        });
+    }
+
+    //更新 //PUT api/Rest/{id}  //Post既传URL参数， 也Post实体
+        function update(id) {
+            debugger;
+        $.ajax({
+            url: siteLinkUrl + "api/rest/UpdateByID/" + id,
+            type: "POST",
+            data: { "UserID": 1, "UserName": "moditest", "UserEmail": "Parry@cnblogs.com" },
+            success: function (data)
+            {
+                alert(JSON.stringify(data));
+            },
+            error: function (error) {
+                alert("错误:" + error.responseJSON.Message + ", " + error.responseJSON.MessageDetail);
+            }
+        });
+    }
+
+    //删除 //DELETE api/Rest/{id} //需授权
+        function deletes(id) {
+            debugger;
+        $.ajax({
+            url: siteLinkUrl + "api/rest/DeleteByID/" + id,
+            type: "POST",
+            success: function (data)
+            {
+                alert(JSON.stringify(data));
+            },
+            error: function (error) {
+                alert("错误:" + error.responseJSON.Message + ", " + error.responseJSON.MessageDetail);
+            }
+        });
+        }
+
+        //async默认值: true。默认设置下，所有请求均为异步请求 //API方法线程睡三秒
+        function deletesSync(id) {
+            debugger;
+            $.ajax({
+                url: siteLinkUrl + "api/rest/SyncDeleteByID/" + id,
+                type: "POST",
+                async: false, 
+                success: function (data) {
+                    alert(JSON.stringify(data));
+                },
+                error: function (error) {
+                    alert("错误:" + error.responseJSON.Message + ", " + error.responseJSON.MessageDetail);
+                }
+            });
+
+            //异步时，API方法未执行完，就会执行到这里，同步则需等待API方法执行完
+            alert("Test Async/Sync!");
+        }
+
+        function testGetMoreThanOneParam(startId, itemcount) {
+            debugger;
+            $.ajax({
+                //url: siteLinkUrl + "api/rest/SiteList2?startId=" + startId + "&itemcount=" + itemcount,
+                url: siteLinkUrl + "api/rest/SiteList?startId=" + startId + "&itemcount=" + itemcount,
+                type: "GET",
+                data: { "UserID": 1, "UserName": "moditest", "UserEmail": "Parry@cnblogs.com" },
+                success: function (data) {
+                    alert(JSON.stringify(data));
+                },
+                error: function (error) {
+                    alert("错误:" + error.responseJSON.Message + ", " + error.responseJSON.MessageDetail);
+                }
+            });
+        }
+
+    </script>
