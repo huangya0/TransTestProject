@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -20,11 +22,17 @@ namespace AdminLteAspNetMVC1.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public async Task<ActionResult> Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = await this.AsyncMethod1();
 
             return View();
+        }
+
+        private Task<string> AsyncMethod1()
+        {
+            Thread.Sleep(3000);
+            return Task.FromResult("MEssage return by a AsyncMethod!");
         }
     }
 }

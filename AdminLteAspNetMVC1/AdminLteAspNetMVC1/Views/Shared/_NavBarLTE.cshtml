@@ -1,0 +1,55 @@
+﻿@using VM = AdminLteAspNetMVC1.ViewModel;
+@using AdminLteAspNetMVC1.Common;
+@model List<VM.SiteMenu>
+
+
+
+@if (Model != null)
+{
+    @Html.MenuLTE(Model)
+}
+
+@*fa fa-link这个样式应该在db数据表里配置，span中的是多语言，整个li用方法生成*@
+<li><a href="@Html.LinkURL("Index", "Home")"><i class="fa fa-link"></i> <span>Home</span></a></li>
+<li><a href="@Html.LinkURL("About", "Home")"><i class="fa fa-link"></i> <span>About</span></a></li>
+<li><a href="@Url.Action("Contact", "Home")"><i class="fa fa-link"></i> <span>Contact</span></a></li>
+
+
+
+<li>               <a href="#"><i class="fa fa-folder"></i> <span>Link1       </span></a></li>
+<li class=""><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+<li class="treeview">
+    <a href="#">
+        <i class="fa fa-share"></i> <span>Multilevel</span>
+        <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+        </span>
+    </a>
+    <ul class="treeview-menu">
+        <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-circle-o"></i> Level One
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-circle-o"></i> Level Two
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="active"><a href="@Url.Action("Contact", "Home")"><i class="fa fa-circle-o"></i> Level Three(Contact)</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+    </ul>
+</li>

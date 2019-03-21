@@ -5,12 +5,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - 我的 ASP.NET 应用程序</title>
+    @*<title>@ViewBag.Title - 我的 ASP.NET 应用程序</title>*@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
     <!--AdminLTE Menu Start-->
-    <title>AdminLTE 2 | Starter</title>
+    <title>AdminLTE 2 | Zack test</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="~/AdminLTE241/bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -243,48 +243,10 @@
                     }
                     <li class="header">HEADER</li>
                     <!-- Optionally, you can add icons to the links -->
-                    @*fa fa-link这个样式应该在db数据表里配置，span中的是多语言，整个li用方法生成*@
-                    <li><a href="@Html.LinkURL("Index", "Home")"><i class="fa fa-link"></i> <span>Home</span></a></li>
-                    <li><a href="@Html.LinkURL("About", "Home")"><i class="fa fa-link"></i> <span>About</span></a></li>
-                    <li><a href="@Url.Action("Contact", "Home")"><i class="fa fa-link"></i> <span>Contact</span></a></li>
-
-                    <li>               <a href="#"><i class="fa fa-folder"></i> <span>Link1       </span></a></li>
-                    <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-share"></i> <span>Multilevel</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-                            <li class="treeview">
-                                <a href="#">
-                                    <i class="fa fa-circle-o"></i> Level One
-                                    <span class="pull-right-container">
-                                        <i class="fa fa-angle-left pull-right"></i>
-                                    </span>
-                                </a>
-                                <ul class="treeview-menu">
-                                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
-                                    <li class="treeview">
-                                        <a href="#">
-                                            <i class="fa fa-circle-o"></i> Level Two
-                                            <span class="pull-right-container">
-                                                <i class="fa fa-angle-left pull-right"></i>
-                                            </span>
-                                        </a>
-                                        <ul class="treeview-menu">
-                                            <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                                            <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-                        </ul>
-                    </li>
+                    @{
+                        @Html.Partial("_NavBarLTE", AdminLteAspNetMVC1.Common.SiteMenuHelper.GetSiteMenu())
+                    }
+                    
                 </ul>
                 <!-- /.sidebar-menu -->
             </section>
