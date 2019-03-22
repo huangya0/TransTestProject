@@ -154,9 +154,9 @@ namespace AdminLteAspNetMVC1.Common
         #region for new layout use
         public static MvcHtmlString MenuLTE(this HtmlHelper htmlHelper, List<VM.SiteMenu> siteMenus)
         {
-            string Area = HttpContext.Current.Request.RequestContext.RouteData.Values.ContainsKey("area") ? HttpContext.Current.Request.RequestContext.RouteData.Values["area"].ToString() : string.Empty;
-            string Controller = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-            string Action = HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString();
+            string area = HttpContext.Current.Request.RequestContext.RouteData.Values.ContainsKey("area") ? HttpContext.Current.Request.RequestContext.RouteData.Values["area"].ToString() : string.Empty;
+            string controller = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+            string action = HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString();
             // remove companycode and companyId dependency
             //string companyCode = HttpContext.Current.Request.RequestContext.RouteData.Values.ContainsKey("company") ? HttpContext.Current.Request.RequestContext.RouteData.Values["company"].ToString() : string.Empty;
             //int? companyId = GetCompanyId(companyCode);
@@ -170,11 +170,36 @@ namespace AdminLteAspNetMVC1.Common
             {
                 foreach (VM.SiteMenu m in siteMenus)
                 {
-                    MenuTag.Append(GetTagLILTE(htmlHelper, m, Area, Controller, Action, 0));
+                    MenuTag.Append(GetTagLILTE(htmlHelper, m, area, controller, action, 0));
                 }
             }
 
             return new MvcHtmlString(MenuTag.ToString());
+        }
+
+        static bool MultiLeveMenuContainsActiveItem(List<VM.SiteMenu> menus, string action)
+        {
+            bool returnVal = false;
+         
+            if (menus != null && menus.Count > 0)
+            {
+                foreach (VM.SiteMenu p in menus)
+                {
+
+                    if (p.ActionName.Trim() == action.Trim())
+                    {
+                        returnVal = true;
+                        break;
+                    }
+
+                    if (!returnVal && p.ChildrenMenu != null && p.ChildrenMenu.Count > 0)
+                    {
+                        returnVal = MultiLeveMenuContainsActiveItem(p.ChildrenMenu, action);
+                    }
+                }
+            }
+
+            return returnVal;
         }
 
         //菜单每次点周后都刷掉了原来展开的层次?????
@@ -184,14 +209,18 @@ namespace AdminLteAspNetMVC1.Common
             TagBuilder li_Tag = new TagBuilder("li");
             string activeCSS = string.Empty;
             string treeviewCSS = "treeview";
-            //string caret = "caret";
             string strUrl = UrlHelper.GenerateUrl(null, menu.ActionName, menu.Controller, null, null, null, new RouteValueDictionary(new { area = menu.Area }), htmlHelper.RouteCollection, htmlHelper.ViewContext.RequestContext, true);
 
             StringBuilder li_InnerHtml = new StringBuilder(200);
 
-            if (menu.Area.Equals(area, StringComparison.InvariantCultureIgnoreCase)
-                && menu.Controller.Equals(controller, StringComparison.InvariantCultureIgnoreCase)
-                && menu.ActionName.Equals(action, StringComparison.InvariantCultureIgnoreCase))
+            //点击菜单到达的页面，再点击页面里的操作，还是会刷掉已选菜单项，未来判断需加上找到页面里的action是不是在这个菜单下
+            bool isActive = MultiLeveMenuContainsActiveItem(menu.ChildrenMenu, action);
+            if (
+                  (menu.Area.Equals(area, StringComparison.InvariantCultureIgnoreCase)
+                        && menu.Controller.Equals(controller, StringComparison.InvariantCultureIgnoreCase)
+                        && menu.ActionName.Equals(action, StringComparison.InvariantCultureIgnoreCase))
+                    || isActive
+                )
             {
                 activeCSS = "active";
             }

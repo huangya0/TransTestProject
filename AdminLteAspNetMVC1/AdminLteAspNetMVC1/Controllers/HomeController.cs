@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdminLteAspNetMVC1.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -8,7 +9,8 @@ using System.Web.Mvc;
 
 namespace AdminLteAspNetMVC1.Controllers
 {
-    public class HomeController : Controller
+    [Authorize]
+    public class HomeController : BaseController
     {
         public ActionResult Index()
         {
@@ -33,6 +35,48 @@ namespace AdminLteAspNetMVC1.Controllers
         {
             Thread.Sleep(3000);
             return Task.FromResult("MEssage return by a AsyncMethod!");
+        }
+
+        public ActionResult MenuLevel2_1()
+        {
+            ViewBag.Message = "MenuLevel2_1 selected";
+
+            return View();
+        }
+
+        public ActionResult MenuLevel2_2()
+        {
+            ViewBag.Message = "MenuLevel2_2 selected";
+
+            return View();
+        }
+
+        public ActionResult MenuLevel2_3()
+        {
+            ViewBag.Message = "MenuLevel2_3 selected";
+
+            return View();
+        }
+
+        public ActionResult MenuLevel3_1()
+        {
+            ViewBag.Message = "MenuLevel3_1 selected";
+
+            return View();
+        }
+
+        public ActionResult MenuLevel3_2()
+        {
+            ViewBag.Message = "MenuLevel3_2 selected";
+
+            return View();
+        }
+
+        public ActionResult MenuLevel3_3()
+        {
+            ViewBag.Message = "MenuLevel3_3 selected";
+
+            return View();
         }
     }
 }

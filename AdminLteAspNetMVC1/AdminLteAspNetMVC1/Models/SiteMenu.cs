@@ -17,7 +17,26 @@ namespace AdminLteAspNetMVC1.ViewModel
         public string RouteValues { get; set; }
         public bool IsSkip { get; set; }
         public int DisplayOrder { get; set; }
-        public virtual List<SiteMenu> ChildrenMenu { get; set; }
+
+        private List<SiteMenu> childrenMenu;
+        public virtual List<SiteMenu> ChildrenMenu
+        {
+            get
+            {
+                if (childrenMenu == null)
+                {
+                    return new List<SiteMenu>();
+                }
+                else
+                {
+                    return this.childrenMenu;
+                }
+            }
+            set
+            {
+                childrenMenu = value;
+            }
+        }
         public virtual SiteMenu ParentMenu { get; set; } //应该没有用
     }
 }

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @*<title>@ViewBag.Title - 我的 ASP.NET 应用程序</title>*@
-    @Styles.Render("~/Content/css")
+    @*@Styles.Render("~/Content/css")*@
     @Scripts.Render("~/bundles/modernizr")
 
     <!--AdminLTE Menu Start-->
@@ -194,7 +194,7 @@
                                         <a href="#" class="btn btn-default btn-flat">Profile</a>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                        <a href="@Url.Action("LoginOff", "Login")" class="btn btn-default btn-flat">Sign out</a>
                                     </div>
                                 </li>
                             </ul>
@@ -236,14 +236,10 @@
                 <!-- /.search form -->
                 <!-- Sidebar Menu -->
                 <ul class="sidebar-menu" data-widget="tree">
-                    @{
-                        //在这里拼下边的HTML脚本
-                        //@Html.Partial("_NavBar", AdminLteAspNetMVC1.Common.SiteMenuHelper.GetSiteMenu())
-                        //<li>@Html.ActionLink("主页", "Index", "Home")</li>
-                    }
                     <li class="header">HEADER</li>
                     <!-- Optionally, you can add icons to the links -->
                     @{
+                        //动态生成menu html content
                         @Html.Partial("_NavBarLTE", AdminLteAspNetMVC1.Common.SiteMenuHelper.GetSiteMenu())
                     }
                     
