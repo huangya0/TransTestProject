@@ -58,6 +58,7 @@
     <Compile Include="Data\DBMethod.cs" />
     <Compile Include="Data\ParameterAttribute.cs" />
     <Compile Include="Data\StoredProcedureNameAttribute.cs" />
+    <Compile Include="DEncrypt\DESEncrypt.cs" />
     <Compile Include="Log4net\LogHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Web\ConfigurationHelper.cs" />

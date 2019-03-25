@@ -1,4 +1,5 @@
 ﻿using AdminLteAspNetMVC1.Common;
+using EMS.BL.Common;
 using EMS.Model;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using VM = EMS.Model;
 
 namespace AdminLteAspNetMVC1.Controllers
 {
+    [NoCache]
     public class LoginController : BaseController  //BaseController<EMS.BL.ISampleBL, EMS.BL.SampleBL>
     {
         [AllowAnonymous]
@@ -44,22 +46,20 @@ namespace AdminLteAspNetMVC1.Controllers
                 //    }
                 //}
 
-                //UserItem userItem = permissionBL.ValidUser(model);
-                if (model.LoginName == "zack" || model.LoginName == "zack2")
+                using (Permission permissionBL = new Permission())
                 {
-                    UserModel um = new UserModel();
-                    um.ID = 1;
-                    um.LogonName = model.LoginName;
-
-                    UserHelper.WriteLoginCookie(um);
-                    returnUrl = string.IsNullOrEmpty(returnUrl) ? "/" : returnUrl;
-                    return Redirect(returnUrl);
-                    
-                }
-                else
-                {
-                    ModelState.AddModelError("", "用户名或密码不存在.");
-                    return View(model);
+                    UserModel userItem = permissionBL.ValidUser(model);
+                    if (userItem == null)
+                    {
+                        ModelState.AddModelError("", "用户名或密码不存在.");
+                        return View(model);
+                    }
+                    else
+                    {
+                        UserHelper.WriteLoginCookie(userItem);
+                        returnUrl = string.IsNullOrEmpty(returnUrl) ? "/" : returnUrl;
+                        return Redirect(returnUrl);
+                    }
                 }
             }
             else
@@ -68,6 +68,7 @@ namespace AdminLteAspNetMVC1.Controllers
             }
         }
 
+        [AllowAnonymous]
         public ActionResult LoginOff()
         {
             FormsAuthentication.SignOut();

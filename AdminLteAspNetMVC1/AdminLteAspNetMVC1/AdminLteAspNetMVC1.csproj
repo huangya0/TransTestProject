@@ -137,6 +137,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="BL\BLSiteMenu.cs" />
     <Compile Include="Common\BaseController.cs" />
+    <Compile Include="Common\NoCacheAttribute.cs" />
+    <Compile Include="Common\PermissionControlAttribute.cs" />
+    <Compile Include="Common\PermissionDataHelper.cs" />
     <Compile Include="Common\SiteMenuHtmlHelperExtension.cs" />
     <Compile Include="Common\SiteMenuHelper.cs" />
     <Compile Include="Common\UserHelper.cs" />
@@ -147,7 +150,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AdminLteAspNetMVC1Context.cs" />
-    <Compile Include="Models\SiteMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

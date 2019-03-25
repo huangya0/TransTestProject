@@ -54,6 +54,16 @@
     <Compile Include="Common\BaseContextForSP.cs" />
     <Compile Include="Common\SPBase.cs" />
     <Compile Include="Contexts\EmsWebDB.cs" />
+    <Compile Include="Models\Common\Common_Authen_ControllerActions.cs" />
+    <Compile Include="Models\Common\Common_Authen_FunctionPermissionLevel.cs" />
+    <Compile Include="Models\Common\Common_Authen_Role.cs" />
+    <Compile Include="Models\Common\Common_Authen_RoleFunctionPermission.cs" />
+    <Compile Include="Models\Common\Common_Authen_RoleUser.cs" />
+    <Compile Include="Models\Common\Common_Authen_User.cs" />
+    <Compile Include="Models\Common\Common_SiteMap_Menu.cs" />
+    <Compile Include="Models\Common\vw_Authen_RolePermissions.cs" />
+    <Compile Include="Models\StoredProcedure\usp_GetUserPermissionLevel.cs" />
+    <Compile Include="Models\StoredProcedure\usp_GetUserPermissionLevelByFunctionName.cs" />
     <Compile Include="Models\tbl_LogInfo.cs" />
     <Compile Include="Models\tbl_Sample.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

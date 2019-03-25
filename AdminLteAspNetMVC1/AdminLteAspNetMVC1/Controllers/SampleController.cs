@@ -12,6 +12,7 @@ using EMS.Model;
 
 namespace AdminLteAspNetMVC1.Controllers
 {
+    [Authorize]
     public class SampleController : BaseController<EMS.BL.ISampleBL, EMS.BL.SampleBL>
     {
         //private AdminLteAspNetMVC1Context db = new AdminLteAspNetMVC1Context();

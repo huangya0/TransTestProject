@@ -1,20 +1,14 @@
-namespace EMS.DataProvider.Contexts
+namespace EF_FromDBCodeFirst
 {
     using System;
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
-    using EMS.DataProvider.Models;
-    using EMS.DataProvider.Common;
-    using EMS.DataProvider.Models.Common;
 
-    /// <summary>
-    /// 注意ChildrenMenug与ParentMenu需在EF自动生成后手动改
-    /// </summary>
-    public partial class EmsWebDB : BaseContext
+    public partial class EmsWebDB5 : DbContext
     {
-        public EmsWebDB()
-            : base("name=EmsWebDB")
+        public EmsWebDB5()
+            : base("name=EmsWebDB5")
         {
         }
 
@@ -114,8 +108,8 @@ namespace EMS.DataProvider.Contexts
                 .IsUnicode(false);
 
             modelBuilder.Entity<Common_SiteMap_Menu>()
-                .HasMany(e => e.ChildrenMenu)
-                .WithOptional(e => e.ParentMenu)
+                .HasMany(e => e.Common_SiteMap_Menu1)
+                .WithOptional(e => e.Common_SiteMap_Menu2)
                 .HasForeignKey(e => e.ParentID);
 
             modelBuilder.Entity<Table_2>()

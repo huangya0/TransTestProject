@@ -12,6 +12,8 @@ namespace EF_FromDBEFDesigner
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class EmsWebDBEntities : DbContext
     {
@@ -30,5 +32,42 @@ namespace EF_FromDBEFDesigner
         public virtual DbSet<Table_3> Table_3 { get; set; }
         public virtual DbSet<Table_4> Table_4 { get; set; }
         public virtual DbSet<Table_5> Table_5 { get; set; }
+        public virtual DbSet<Common_Authen_ControllerActions> Common_Authen_ControllerActions { get; set; }
+        public virtual DbSet<Common_Authen_FunctionPermissionLevel> Common_Authen_FunctionPermissionLevel { get; set; }
+        public virtual DbSet<Common_Authen_Role> Common_Authen_Role { get; set; }
+        public virtual DbSet<Common_Authen_RoleFunctionPermission> Common_Authen_RoleFunctionPermission { get; set; }
+        public virtual DbSet<Common_Authen_RoleUser> Common_Authen_RoleUser { get; set; }
+        public virtual DbSet<Common_Authen_User> Common_Authen_User { get; set; }
+        public virtual DbSet<Common_SiteMap_Menu> Common_SiteMap_Menu { get; set; }
+        public virtual DbSet<tbl_LogInfo> tbl_LogInfo { get; set; }
+        public virtual DbSet<tbl_Sample> tbl_Sample { get; set; }
+        public virtual DbSet<vw_Authen_RolePermissions> vw_Authen_RolePermissions { get; set; }
+    
+        public virtual ObjectResult<Nullable<System.Guid>> SqlQueryNotificationStoredProcedure_e4bced98_3009_4e4e_983d_e32d8a6e090c()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<System.Guid>>("SqlQueryNotificationStoredProcedure_e4bced98_3009_4e4e_983d_e32d8a6e090c");
+        }
+    
+        public virtual ObjectResult<usp_GetUserPermissionLevel_Result> usp_GetUserPermissionLevel(Nullable<int> userID)
+        {
+            var userIDParameter = userID.HasValue ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_GetUserPermissionLevel_Result>("usp_GetUserPermissionLevel", userIDParameter);
+        }
+    
+        public virtual ObjectResult<usp_GetUserPermissionLevelByFunctionName_Result> usp_GetUserPermissionLevelByFunctionName(Nullable<int> userID, string functionName)
+        {
+            var userIDParameter = userID.HasValue ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(int));
+    
+            var functionNameParameter = functionName != null ?
+                new ObjectParameter("FunctionName", functionName) :
+                new ObjectParameter("FunctionName", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_GetUserPermissionLevelByFunctionName_Result>("usp_GetUserPermissionLevelByFunctionName", userIDParameter, functionNameParameter);
+        }
     }
 }

@@ -51,6 +51,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Common_Authen_ControllerActions.cs">
+      <DependentUpon>EmsWebDbEdmx1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Common_Authen_FunctionPermissionLevel.cs">
+      <DependentUpon>EmsWebDbEdmx1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Common_Authen_Role.cs">
+      <DependentUpon>EmsWebDbEdmx1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Common_Authen_RoleFunctionPermission.cs">
+      <DependentUpon>EmsWebDbEdmx1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Common_Authen_RoleUser.cs">
+      <DependentUpon>EmsWebDbEdmx1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Common_Authen_User.cs">
+      <DependentUpon>EmsWebDbEdmx1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Common_SiteMap_Menu.cs">
+      <DependentUpon>EmsWebDbEdmx1.tt</DependentUpon>
+    </Compile>
     <Compile Include="EmsWebDbEdmx1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,6 +101,21 @@
       <DependentUpon>EmsWebDbEdmx1.tt</DependentUpon>
     </Compile>
     <Compile Include="Table_5.cs">
+      <DependentUpon>EmsWebDbEdmx1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_LogInfo.cs">
+      <DependentUpon>EmsWebDbEdmx1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Sample.cs">
+      <DependentUpon>EmsWebDbEdmx1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetUserPermissionLevelByFunctionName_Result.cs">
+      <DependentUpon>EmsWebDbEdmx1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetUserPermissionLevel_Result.cs">
+      <DependentUpon>EmsWebDbEdmx1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Authen_RolePermissions.cs">
       <DependentUpon>EmsWebDbEdmx1.tt</DependentUpon>
     </Compile>
   </ItemGroup>

@@ -52,6 +52,8 @@
     <Compile Include="Common\BaseControllerBLL.cs" />
     <Compile Include="Common\IBaseControllerBLL.cs" />
     <Compile Include="Common\IMessageModel.cs" />
+    <Compile Include="Common\Permission.cs" />
+    <Compile Include="Common\SiteMenu.cs" />
     <Compile Include="ISampleBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SampleBL.cs" />
@@ -68,6 +70,10 @@
     <ProjectReference Include="..\EMS.Model\EMS.Model.csproj">
       <Project>{005b7582-3ac4-497c-98e3-a151bb6e0444}</Project>
       <Name>EMS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EMS.Utility\EMS.Utility.csproj">
+      <Project>{e5b14296-082c-4f81-b1b9-6ce0bca23027}</Project>
+      <Name>EMS.Utility</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,7 +4,95 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EmsWebDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="EmsWebDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Common_Authen_ControllerActions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="PermissionLevelID" Type="int" Nullable="false" />
+          <Property Name="Area" Type="varchar" MaxLength="100" />
+          <Property Name="Controller" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ActionName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="HasActionPermission" Type="bit" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Common_Authen_FunctionPermissionLevel">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="FunctionName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="PermissionLevel" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Common_Authen_Role">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Description" Type="nchar" MaxLength="200" />
+          <Property Name="ShowFlag" Type="bit" />
+          <Property Name="ResourceKey" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Common_Authen_RoleFunctionPermission">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="PermissionLevelID" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Common_Authen_RoleUser">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Common_Authen_User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LogonName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="PhoneNumber" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="EmailAddress" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="IDNumber" Type="varchar" MaxLength="18" />
+          <Property Name="DateOFBirth" Type="datetime" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CanDelete" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Common_SiteMap_Menu">
+          <Key>
+            <PropertyRef Name="MenuID" />
+          </Key>
+          <Property Name="MenuID" Type="int" Nullable="false" />
+          <Property Name="ParentID" Type="int" />
+          <Property Name="ResourceKey" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Area" Type="varchar" MaxLength="100" />
+          <Property Name="Controller" Type="varchar" MaxLength="100" />
+          <Property Name="ActionName" Type="varchar" MaxLength="100" />
+          <Property Name="RouteValues" Type="varchar" MaxLength="500" />
+          <Property Name="IsSkip" Type="bit" Nullable="false" />
+          <Property Name="DisplayOrder" Type="int" Nullable="false" />
+          <Property Name="IsShow" Type="bit" />
+        </EntityType>
         <EntityType Name="Table_1">
           <Key>
             <PropertyRef Name="ID" />
@@ -41,6 +129,124 @@
           <Property Name="id" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="name" Type="nchar" MaxLength="10" />
         </EntityType>
+        <EntityType Name="tbl_LogInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LogTime" Type="datetime" Nullable="false" />
+          <Property Name="Thread" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="LogLevel" Type="nvarchar(max)" />
+          <Property Name="Logger" Type="nvarchar(max)" />
+          <Property Name="Message" Type="nvarchar(max)" />
+          <Property Name="Exception" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="tbl_Sample">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsDeleted" Type="bit" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“EmsWebDB.dbo.vw_Authen_RolePermissions”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="vw_Authen_RolePermissions">
+          <Key>
+            <PropertyRef Name="RoleID" />
+            <PropertyRef Name="RoleName" />
+            <PropertyRef Name="Controller" />
+            <PropertyRef Name="ActionName" />
+            <PropertyRef Name="HasActionPermission" />
+          </Key>
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Area" Type="varchar" MaxLength="100" />
+          <Property Name="Controller" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ActionName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="HasActionPermission" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Common_Authen_ControllerActions_Common_Authen_FunctionPermissionLevel">
+          <End Role="Common_Authen_FunctionPermissionLevel" Type="Self.Common_Authen_FunctionPermissionLevel" Multiplicity="1" />
+          <End Role="Common_Authen_ControllerActions" Type="Self.Common_Authen_ControllerActions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Common_Authen_FunctionPermissionLevel">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Common_Authen_ControllerActions">
+              <PropertyRef Name="PermissionLevelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Common_Authen_RoleFunctionPermission_Common_Authen_FunctionPermissionLevel">
+          <End Role="Common_Authen_FunctionPermissionLevel" Type="Self.Common_Authen_FunctionPermissionLevel" Multiplicity="1" />
+          <End Role="Common_Authen_RoleFunctionPermission" Type="Self.Common_Authen_RoleFunctionPermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Common_Authen_FunctionPermissionLevel">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Common_Authen_RoleFunctionPermission">
+              <PropertyRef Name="PermissionLevelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Common_Authen_RoleFunctionPermission_Common_Authen_Role">
+          <End Role="Common_Authen_Role" Type="Self.Common_Authen_Role" Multiplicity="1" />
+          <End Role="Common_Authen_RoleFunctionPermission" Type="Self.Common_Authen_RoleFunctionPermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Common_Authen_Role">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="Common_Authen_RoleFunctionPermission">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Common_Authen_RoleUser_Common_Authen_Role">
+          <End Role="Common_Authen_Role" Type="Self.Common_Authen_Role" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Common_Authen_RoleUser" Type="Self.Common_Authen_RoleUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Common_Authen_Role">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="Common_Authen_RoleUser">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Common_Authen_RoleUser_Common_Authen_User">
+          <End Role="Common_Authen_User" Type="Self.Common_Authen_User" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Common_Authen_RoleUser" Type="Self.Common_Authen_RoleUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Common_Authen_User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Common_Authen_RoleUser">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Common_SiteMap_Menu_Common_SiteMap_Menu">
+          <End Role="Common_SiteMap_Menu" Type="Self.Common_SiteMap_Menu" Multiplicity="0..1" />
+          <End Role="Common_SiteMap_Menu1" Type="Self.Common_SiteMap_Menu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Common_SiteMap_Menu">
+              <PropertyRef Name="MenuID" />
+            </Principal>
+            <Dependent Role="Common_SiteMap_Menu1">
+              <PropertyRef Name="ParentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Table_4_Table_2">
           <End Role="Table_2" Type="Self.Table_2" Multiplicity="0..1" />
           <End Role="Table_4" Type="Self.Table_4" Multiplicity="*" />
@@ -53,19 +259,69 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="SqlQueryNotificationStoredProcedure_e4bced98_3009_4e4e_983d_e32d8a6e090c" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="SqlQueryNotificationStoredProcedure-e4bced98-3009-4e4e-983d-e32d8a6e090c" />
+        <Function Name="usp_GetUserPermissionLevel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_GetUserPermissionLevelByFunctionName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserID" Type="int" Mode="In" />
+          <Parameter Name="FunctionName" Type="varchar" Mode="In" />
+        </Function>
         <EntityContainer Name="EmsWebDBModelStoreContainer">
+          <EntitySet Name="Common_Authen_ControllerActions" EntityType="Self.Common_Authen_ControllerActions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Common_Authen_FunctionPermissionLevel" EntityType="Self.Common_Authen_FunctionPermissionLevel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Common_Authen_Role" EntityType="Self.Common_Authen_Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Common_Authen_RoleFunctionPermission" EntityType="Self.Common_Authen_RoleFunctionPermission" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Common_Authen_RoleUser" EntityType="Self.Common_Authen_RoleUser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Common_Authen_User" EntityType="Self.Common_Authen_User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Common_SiteMap_Menu" EntityType="Self.Common_SiteMap_Menu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Table_1" EntityType="Self.Table_1" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Table_2" EntityType="Self.Table_2" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Table_3" EntityType="Self.Table_3" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Table_4" EntityType="Self.Table_4" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Table_5" EntityType="Self.Table_5" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_LogInfo" EntityType="Self.tbl_LogInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Sample" EntityType="Self.tbl_Sample" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vw_Authen_RolePermissions" EntityType="Self.vw_Authen_RolePermissions" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_Authen_RolePermissions].[RoleID] AS [RoleID], 
+    [vw_Authen_RolePermissions].[RoleName] AS [RoleName], 
+    [vw_Authen_RolePermissions].[Area] AS [Area], 
+    [vw_Authen_RolePermissions].[Controller] AS [Controller], 
+    [vw_Authen_RolePermissions].[ActionName] AS [ActionName], 
+    [vw_Authen_RolePermissions].[HasActionPermission] AS [HasActionPermission]
+    FROM [dbo].[vw_Authen_RolePermissions] AS [vw_Authen_RolePermissions]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Common_Authen_ControllerActions_Common_Authen_FunctionPermissionLevel" Association="Self.FK_Common_Authen_ControllerActions_Common_Authen_FunctionPermissionLevel">
+            <End Role="Common_Authen_FunctionPermissionLevel" EntitySet="Common_Authen_FunctionPermissionLevel" />
+            <End Role="Common_Authen_ControllerActions" EntitySet="Common_Authen_ControllerActions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Common_Authen_RoleFunctionPermission_Common_Authen_FunctionPermissionLevel" Association="Self.FK_Common_Authen_RoleFunctionPermission_Common_Authen_FunctionPermissionLevel">
+            <End Role="Common_Authen_FunctionPermissionLevel" EntitySet="Common_Authen_FunctionPermissionLevel" />
+            <End Role="Common_Authen_RoleFunctionPermission" EntitySet="Common_Authen_RoleFunctionPermission" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Common_Authen_RoleFunctionPermission_Common_Authen_Role" Association="Self.FK_Common_Authen_RoleFunctionPermission_Common_Authen_Role">
+            <End Role="Common_Authen_Role" EntitySet="Common_Authen_Role" />
+            <End Role="Common_Authen_RoleFunctionPermission" EntitySet="Common_Authen_RoleFunctionPermission" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Common_Authen_RoleUser_Common_Authen_Role" Association="Self.FK_Common_Authen_RoleUser_Common_Authen_Role">
+            <End Role="Common_Authen_Role" EntitySet="Common_Authen_Role" />
+            <End Role="Common_Authen_RoleUser" EntitySet="Common_Authen_RoleUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Common_Authen_RoleUser_Common_Authen_User" Association="Self.FK_Common_Authen_RoleUser_Common_Authen_User">
+            <End Role="Common_Authen_User" EntitySet="Common_Authen_User" />
+            <End Role="Common_Authen_RoleUser" EntitySet="Common_Authen_RoleUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Common_SiteMap_Menu_Common_SiteMap_Menu" Association="Self.FK_Common_SiteMap_Menu_Common_SiteMap_Menu">
+            <End Role="Common_SiteMap_Menu" EntitySet="Common_SiteMap_Menu" />
+            <End Role="Common_SiteMap_Menu1" EntitySet="Common_SiteMap_Menu" />
+          </AssociationSet>
           <AssociationSet Name="FK_Table_4_Table_2" Association="Self.FK_Table_4_Table_2">
             <End Role="Table_2" EntitySet="Table_2" />
             <End Role="Table_4" EntitySet="Table_4" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EmsWebDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -129,7 +385,273 @@
             <End Role="Table_2" EntitySet="Table_2" />
             <End Role="Table_4" EntitySet="Table_4" />
           </AssociationSet>
+          <EntitySet Name="Common_Authen_ControllerActions" EntityType="EmsWebDBModel.Common_Authen_ControllerActions" />
+          <EntitySet Name="Common_Authen_FunctionPermissionLevel" EntityType="EmsWebDBModel.Common_Authen_FunctionPermissionLevel" />
+          <EntitySet Name="Common_Authen_Role" EntityType="EmsWebDBModel.Common_Authen_Role" />
+          <EntitySet Name="Common_Authen_RoleFunctionPermission" EntityType="EmsWebDBModel.Common_Authen_RoleFunctionPermission" />
+          <EntitySet Name="Common_Authen_RoleUser" EntityType="EmsWebDBModel.Common_Authen_RoleUser" />
+          <EntitySet Name="Common_Authen_User" EntityType="EmsWebDBModel.Common_Authen_User" />
+          <EntitySet Name="Common_SiteMap_Menu" EntityType="EmsWebDBModel.Common_SiteMap_Menu" />
+          <EntitySet Name="tbl_LogInfo" EntityType="EmsWebDBModel.tbl_LogInfo" />
+          <EntitySet Name="tbl_Sample" EntityType="EmsWebDBModel.tbl_Sample" />
+          <EntitySet Name="vw_Authen_RolePermissions" EntityType="EmsWebDBModel.vw_Authen_RolePermissions" />
+          <AssociationSet Name="FK_Common_Authen_ControllerActions_Common_Authen_FunctionPermissionLevel" Association="EmsWebDBModel.FK_Common_Authen_ControllerActions_Common_Authen_FunctionPermissionLevel">
+            <End Role="Common_Authen_FunctionPermissionLevel" EntitySet="Common_Authen_FunctionPermissionLevel" />
+            <End Role="Common_Authen_ControllerActions" EntitySet="Common_Authen_ControllerActions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Common_Authen_RoleFunctionPermission_Common_Authen_FunctionPermissionLevel" Association="EmsWebDBModel.FK_Common_Authen_RoleFunctionPermission_Common_Authen_FunctionPermissionLevel">
+            <End Role="Common_Authen_FunctionPermissionLevel" EntitySet="Common_Authen_FunctionPermissionLevel" />
+            <End Role="Common_Authen_RoleFunctionPermission" EntitySet="Common_Authen_RoleFunctionPermission" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Common_Authen_RoleFunctionPermission_Common_Authen_Role" Association="EmsWebDBModel.FK_Common_Authen_RoleFunctionPermission_Common_Authen_Role">
+            <End Role="Common_Authen_Role" EntitySet="Common_Authen_Role" />
+            <End Role="Common_Authen_RoleFunctionPermission" EntitySet="Common_Authen_RoleFunctionPermission" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Common_Authen_RoleUser_Common_Authen_Role" Association="EmsWebDBModel.FK_Common_Authen_RoleUser_Common_Authen_Role">
+            <End Role="Common_Authen_Role" EntitySet="Common_Authen_Role" />
+            <End Role="Common_Authen_RoleUser" EntitySet="Common_Authen_RoleUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Common_Authen_RoleUser_Common_Authen_User" Association="EmsWebDBModel.FK_Common_Authen_RoleUser_Common_Authen_User">
+            <End Role="Common_Authen_User" EntitySet="Common_Authen_User" />
+            <End Role="Common_Authen_RoleUser" EntitySet="Common_Authen_RoleUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Common_SiteMap_Menu_Common_SiteMap_Menu" Association="EmsWebDBModel.FK_Common_SiteMap_Menu_Common_SiteMap_Menu">
+            <End Role="Common_SiteMap_Menu" EntitySet="Common_SiteMap_Menu" />
+            <End Role="Common_SiteMap_Menu1" EntitySet="Common_SiteMap_Menu" />
+          </AssociationSet>
+          <FunctionImport Name="SqlQueryNotificationStoredProcedure_e4bced98_3009_4e4e_983d_e32d8a6e090c" ReturnType="Collection(Guid)" />
+          <FunctionImport Name="usp_GetUserPermissionLevel" ReturnType="Collection(EmsWebDBModel.usp_GetUserPermissionLevel_Result)">
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_GetUserPermissionLevelByFunctionName" ReturnType="Collection(EmsWebDBModel.usp_GetUserPermissionLevelByFunctionName_Result)">
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
+            <Parameter Name="FunctionName" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
+        <EntityType Name="Common_Authen_ControllerActions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="PermissionLevelID" Type="Int32" Nullable="false" />
+          <Property Name="Area" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Controller" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ActionName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="HasActionPermission" Type="Boolean" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Common_Authen_FunctionPermissionLevel" Relationship="EmsWebDBModel.FK_Common_Authen_ControllerActions_Common_Authen_FunctionPermissionLevel" FromRole="Common_Authen_ControllerActions" ToRole="Common_Authen_FunctionPermissionLevel" />
+        </EntityType>
+        <EntityType Name="Common_Authen_FunctionPermissionLevel">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="FunctionName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PermissionLevel" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Common_Authen_ControllerActions" Relationship="EmsWebDBModel.FK_Common_Authen_ControllerActions_Common_Authen_FunctionPermissionLevel" FromRole="Common_Authen_FunctionPermissionLevel" ToRole="Common_Authen_ControllerActions" />
+          <NavigationProperty Name="Common_Authen_RoleFunctionPermission" Relationship="EmsWebDBModel.FK_Common_Authen_RoleFunctionPermission_Common_Authen_FunctionPermissionLevel" FromRole="Common_Authen_FunctionPermissionLevel" ToRole="Common_Authen_RoleFunctionPermission" />
+        </EntityType>
+        <EntityType Name="Common_Authen_Role">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+          <Property Name="ShowFlag" Type="Boolean" />
+          <Property Name="ResourceKey" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Common_Authen_RoleFunctionPermission" Relationship="EmsWebDBModel.FK_Common_Authen_RoleFunctionPermission_Common_Authen_Role" FromRole="Common_Authen_Role" ToRole="Common_Authen_RoleFunctionPermission" />
+          <NavigationProperty Name="Common_Authen_RoleUser" Relationship="EmsWebDBModel.FK_Common_Authen_RoleUser_Common_Authen_Role" FromRole="Common_Authen_Role" ToRole="Common_Authen_RoleUser" />
+        </EntityType>
+        <EntityType Name="Common_Authen_RoleFunctionPermission">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="PermissionLevelID" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Common_Authen_FunctionPermissionLevel" Relationship="EmsWebDBModel.FK_Common_Authen_RoleFunctionPermission_Common_Authen_FunctionPermissionLevel" FromRole="Common_Authen_RoleFunctionPermission" ToRole="Common_Authen_FunctionPermissionLevel" />
+          <NavigationProperty Name="Common_Authen_Role" Relationship="EmsWebDBModel.FK_Common_Authen_RoleFunctionPermission_Common_Authen_Role" FromRole="Common_Authen_RoleFunctionPermission" ToRole="Common_Authen_Role" />
+        </EntityType>
+        <EntityType Name="Common_Authen_RoleUser">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Common_Authen_Role" Relationship="EmsWebDBModel.FK_Common_Authen_RoleUser_Common_Authen_Role" FromRole="Common_Authen_RoleUser" ToRole="Common_Authen_Role" />
+          <NavigationProperty Name="Common_Authen_User" Relationship="EmsWebDBModel.FK_Common_Authen_RoleUser_Common_Authen_User" FromRole="Common_Authen_RoleUser" ToRole="Common_Authen_User" />
+        </EntityType>
+        <EntityType Name="Common_Authen_User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LogonName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="EmailAddress" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="IDNumber" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+          <Property Name="DateOFBirth" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CanDelete" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Common_Authen_RoleUser" Relationship="EmsWebDBModel.FK_Common_Authen_RoleUser_Common_Authen_User" FromRole="Common_Authen_User" ToRole="Common_Authen_RoleUser" />
+        </EntityType>
+        <EntityType Name="Common_SiteMap_Menu">
+          <Key>
+            <PropertyRef Name="MenuID" />
+          </Key>
+          <Property Name="MenuID" Type="Int32" Nullable="false" />
+          <Property Name="ParentID" Type="Int32" />
+          <Property Name="ResourceKey" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Area" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Controller" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ActionName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="RouteValues" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="IsSkip" Type="Boolean" Nullable="false" />
+          <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
+          <Property Name="IsShow" Type="Boolean" />
+          <NavigationProperty Name="Common_SiteMap_Menu1" Relationship="EmsWebDBModel.FK_Common_SiteMap_Menu_Common_SiteMap_Menu" FromRole="Common_SiteMap_Menu" ToRole="Common_SiteMap_Menu1" />
+          <NavigationProperty Name="Common_SiteMap_Menu2" Relationship="EmsWebDBModel.FK_Common_SiteMap_Menu_Common_SiteMap_Menu" FromRole="Common_SiteMap_Menu1" ToRole="Common_SiteMap_Menu" />
+        </EntityType>
+        <EntityType Name="tbl_LogInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LogTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Thread" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LogLevel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Logger" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Exception" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Sample">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="vw_Authen_RolePermissions">
+          <Key>
+            <PropertyRef Name="RoleID" />
+            <PropertyRef Name="RoleName" />
+            <PropertyRef Name="Controller" />
+            <PropertyRef Name="ActionName" />
+            <PropertyRef Name="HasActionPermission" />
+          </Key>
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Area" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Controller" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ActionName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="HasActionPermission" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Common_Authen_ControllerActions_Common_Authen_FunctionPermissionLevel">
+          <End Type="EmsWebDBModel.Common_Authen_FunctionPermissionLevel" Role="Common_Authen_FunctionPermissionLevel" Multiplicity="1" />
+          <End Type="EmsWebDBModel.Common_Authen_ControllerActions" Role="Common_Authen_ControllerActions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Common_Authen_FunctionPermissionLevel">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Common_Authen_ControllerActions">
+              <PropertyRef Name="PermissionLevelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Common_Authen_RoleFunctionPermission_Common_Authen_FunctionPermissionLevel">
+          <End Type="EmsWebDBModel.Common_Authen_FunctionPermissionLevel" Role="Common_Authen_FunctionPermissionLevel" Multiplicity="1" />
+          <End Type="EmsWebDBModel.Common_Authen_RoleFunctionPermission" Role="Common_Authen_RoleFunctionPermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Common_Authen_FunctionPermissionLevel">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Common_Authen_RoleFunctionPermission">
+              <PropertyRef Name="PermissionLevelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Common_Authen_RoleFunctionPermission_Common_Authen_Role">
+          <End Type="EmsWebDBModel.Common_Authen_Role" Role="Common_Authen_Role" Multiplicity="1" />
+          <End Type="EmsWebDBModel.Common_Authen_RoleFunctionPermission" Role="Common_Authen_RoleFunctionPermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Common_Authen_Role">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="Common_Authen_RoleFunctionPermission">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Common_Authen_RoleUser_Common_Authen_Role">
+          <End Type="EmsWebDBModel.Common_Authen_Role" Role="Common_Authen_Role" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="EmsWebDBModel.Common_Authen_RoleUser" Role="Common_Authen_RoleUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Common_Authen_Role">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="Common_Authen_RoleUser">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Common_Authen_RoleUser_Common_Authen_User">
+          <End Type="EmsWebDBModel.Common_Authen_User" Role="Common_Authen_User" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="EmsWebDBModel.Common_Authen_RoleUser" Role="Common_Authen_RoleUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Common_Authen_User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Common_Authen_RoleUser">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Common_SiteMap_Menu_Common_SiteMap_Menu">
+          <End Type="EmsWebDBModel.Common_SiteMap_Menu" Role="Common_SiteMap_Menu" Multiplicity="0..1" />
+          <End Type="EmsWebDBModel.Common_SiteMap_Menu" Role="Common_SiteMap_Menu1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Common_SiteMap_Menu">
+              <PropertyRef Name="MenuID" />
+            </Principal>
+            <Dependent Role="Common_SiteMap_Menu1">
+              <PropertyRef Name="ParentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="usp_GetUserPermissionLevel_Result">
+          <Property Type="String" Name="FunctionName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="LevelName" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="usp_GetUserPermissionLevelByFunctionName_Result">
+          <Property Type="String" Name="FunctionName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="LevelName" Nullable="false" MaxLength="50" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -177,6 +699,157 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Common_Authen_ControllerActions">
+            <EntityTypeMapping TypeName="EmsWebDBModel.Common_Authen_ControllerActions">
+              <MappingFragment StoreEntitySet="Common_Authen_ControllerActions">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="HasActionPermission" ColumnName="HasActionPermission" />
+                <ScalarProperty Name="ActionName" ColumnName="ActionName" />
+                <ScalarProperty Name="Controller" ColumnName="Controller" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="PermissionLevelID" ColumnName="PermissionLevelID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Common_Authen_FunctionPermissionLevel">
+            <EntityTypeMapping TypeName="EmsWebDBModel.Common_Authen_FunctionPermissionLevel">
+              <MappingFragment StoreEntitySet="Common_Authen_FunctionPermissionLevel">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="PermissionLevel" ColumnName="PermissionLevel" />
+                <ScalarProperty Name="FunctionName" ColumnName="FunctionName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Common_Authen_Role">
+            <EntityTypeMapping TypeName="EmsWebDBModel.Common_Authen_Role">
+              <MappingFragment StoreEntitySet="Common_Authen_Role">
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ResourceKey" ColumnName="ResourceKey" />
+                <ScalarProperty Name="ShowFlag" ColumnName="ShowFlag" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Common_Authen_RoleFunctionPermission">
+            <EntityTypeMapping TypeName="EmsWebDBModel.Common_Authen_RoleFunctionPermission">
+              <MappingFragment StoreEntitySet="Common_Authen_RoleFunctionPermission">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="PermissionLevelID" ColumnName="PermissionLevelID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Common_Authen_RoleUser">
+            <EntityTypeMapping TypeName="EmsWebDBModel.Common_Authen_RoleUser">
+              <MappingFragment StoreEntitySet="Common_Authen_RoleUser">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Common_Authen_User">
+            <EntityTypeMapping TypeName="EmsWebDBModel.Common_Authen_User">
+              <MappingFragment StoreEntitySet="Common_Authen_User">
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CanDelete" ColumnName="CanDelete" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="DateOFBirth" ColumnName="DateOFBirth" />
+                <ScalarProperty Name="IDNumber" ColumnName="IDNumber" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="LogonName" ColumnName="LogonName" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Common_SiteMap_Menu">
+            <EntityTypeMapping TypeName="EmsWebDBModel.Common_SiteMap_Menu">
+              <MappingFragment StoreEntitySet="Common_SiteMap_Menu">
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+                <ScalarProperty Name="IsSkip" ColumnName="IsSkip" />
+                <ScalarProperty Name="RouteValues" ColumnName="RouteValues" />
+                <ScalarProperty Name="ActionName" ColumnName="ActionName" />
+                <ScalarProperty Name="Controller" ColumnName="Controller" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="ResourceKey" ColumnName="ResourceKey" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_LogInfo">
+            <EntityTypeMapping TypeName="EmsWebDBModel.tbl_LogInfo">
+              <MappingFragment StoreEntitySet="tbl_LogInfo">
+                <ScalarProperty Name="Exception" ColumnName="Exception" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Logger" ColumnName="Logger" />
+                <ScalarProperty Name="LogLevel" ColumnName="LogLevel" />
+                <ScalarProperty Name="Thread" ColumnName="Thread" />
+                <ScalarProperty Name="LogTime" ColumnName="LogTime" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Sample">
+            <EntityTypeMapping TypeName="EmsWebDBModel.tbl_Sample">
+              <MappingFragment StoreEntitySet="tbl_Sample">
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_Authen_RolePermissions">
+            <EntityTypeMapping TypeName="EmsWebDBModel.vw_Authen_RolePermissions">
+              <MappingFragment StoreEntitySet="vw_Authen_RolePermissions">
+                <ScalarProperty Name="HasActionPermission" ColumnName="HasActionPermission" />
+                <ScalarProperty Name="ActionName" ColumnName="ActionName" />
+                <ScalarProperty Name="Controller" ColumnName="Controller" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SqlQueryNotificationStoredProcedure_e4bced98_3009_4e4e_983d_e32d8a6e090c" FunctionName="EmsWebDBModel.Store.SqlQueryNotificationStoredProcedure_e4bced98_3009_4e4e_983d_e32d8a6e090c" />
+          <FunctionImportMapping FunctionImportName="usp_GetUserPermissionLevel" FunctionName="EmsWebDBModel.Store.usp_GetUserPermissionLevel">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EmsWebDBModel.usp_GetUserPermissionLevel_Result">
+                <ScalarProperty Name="FunctionName" ColumnName="FunctionName" />
+                <ScalarProperty Name="LevelName" ColumnName="LevelName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_GetUserPermissionLevelByFunctionName" FunctionName="EmsWebDBModel.Store.usp_GetUserPermissionLevelByFunctionName">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EmsWebDBModel.usp_GetUserPermissionLevelByFunctionName_Result">
+                <ScalarProperty Name="FunctionName" ColumnName="FunctionName" />
+                <ScalarProperty Name="LevelName" ColumnName="LevelName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

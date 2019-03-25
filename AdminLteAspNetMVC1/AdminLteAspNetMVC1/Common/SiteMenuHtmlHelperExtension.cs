@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-using VM = AdminLteAspNetMVC1.ViewModel;
+using VM = EMS.Model.Common;
 
 namespace AdminLteAspNetMVC1.Common
 {
@@ -177,7 +177,7 @@ namespace AdminLteAspNetMVC1.Common
             return new MvcHtmlString(MenuTag.ToString());
         }
 
-        static bool MultiLeveMenuContainsActiveItem(List<VM.SiteMenu> menus, string action)
+        static bool MultiLeveMenuContainsActiveItem(List<VM.SiteMenu> menus, string area, string controller, string action)
         {
             bool returnVal = false;
          
@@ -185,8 +185,11 @@ namespace AdminLteAspNetMVC1.Common
             {
                 foreach (VM.SiteMenu p in menus)
                 {
-
-                    if (p.ActionName.Trim() == action.Trim())
+                    if (
+                          (p.Area.Equals(area, StringComparison.InvariantCultureIgnoreCase)
+                                && p.Controller.Equals(controller, StringComparison.InvariantCultureIgnoreCase)
+                                && p.ActionName.Equals(action, StringComparison.InvariantCultureIgnoreCase))
+                        )
                     {
                         returnVal = true;
                         break;
@@ -194,7 +197,7 @@ namespace AdminLteAspNetMVC1.Common
 
                     if (!returnVal && p.ChildrenMenu != null && p.ChildrenMenu.Count > 0)
                     {
-                        returnVal = MultiLeveMenuContainsActiveItem(p.ChildrenMenu, action);
+                        returnVal = MultiLeveMenuContainsActiveItem(p.ChildrenMenu, area, controller, action);
                     }
                 }
             }
@@ -214,7 +217,7 @@ namespace AdminLteAspNetMVC1.Common
             StringBuilder li_InnerHtml = new StringBuilder(200);
 
             //点击菜单到达的页面，再点击页面里的操作，还是会刷掉已选菜单项，未来判断需加上找到页面里的action是不是在这个菜单下
-            bool isActive = MultiLeveMenuContainsActiveItem(menu.ChildrenMenu, action);
+            bool isActive = MultiLeveMenuContainsActiveItem(menu.ChildrenMenu, area, controller, action);
             if (
                   (menu.Area.Equals(area, StringComparison.InvariantCultureIgnoreCase)
                         && menu.Controller.Equals(controller, StringComparison.InvariantCultureIgnoreCase)
@@ -233,23 +236,13 @@ namespace AdminLteAspNetMVC1.Common
 
             menuLevel++;
 
-            //NamingItems NamingItems = new NamingItems(companyId);
-            //if(System.Web.HttpRuntime.Cache["Menu"] == null)
-            //{
-            //    NamingItems=new NamingItems(companyId);
-            //    System.Web.HttpRuntime.Cache["Menu"] = NamingItems;
-            //}
-            //else
-            //{
-            //    NamingItems=(NamingItems)System.Web.HttpRuntime.Cache["Menu"];
-            //}
-
             if (menu.ChildrenMenu != null && menu.ChildrenMenu.Count > 0)
             {
                 //<li class="@activeCSS @dropdownCSS" ><a href="@Url.Action(Model.ActionName, Model.Controller, new { area = Model.Area })" class="dropdown-toggle" data-toggle="dropdown" >@ResourceHelper.GetResourceWithCustom(typeof(CommonResource),Model.ResourceKey,companyCode)
                 //     <b class="@caret"></b></a>
                 //    @Html.Partial("_NavBarMenuNodes", Model.ChildrenMenu)
                 //</li>
+
                 TagBuilder li_a_Tag = new TagBuilder("a");
                 TagBuilder li_a_i_Tag = new TagBuilder("i");
                 TagBuilder li_a_span1_Tag = new TagBuilder("span");

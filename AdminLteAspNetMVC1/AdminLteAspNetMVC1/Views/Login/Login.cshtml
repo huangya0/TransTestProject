@@ -9,14 +9,28 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>WebApplication</title>
+    <title>EMS</title>
+    <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-    @Styles.Render("~/AdminLTE241/bower_components/bootstrap/css")
-    @Styles.Render("~/AdminLTE241/bower_components/font-awesome/css")
-    @Styles.Render("~/AdminLTE241/bower_components/ionicons/css")
-    @Styles.Render("~/AdminLTE241/dist/css")
-    @Styles.Render("~/AdminLTE241/plugins/icheck/sqare/blue")
+    @*@Styles.Render("~/AdminLTE241/bower_components/bootstrap/css")
+        @Styles.Render("~/AdminLTE241/bower_components/font-awesome/css")
+            @Styles.Render("~/AdminLTE241/bower_components/ionicons/css")
+            @Styles.Render("~/AdminLTE241/dist/css")
+            @Styles.Render("~/AdminLTE241/plugins/icheck/sqare/blue")*@
+
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="~/AdminLTE241/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/AdminLTE241/bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="~/AdminLTE241/bower_components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/AdminLTE241/dist/css/AdminLTE.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="~/AdminLTE241/plugins/iCheck/square/blue.css">
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,7 +42,7 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="@Url.Action("DashboardV1", "Home")">Welcome to <b>WebApplication!</b></a>
+            <a href="@Url.Action("DashboardV1", "Home")">Welcome to <b>EMS!</b></a>
         </div>
         <div class="login-box-body">
             <p class="login-box-msg">Sign in to start your session</p>
@@ -50,7 +64,7 @@
                     <div class="col-xs-8">
                         <div class="checkbox icheck">
                             @*@Html.CheckBoxFor(m => m.RememberMe)
-                            @Html.LabelFor(m => m.RememberMe)*@
+                                @Html.LabelFor(m => m.RememberMe)*@
                         </div>
                     </div>
                     <div class="col-xs-4">
@@ -74,11 +88,24 @@
         </div>
     </div>
 
-    @Scripts.Render("~/AdminLTE241/bower_components/jquery/src")
-    @Scripts.Render("~/AdminLTE241/bower_components/bootstrap/js")
-    @Scripts.Render("~/AdminLTE241/plugins/icheck/js")
-    @Scripts.Render("~/Scripts")
+    @*@Scripts.Render("~/AdminLTE241/bower_components/jquery/src")
+        @Scripts.Render("~/AdminLTE241/bower_components/bootstrap/js")
+        @Scripts.Render("~/AdminLTE241/plugins/icheck/js")
+        @Scripts.Render("~/Scripts")*@
 
+    <!-- jQuery 3 -->
+    <script src="~/AdminLTE241/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="~/AdminLTE241/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- iCheck -->
+    <script src="~/AdminLTE241/plugins/iCheck/icheck.min.js"></script>
+    <script>$(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' /* optional */
+    });
+  });</script>
 
 </body>
 </html>

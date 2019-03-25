@@ -11,6 +11,22 @@
         <EntityTypeShape EntityType="EmsWebDBModel.Table_4" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="EmsWebDBModel.Table_5" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
         <AssociationConnector Association="EmsWebDBModel.FK_Table_4_Table_2" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="EmsWebDBModel.Common_Authen_ControllerActions" Width="1.5" PointX="5" PointY="14.25" />
+        <EntityTypeShape EntityType="EmsWebDBModel.Common_Authen_FunctionPermissionLevel" Width="1.5" PointX="2.75" PointY="12.375" />
+        <EntityTypeShape EntityType="EmsWebDBModel.Common_Authen_Role" Width="1.5" PointX="2.75" PointY="8" />
+        <EntityTypeShape EntityType="EmsWebDBModel.Common_Authen_RoleFunctionPermission" Width="1.5" PointX="5" PointY="8.375" />
+        <EntityTypeShape EntityType="EmsWebDBModel.Common_Authen_RoleUser" Width="1.5" PointX="5" PointY="11.375" />
+        <EntityTypeShape EntityType="EmsWebDBModel.Common_Authen_User" Width="1.5" PointX="2.75" PointY="15.625" />
+        <EntityTypeShape EntityType="EmsWebDBModel.Common_SiteMap_Menu" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="EmsWebDBModel.tbl_LogInfo" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EmsWebDBModel.tbl_Sample" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EmsWebDBModel.vw_Authen_RolePermissions" Width="1.5" PointX="7.75" PointY="4.75" />
+        <AssociationConnector Association="EmsWebDBModel.FK_Common_Authen_ControllerActions_Common_Authen_FunctionPermissionLevel" />
+        <AssociationConnector Association="EmsWebDBModel.FK_Common_Authen_RoleFunctionPermission_Common_Authen_FunctionPermissionLevel" />
+        <AssociationConnector Association="EmsWebDBModel.FK_Common_Authen_RoleFunctionPermission_Common_Authen_Role" />
+        <AssociationConnector Association="EmsWebDBModel.FK_Common_Authen_RoleUser_Common_Authen_Role" />
+        <AssociationConnector Association="EmsWebDBModel.FK_Common_Authen_RoleUser_Common_Authen_User" />
+        <AssociationConnector Association="EmsWebDBModel.FK_Common_SiteMap_Menu_Common_SiteMap_Menu" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

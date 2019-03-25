@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using AdminLteAspNetMVC1.Common;
+using System.Web;
 using System.Web.Mvc;
 
 namespace AdminLteAspNetMVC1
@@ -8,6 +9,7 @@ namespace AdminLteAspNetMVC1
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new PermissionControlAttribute());
         }
     }
 }
