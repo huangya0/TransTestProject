@@ -156,6 +156,7 @@
     <Compile Include="Common\NoCacheAttribute.cs" />
     <Compile Include="Common\PermissionControlAttribute.cs" />
     <Compile Include="Common\PermissionDataHelper.cs" />
+    <Compile Include="Common\ScriptBlockExtension.cs" />
     <Compile Include="Common\SiteMenuHtmlHelperExtension.cs" />
     <Compile Include="Common\SiteMenuHelper.cs" />
     <Compile Include="Common\UserHelper.cs" />
@@ -7323,6 +7324,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\SamplePopup.js" />
     <Content Include="TestCallAPIPage.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -7353,6 +7355,9 @@
     <Content Include="Views\Sample\Edit.cshtml" />
     <Content Include="Views\Sample\Index.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Sample\_PopupView.cshtml" />
+    <Content Include="Views\Sample\TestPopup.cshtml" />
+    <Content Include="Views\Sample\_PopupModal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

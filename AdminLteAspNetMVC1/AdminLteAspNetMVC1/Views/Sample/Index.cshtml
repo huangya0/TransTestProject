@@ -1,79 +1,141 @@
-﻿@model IEnumerable<EMS.Model.SampleItemModel>
+﻿@using AdminLteAspNetMVC1.Common;
+
+@model IEnumerable<EMS.Model.SampleItemModel>
 
 @{
     ViewBag.Title = "Index";
 }
 
 
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Address)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UpdatedDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UpdatedBy)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UpdatedByID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreatedDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreatedBy)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreatedByID)
-            </th>
-            <th></th>
-        </tr>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<p>
+    @Html.ActionLink("Test Popup", "TestPopup")
+</p>
 
-        @{
-            if (Model != null && Model.Count() > 0)
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdatedByID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedByID)
+        </th>
+        <th></th>
+    </tr>
+
+    @{
+        if (Model != null && Model.Count() > 0)
+        {
+            foreach (var item in Model)
             {
-                foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Name)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Address)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.UpdatedDate)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.UpdatedBy)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.UpdatedByID)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.CreatedDate)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.CreatedBy)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.CreatedByID)
-                        </td>
-                        <td>
-                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                        </td>
-                    </tr>
-                }
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Address)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UpdatedDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UpdatedBy)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UpdatedByID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedBy)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedByID)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id }) |
+                        @Html.ActionLink("Redirect to Popup form", "_PopupView", new { id = item.Id }) |
+                        @Html.ActionLink("Popup1", "_PopupView", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-default", data_toggle = "modal", data_target = "#modal-default" })
+
+                        <a id="@item.Id" href="@Url.Action("_PopupView", "Sample", new { id = item.Id } )" class="btn btn-default" data-toggle="modal" data-target="#modal-default">Popup2</a>
+
+
+
+
+
+                        @using (Html.BeginForm("Index", "Sample", FormMethod.Post, new { @id = "form-search" }))
+                        {
+                            @Html.ActionLink("Popup3", "_PopupView", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-default", data_toggle = "modal", data_target = "#modal-default" })
+                        }
+
+                        <a id="openModal" onclick="popupWindow(@item.Id)" class="btn btn-default">Popup5</a>
+
+                        @*<button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
+                                Popup View
+                            </button>*@
+                    </td>
+                </tr>
             }
         }
-    </table>
+    }
+</table>
+
+
+@Html.Partial("_PopupModal")
+
+
+<!-- jQuery 3 -->
+
+<!-- Bootstrap 3.3.7 -->
+
+<!-- FastClick -->
+<script src="~/AdminLTE241/bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<!-- AdminLTE for demo purposes -->
+
+
+@*<script src="~/Scripts/SamplePopup.js"></script>*@
+
+<script type="text/javascript">
+
+    function popupWindow2(obj) {
+        //$('#modal-default').modal('show');
+        debugger;
+        $('#modal-default').modal("show");
+    }
+
+        function popupWindow(idVal) {
+            // $('#OrderModal #Minute').val(new Data().getMinutes());
+            debugger;
+            @*var urlAction = @Url.Action("_PopupView", "Sample") + "/" + idVal;*@
+            var urlAction = "@Url.Action("_PopupView", "Sample")";
+            urlAction = urlAction + "/" + idVal;
+
+            $("#modal-default").load(urlAction, function () { $('#modal-default').modal({show : true}) });
+            //$("#modal-default").load('/Sample/_PopupView/1', function () { $('#modal-default').modal('show'); });
+        }
+
+</script>

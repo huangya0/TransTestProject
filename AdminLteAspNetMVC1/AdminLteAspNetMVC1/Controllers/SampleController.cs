@@ -12,6 +12,7 @@ using EMS.Model;
 
 namespace AdminLteAspNetMVC1.Controllers
 {
+    [NoCache]
     [Authorize]
     public class SampleController : BaseController<EMS.BL.ISampleBL, EMS.BL.SampleBL>
     {
@@ -122,6 +123,31 @@ namespace AdminLteAspNetMVC1.Controllers
             //db.SaveChanges();
             //需在SampleBL中建一个Delete方法, Delete方法再调用EF的删除
             return RedirectToAction("Index");
+        }
+
+        //[OutputCache(NoStore = true, Duration = 0, VaryByParam = "*")]
+        //[HttpPost]
+        //public ActionResult _PopupView(int? id)
+        public ActionResult _PopupView(int? id)
+        {
+            //Response.AppendHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.
+            //Response.AppendHeader("Pragma", "no-cache"); // HTTP 1.0.
+            //Response.AppendHeader("Expires", "0"); // Proxies.
+
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            SampleItemModel sampleItemModel = BusinessLogic.GetSampleList().Where(i => i.Id == id).First();
+            if (sampleItemModel == null)
+            {
+                return HttpNotFound();
+            }
+            return PartialView(sampleItemModel);
+            //return View(sampleItemModel);
+            //return View();
+
+            //htmlAttributes
         }
 
         //protected override void Dispose(bool disposing)

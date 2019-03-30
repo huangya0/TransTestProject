@@ -1,0 +1,102 @@
+﻿@model EMS.Model.SampleItemModel
+
+@{
+    /**/
+
+    ViewBag.Title = "Details";
+}
+
+<div class="modal-dialog">
+<div class="modal-content">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Default Modal</h4>
+    </div>
+    <div class="modal-body" id="modal-sample-body">
+        <p>One fine body&hellip;</p>
+        test by zack
+        <div>
+            <h4>SampleItemModel</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @{
+                        string test = "";
+                    }
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Address)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Address)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.UpdatedDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.UpdatedDate)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.UpdatedBy)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.UpdatedBy)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.UpdatedByID)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.UpdatedByID)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CreatedDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CreatedDate)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CreatedBy)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CreatedBy)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CreatedByID)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CreatedByID)
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+
+</div>
+</div>
