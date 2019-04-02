@@ -46,3 +46,9 @@
 /DotNetRemotingSample1/RemotingClient/bin/Debug
 /DotNetRemotingSample1/.vs/DotNetRemotingSample1
 /DotNetRemotingSample2/.vs/DotNetRemotingSample2/v15
+/DotNetRemotingSample2/RemotingClient/bin/Debug
+/DotNetRemotingSample2/RemotingClient/obj/Debug
+/DotNetRemotingSample2/RemotingLibrary/bin/Debug
+/DotNetRemotingSample2/RemotingLibrary/obj/Debug
+/DotNetRemotingSample2/RemotingServer/bin/Debug
+/DotNetRemotingSample2/RemotingServer/obj/Debug
