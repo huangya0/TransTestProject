@@ -17,7 +17,7 @@ namespace RemotingServer
             TcpServerChannel channel = new TcpServerChannel(8086);
             ChannelServices.RegisterChannel(channel, false);
             RemotingConfiguration.RegisterWellKnownServiceType(typeof(Hello), "hi", WellKnownObjectMode.SingleCall);
-            channel.ChannelData
+            //channel.ChannelData
             Console.WriteLine("hit to exit");
             Console.ReadLine();
             
