@@ -43,6 +43,7 @@
             this.btnGetSimpleData.TabIndex = 0;
             this.btnGetSimpleData.Text = "btnGetSimpleData";
             this.btnGetSimpleData.UseVisualStyleBackColor = true;
+            this.btnGetSimpleData.Click += new System.EventHandler(this.btnGetSimpleData_Click_1);
             // 
             // txtValue
             // 

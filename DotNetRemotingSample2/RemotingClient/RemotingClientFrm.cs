@@ -62,10 +62,6 @@ namespace RemotingClient
             return true;
         }
 
-        private void btnGetSimpleData_Click(object sender, EventArgs e)
-        {
-            this.Connect();
-        }
 
         private void btnGetListData_Click(object sender, EventArgs e)
         {
@@ -102,6 +98,11 @@ namespace RemotingClient
 
 
             //return true;
+        }
+
+        private void btnGetSimpleData_Click_1(object sender, EventArgs e)
+        {
+            this.Connect();
         }
     }
 }
