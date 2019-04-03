@@ -48,6 +48,7 @@ namespace RemotingServer
 
             //这两个都是Form里我自己定义的方法，各位看官不要看错了. :)
             f.WriteMsg("程序已经启动,Port:7575!");
+
             f.Start();
         }
 

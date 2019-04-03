@@ -164,6 +164,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RestController.cs" />
     <Compile Include="Controllers\SampleController.cs" />
+    <Compile Include="Controllers\VmTblUsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -7358,6 +7359,11 @@
     <Content Include="Views\Sample\_PopupView.cshtml" />
     <Content Include="Views\Sample\TestPopup.cshtml" />
     <Content Include="Views\Sample\_PopupModal.cshtml" />
+    <Content Include="Views\VmTblUsers\Create.cshtml" />
+    <Content Include="Views\VmTblUsers\Delete.cshtml" />
+    <Content Include="Views\VmTblUsers\Details.cshtml" />
+    <Content Include="Views\VmTblUsers\Edit.cshtml" />
+    <Content Include="Views\VmTblUsers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

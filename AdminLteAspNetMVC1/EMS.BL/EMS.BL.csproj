@@ -55,8 +55,10 @@
     <Compile Include="Common\Permission.cs" />
     <Compile Include="Common\SiteMenu.cs" />
     <Compile Include="ISampleBL.cs" />
+    <Compile Include="IUserBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SampleBL.cs" />
+    <Compile Include="UserBL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
