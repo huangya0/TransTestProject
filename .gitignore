@@ -52,3 +52,9 @@
 /DotNetRemotingSample2/RemotingLibrary/obj/Debug
 /DotNetRemotingSample2/RemotingServer/bin/Debug
 /DotNetRemotingSample2/RemotingServer/obj/Debug
+/EmqttdSample1/.vs/EmqttdSample1/v15
+/EmqttdSample1/EmqttdClient/bin/Debug
+/EmqttdSample1/EmqttdClient/obj/Debug
+/EmqttdSample1/EmqttdSample1/bin/Debug
+/EmqttdSample1/EmqttdSample1/obj/Debug
+/EmqttdSample1/packages/M2Mqtt.4.3.0.0

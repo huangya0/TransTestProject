@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmqttdSample1", "EmqttdSample1\EmqttdSample1.csproj", "{6CA3AA01-67FD-4603-83A5-6EFDE9A9C747}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmqttdClient", "EmqttdClient\EmqttdClient.csproj", "{E9AED170-598C-4F7D-A4FB-A2F2ECEDD86D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CA3AA01-67FD-4603-83A5-6EFDE9A9C747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CA3AA01-67FD-4603-83A5-6EFDE9A9C747}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CA3AA01-67FD-4603-83A5-6EFDE9A9C747}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CA3AA01-67FD-4603-83A5-6EFDE9A9C747}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9AED170-598C-4F7D-A4FB-A2F2ECEDD86D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9AED170-598C-4F7D-A4FB-A2F2ECEDD86D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9AED170-598C-4F7D-A4FB-A2F2ECEDD86D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9AED170-598C-4F7D-A4FB-A2F2ECEDD86D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A67764FB-004A-4909-99ED-B52CFD499D3A}
+	EndGlobalSection
+EndGlobal
