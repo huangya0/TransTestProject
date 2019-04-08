@@ -18,6 +18,8 @@ namespace EmqttdClient
     {
         public EmqttdClientFrm()
         {
+            CheckForIllegalCrossThreadCalls = false;
+
             InitializeComponent();
         }
 
@@ -80,9 +82,9 @@ namespace EmqttdClient
             //string caPath = "C:/MqttSSL/ca.crt";
             string caPath = @"D:\emqttd\zacktest.cer";
             X509Certificate caCert = new X509Certificate(caPath);
-            Console.WriteLine(caCert.ToString(true) + "\n" + caCert.ToString());
-            Console.ReadKey();
-            Console.WriteLine("------------------------分割线-------------------------------");
+            //Console.WriteLine(caCert.ToString(true) + "\n" + caCert.ToString());
+            //Console.ReadKey();
+            //Console.WriteLine("------------------------分割线-------------------------------");
             //无SSL连接
             //MqttClient client = new MqttClient(brokerHostName,brokerPort,false,null,null,MqttSslProtocols.None);
             try
@@ -111,7 +113,7 @@ namespace EmqttdClient
             byte[] qosLevels = { MqttMsgBase.QOS_LEVEL_AT_MOST_ONCE };
             //client.Subscribe(topic,  qosLevels);
 
-            string msg = "msg sent from client!Q";
+            string msg = client.ClientId + " : msg sent from client!Q";
             client.Publish(topic, System.Text.Encoding.UTF8.GetBytes(msg));
         }
     }
