@@ -98,6 +98,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Readme.cs" />
     <Compile Include="UCPager.cs">
       <SubType>UserControl</SubType>
     </Compile>
