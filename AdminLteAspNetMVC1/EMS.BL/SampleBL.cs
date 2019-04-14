@@ -9,6 +9,7 @@ using MD = EMS.DataProvider.Models;
 using VM = EMS.Model;
 using EMS.Model.Common;
 using System.Data.Entity;
+using EMS.GlobalResources;
 
 namespace EMS.BL
 {
@@ -51,5 +52,46 @@ namespace EMS.BL
             return result;
 
         }
+
+        public bool IsExistRecord(VM.SampleItemModel model)
+        {
+            return context.tbl_Sample.Any(i => i.Name == model.Name && i.IsDeleted == false);
+        }
+
+        public bool CreateSampleItem(VM.SampleItemModel model)
+        {
+            if (model == null)
+            {
+                //Message = MessageModel.InsertFailue(MessageResource.QualificaitonPage_Empty_ErrorMessage + "," + MessageResource.Message_CommonInsertFail);
+                Message = MessageModel.InsertFailue(MessageResource.Message_CommonInsertFail);
+                return false;
+            }
+            var item = this.ConvertToDataModel(model);
+            context.tbl_Sample.Add(item);
+            context.SaveChanges();
+            Message = MessageModel.InsertSuccess();
+            return true;
+        }
+
+
+        private MD.tbl_Sample ConvertToDataModel(VM.SampleItemModel model)
+        {
+            if (model == null)
+            {
+                return null;
+            }
+            MD.tbl_Sample item = new MD.tbl_Sample();
+            item.ID = model.Id;
+            item.Name = model.Name;
+            item.Address = model.Address;
+            item.IsDeleted = false;
+
+            item.CreatedBy = model.CreatedBy;
+            item.CreatedDate = model.CreatedDate;
+            item.UpdatedBy = model.UpdatedBy;
+            item.UpdatedDate = model.UpdatedDate;
+            return item;
+        }
+
     }
 }

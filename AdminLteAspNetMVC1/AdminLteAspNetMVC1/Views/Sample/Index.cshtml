@@ -11,7 +11,8 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 <p>
-    @Html.ActionLink("Test Popup", "TestPopup")
+    @Html.ActionLink("弹窗新增", "Create")
+    <a id="openModal" onclick="popupCreateWindow();" class="btn btn-default">弹窗新增</a>
 </p>
 
 <table class="table">
@@ -91,7 +92,7 @@
                             @Html.ActionLink("Popup3", "_PopupView", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-default", data_toggle = "modal", data_target = "#modal-default" })
                         }
 
-                        <a id="openModal" onclick="popupWindow(@item.Id)" class="btn btn-default">Popup5</a>
+                        <a id="openModal" onclick="popupWindow(@item.Id)" class="btn btn-default">弹窗修改</a>
 
                         @*<button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
                                 Popup View
@@ -127,15 +128,27 @@
         $('#modal-default').modal("show");
     }
 
-        function popupWindow(idVal) {
-            // $('#OrderModal #Minute').val(new Data().getMinutes());
-            debugger;
-            @*var urlAction = @Url.Action("_PopupView", "Sample") + "/" + idVal;*@
-            var urlAction = "@Url.Action("_PopupView", "Sample")";
-            urlAction = urlAction + "/" + idVal;
+    //不要用弹本弹出的窗，在点击的行时，里边的值没有刷新，因为Razor脚本只执行了一次。所以要改用js
+    function popupWindow(idVal) {
+        // $('#OrderModal #Minute').val(new Data().getMinutes());
+        debugger;
+        @*var urlAction = @Url.Action("_PopupView", "Sample") + "/" + idVal;*@
+        var urlAction = "@Url.Action("_PopupView", "Sample")";
+        urlAction = urlAction + "/" + idVal;
 
-            $("#modal-default").load(urlAction, function () { $('#modal-default').modal({show : true}) });
-            //$("#modal-default").load('/Sample/_PopupView/1', function () { $('#modal-default').modal('show'); });
-        }
+        $("#modal-default").load(urlAction, function () { $('#modal-default').modal({show : true}) });
+        //$("#modal-default").load('/Sample/_PopupView/1', function () { $('#modal-default').modal('show'); });
+    }
+
+    function popupCreateWindow() {
+        debugger;
+        @*var urlAction = @Url.Action("_PopupView", "Sample") + "/" + idVal;*@
+
+        var urlAction = "@Url.Action("Create", "Sample")";
+        urlAction = urlAction; // + "/" + idVal;
+
+        $("#modal-default").load(urlAction, function () { $('#modal-default').modal({ show: true }) });
+
+    }
 
 </script>

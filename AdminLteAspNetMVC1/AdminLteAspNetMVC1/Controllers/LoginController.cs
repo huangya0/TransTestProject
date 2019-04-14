@@ -1,6 +1,7 @@
 ﻿using AdminLteAspNetMVC1.Common;
 using EMS.BL.Common;
 using EMS.Model;
+using EMS.Model.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,7 +49,7 @@ namespace AdminLteAspNetMVC1.Controllers
 
                 using (Permission permissionBL = new Permission())
                 {
-                    UserModel userItem = permissionBL.ValidUser(model);
+                    UserItem userItem = permissionBL.ValidUser(model);
                     if (userItem == null)
                     {
                         ModelState.AddModelError("", "用户名或密码不存在.");

@@ -30,14 +30,14 @@ namespace EMS.BL.Common
             return permissions;
         }
 
-        public VM.UserModel GetUser(int userID)
+        public VM.Common.UserItem GetUser(int userID)
         {
             var user = ctx.Common_Authen_User.Include("Common_Authen_RoleUser").SingleOrDefault(u => u.UserID == userID);
             return ConvertUser(user);
 
         }
 
-        public VM.UserModel ValidUser(VM.LoginModel loginUser)
+        public VM.Common.UserItem ValidUser(VM.LoginModel loginUser)
         {
             var userpwd = DESEncrypt.Encrypt(loginUser.Password); //PRD
             //var userpwd = loginUser.Password; //Test
@@ -182,10 +182,10 @@ namespace EMS.BL.Common
             return true;
         }
 
-        private VM.UserModel ConvertUser(MD.Common.Common_Authen_User user)
+        private VM.Common.UserItem ConvertUser(MD.Common.Common_Authen_User user)
         {
             if (user == null) return null;
-            var result = new VM.UserModel();
+            var result = new VM.Common.UserItem();
             result.ID = user.UserID;
             result.LogonName = user.LogonName;
             result.FullName = user.UserName;

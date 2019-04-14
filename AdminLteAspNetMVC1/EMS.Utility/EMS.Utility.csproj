@@ -56,6 +56,8 @@
     <Compile Include="Data\DatabaseCacheDependency\CacheHelper.cs" />
     <Compile Include="Data\DatabaseCacheDependency\ICacheHelper.cs" />
     <Compile Include="Data\DBMethod.cs" />
+    <Compile Include="Data\DynamicLambda.cs" />
+    <Compile Include="Data\IQueryableSortHelper.cs" />
     <Compile Include="Data\ParameterAttribute.cs" />
     <Compile Include="Data\StoredProcedureNameAttribute.cs" />
     <Compile Include="DEncrypt\DESEncrypt.cs" />

@@ -65,7 +65,7 @@ namespace AdminLteAspNetMVC1.Common
             }
             else
             {
-                UserModel userItem = UserHelper.GetCurrentUser();
+                UserItem userItem = UserHelper.GetCurrentUser();
                 List<PermissionItem> permissionList = PermissionDataHelper.GetPermissionData();
 
                 if (userItem == null || permissionList == null)

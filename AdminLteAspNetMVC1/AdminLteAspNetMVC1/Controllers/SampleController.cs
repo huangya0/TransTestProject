@@ -45,7 +45,20 @@ namespace AdminLteAspNetMVC1.Controllers
         // GET: Sample/Create
         public ActionResult Create()
         {
-            return View();
+            //if (id == null)
+            //{
+            //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            //}
+            //SampleItemModel sampleItemModel = BusinessLogic.GetSampleList().Where(i => i.Id == id).First();
+            //if (sampleItemModel == null)
+            //{
+            //    return HttpNotFound();
+            //}
+
+            SampleItemModel sampleItemModel = new SampleItemModel();
+            return PartialView(sampleItemModel);
+
+            //return View();
         }
 
         // POST: Sample/Create
@@ -55,15 +68,37 @@ namespace AdminLteAspNetMVC1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Name,Address,UpdatedDate,UpdatedBy,UpdatedByID,CreatedDate,CreatedBy,CreatedByID")] SampleItemModel sampleItemModel)
         {
+            //20190414: 弹窗后保存成功后，弹窗关后 ， 处理未成功// 
+            if (BusinessLogic.IsExistRecord(sampleItemModel))
+            {
+                //ModelState.AddModelError("QualificaitonName", MessageResource.Qualificaiton_Name_Exist);
+                ModelState.AddModelError("SampleTableName", "记录已存在！");
+            }
+
             if (ModelState.IsValid)
             {
                 //db.SampleItemModels.Add(sampleItemModel);
                 //db.SaveChanges();
+
                 //需在SampleBL中建一个Create方法,  Create方法里将view model转换成database model再用EF方法保存
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
+            }
+            if (ModelState.IsValid)
+            {
+                this.InitCreateMessage<SampleItemModel>(sampleItemModel);
+                bool result = BusinessLogic.CreateSampleItem(sampleItemModel);
+                //return Json(result, JsonRequestBehavior.AllowGet);
+                //return View("Index");
+                return Index();
+            }
+            else
+            {
+                //View Model
+                //sampleItemModel = new SampleItemModel();
+                return PartialView(sampleItemModel);
+                //return Index();
             }
 
-            return View(sampleItemModel);
         }
 
         // GET: Sample/Edit/5

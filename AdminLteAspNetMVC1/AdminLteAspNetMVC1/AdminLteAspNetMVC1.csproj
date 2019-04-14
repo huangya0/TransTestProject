@@ -153,12 +153,20 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="BL\BLSiteMenu.cs" />
     <Compile Include="Common\BaseController.cs" />
+    <Compile Include="Common\CommonHelper.cs" />
+    <Compile Include="Common\EncryptionHelper.cs" />
+    <Compile Include="Common\ForCommonHelper.cs" />
+    <Compile Include="Common\ForUserHelper.cs" />
+    <Compile Include="Common\IForCommonHelper.cs" />
+    <Compile Include="Common\IForUserHelper.cs" />
+    <Compile Include="Common\IStaticMethod.cs" />
     <Compile Include="Common\NoCacheAttribute.cs" />
     <Compile Include="Common\PermissionControlAttribute.cs" />
     <Compile Include="Common\PermissionDataHelper.cs" />
     <Compile Include="Common\ScriptBlockExtension.cs" />
     <Compile Include="Common\SiteMenuHtmlHelperExtension.cs" />
     <Compile Include="Common\SiteMenuHelper.cs" />
+    <Compile Include="Common\StaticMethodHelper.cs" />
     <Compile Include="Common\UserHelper.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -7391,6 +7399,10 @@
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Airwave.GlobalResources\Airwave.GlobalResources.csproj">
+      <Project>{065e07d5-2b9a-4cd4-a194-cdee88b3ae03}</Project>
+      <Name>Airwave.GlobalResources</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EMS.BL\EMS.BL.csproj">
       <Project>{fde0e6bf-6efb-44d8-aed3-5b959faac5a1}</Project>
       <Name>EMS.BL</Name>

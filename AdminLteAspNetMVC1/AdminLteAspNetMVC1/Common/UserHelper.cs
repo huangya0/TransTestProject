@@ -1,4 +1,5 @@
 ﻿using EMS.Model;
+using EMS.Model.Common;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,9 @@ namespace AdminLteAspNetMVC1.Common
 {
     public class UserHelper
     {
-        public static UserModel GetCurrentUser()
+        private const string USER_KEY = "UserSessionKey";
+
+        public static UserItem GetCurrentUser()
         {
             if (HttpContext.Current == null ||
                 HttpContext.Current.Session == null)
@@ -26,12 +29,55 @@ namespace AdminLteAspNetMVC1.Common
                 }
                 else
                 {
-                    UserModel user = JsonConvert.DeserializeObject<UserModel>(additionalData);
+                    UserItem user = JsonConvert.DeserializeObject<UserItem>(additionalData);
                     return user;
                 }
             }
 
             return null;
+        }
+
+        public static void ResetCurrentUser()
+        {
+            if (HttpContext.Current.Request == null)
+                return;
+
+            //HttpContext.Current.Session[USER_KEY] = null;
+            CommonHelper.RemoveCookie(USER_KEY);
+            CommonHelper.RemoveCookie("dbLang");
+            //remove cookie for UserIdentityType and User,Company's Message
+            //CommonHelper.RemoveCookie("UserIdentityType");
+            //CommonHelper.RemoveCookie("UserMsgIdentityType");
+            //CommonHelper.RemoveCookie("companyCode");
+        }
+
+        public static int GetCurrentUserRoleId(string userName)
+        {
+            using (var roleDB = new EMS.BL.Account.Role())
+            {
+                return roleDB.GetRoleId(userName);
+            }
+        }
+
+        public static Dictionary<int, string> GetCurrentRole()
+        {
+            using (var roleDB = new EMS.BL.Account.Role())
+            {
+                return roleDB.GetUserRoleMsg(GetCurrentUserID());
+            }
+        }
+
+        public static int GetCurrentUserID()
+        {
+            var user = GetCurrentUser();
+            if (user == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return user.ID;
+            }
         }
 
         /// <summary>
@@ -56,7 +102,7 @@ namespace AdminLteAspNetMVC1.Common
             HttpContext.Current.Response.Cookies.Add(cookie);
         }
 
-        public static void WriteLoginCookie(UserModel user)
+        public static void WriteLoginCookie(UserItem user)
         {
             string additionalData = JsonConvert.SerializeObject(user);
             WriteLoginCookie(user.LogonName, additionalData);
