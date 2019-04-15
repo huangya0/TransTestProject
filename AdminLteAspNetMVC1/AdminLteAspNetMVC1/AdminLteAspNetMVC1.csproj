@@ -7372,6 +7372,10 @@
     <Content Include="Views\VmTblUsers\Details.cshtml" />
     <Content Include="Views\VmTblUsers\Edit.cshtml" />
     <Content Include="Views\VmTblUsers\Index.cshtml" />
+    <Content Include="Views\VmTblUsers\_List.cshtml" />
+    <Content Include="Views\VmTblUsers\_ListContainer.cshtml" />
+    <Content Include="Views\VmTblUsers\_Search.cshtml" />
+    <Content Include="Views\VmTblUsers\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

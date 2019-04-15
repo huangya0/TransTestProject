@@ -58,7 +58,9 @@
     <Compile Include="Role\RoleSearchModel.cs" />
     <Compile Include="SampleItemModel.cs" />
     <Compile Include="UserModel.cs" />
-    <Compile Include="VmTblUser.cs" />
+    <Compile Include="User\UserModel.cs" />
+    <Compile Include="User\UserSearchModel.cs" />
+    <Compile Include="User\VmTblUser.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

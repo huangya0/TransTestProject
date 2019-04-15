@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EMS.Model.Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EMS.Model
 {
-    public class VmTblUser
+    public class VmTblUser : BaseModel
     {
         [Key]
         public int UserID { get; set; }
@@ -45,15 +46,15 @@ namespace EMS.Model
 
         public bool? CanDelete { get; set; }
 
-        public DateTime CreatedDate { get; set; }
+        //public DateTime CreatedDate { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string CreatedBy { get; set; }
+        //[Required]
+        //[StringLength(50)]
+        //public string CreatedBy { get; set; }
 
-        public DateTime? UpdatedDate { get; set; }
+        //public DateTime? UpdatedDate { get; set; }
 
-        [StringLength(50)]
-        public string UpdatedBy { get; set; }
+        //[StringLength(50)]
+        //public string UpdatedBy { get; set; }
     }
 }
