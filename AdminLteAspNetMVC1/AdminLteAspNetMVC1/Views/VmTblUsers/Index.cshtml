@@ -7,6 +7,19 @@
 
 <p>
     @Html.ActionLink("Create New", "Create")
+    @using (Ajax.BeginForm("AddComment", "VmTblUsers",  new AjaxOptions
+    {
+        HttpMethod = "POST",
+        UpdateTargetId = "txtComments",
+        InsertionMode = InsertionMode.InsertAfter
+    }))
+    {
+        @Html.TextArea("Comment", new {id= "txtComments", rows = 5, cols = 50 })
+        <button type="submit">Add Comment</button>
+    }
+
+    @Html.ActionLink("Ajax Example", "Index", "VmTblUsers", new { area = "" }, new { @class = "navbar-brand" })
+
 </p>
 <table class="table">
     <tr>
