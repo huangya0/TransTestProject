@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "主页面";
+}
+<h2>主页面</h2>
+
+@using (Ajax.BeginForm("AjaxForm", "Ajax", new AjaxOptions { HttpMethod = "Post" }, new { role = "form" }))
+{
+    <div>
+        <label for="i1">第一</label>
+        <input type="text" name="Field1" id="i1" />
+    </div>
+    <div>
+        <label for="i2">第二</label>
+        <input type="text" name="Field2" id="i2" />
+    </div>
+    <div>
+        <label for="i3">第三</label>
+        <input type="text" name="Field3" id="i3" />
+    </div>
+    <input type="submit" value="提交" />
+}
+
+<p>列表详细信息</p>
+<div id="partialDiv"></div>
+<script>
+    debugger;
+    $('#partialDiv').load('@Url.Action("ListPage", "Ajax")');
+</script>
+
+<p>列表详细信息2</p>
+@Ajax.ActionLink("获取简单内容", "GetTableContent", new AjaxOptions { UpdateTargetId = "partialDiv3", InsertionMode = InsertionMode.InsertAfter, HttpMethod = "Get" })
+<div id="partialDiv3"></div>
+
+<p>列表详细信息2</p>
+@Ajax.ActionLink("加载详细列表", "ListPage", new AjaxOptions { UpdateTargetId = "partialDiv2", InsertionMode = InsertionMode.InsertAfter, HttpMethod = "Get" })
+<div id="partialDiv2"></div>

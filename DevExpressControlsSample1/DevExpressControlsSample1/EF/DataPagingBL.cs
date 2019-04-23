@@ -1,6 +1,7 @@
 ﻿using DevExpressControlsSample1.Uti;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -27,6 +28,29 @@ namespace DevExpressControlsSample1.EF
             //Message = MessageModel.LoadSuccess();
             //return this.ConvertToViewModelList(resultQuery);
             return resultQuery.ToList(); //真正执行query的脚本，IQueryable是延时执行
+        }
+
+        public void UpdateList(List<ELMAH_Error> ls)
+        {
+            try
+            {
+                foreach (var item in ls)
+                {
+                    if (string.IsNullOrEmpty(item.User))
+                    {
+                        item.User = "Zack";
+                    }
+
+                    //context.ELMAH_Error.Attach()
+                    context.ELMAH_Error.AddOrUpdate(item);
+                }
+                context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                //Console.WriteLine(e);
+                throw e;
+            }
         }
 
         private List<ELMAH_Error> ConvertToViewModelList(IQueryable<ELMAH_Error> queryResult)

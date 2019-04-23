@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.colorEdit1 = new DevExpress.XtraEditors.ColorEdit();
             this.dataNavigator1 = new DevExpress.XtraEditors.DataNavigator();
             this.imageEdit1 = new DevExpress.XtraEditors.ImageEdit();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnUploadFile = new System.Windows.Forms.Button();
             this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
             this.dataSet1 = new XtraReportsDemos.HugeAmountRecords.DataSet();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -56,6 +56,10 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.repositoryItemCalcEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
+            this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
+            this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -70,6 +74,12 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnOpenDataPagingFrm = new System.Windows.Forms.Button();
             this.btnOpenUCPagerSamge = new System.Windows.Forms.Button();
+            this.btnRepositoryItemMemoFrm = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.gridControlFiles = new DevExpress.XtraGrid.GridControl();
+            this.gridViewFiles = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.btnReadFolder = new System.Windows.Forms.Button();
+            this.btnSelectedFile = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.colorEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
@@ -82,14 +92,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlFiles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewFiles)).BeginInit();
             this.SuspendLayout();
             // 
             // colorEdit1
             // 
             this.colorEdit1.EditValue = System.Drawing.Color.Empty;
-            this.colorEdit1.Location = new System.Drawing.Point(215, 126);
+            this.colorEdit1.Location = new System.Drawing.Point(815, 80);
             this.colorEdit1.Name = "colorEdit1";
             this.colorEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -98,7 +114,7 @@
             // 
             // dataNavigator1
             // 
-            this.dataNavigator1.Location = new System.Drawing.Point(373, 381);
+            this.dataNavigator1.Location = new System.Drawing.Point(1015, 413);
             this.dataNavigator1.Name = "dataNavigator1";
             this.dataNavigator1.Size = new System.Drawing.Size(172, 24);
             this.dataNavigator1.TabIndex = 1;
@@ -113,19 +129,19 @@
             this.imageEdit1.Size = new System.Drawing.Size(100, 20);
             this.imageEdit1.TabIndex = 2;
             // 
-            // button1
+            // btnUploadFile
             // 
-            this.button1.Location = new System.Drawing.Point(241, 42);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnUploadFile.Location = new System.Drawing.Point(241, 42);
+            this.btnUploadFile.Name = "btnUploadFile";
+            this.btnUploadFile.Size = new System.Drawing.Size(75, 23);
+            this.btnUploadFile.TabIndex = 3;
+            this.btnUploadFile.Text = "btnUploadFile";
+            this.btnUploadFile.UseVisualStyleBackColor = true;
+            this.btnUploadFile.Click += new System.EventHandler(this.btnUploadFile_Click);
             // 
             // buttonEdit1
             // 
-            this.buttonEdit1.Location = new System.Drawing.Point(142, 233);
+            this.buttonEdit1.Location = new System.Drawing.Point(784, 265);
             this.buttonEdit1.Name = "buttonEdit1";
             this.buttonEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -139,7 +155,7 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Location = new System.Drawing.Point(87, 305);
+            this.panelControl1.Location = new System.Drawing.Point(729, 337);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(200, 100);
             this.panelControl1.TabIndex = 5;
@@ -329,14 +345,18 @@
             // gridControl1
             // 
             this.gridControl1.Cursor = System.Windows.Forms.Cursors.Default;
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.gridControl1.Location = new System.Drawing.Point(590, 168);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemComboBox1});
+            this.repositoryItemComboBox1,
+            this.repositoryItemTextEdit1,
+            this.repositoryItemCalcEdit1,
+            this.repositoryItemMemoEdit1,
+            this.repositoryItemMemoExEdit1});
             this.gridControl1.Size = new System.Drawing.Size(400, 200);
             this.gridControl1.TabIndex = 7;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -363,6 +383,29 @@
             this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
+            // 
+            // repositoryItemTextEdit1
+            // 
+            this.repositoryItemTextEdit1.AutoHeight = false;
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
+            // 
+            // repositoryItemCalcEdit1
+            // 
+            this.repositoryItemCalcEdit1.AutoHeight = false;
+            this.repositoryItemCalcEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemCalcEdit1.Name = "repositoryItemCalcEdit1";
+            // 
+            // repositoryItemMemoEdit1
+            // 
+            this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
+            // 
+            // repositoryItemMemoExEdit1
+            // 
+            this.repositoryItemMemoExEdit1.AutoHeight = false;
+            this.repositoryItemMemoExEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemMemoExEdit1.Name = "repositoryItemMemoExEdit1";
             // 
             // bindingNavigator1
             // 
@@ -497,11 +540,65 @@
             this.btnOpenUCPagerSamge.UseVisualStyleBackColor = true;
             this.btnOpenUCPagerSamge.Click += new System.EventHandler(this.btnOpenUCPagerSamge_Click);
             // 
+            // btnRepositoryItemMemoFrm
+            // 
+            this.btnRepositoryItemMemoFrm.Location = new System.Drawing.Point(12, 159);
+            this.btnRepositoryItemMemoFrm.Name = "btnRepositoryItemMemoFrm";
+            this.btnRepositoryItemMemoFrm.Size = new System.Drawing.Size(165, 23);
+            this.btnRepositoryItemMemoFrm.TabIndex = 11;
+            this.btnRepositoryItemMemoFrm.Text = "btnRepositoryItemMemoFrm";
+            this.btnRepositoryItemMemoFrm.UseVisualStyleBackColor = true;
+            this.btnRepositoryItemMemoFrm.Click += new System.EventHandler(this.btnRepositoryItemMemoFrm_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // gridControlFiles
+            // 
+            this.gridControlFiles.Cursor = System.Windows.Forms.Cursors.Default;
+            this.gridControlFiles.Location = new System.Drawing.Point(9, 197);
+            this.gridControlFiles.MainView = this.gridViewFiles;
+            this.gridControlFiles.Name = "gridControlFiles";
+            this.gridControlFiles.Size = new System.Drawing.Size(400, 200);
+            this.gridControlFiles.TabIndex = 12;
+            this.gridControlFiles.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewFiles});
+            // 
+            // gridViewFiles
+            // 
+            this.gridViewFiles.GridControl = this.gridControlFiles;
+            this.gridViewFiles.Name = "gridViewFiles";
+            // 
+            // btnReadFolder
+            // 
+            this.btnReadFolder.Location = new System.Drawing.Point(202, 159);
+            this.btnReadFolder.Name = "btnReadFolder";
+            this.btnReadFolder.Size = new System.Drawing.Size(139, 23);
+            this.btnReadFolder.TabIndex = 13;
+            this.btnReadFolder.Text = "btnReadFolder";
+            this.btnReadFolder.UseVisualStyleBackColor = true;
+            this.btnReadFolder.Click += new System.EventHandler(this.btnReadFolder_Click);
+            // 
+            // btnSelectedFile
+            // 
+            this.btnSelectedFile.Location = new System.Drawing.Point(355, 159);
+            this.btnSelectedFile.Name = "btnSelectedFile";
+            this.btnSelectedFile.Size = new System.Drawing.Size(139, 23);
+            this.btnSelectedFile.TabIndex = 14;
+            this.btnSelectedFile.Text = "btnSelectedFile";
+            this.btnSelectedFile.UseVisualStyleBackColor = true;
+            this.btnSelectedFile.Click += new System.EventHandler(this.btnSelectedFile_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1056, 450);
+            this.Controls.Add(this.btnSelectedFile);
+            this.Controls.Add(this.btnReadFolder);
+            this.Controls.Add(this.gridControlFiles);
+            this.Controls.Add(this.btnRepositoryItemMemoFrm);
             this.Controls.Add(this.btnOpenUCPagerSamge);
             this.Controls.Add(this.btnOpenDataPagingFrm);
             this.Controls.Add(this.bindingNavigator1);
@@ -509,7 +606,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.buttonEdit1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnUploadFile);
             this.Controls.Add(this.imageEdit1);
             this.Controls.Add(this.dataNavigator1);
             this.Controls.Add(this.colorEdit1);
@@ -527,9 +624,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlFiles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewFiles)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -540,7 +643,7 @@
         private DevExpress.XtraEditors.ColorEdit colorEdit1;
         private DevExpress.XtraEditors.DataNavigator dataNavigator1;
         private DevExpress.XtraEditors.ImageEdit imageEdit1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnUploadFile;
         private DevExpress.XtraEditors.ButtonEdit buttonEdit1;
         private XtraReportsDemos.HugeAmountRecords.DataSet dataSet1;
         private DevExpress.XtraEditors.PanelControl panelControl1;
@@ -576,6 +679,16 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.Button btnOpenDataPagingFrm;
         private System.Windows.Forms.Button btnOpenUCPagerSamge;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit repositoryItemCalcEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit repositoryItemMemoExEdit1;
+        private System.Windows.Forms.Button btnRepositoryItemMemoFrm;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private DevExpress.XtraGrid.GridControl gridControlFiles;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewFiles;
+        private System.Windows.Forms.Button btnReadFolder;
+        private System.Windows.Forms.Button btnSelectedFile;
     }
 }
 
