@@ -38,6 +38,9 @@ namespace AspNetMvcAjaxWebApp1.Controllers
         {
             if (Request.IsAjaxRequest())
             {
+                //此处保存到db
+                //if(ModelState.IsValid)
+
                 string itemPro = JsonConvert.SerializeObject(item);
                 //string scriptStr = "<script>alert('服务器端返回脚本提示');</script>";
                 return JavaScript($"alert('服务器端返回脚本提示，你提交的数据json是{itemPro}')");
