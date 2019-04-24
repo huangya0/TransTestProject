@@ -145,9 +145,11 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AjaxController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ValidateSampleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Models\PersonViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -191,6 +193,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Ajax\MainPage.cshtml" />
     <Content Include="Views\Ajax\ListPage.cshtml" />
+    <Content Include="Views\ValidateSample\_Person.cshtml" />
+    <Content Include="Views\ValidateSample\Index.cshtml" />
+    <Content Include="Views\ValidateSample\_PersonItem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
