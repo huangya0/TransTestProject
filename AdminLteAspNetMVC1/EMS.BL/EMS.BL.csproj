@@ -68,13 +68,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Airwave.GlobalResources\Airwave.GlobalResources.csproj">
-      <Project>{065e07d5-2b9a-4cd4-a194-cdee88b3ae03}</Project>
-      <Name>Airwave.GlobalResources</Name>
-    </ProjectReference>
     <ProjectReference Include="..\EMS.DataProvider\EMS.DataProvider.csproj">
       <Project>{d479b1c8-a753-44ee-8e99-707d5944a9d0}</Project>
       <Name>EMS.DataProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EMS.GlobalResources\EMS.GlobalResources.csproj">
+      <Project>{8dbbbacf-51f3-42a8-a193-47f6e0df7e55}</Project>
+      <Name>EMS.GlobalResources</Name>
     </ProjectReference>
     <ProjectReference Include="..\EMS.Model\EMS.Model.csproj">
       <Project>{005b7582-3ac4-497c-98e3-a151bb6e0444}</Project>

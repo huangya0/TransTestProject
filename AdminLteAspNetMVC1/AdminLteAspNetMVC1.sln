@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMS.BL", "EMS.BL\EMS.BL.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMS.Model", "EMS.Model\EMS.Model.csproj", "{005B7582-3AC4-497C-98E3-A151BB6E0444}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airwave.GlobalResources", "Airwave.GlobalResources\Airwave.GlobalResources.csproj", "{065E07D5-2B9A-4CD4-A194-CDEE88B3AE03}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMS.GlobalResources", "EMS.GlobalResources\EMS.GlobalResources.csproj", "{8DBBBACF-51F3-42A8-A193-47F6E0DF7E55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,10 @@ Global
 		{005B7582-3AC4-497C-98E3-A151BB6E0444}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{005B7582-3AC4-497C-98E3-A151BB6E0444}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{005B7582-3AC4-497C-98E3-A151BB6E0444}.Release|Any CPU.Build.0 = Release|Any CPU
-		{065E07D5-2B9A-4CD4-A194-CDEE88B3AE03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{065E07D5-2B9A-4CD4-A194-CDEE88B3AE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{065E07D5-2B9A-4CD4-A194-CDEE88B3AE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{065E07D5-2B9A-4CD4-A194-CDEE88B3AE03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DBBBACF-51F3-42A8-A193-47F6E0DF7E55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DBBBACF-51F3-42A8-A193-47F6E0DF7E55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DBBBACF-51F3-42A8-A193-47F6E0DF7E55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DBBBACF-51F3-42A8-A193-47F6E0DF7E55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

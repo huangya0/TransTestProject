@@ -22,6 +22,19 @@ namespace AdminLteAspNetMVC1.Controllers
             return View(BusinessLogic.GetUserList());
         }
 
+        public ActionResult AddComment()
+        {
+            //return PartialView((object)("test by zack"));
+            return Json("test test tes");
+        }
+
+
+        [HttpPost]
+        public ActionResult AjaxTest(string message)
+        {
+            return PartialView((object)message);
+        }
+
         // GET: VmTblUsers/Details/5
         public ActionResult Details(int? id)
         {

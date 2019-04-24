@@ -45,7 +45,7 @@ namespace EMS.BL
                 Address = i.Address,
                 CreatedBy = i.CreatedBy,
                 UpdatedDate = DbFunctions.TruncateTime(i.UpdatedDate),
-                CreatedDate = i.CreatedDate.GetValueOrDefault(),
+                CreatedDate = i.CreatedDate??System.DateTime.Now, //.GetValueOrDefault(),
                 UpdatedBy = i.UpdatedBy
 
             });

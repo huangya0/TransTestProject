@@ -89,7 +89,8 @@ namespace AdminLteAspNetMVC1.Controllers
                 bool result = BusinessLogic.CreateSampleItem(sampleItemModel);
                 //return Json(result, JsonRequestBehavior.AllowGet);
                 //return View("Index");
-                return Index();
+                //return Index();
+                return RedirectToAction(nameof(Index));
             }
             else
             {
