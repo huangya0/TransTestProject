@@ -1,125 +1,54 @@
-﻿@model IEnumerable<EMS.Model.VmTblUser>
+﻿@using EMS.GlobalResources
+@model EMS.Model.User.UserModel
 
 @{
     ViewBag.Title = "Index";
 }
 
+<div style="display: none;" data-element="data-VmTblUsers">
+    <span data-url="create-@Url.Action("Create", "VmTblUsers")"></span>
+    <span data-url="update-@Url.Action("Update", "VmTblUsers")"></span>
+    <span data-url="delete-@Url.Action("Delete", "VmTblUsers")"></span>
+    <span data-url="fresh-@Url.Action("Index", "VmTblUsers")"></span>
+    <span data-text="edit-@CommonResource.Page_EditDialogTitle"></span>
+    <span data-text="new-@CommonResource.Page_NewDialogTitle"></span>
+    <span data-text="delete-@MessageResource.Message_ConfirmDeletion"></span>
+</div>
+
 
 <p>
     @Html.ActionLink("Create New", "Create")
-    @using (Ajax.BeginForm("AddComment", "VmTblUsers",  new AjaxOptions
+    @using (Ajax.BeginForm("AjaxForm", "VmTblUsers", new AjaxOptions { HttpMethod = "Post" }, new { role = "form" }))
     {
-        HttpMethod = "POST",
-        UpdateTargetId = "txtComments",
-        InsertionMode = InsertionMode.InsertAfter
-    }))
-    {
-        @Html.TextArea("Comment", new {id= "txtComments", rows = 5, cols = 50 })
-        <button type="submit">Add Comment</button>
+        <div>
+            <label for="i1">第一</label>
+            <input type="text" name="Field1" id="i1" />
+        </div>
+        <div>
+            <label for="i2">第二</label>
+            <input type="text" name="Field2" id="i2" />
+        </div>
+        <div>
+            <label for="i3">第三</label>
+            <input type="text" name="Field3" id="i3" />
+        </div>
+        <input type="submit" value="提交" />
     }
 
-    @Html.ActionLink("Ajax Example", "Index", "VmTblUsers", new { area = "" }, new { @class = "navbar-brand" })
+    @Ajax.ActionLink("获取简单内容", "GetTableContent", new AjaxOptions { UpdateTargetId = "partialDiv3", InsertionMode = InsertionMode.InsertAfter, HttpMethod = "Get" })
+    <div id="partialDiv3"></div>
+
+    <div class="row" data-element="search-VmTblUsers">
+        @using (Html.BeginForm("Index", "VmTblUsers", FormMethod.Get, new { @id = "form-search" }))
+        {
+            @Html.Partial("_Search", Model.Search)
+        }
+    </div>
+    <div class="row" data-element="grid-VmTblUsers">
+        @Html.Partial("_ListContainer", Model)
+    </div>
+
 
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.LogonName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Password)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UserName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Gender)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EmailAddress)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IDNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DateOFBirth)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Status)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CanDelete)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedBy)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UpdatedDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UpdatedBy)
-        </th>
-        <th></th>
-    </tr>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.LogonName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Password)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Gender)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PhoneNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EmailAddress)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IDNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateOFBirth)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CanDelete)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedBy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UpdatedDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UpdatedBy)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.UserID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.UserID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.UserID })
-            </td>
-        </tr>
-    }
-
-</table>
 

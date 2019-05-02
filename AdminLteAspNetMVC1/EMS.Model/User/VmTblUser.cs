@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EMS.Model
+namespace EMS.Model.User
 {
     public class VmTblUser : BaseModel
     {

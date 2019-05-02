@@ -1,1 +1,36 @@
-﻿
+﻿@using EMS.GlobalResources
+@model EMS.Model.User.UserSearchModel
+
+<div class="row section-head">
+    <div class="section-title">
+        @CommonResource.Page_SearchCriteria
+    </div>
+    <div class="titlemenu">
+        <input type="button" class="" value="@CommonResource.Page_Search" data-action="search" />
+        <input type="button" class="" value="@CommonResource.Page_Reset" data-action="clear-search" />
+        <a class="after"></a>
+        <input type="button" class="abtn" value="@CommonResource.Page_Add" data-action="add" />
+
+
+    </div>
+</div>
+<div class="row field-row">
+    <div class="col-sm-2 field-title">
+        @*@CommonResource.QualificaitonPage_QualificaitonName :*@
+        LogonName
+    </div>
+    <div class="col-sm-3">
+        @Html.TextBoxFor(model => model.LogonName, new { @class = "field-input" })
+    </div>
+</div>
+<div>
+    @Html.ValidationSummary()
+</div>
+@Html.HiddenFor(search => search.SortBy)
+@Html.HiddenFor(search => search.SortDirection)
+@Html.HiddenFor(search => search.PageNum)
+@Html.HiddenFor(search => search.PreSearchCriteria)
+
+@Html.ActionLink("查詢", "Index")
+@Ajax.ActionLink("Ajax查询", "Index", new AjaxOptions { HttpMethod = "Get" })
+@Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control" } })

@@ -242,7 +242,7 @@
                         //动态生成menu html content
                         @Html.Partial("_NavBarLTE", AdminLteAspNetMVC1.Common.SiteMenuHelper.GetSiteMenu())
                     }
-                    
+
                 </ul>
                 <!-- /.sidebar-menu -->
             </section>
@@ -361,6 +361,10 @@
     <!-- Optionally, you can add Slimscroll and FastClick plugins.
          Both of these plugins are recommended to enhance the
          user experience. -->
+    <!---->
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/Scripts/action.js"></script>
+    <script src="~/Scripts/common.js"></script>
 
     @*@Scripts.Render("~/bundles/jquery") //改用script标签引用*@
     @*@Scripts.Render("~/bundles/bootstrap") //已由_layout.cshtml中通过script标签加载，且AdminLTE版本较新*@

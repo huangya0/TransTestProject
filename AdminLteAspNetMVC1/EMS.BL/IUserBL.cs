@@ -4,13 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VM = EMS.Model;
+using VM = EMS.Model.User;
 
 namespace EMS.BL
 {
     public interface IUserBL : IMessageModel, IDisposable
     {
         IQueryable<VM.VmTblUser> GetUserList();
+
+        List<VM.VmTblUser> GetUserList(VM.UserSearchModel search);
 
         VM.VmTblUser GetUserByID(int id);
 

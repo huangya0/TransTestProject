@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 using EMS.BL.Common;
 using EMS.DataProvider.Contexts;
 using MD = EMS.DataProvider.Models;
-using VM = EMS.Model;
+using VM = EMS.Model.User;
 using EMS.Model.Common;
 using System.Data.Entity;
+using System.Linq.Expressions;
+using EMS.Utility.Data;
 
 namespace EMS.BL
 {
@@ -70,6 +72,47 @@ namespace EMS.BL
 
             });
             return result;
+        }
+
+        public List<VM.VmTblUser> GetUserList(VM.UserSearchModel search)
+        {
+            string sortBy = "LogonName";
+            string sortDirection = "DESC";
+            if (string.IsNullOrWhiteSpace(search.SortBy))
+            {
+                search.SortBy = sortBy;
+                search.SortDirection = sortDirection;
+            }
+            Expression<Func<MD.Common.Common_Authen_User, bool>> expr = this.BuildSearchCriteria(search);
+            IQueryable<MD.Common.Common_Authen_User> resultQuery = context.Common_Authen_User.Where(expr).SortWith(search.SortBy, search.SortDirection);
+            search.RecordCount = resultQuery.Count();
+            resultQuery = resultQuery.Skip(search.PageSkip).Take(search.PageSize);
+            Message = MessageModel.LoadSuccess();
+            return this.ConvertToViewModelList(resultQuery);
+        }
+
+        private List<VM.VmTblUser> ConvertToViewModelList(IQueryable<MD.Common.Common_Authen_User> queryResult)
+        {
+            List<VM.VmTblUser> result = new List<VM.VmTblUser>();
+            foreach (var item in queryResult)
+            {
+                result.Add(ConvertToViewModel(item));
+            }
+            return result;
+        }
+
+        private Expression<Func<MD.Common.Common_Authen_User, bool>> BuildSearchCriteria(VM.UserSearchModel search)
+        {
+            Expression<Func<MD.Common.Common_Authen_User, bool>> expr = null;
+            DynamicLambda<MD.Common.Common_Authen_User> bulid = new DynamicLambda<MD.Common.Common_Authen_User>();
+            if (!string.IsNullOrEmpty(search.LogonName))
+            {
+                Expression<Func<MD.Common.Common_Authen_User, bool>> temp = s => s.LogonName.Contains(search.LogonName);
+                expr = bulid.BuildQueryAnd(expr, temp);
+            }
+            Expression<Func<MD.Common.Common_Authen_User, bool>> solidFilter = s => (s.Status == 1);
+            expr = bulid.BuildQueryAnd(expr, solidFilter);
+            return expr;
         }
 
         public bool CreateUser(VM.VmTblUser model)

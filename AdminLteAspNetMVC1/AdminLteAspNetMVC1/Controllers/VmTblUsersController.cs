@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using AdminLteAspNetMVC1.Common;
 using AdminLteAspNetMVC1.Models;
-using EMS.Model;
+using EMS.Model.User;
 
 
 namespace AdminLteAspNetMVC1.Controllers
@@ -17,15 +17,58 @@ namespace AdminLteAspNetMVC1.Controllers
     {
 
         // GET: VmTblUsers
-        public ActionResult Index()
+        //public ActionResult Index()
+        //{
+        //    return View(BusinessLogic.GetUserList());
+        //}
+
+        public ActionResult Index(UserSearchModel search)
         {
-            return View(BusinessLogic.GetUserList());
+            ViewBag.IsSortable = true;
+            var model = new UserModel();
+            //search.LogonName = this.GetCurrentCompanyId();
+            model.ItemList = BusinessLogic.GetUserList(search);
+            ViewBag.Message = BusinessLogic.Message;
+            model.Search = search;
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("_ListContainer", model);
+            }
+            return View(model);
         }
 
         public ActionResult AddComment()
         {
             //return PartialView((object)("test by zack"));
             return Json("test test tes");
+        }
+
+        public ActionResult AjaxForm(SubmitViewModel item)
+        {
+            if (Request.IsAjaxRequest())
+            {
+                //此处保存到db
+                //if(ModelState.IsValid)
+
+                string itemPro = Newtonsoft.Json.JsonConvert.SerializeObject(item);
+                //string scriptStr = "<script>alert('服务器端返回脚本提示');</script>";
+                return JavaScript($"alert('服务器端返回脚本提示，你提交的数据json是{itemPro}')");
+            }
+
+            return View(item);
+        }
+
+        public ActionResult GetTableContent()
+        {
+            if (Request.IsAjaxRequest())
+            {
+                string tableStr = "<table><tr><td>这是Ajax返回的内容</td></tr></table>";
+                return Content(tableStr);
+            }
+            else
+            {
+                return View("这不是Ajax返回的内容");
+            }
         }
 
 
