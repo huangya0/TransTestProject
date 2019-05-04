@@ -55,7 +55,7 @@ function loadHtml(url, target, params, callback, hasChildAjaxRequest) {
             data: params,
             beforeSend: function () {
                 turnAjaxWaitOn();
-                //showLoading();
+                showLoading();
             },
             success: function (result) {
                 if (typeof result == "string" && result.indexOf("AjaxNoPermissionMsgKey:") != -1) {
@@ -76,7 +76,7 @@ function loadHtml(url, target, params, callback, hasChildAjaxRequest) {
                 buildError()
             },
             complete: function () {
-                //hideLoading();
+                hideLoading();
                 turnAjaxWaitDown(hasChildAjaxRequest);
             }
         });
@@ -433,7 +433,7 @@ function hideModal(modal, callback) {
     var placeholders = $modal.find(".placehoder");
     placeholders.empty();
     $modal.modal("hide");
-    $body.html('<img class="loading" src="../../../Images/Main/loading.gif" alt="" />');
+    $body.html('<img class="loading" src="../../../Images/loading.gif" alt="" />');
     //$modal_buttons.html("");
     //$modal_overform.html("");
     //$modal_underform.html("");

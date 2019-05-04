@@ -1,0 +1,374 @@
+﻿@using EMS.Common;
+@using EMS.GlobalResources
+@using AdminLteAspNetMVC1.Common
+<div id="loadingUI" style="display: none; border: 4px solid #333333; background-color: #FFFFFF; text-align: center; width: 300px">
+    <div style="margin: 10px; font-weight: bold; font-size: 1.25em; color: #666666;">
+        @MessageResource.Message_WaitProcessing
+    </div>
+    <img src="~/Images/loading.gif" alt="loading" style="margin: 10px auto 20px auto" />
+</div>
+@{
+    //NamingItems namingItems = (NamingItems)ViewBag.NamingItems;
+}
+@Html.Hidden("Message_Hidden", "")
+@Html.ScriptBlock(
+    @<script type="text/javascript">
+    //Show Process Waiting Loading Screen
+    function showLoading() {
+        debugger;
+        $("#loadingUI").bPopup({
+            escClose: false, followSpeed: 0
+           , zIndex: 1990
+           , modalClose: false
+        });
+    }
+    //Hide Process Waiting Loading Screen
+    function hideLoading() {
+        $("#loadingUI").bPopup().close();
+        popup_notification();
+        popup_notification = function () { };
+    }
+    //Show Notification Message
+    function showMessage(msgType, message) {
+        switch (msgType) {
+            case "info":
+                $.growlUI(null, message, 2000, KeepMessage(message), 'growlUISucccess');
+                break;
+            case "error":
+                $.growlUI(null, message, 0, KeepMessage(message), 'growlUIFail');
+                break;
+        }
+        $('.messageImg div').attr('title', '@MessageResource.Tip_ClickToHide').click($.unblockUI); //CommonResource.Tip_ClickToHide
+    }
+   function KeepMessage(message)
+   {
+         $("#Message_Hidden").val(message);
+   }
+    var popup_notification = function () { };
+    //Build Common Successful Notification Message
+    function buildInfo() {
+        popup_notification = function () {
+            showMessage("info", "@MessageResource.Message_CommonSuccessful"); //CommonResource.Message_CommonSuccessful
+        }
+    }
+
+    //Build Common Error Notification Message
+    function buildError(msg) {
+        popup_notification = function () {
+            if (msg != null) {
+                showMessage("error", msg); //CommonResource.Message_CommonError
+            } else {
+                showMessage("error", "@MessageResource.Message_CommonError"); //CommonResource.Message_CommonError
+            }
+        }
+    }
+    //Building Notification Message with parameter
+    function buildMessage(msgType, msgContent) {
+        popup_notification = function () {
+            showMessage(msgType, msgContent);
+        }
+    }
+    //Common Popup confirm action
+    function commonConfirm() {
+        return confirm("@MessageResource.Message_ConfirmDeletion"); //CommonResource.Message_ConfirmDeletion
+    }
+
+    // dispaly message from cookie "MessageKey"
+    function showMessageFromCookie() {
+
+        var cookieObj = CookieHelper.getCookieObj("MessageKey");
+        if (cookieObj) {
+            if (cookieObj.MessageType != null && cookieObj.MessageType != undefined && cookieObj.MessageType.indexOf("Failure") != -1) {
+                showMessage("error", ChartCodeToString(cookieObj.Message));
+                //buildError();
+            } else {
+                showMessage("info", ChartCodeToString(cookieObj.Message));
+                //buildInfo();
+            }
+        }
+    }
+
+    @{
+            var common_culture = System.Threading.Thread.CurrentThread.CurrentCulture.Name;
+            var common_format = BasicParam.JS_yy_mm_dd; //BasicParam.GetJSDateFormat(ViewData["CurrentCompanyCode"].ToString());
+        }
+
+    function SetDatePickerCulture() {
+        $.datepicker.regional['zh-TW'] = {
+            closeText: '關閉',
+            prevText: '&#x3c;上月',
+            nextText: '下月&#x3e;',
+            currentText: '今天',
+            monthNames: ['一月', '二月', '三月', '四月', '五月', '六月',
+         '七月', '八月', '九月', '十月', '十一月', '十二月'],
+            monthNamesShort: ['一', '二', '三', '四', '五', '六',
+            '七', '八', '九', '十', '十一', '十二'],
+            dayNames: ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'],
+            dayNamesShort: ['周日', '周一', '周二', '周三', '周四', '周五', '周六'],
+            dayNamesMin: ['日', '一', '二', '三', '四', '五', '六'],
+            weekHeader: '周',
+            dateFormat: 'yy/mm/dd',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: true,
+            yearSuffix: '年'
+        };
+        $.datepicker.setDefaults($.datepicker.regional['zh-TW']);
+    }
+
+    $(function () {
+        var culture = "@common_culture";
+
+        if (culture == "zh-CN") {
+
+            $.datepicker.setDefaults($.datepicker.regional['zh-CN']);
+
+        }
+        else if (culture == "zh-HK") {
+            SetDatePickerCulture()
+            //$.datepicker.setDefaults($.datepicker.regional['zh-CN']);
+        }
+        else {
+            $.datepicker.setDefaults($.datepicker.regional['en-US']);
+            culture = 'en-US';
+        }
+        var format = "@common_format";
+
+        $("input[data-type=datepicker]").not("[date-no]").datepicker("option", "dateFormat", format);
+        SetDatePicker(culture, format);
+    });
+    function SetDatePicker(culture, format) {
+        culture = "@common_culture";
+        format = "@common_format";
+        @*var format = "@Towngas.Airwave.Web.Common.BasicParam.GetJSDateFormat(ViewData["CurrentCompanyCode"].ToString())";*@
+        $("input[data-type=datepicker]").each(function (index, element) {
+            $date = $(element);
+            var value = $date.val();
+            $date.datepicker({
+                showButtonPanel: true,
+                dateFormat: format,
+                showButtonPanel: true,
+                defaultDate: convertDate(value)
+            });
+            var tempDate = $date.datepicker("getDate");
+
+            // dateless:begin
+            if ($date.filter("[data-val-dateless]").length > 0) {
+                var maxDate = $date.attr("data-val-dateless-maxdate");
+                var isequal = $date.attr("data-val-dateless-isequal");
+                var comparefield = $date.attr("data-val-dateless-comparefield");
+
+                if (maxDate != null && maxDate != undefined && maxDate != "") {
+                    if (isequal == "True") { // maxDate can be select
+                        maxDate = new Date(maxDate);
+                    }
+                    else {
+                        maxDate = new Date(maxDate);
+                        maxDate = new Date(maxDate.setDate(maxDate.getDate() - 1));
+                    }
+                    $date.datepicker("option", "maxDate", maxDate);
+                }
+
+                if (comparefield) {
+                    var $compare_biggerfield = $("#" + comparefield);
+                    if ($compare_biggerfield.filter("[data-type=datepicker]").length > 0 && $compare_biggerfield.datepicker != null) {
+                        var current = $date.datepicker("getDate");
+                        var compare_minDate = $compare_biggerfield.datepicker("option", "minDate");
+                        if (current != null && compare_minDate == null) {
+                            //2.reset the compare datepicker
+                            if (isequal == "True") {
+                                $compare_biggerfield.datepicker("option", "minDate", current);
+                            } else {
+                                current = current.setDate(current.getDate() + 1);
+                                $compare_biggerfield.datepicker("option", "minDate", current);
+                            }
+                        }
+                        $date.datepicker("option", "onSelect", function (textdate, datepicker) {
+                            var selectDate = convertDate(textdate);
+                            var $currentDatePicker = $(this);
+                            var isequal = $currentDatePicker.attr("data-val-dateless-isequal");
+                            var compare_biggerfield = $currentDatePicker.attr("data-val-dateless-comparefield");
+                            var compare_smallfield = $currentDatePicker.attr("data-val-dategreater-comparefield");
+                            if (compare_biggerfield) {
+                                var $compare_biggerfield = $("#" + compare_biggerfield);
+                                if ($compare_biggerfield.datepicker) {
+                                    if (isequal == "True") {
+                                        $compare_biggerfield.datepicker("option", "minDate", selectDate);
+                                    } else {
+                                        selectDate = new Date(selectDate.setDate(selectDate.getDate() + 1));
+                                        var comparemaxDate = $compare_biggerfield.datepicker("option", "minDate");
+                                        $compare_biggerfield.datepicker("option", "minDate", selectDate);
+                                    }
+                                    $compare_biggerfield.datepicker("option", "showButtonPanel", true);
+                                }
+                            }
+
+                            var bigger_isequal = $currentDatePicker.attr("data-val-dategreater-isequal");
+                            var compare_biggerfield = $currentDatePicker.attr("data-val-dategreater-comparefield");
+                            if (compare_smallfield) {
+                                var $compare_smallfield = $("#" + compare_smallfield);
+                                if ($compare_smallfield.datepicker) {
+                                    if (bigger_isequal == "True") {
+                                        $compare_smallfield.datepicker("option", "maxDate", selectDate);
+                                    } else {
+                                        selectDate = new Date(selectDate.setDate(selectDate.getDate() - 1));
+                                        var compareMinDate = $compare_smallfield.datepicker("option", "minDate");
+                                        $compare_smallfield.datepicker("option", "maxDate", selectDate);
+                                    }
+                                    $compare_smallfield.datepicker("option", "showButtonPanel", true);
+                                }
+                            }
+                        });
+                    }
+                }
+            }
+            else {
+                $date.datepicker({
+                    showButtonPanel: true,
+                    dateFormat: format
+                });
+            }
+            // dateless:end
+
+            // dategreater:begin
+            if ($date.filter("[data-val-dategreater]").length > 0) {
+                var minDate = $date.attr("data-val-dategreater-mindate");
+                var isequal = $date.attr("data-val-dategreater-isequal");
+                var comparefield = $date.attr("data-val-dategreater-comparefield");
+
+                if (minDate != null && minDate != undefined && minDate != "") {
+                    if (isequal == "True") { // minDate can be select
+                        minDate = new Date(minDate);
+                    }
+                    else {
+                        minDate = new Date(minDate);
+                        minDate = new Date(minDate.setDate(minDate.getDate() + 1));
+                    }
+                    $date.datepicker("option", "minDate", minDate);
+                }
+
+                if (comparefield) {
+                    var $compare_smallfield = $("#" + comparefield);
+                    if ($compare_smallfield.filter("[data-type=datepicker]").length > 0 && $compare_smallfield.datepicker != null) {
+                        var current = $date.datepicker("getDate");
+                        var compare_maxDate = $compare_smallfield.datepicker("option", "maxDate");
+                        if (current != null && compare_maxDate == null) {
+                            //2.reset the compare datepicker
+                            if (isequal == "True") {
+                                $compare_smallfield.datepicker("option", "maxDate", current);
+                            } else {
+                                current = current.setDate(current.getDate() + 1);
+                                $compare_smallfield.datepicker("option", "maxDate", current);
+                            }
+                        }
+                        $date.datepicker("option", "onSelect", function (textdate, datepicker) {
+                            var selectDate = convertDate(textdate);
+                            var $currentDatePicker = $(this);
+                            var small_isequal = $currentDatePicker.attr("data-val-dategreater-isequal");
+                            var compare_smallfield = $currentDatePicker.attr("data-val-dategreater-comparefield");
+                            if (compare_smallfield) {
+                                var $compare_smallfield = $("#" + compare_smallfield);
+                                if ($compare_smallfield.datepicker) {
+                                    if (small_isequal == "True") {
+                                        $compare_smallfield.datepicker("option", "maxDate", selectDate);
+                                    } else {
+                                        selectDate = new Date(selectDate.setDate(selectDate.getDate() - 1));
+                                        var compareMinDate = $compare_smallfield.datepicker("option", "minDate");
+                                        $compare_smallfield.datepicker("option", "maxDate", selectDate);
+                                    }
+                                    $compare_smallfield.datepicker("option", "showButtonPanel", true);
+                                }
+                            }
+
+                            var compare_biggerfield = $currentDatePicker.attr("data-val-dateless-comparefield");
+                            var bigger_isequal = $currentDatePicker.attr("data-val-dateless-isequal");
+                            if (compare_biggerfield) {
+                                var $compare_biggerfield = $("#" + compare_biggerfield);
+                                if ($compare_biggerfield.datepicker) {
+                                    if (bigger_isequal == "True") {
+                                        $compare_biggerfield.datepicker("option", "minDate", selectDate);
+                                    } else {
+                                        selectDate = new Date(selectDate.setDate(selectDate.getDate() + 1));
+                                        var comparemaxDate = $compare_biggerfield.datepicker("option", "minDate");
+                                        $compare_biggerfield.datepicker("option", "minDate", selectDate);
+                                    }
+                                    $compare_biggerfield.datepicker("option", "showButtonPanel", true);
+                                }
+                            }
+                        });
+                    }
+                }
+            }
+            else {
+                $date.datepicker({
+                    showButtonPanel: true,
+                    dateFormat: format
+                });
+            }
+            //dategreater: end
+
+            $date.datepicker("setDate", tempDate);
+        });
+    }
+    function convertDate(date) {
+        var dateSplit = date.split("-");
+        if (dateSplit[0].length == 4) { // yyyy-mm-dd
+            return new Date(dateSplit[0], dateSplit[1] - 1, dateSplit[2]);
+        } else { // dd-mm-yyyy
+            return new Date(dateSplit[2], dateSplit[1] - 1, dateSplit[0]);
+        }
+    }
+
+    function formatDateTime(datetime) {
+        var format = "@common_format";
+        try {
+            var newDate = new Date(datetime).format(format);
+            return newDate;
+        }
+        catch (e) {
+            return "";
+        }
+    }
+
+    @{
+            //string code = ViewData["CurrentCompanyCode"].ToString();
+            //var cacheContainer = CacheContainer.GetInstance();
+            //var company = cacheContainer.GetAllCompany().FirstOrDefault(m => m.Code.Equals(code, StringComparison.OrdinalIgnoreCase));
+            //var companyId = company == null ? 0 : company.Id;
+        }
+
+    @*function formatValidMessage() {
+        var $validInputs = $("[data-val=true]");
+        if ($validInputs.length > 0) {
+            for (var i = 0; i < $validInputs.length; i++) {
+                // 获取该对象所有属性名
+                var attrs = $validInputs[i].attributes;
+                var $input = $($validInputs[i]);
+                for (var j = 0; j < attrs.length; j++) {
+                    if (attrs[j].name.indexOf("data-val-") != -1) {
+                        var orginVal = $input.attr(attrs[j].name);
+                        $input.attr(attrs[j].name, orginVal.replace(/\['Team'\]/gi, "@namingItems.GetNamingValue(DefaultNamingItem.Team)"));
+                        }
+                    }
+                }
+            }
+        }
+
+        function formatValidMessage2() {
+            var $errorList = $(".validation-summary-errors li");
+            var $errorCount = $errorList.length;
+            if ($errorCount > 0) {
+                for (var i = 0; i < $errorCount; i++) {
+                    var $errorLi = $errorList[i];
+                    var errorText = $errorLi.textContent;
+                    if (errorText.indexOf("['Team']") != -1) {
+                        errorText = errorText.replace(/\['Team'\]/gi, "@namingItems.GetNamingValue(DefaultNamingItem.Team)");
+                    }
+                    $errorLi.textContent = errorText;
+                }
+            }
+        }*@
+    </script>
+
+
+)

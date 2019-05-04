@@ -7320,6 +7320,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\loading-sm.gif" />
+    <Content Include="Images\loading.gif" />
     <Content Include="Images\logo.jpg" />
     <Content Include="Scripts\action.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -7331,6 +7333,7 @@
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.bpopup.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
@@ -7382,6 +7385,7 @@
     <Content Include="Views\VmTblUsers\_Search.cshtml" />
     <Content Include="Views\VmTblUsers\Update.cshtml" />
     <Content Include="Views\Shared\_Pager.cshtml" />
+    <Content Include="Views\Shared\_BPopout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -7412,6 +7416,10 @@
     <ProjectReference Include="..\EMS.BL\EMS.BL.csproj">
       <Project>{fde0e6bf-6efb-44d8-aed3-5b959faac5a1}</Project>
       <Name>EMS.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EMS.Common\EMS.Common.csproj">
+      <Project>{548139f9-078e-48c8-a291-5b1445ca7d80}</Project>
+      <Name>EMS.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\EMS.GlobalResources\EMS.GlobalResources.csproj">
       <Project>{8dbbbacf-51f3-42a8-a193-47f6e0df7e55}</Project>
