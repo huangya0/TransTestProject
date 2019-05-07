@@ -5,24 +5,65 @@
     <title></title>
     <meta charset="utf-8" />
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="Scripts/Jquery_ajax_extention.js"></script>
 </head>
 <body>
-    <fieldset>
-        <legend>
-            测试Web Api - /app/v1/rest/---项目用IIS Express运行后， 在地址栏里单独输入这个文件的本地路径即可测试
-        </legend>
-        <a href="javascript:add()">添加(post)</a>
-        <a href="javascript:update(1)">更新(put)</a>
-        <a href="javascript:deletes(1)">删除(delete需授权)</a>
-        <a href="javascript:get('')">列表(Get)</a>
-        <a href="javascript:get(1)">实体(Get)</a>
-        <a href="javascript:exists('Batman')">验证(Get)</a>
-        <a href="javascript:deletesSync(1)">同步/异步</a>
-        <a href="javascript:testGetMoreThanOneParam(1 , 3)">Get传多个参数</a>
-    </fieldset>
-    <script>
+<fieldset>
+    <legend>
+        测试Web Api - /app/v1/rest/---项目用IIS Express运行后， 在地址栏里单独输入这个文件的本地路径即可测试
+    </legend>
+    <a href="javascript:add()">添加(post)</a>
+    <a href="javascript:update(1)">更新(put)</a>
+    <a href="javascript:deletes(1)">删除(delete需授权)</a>
+    <a href="javascript:get('')">列表(Get)</a>
+    <a href="javascript:get(1)">实体(Get)</a>
+    <a href="javascript:exists('Batman')">验证(Get)</a>
+    <a href="javascript:deletesSync(1)">同步/异步</a>
+    <a href="javascript:testGetMoreThanOneParam(1 , 3)">Get传多个参数</a>
+</fieldset>
 
-        var siteLinkUrl = "http://localhost:56018/"; //端口需改
+<div style="text-align:center;"> 
+    <div>用户名：<input type="text" id="txt_username" /></div>
+    <div>密  码：<input type="password" id="txt_password"  /></div>
+    <div><input type="button" value="登录" id="btn_login" class="btn-default" /></div>
+    <div id="divTicket"></div>
+</div>
+
+<script>
+
+    var siteLinkUrl = "http://localhost:56018/"; //端口需改
+    var ticket = $("#divTicket").val();
+
+    $(function () {
+        $("#btn_login").click(function () {
+            $.ajax({
+                type: "get",
+                url: siteLinkUrl + "/api/rest/Login",
+                data: { strUser: $("#txt_username").val(), strPwd: $("#txt_password").val() },
+                success: function (data, status) {
+                    if (status == "success") {
+                        if (!data.bRes){
+                            alert("登录失败");
+                            return;
+                        }
+                        alert("登录成功");
+                        //登录成功之后将用户名和用户票据带到主界面
+                        //window.location = "/Home/Index?UserName=" + data.UserName + "&Ticket=" + data.Ticket;
+                        debugger;
+                        $("#divTicket").val(data.Ticket);
+                        $("#divTicket").html(data.Ticket);
+                    }
+                },
+                error: function (e) {
+                },
+                complete: function () {
+
+                }
+
+            });
+        });
+    });
+
     //验证 //GET api/Rest/{id}
     function exists(name) {
         debugger;
@@ -102,11 +143,20 @@
     //删除 //DELETE api/Rest/{id} //需授权
         function deletes(id) {
             debugger;
+            var userTicket = $("#divTicket").val();
         $.ajax({
             url: siteLinkUrl + "api/rest/DeleteByID/" + id,
             type: "POST",
-            success: function (data)
+            beforeSend: function (XHR) {
+                //发送ajax请求之前向http的head里面加入验证信息
+                debugger; //Jquery_ajax_extention.js里已统一定义，不需要各个调用方法再写beforeSend，但需在开始定义ticket变量并赋值
+                XHR.setRequestHeader('Authorization', 'BasicAuth ' + userTicket);
+            },
+            success: function (data, status)
             {
+                if (status == "success") {
+                    debugger;
+                }
                 alert(JSON.stringify(data));
             },
             error: function (error) {

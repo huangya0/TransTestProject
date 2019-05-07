@@ -19,6 +19,7 @@ using System.Web.Http.OData;
 namespace AjaxCallRestWebApi1.Areas.HelpPage
 {
     /// <summary>
+    /// http://www.cnblogs.com/landeanfen/p/5210356.html
     /// Use this class to customize the Help Page.
     /// For example you can set a custom <see cref="System.Web.Http.Description.IDocumentationProvider"/> to supply the documentation
     /// or you can provide the samples for the requests/responses.
