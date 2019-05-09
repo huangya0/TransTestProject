@@ -53,6 +53,7 @@
                         debugger;
                         $("#divTicket").val(data.Ticket);
                         $("#divTicket").html(data.Ticket);
+                        localStorage.setItem("currentUser_Token", data.Ticket); //存在localStorage中以免被F5刷掉
                     }
                 },
                 error: function (e) {
@@ -78,6 +79,7 @@
                         debugger;
                         $("#divTicket").val("");
                         $("#divTicket").html("");
+                        localStorage.setItem("currentUser_Token", "");
                     }
                 },
                 error: function (e) {
@@ -169,7 +171,8 @@
     //删除 //DELETE api/Rest/{id} //需授权
         function deletes(id) {
             debugger;
-            var userTicket = $("#divTicket").val();
+            //var userTicket = $("#divTicket").val();
+            var userTicket = localStorage.getItem("currentUser_Token");
         $.ajax({
             url: siteLinkUrl + "api/rest/DeleteByID/" + id,
             type: "POST",
