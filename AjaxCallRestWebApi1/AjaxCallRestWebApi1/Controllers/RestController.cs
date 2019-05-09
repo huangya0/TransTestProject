@@ -78,6 +78,15 @@ namespace AjaxCallRestWebApi1.Controllers
             return oUser;
         }
 
+        [HttpGet]
+        public object Logout(string strUser)
+        {
+            FormsAuthentication.SignOut();
+            //HttpContext.Current.Session[strUser] = oUser;
+
+            return "Logout success!";
+        }
+
         //校验用户名密码（正式环境中应该是数据库校验）
         private bool ValidateUser(string strUser, string strPwd)
         {
