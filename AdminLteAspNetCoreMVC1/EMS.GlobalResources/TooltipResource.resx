@@ -1,0 +1,743 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CancelReason_Name" xml:space="preserve">
+    <value>The reason of canceling the order</value>
+  </data>
+  <data name="Common_Attachment_Description" xml:space="preserve">
+    <value>Attachment's Description</value>
+  </data>
+  <data name="Company_Attachlimited" xml:space="preserve">
+    <value>Company's Attachment Limits</value>
+  </data>
+  <data name="Company_Code" xml:space="preserve">
+    <value>Company's Code</value>
+  </data>
+  <data name="PasswordPolicy_ContainLetter" xml:space="preserve">
+    <value>Whether a password containing letters</value>
+  </data>
+  <data name="PasswordPolicy_ContainNumber" xml:space="preserve">
+    <value>Whether a password containing number</value>
+  </data>
+  <data name="Company_Description" xml:space="preserve">
+    <value>Company's Description</value>
+  </data>
+  <data name="Company_DisplayName" xml:space="preserve">
+    <value>Company's Full Name</value>
+  </data>
+  <data name="Company_EmailSender" xml:space="preserve">
+    <value>Company's Email Sender</value>
+  </data>
+  <data name="Company_FooterText" xml:space="preserve">
+    <value>Company's Footer Text</value>
+  </data>
+  <data name="Company_IsEquip" xml:space="preserve">
+    <value>Whether to enable EquipCal function</value>
+  </data>
+  <data name="Company_Language" xml:space="preserve">
+    <value>Company's Default Language</value>
+  </data>
+  <data name="Company_Logo" xml:space="preserve">
+    <value>Company's Logo</value>
+  </data>
+  <data name="PasswordPolicy_MinLength" xml:space="preserve">
+    <value>Minimum password length</value>
+  </data>
+  <data name="Company_Name" xml:space="preserve">
+    <value>Company's Short Name</value>
+  </data>
+  <data name="Company_ServiceType" xml:space="preserve">
+    <value>Company's Service Type</value>
+  </data>
+  <data name="Company_Theme" xml:space="preserve">
+    <value>Company's Theme</value>
+  </data>
+  <data name="Company_UserLimited" xml:space="preserve">
+    <value>Company's User Limits</value>
+  </data>
+  <data name="Company_WebSiteType" xml:space="preserve">
+    <value>Company's Web Site Type</value>
+  </data>
+  <data name="EmailTemplate_Name" xml:space="preserve">
+    <value>Email Template Name</value>
+  </data>
+  <data name="EquipType_Item_Descrption" xml:space="preserve">
+    <value>['Item'] Template's Description</value>
+  </data>
+  <data name="EquipType_Item_Manftr" xml:space="preserve">
+    <value>['Item'] Template's Manufacturer</value>
+  </data>
+  <data name="EquipType_Item_Model" xml:space="preserve">
+    <value>['Item'] Template's Model</value>
+  </data>
+  <data name="EquipType_Item_Name" xml:space="preserve">
+    <value>['Item'] Template's Name</value>
+  </data>
+  <data name="EquipType_Item_No" xml:space="preserve">
+    <value>['Item'] Template's Number</value>
+  </data>
+  <data name="EquipType_Item_PredefineName" xml:space="preserve">
+    <value>['Item'] Template's Predefine Name</value>
+  </data>
+  <data name="EquipType_Item_Remark" xml:space="preserve">
+    <value>['Item'] Template's Service Remark</value>
+  </data>
+  <data name="EquipType_Plan_AlarmLevel" xml:space="preserve">
+    <value>Item Template Plan's Alarming Level,value must be number</value>
+  </data>
+  <data name="EquipType_Plan_AlarmLevelInterval" xml:space="preserve">
+    <value>Item Template Plan's Alarming Level Interval,value must be number</value>
+  </data>
+  <data name="EquipType_Plan_EstiaSerDuration" xml:space="preserve">
+    <value>Item Template Plan's Estimate Duration,must be number</value>
+  </data>
+  <data name="EquipType_Plan_MaintCheck" xml:space="preserve">
+    <value>Item Template Plan's Maintance Check</value>
+  </data>
+  <data name="EquipType_Plan_MaintConDesc" xml:space="preserve">
+    <value>Description of Item Template Plan's Maintance Content </value>
+  </data>
+  <data name="EquipType_Plan_MaintUserRequirDesc" xml:space="preserve">
+    <value>Description of ItemTemplate Plan's User Maintance Requirement</value>
+  </data>
+  <data name="EquipType_Plan_Name" xml:space="preserve">
+    <value>Item Template Plan's Name</value>
+  </data>
+  <data name="EquipType_Plan_OtherRequest" xml:space="preserve">
+    <value>Item Template Plan's Other Request</value>
+  </data>
+  <data name="EquipType_Plan_RepairLevel" xml:space="preserve">
+    <value>Item Template Plan's Repair Level,value must be number</value>
+  </data>
+  <data name="EquipType_Plan_RepairLevelInterval" xml:space="preserve">
+    <value>Item Template Plan's Repair Level Interval,value must be number</value>
+  </data>
+  <data name="Equip_Category" xml:space="preserve">
+    <value>The item's Category.</value>
+  </data>
+  <data name="Equip_Contractor" xml:space="preserve">
+    <value>item Contractor</value>
+  </data>
+  <data name="Equip_ItemName" xml:space="preserve">
+    <value>Item's Name</value>
+  </data>
+  <data name="Equip_ItemNo" xml:space="preserve">
+    <value>A unique no of the equipment (can be alphanumeric)</value>
+  </data>
+  <data name="Equip_ItemStatus_All" xml:space="preserve">
+    <value>It means that there is no plan assigned to this equipment yet</value>
+  </data>
+  <data name="Equip_ItemStatus_Green" xml:space="preserve">
+    <value>Green - means that there is no outstanding order at this moment</value>
+  </data>
+  <data name="Equip_ItemStatus_Red" xml:space="preserve">
+    <value>Red - means that the equipment exceeds the planned service date</value>
+  </data>
+  <data name="Equip_ItemStatus_Yellow" xml:space="preserve">
+    <value>Yellow - means that the equipment is approaching the planned service date</value>
+  </data>
+  <data name="Equip_ItemType" xml:space="preserve">
+    <value>Item's type</value>
+  </data>
+  <data name="Equip_Location" xml:space="preserve">
+    <value>Item's location</value>
+  </data>
+  <data name="Equip_Manufacturer" xml:space="preserve">
+    <value>Item's manufacturer</value>
+  </data>
+  <data name="Equip_Model" xml:space="preserve">
+    <value>Item's model</value>
+  </data>
+  <data name="Equip_Name" xml:space="preserve">
+    <value>Item's name (should be a unique name)</value>
+  </data>
+  <data name="Equip_OrgUnit" xml:space="preserve">
+    <value>Item's organization unit (OU)</value>
+  </data>
+  <data name="Equip_ParentItem" xml:space="preserve">
+    <value>For selecting the coresponding parent item.</value>
+  </data>
+  <data name="Equip_ParentItemType" xml:space="preserve">
+    <value>Help you to select 'Parent item'. If there are too many parent items, you can use this to look for the parent item.</value>
+  </data>
+  <data name="Equip_Plan_AlarmingDay" xml:space="preserve">
+    <value>Define the number of days the notification to be sent out prior to the service/inspection due date</value>
+  </data>
+  <data name="Equip_Plan_AlarmingIntervalDay" xml:space="preserve">
+    <value>To define the frequency the reminder notificaiton should be sent  (after issued the first notification)</value>
+  </data>
+  <data name="Equip_Plan_Check" xml:space="preserve">
+    <value>Instruction/steps for the technicans to service/maintain an equipment.</value>
+  </data>
+  <data name="Equip_Plan_ContentDesc" xml:space="preserve">
+    <value>The plan's description</value>
+  </data>
+  <data name="Equip_Plan_EstimateServiceDuration" xml:space="preserve">
+    <value>A value to define the estimated service hours required for servicing the item</value>
+  </data>
+  <data name="Equip_Plan_FirstServiceDate" xml:space="preserve">
+    <value>Define the first service date</value>
+  </data>
+  <data name="Equip_Plan_Interval" xml:space="preserve">
+    <value>A interval (numeric value) between each service period</value>
+  </data>
+  <data name="Equip_Plan_Name" xml:space="preserve">
+    <value>A unique name of the plan</value>
+  </data>
+  <data name="Equip_Plan_Other" xml:space="preserve">
+    <value>Other reason</value>
+  </data>
+  <data name="Equip_Plan_Qualification" xml:space="preserve">
+    <value>Qualification of a technican who can carry out the inspection/service.</value>
+  </data>
+  <data name="Equip_Plan_RepairAlarmingDay" xml:space="preserve">
+    <value>Define the number of days the notification to be sent out prior to the repair due date.</value>
+  </data>
+  <data name="Equip_Plan_RepairAlarmingIntervalDay" xml:space="preserve">
+    <value>after the first alarm day, alarm interval day</value>
+  </data>
+  <data name="Equip_Plan_RequirementDesc" xml:space="preserve">
+    <value>requirement description</value>
+  </data>
+  <data name="Equip_Plan_ServiceBy" xml:space="preserve">
+    <value>the primary person who in charge this item's service.</value>
+  </data>
+  <data name="Equip_Plan_ServiceBy2" xml:space="preserve">
+    <value>the vice-person who in charge this item's service.</value>
+  </data>
+  <data name="Equip_Remark" xml:space="preserve">
+    <value>Something shulde be pay attention to when service this item.</value>
+  </data>
+  <data name="FaultCode_Name" xml:space="preserve">
+    <value>Project fault code</value>
+  </data>
+  <data name="Location_Name" xml:space="preserve">
+    <value>The project's location</value>
+  </data>
+  <data name="Location_ParentName" xml:space="preserve">
+    <value>The project's parent location</value>
+  </data>
+  <data name="MaintSummary_ItemType" xml:space="preserve">
+    <value>Item's type.</value>
+  </data>
+  <data name="MaintSummary_Location" xml:space="preserve">
+    <value>['Item']'s ['Location'].</value>
+  </data>
+  <data name="MaintSummary_OrgUnit" xml:space="preserve">
+    <value>['Item']'s Org. Unit.</value>
+  </data>
+  <data name="MaintSummary_ViewCategory" xml:space="preserve">
+    <value>Annual plan of the repair order or had done service order.</value>
+  </data>
+  <data name="MaintSummary_Year" xml:space="preserve">
+    <value>Search summary for specified year.</value>
+  </data>
+  <data name="OrderPage_ApproveBy" xml:space="preserve">
+    <value>Select a user to approve the order</value>
+  </data>
+  <data name="OrderPage_ApproveResult" xml:space="preserve">
+    <value>Select the approve order result</value>
+  </data>
+  <data name="OrderPage_ApproveResultRemark" xml:space="preserve">
+    <value>Recode the approve order remark</value>
+  </data>
+  <data name="OrderPage_CalBy" xml:space="preserve">
+    <value>Select a user to cal the order</value>
+  </data>
+  <data name="OrderPage_CalCompletionServiceDate" xml:space="preserve">
+    <value>Input the completion date for actually calibration</value>
+  </data>
+  <data name="OrderPage_CalEstimateServiceDate" xml:space="preserve">
+    <value>The order's estimate service date</value>
+  </data>
+  <data name="OrderPage_CalEstimateServiceDuration" xml:space="preserve">
+    <value>The order's estimate service duration</value>
+  </data>
+  <data name="OrderPage_CalRemarkTitle" xml:space="preserve">
+    <value>Recode the cal order remark</value>
+  </data>
+  <data name="OrderPage_CalResult" xml:space="preserve">
+    <value>Select the cal order result</value>
+  </data>
+  <data name="OrderPage_CalServiceDuration" xml:space="preserve">
+    <value>Input the actual duration for cal order</value>
+  </data>
+  <data name="OrderPage_CancelReason" xml:space="preserve">
+    <value>Select a reason to cancel the order</value>
+  </data>
+  <data name="OrderPage_CheckBy" xml:space="preserve">
+    <value>Select a user to check the order</value>
+  </data>
+  <data name="OrderPage_CheckInBy" xml:space="preserve">
+    <value>Select a user to check in the order</value>
+  </data>
+  <data name="OrderPage_CheckResult" xml:space="preserve">
+    <value>Select the check order result</value>
+  </data>
+  <data name="OrderPage_CheckResultRemark" xml:space="preserve">
+    <value>Recode the check order remark</value>
+  </data>
+  <data name="OrderPage_Control" xml:space="preserve">
+    <value>Select a order's control</value>
+  </data>
+  <data name="OrderPage_ExtendServiceDate" xml:space="preserve">
+    <value>Input a date to extend the order</value>
+  </data>
+  <data name="OrderPage_InternalExternal" xml:space="preserve">
+    <value>The order is Internal or External</value>
+  </data>
+  <data name="OrderPage_IsPriority" xml:space="preserve">
+    <value>The order is priority</value>
+  </data>
+  <data name="OrderPage_InspectionBy" xml:space="preserve">
+    <value>Select a user to inspection the order</value>
+  </data>
+  <data name="OrderPage_MaintCompletionServiceDate" xml:space="preserve">
+    <value>Input the completion date for maint(repair) order</value>
+  </data>
+  <data name="OrderPage_MaintEstimateServiceDate" xml:space="preserve">
+    <value>The order's estimate service date</value>
+  </data>
+  <data name="OrderPage_MaintEstimateServiceDuration" xml:space="preserve">
+    <value>The order's estimate service duration</value>
+  </data>
+  <data name="OrderPage_MaintRemarkTitle" xml:space="preserve">
+    <value>Recode the maint order remark</value>
+  </data>
+  <data name="OrderPage_MaintResultTitle" xml:space="preserve">
+    <value>Select the maint order result</value>
+  </data>
+  <data name="OrderPage_MaintServiceDuration" xml:space="preserve">
+    <value>Input the duration for maint(repair) order</value>
+  </data>
+  <data name="OrderPage_NextCalDate" xml:space="preserve">
+    <value>Input next cal date</value>
+  </data>
+  <data name="OrderPage_Remark" xml:space="preserve">
+    <value>Recode the order remark</value>
+  </data>
+  <data name="OrderPage_MaintFollowUpDate" xml:space="preserve">
+    <value>The maint order's follow up date</value>
+  </data>
+  <data name="OrderPage_ReviewBy" xml:space="preserve">
+    <value>Select a user to review the order</value>
+  </data>
+  <data name="OrderPage_ReviewResult" xml:space="preserve">
+    <value>Select the review order result</value>
+  </data>
+  <data name="OrderPage_StandardDeviation" xml:space="preserve">
+    <value>Input the standard deviation for order</value>
+  </data>
+  <data name="OrderPage_WordContent" xml:space="preserve">
+    <value>Input the TI's word content</value>
+  </data>
+  <data name="OrgUnit_Name" xml:space="preserve">
+    <value>OrgUnit's Name</value>
+  </data>
+  <data name="Report_TurnaroundTimeAnalysis_ServiceMonth" xml:space="preserve">
+    <value>Turnaround Time Analysis Service month</value>
+  </data>
+  <data name="Report_Type" xml:space="preserve">
+    <value>Report Formating</value>
+  </data>
+  <data name="SystemCheck_Body" xml:space="preserve">
+    <value>Body</value>
+  </data>
+  <data name="SystemCheck_Receiver" xml:space="preserve">
+    <value>Receiver</value>
+  </data>
+  <data name="SystemCheck_Subject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="Team_Description" xml:space="preserve">
+    <value>Team's Description</value>
+  </data>
+  <data name="Team_Name" xml:space="preserve">
+    <value>Team's Name</value>
+  </data>
+  <data name="Team_TeamType" xml:space="preserve">
+    <value>Team's Type</value>
+  </data>
+  <data name="Team_User" xml:space="preserve">
+    <value>Team's Users</value>
+  </data>
+  <data name="User_Email" xml:space="preserve">
+    <value>User's Email</value>
+  </data>
+  <data name="User_FullName" xml:space="preserve">
+    <value>User's Full Name</value>
+  </data>
+  <data name="User_Language" xml:space="preserve">
+    <value>Users access the default language</value>
+  </data>
+  <data name="User_LogonName" xml:space="preserve">
+    <value>User's Logon Name</value>
+  </data>
+  <data name="User_Roles" xml:space="preserve">
+    <value>User's Roles</value>
+  </data>
+  <data name="UserPage_Title_Colon" xml:space="preserve">
+    <value>User's Title</value>
+  </data>
+  <data name="Company_DateFormat" xml:space="preserve">
+    <value>Company's DateFormat</value>
+  </data>
+  <data name="PasswordPolicy_MaxLength" xml:space="preserve">
+    <value>Maximum password length</value>
+  </data>
+  <data name="PasswordPolicy_MinEnLetterLength" xml:space="preserve">
+    <value>Minimum letter times</value>
+  </data>
+  <data name="PasswordPolicy_NeedSpecialChar" xml:space="preserve">
+    <value>Whether a password containing special char</value>
+  </data>
+  <data name="PasswordPolicy_NoBlankSpace" xml:space="preserve">
+    <value>Whether a password containing space</value>
+  </data>
+  <data name="PasswordPolicy_UnlikePrePwdCount" xml:space="preserve">
+    <value>Password Repeat Interval frequency</value>
+  </data>
+  <data name="Company_Remarks" xml:space="preserve">
+    <value>Company's Remarks</value>
+  </data>
+  <data name="MaintSummary_ItemName" xml:space="preserve">
+    <value>['Item'] Name</value>
+  </data>
+  <data name="OrderPage_ExternalParty" xml:space="preserve">
+    <value>External Party</value>
+  </data>
+  <data name="OrderPage_FollowUp" xml:space="preserve">
+    <value>Follow Up</value>
+  </data>
+  <data name="OrderPage_FollowUpDate" xml:space="preserve">
+    <value>Follow Up Date</value>
+  </data>
+  <data name="Company_ADFS_URL" xml:space="preserve">
+    <value>The login URL by using ADFS method</value>
+  </data>
+  <data name="MaintSummary_PlanTypeCategory" xml:space="preserve">
+    <value>Service order type (fixed/flow)</value>
+  </data>
+  <data name="OrderPage_CheckInDate" xml:space="preserve">
+    <value>Check In Date</value>
+  </data>
+  <data name="Equip_Plan_ManualGenAlarmingDay" xml:space="preserve">
+    <value>Manual Gen Alarming Day</value>
+  </data>
+  <data name="Equip_Plan_ManualGenAlarmingIntervalDay" xml:space="preserve">
+    <value>Manual Gen Alarming Interval Day</value>
+  </data>
+  <data name="TaskPage_ManagementItem" xml:space="preserve">
+    <value>Management Item</value>
+  </data>
+  <data name="TaskPage_NeedNotify" xml:space="preserve">
+    <value>Need Notify</value>
+  </data>
+  <data name="TaskPage_Project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="TaskPage_RiskLevel" xml:space="preserve">
+    <value>Risk Level</value>
+  </data>
+  <data name="TaskTypePage_ManagementItem" xml:space="preserve">
+    <value>Task Template's Management Item</value>
+  </data>
+  <data name="TaskTypePage_Project" xml:space="preserve">
+    <value>Task Template's Project</value>
+  </data>
+  <data name="TaskTypePage_Remark" xml:space="preserve">
+    <value>Task Template's Remark</value>
+  </data>
+  <data name="TaskTypePage_TaskTypeName" xml:space="preserve">
+    <value>Task Template's Name, must be unique</value>
+  </data>
+  <data name="TaskTypePage_TaskTypeRiskLevel" xml:space="preserve">
+    <value>Task Template's Risk Level</value>
+  </data>
+  <data name="CompanyPage_Area" xml:space="preserve">
+    <value>Company area</value>
+  </data>
+  <data name="User_Company" xml:space="preserve">
+    <value>User's Company.If user doesn't only have Sysadmin Administrator Role, Company is require.</value>
+  </data>
+  <data name="Company_Recover" xml:space="preserve">
+    <value>Recover</value>
+  </data>
+  <data name="Company_Suspend" xml:space="preserve">
+    <value>Suspend</value>
+  </data>
+  <data name="CompanyPage_Bloc" xml:space="preserve">
+    <value>Corporate</value>
+  </data>
+  <data name="CompanyPage_EquipmentLimit" xml:space="preserve">
+    <value>Equipment Number Limit</value>
+  </data>
+  <data name="CompanyPage_EquipmentPlanLimit" xml:space="preserve">
+    <value>Equipment Plan Number Limit. This number limit also suits to Equipment Type Plan.</value>
+  </data>
+  <data name="CompanyPage_EquipmentTypeLimit" xml:space="preserve">
+    <value>Equipment Type Number Limit</value>
+  </data>
+  <data name="CompanyPage_LocationLimit" xml:space="preserve">
+    <value>Location Number Limit</value>
+  </data>
+  <data name="CompanyPage_OnlineUserLimit" xml:space="preserve">
+    <value>Company Online User Number Limit</value>
+  </data>
+  <data name="CompanyPage_OrgUnitLimit" xml:space="preserve">
+    <value>Org. Unit Number Limit</value>
+  </data>
+  <data name="CompanyPage_TaskLimit" xml:space="preserve">
+    <value>Task Number  Limit</value>
+  </data>
+  <data name="CompanyPage_TaskTypeLimit" xml:space="preserve">
+    <value>Task Type Number  Limit</value>
+  </data>
+  <data name="CompanyPage_TeamLimit" xml:space="preserve">
+    <value>Team Number Limit</value>
+  </data>
+  <data name="BulkModifyWorker_ExWorker" xml:space="preserve">
+    <value>Select resign user</value>
+  </data>
+  <data name="BulkModifyWorker_OrderStaus" xml:space="preserve">
+    <value>Select resign user belongs working group under the state of the order</value>
+  </data>
+  <data name="BulkModifyWorker_Team" xml:space="preserve">
+    <value>Select resign user working group they belong to</value>
+  </data>
+  <data name="BulkModifyWorker_User" xml:space="preserve">
+    <value>Selection and resign user group on-the-job user with authority</value>
+  </data>
+  <data name="OrderPage_TaskCompletionServiceDate" xml:space="preserve">
+    <value>Input the completion date for task order</value>
+  </data>
+  <data name="CompanyPage_LocationLevels" xml:space="preserve">
+    <value>Location Level Limit</value>
+  </data>
+  <data name="CompanyPage_OULevels" xml:space="preserve">
+    <value>Org. Unit Level Limit</value>
+  </data>
+  <data name="Equip_Supplier" xml:space="preserve">
+    <value>Item's supplier</value>
+  </data>
+  <data name="LabelReport_State_calibration" xml:space="preserve">
+    <value>CALIBRATION</value>
+  </data>
+  <data name="LabelReport_State_checking" xml:space="preserve">
+    <value>CHECKING</value>
+  </data>
+  <data name="LabelReport_State_extended" xml:space="preserve">
+    <value>EXTENDED SERVICE</value>
+  </data>
+  <data name="LabelReport_State_inactive" xml:space="preserve">
+    <value>INACTIVE</value>
+  </data>
+  <data name="LabelReport_State_Reference" xml:space="preserve">
+    <value>REFERENCE CALIBRATION STANDARD</value>
+  </data>
+  <data name="LabelReport_ApprovedBy" xml:space="preserve">
+    <value>Approved By :</value>
+  </data>
+  <data name="LabelReport_CalBy" xml:space="preserve">
+    <value>Cal. By :</value>
+  </data>
+  <data name="LabelReport_CheckBy" xml:space="preserve">
+    <value>Checked By :</value>
+  </data>
+  <data name="LabelReport_Date" xml:space="preserve">
+    <value>Date :</value>
+  </data>
+  <data name="LabelReport_EquipmentNo" xml:space="preserve">
+    <value>Eqm. No. :</value>
+  </data>
+  <data name="LabelReport_ExtDate" xml:space="preserve">
+    <value>Ext. Date :</value>
+  </data>
+  <data name="LabelReport_Next" xml:space="preserve">
+    <value>Next :</value>
+  </data>
+  <data name="LabelReport_VerifiedBy" xml:space="preserve">
+    <value>Verified By :</value>
+  </data>
+  <data name="Bloc_ManagerUser" xml:space="preserve">
+    <value>Management Corporate users</value>
+  </data>
+  <data name="Common_Point2" xml:space="preserve">
+    <value>Only allow two digit after radix point.</value>
+    <comment>小数点后两位有效。</comment>
+  </data>
+  <data name="Page_Templation" xml:space="preserve">
+    <value>To create a new ['Item'], you can select an "['Item'] Template" for editing.  Alternatively, you can select "Empty Template" to start from scratch.</value>
+    <comment>选择一个模板可以减少输入内容，或者从空模板开始。点击【下一步】按钮开始填写['Item']内容。</comment>
+  </data>
+  <data name="ServiceOrderActionDetail_CalibrationApproval" xml:space="preserve">
+    <value>Approve {0} order while order is complete.</value>
+  </data>
+  <data name="ServiceOrderActionDetail_CalibrationExtend" xml:space="preserve">
+    <value>Extend(Delayed) {0} order.</value>
+  </data>
+  <data name="ServiceOrderActionDetail_CalibrationReview" xml:space="preserve">
+    <value>Review {0} order while order is in approval.</value>
+  </data>
+  <data name="ServiceOrderActionDetail_CommonCancel" xml:space="preserve">
+    <value>Cancel this {0} order.</value>
+  </data>
+  <data name="ServiceOrderActionDetail_CommonCheckIn" xml:space="preserve">
+    <value>Check in {0} order while order is complete.</value>
+  </data>
+  <data name="ServiceOrderActionDetail_CommonExecute" xml:space="preserve">
+    <value>Execute {0} work for {0} order.</value>
+  </data>
+  <data name="TaskSwitchDescription" xml:space="preserve">
+    <value>Inspection function switch will affect this switch, if the inspection function is turned off, this switch will automatically set to close.</value>
+  </data>
+  <data name="ServiceOrderActionDetail_CalibrationCheckIn" xml:space="preserve">
+    <value>Check in {0} order.</value>
+  </data>
+  <data name="OrderPage_MeasureBy" xml:space="preserve">
+    <value>Select a user to measure the order</value>
+  </data>
+  <data name="Company_AttachNumberlimitedLimit" xml:space="preserve">
+    <value>A single local upload attachment number limit</value>
+  </data>
+  <data name="Company_AttachSizeSingelPlacelimitedLimit" xml:space="preserve">
+    <value>A single local upload attachment size limit</value>
+  </data>
+  <data name="Company_SingleAttachlimitedLimit" xml:space="preserve">
+    <value>A single upload attachment size limit</value>
+  </data>
+  <data name="MasterOrderSwitchDescription" xml:space="preserve">
+    <value>Inspection function switch will affect this switch, if the inspection function is turned off, this switch will automatically set to close.</value>
+  </data>
+  <data name="Delete_User" xml:space="preserve">
+    <value>Delete User</value>
+  </data>
+  <data name="MaintSummary_MasterCategory" xml:space="preserve">
+    <value>['Item']'s ['MasterCategory']</value>
+  </data>
+  <data name="ServiceOrderActionDetail_CalibrationAssign" xml:space="preserve">
+    <value>Assign this calibration order's work memebers and managent memebers.</value>
+  </data>
+  <data name="ServiceOrderActionDetail_CommonAssign" xml:space="preserve">
+    <value>Assign memebers for this {0} order.</value>
+  </data>
+  <data name="Company_EmailRestriction" xml:space="preserve">
+    <value>Domain name of user's email must follow this setting. If there are multiple restrictions, use "," to separate.</value>
+  </data>
+</root>

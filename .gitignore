@@ -76,3 +76,15 @@
 /TestAreasWebApp/packages
 /TestAreasWebApp/TestAreasWebApp/bin
 /TestAreasWebApp/TestAreasWebApp/obj/Debug
+/AdminLteAspNetCoreMVC1/EMS.DataProvider/bin/Debug/netcoreapp2.2
+/AdminLteAspNetCoreMVC1/EMS.DataProvider/obj
+/AdminLteAspNetCoreMVC1/EMS.GlobalResources/obj
+/AdminLteAspNetCoreMVC1/EMS.GlobalResources/bin/Debug/netcoreapp2.2
+/AdminLteAspNetCoreMVC1/EMS.Model/bin/Debug/netcoreapp2.2
+/AdminLteAspNetCoreMVC1/EMS.Model/obj
+/AdminLteAspNetCoreMVC1/EMS.Utility/bin/Debug/netcoreapp2.2
+/AdminLteAspNetCoreMVC1/EMS.Utility/obj
+/AdminLteAspNetCoreMVC1/EMS.Common/bin/Debug/netcoreapp2.2
+/AdminLteAspNetCoreMVC1/EMS.Common/obj
+/AdminLteAspNetCoreMVC1/EMS.BL/bin/Debug/netcoreapp2.2
+/AdminLteAspNetCoreMVC1/EMS.BL/obj

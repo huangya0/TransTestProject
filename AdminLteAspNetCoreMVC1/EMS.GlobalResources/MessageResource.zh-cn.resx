@@ -1,0 +1,1633 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CancelReasonItem_CancelReasonName" xml:space="preserve">
+    <value>取消原因是必需的！</value>
+  </data>
+  <data name="CancelReasonItem_CancelReasonName_Exist" xml:space="preserve">
+    <value>取消原因已经存在，请重新输入！</value>
+  </data>
+  <data name="CancelReasonItem_CancelReasonName_Length" xml:space="preserve">
+    <value>取消原因的长度必需在2到50之间！</value>
+  </data>
+  <data name="CancelReason_Name_Exist" xml:space="preserve">
+    <value>取消原因已经存在，请重新输入！</value>
+  </data>
+  <data name="ChangePwd_ConfirmNewPwd" xml:space="preserve">
+    <value>新密码确认不能为空！</value>
+  </data>
+  <data name="ChangePwd_Fail" xml:space="preserve">
+    <value>修改密码失败！</value>
+  </data>
+  <data name="ChangePwd_NewPwd" xml:space="preserve">
+    <value>新密码不能为空！</value>
+  </data>
+  <data name="ChangePwd_NewPwdCompare" xml:space="preserve">
+    <value>新密码和新密码确认不一致！</value>
+  </data>
+  <data name="ChangePwd_NewPwdLength" xml:space="preserve">
+    <value>密码长度必需在6到12之间！</value>
+  </data>
+  <data name="ChangePwd_OldPwd" xml:space="preserve">
+    <value>旧密码不能为空！</value>
+  </data>
+  <data name="ChangePwd_OldPwdExist" xml:space="preserve">
+    <value>旧密码不正确！</value>
+  </data>
+  <data name="ChangePwd_Success" xml:space="preserve">
+    <value>修改密码成功！</value>
+  </data>
+  <data name="Common_CompanyCode" xml:space="preserve">
+    <value>编号只能输入英文字母！</value>
+  </data>
+  <data name="Common_DateFormat" xml:space="preserve">
+    <value>日期格式不正确，请重新输入！</value>
+  </data>
+  <data name="Common_EmailExist" xml:space="preserve">
+    <value>邮箱已经被人使用，请重新输入！</value>
+  </data>
+  <data name="Common_EmailFomat" xml:space="preserve">
+    <value>邮箱格式错误，请重新输入！</value>
+  </data>
+  <data name="Common_ResetPasswordSuccess" xml:space="preserve">
+    <value>密码重置成功！</value>
+  </data>
+  <data name="Common_Upload_NoChoosePic" xml:space="preserve">
+    <value>没有选择上传图片</value>
+  </data>
+  <data name="Common_Upload_PicFormat" xml:space="preserve">
+    <value>图片格式不正确</value>
+  </data>
+  <data name="Common_Upload_PicFormat_Col" xml:space="preserve">
+    <value>图片必须是：</value>
+  </data>
+  <data name="Common_Upload_Pixel" xml:space="preserve">
+    <value>像素</value>
+  </data>
+  <data name="CompanyItem_Code" xml:space="preserve">
+    <value>编号是必需的！</value>
+  </data>
+  <data name="CompanyItem_Code_Exist" xml:space="preserve">
+    <value>编号已经存在，请重新输入！</value>
+  </data>
+  <data name="CompanyItem_Code_Length" xml:space="preserve">
+    <value>编号长度必需在2到50之间！</value>
+  </data>
+  <data name="CompanyItem_Description_Length" xml:space="preserve">
+    <value>描述的长度不能大于250！</value>
+  </data>
+  <data name="CompanyItem_Name" xml:space="preserve">
+    <value>公司简称是必需的！</value>
+  </data>
+  <data name="CompanyItem_Name_Exist" xml:space="preserve">
+    <value>公司简称已经存在，请重新输入！</value>
+  </data>
+  <data name="CompanyItem_Name_Length" xml:space="preserve">
+    <value>公司简称的长度必需在2到50之间！</value>
+  </data>
+  <data name="CompanyItem_ServictType" xml:space="preserve">
+    <value>请至少要选择一种服务类型(固定/浮动)！</value>
+  </data>
+  <data name="CompanyItem_Users" xml:space="preserve">
+    <value>你想删除的公司有用户存在。 如果删除该公司，公司下的用户也会被删除。你确定要删除这间公司吗？</value>
+  </data>
+  <data name="CompanyItem_WebSiteType" xml:space="preserve">
+    <value>请至少选择一个开放功能！</value>
+  </data>
+  <data name="Company_MoreThanUser" xml:space="preserve">
+    <value>该公司用户已满，不能再添加新用户！</value>
+  </data>
+  <data name="ContractorItem_ContractorName" xml:space="preserve">
+    <value>供应商是必需的！</value>
+  </data>
+  <data name="ContractorItem_ContractorName_Exist" xml:space="preserve">
+    <value>供应商已经存在，请重新输入！</value>
+  </data>
+  <data name="ContractorItem_ContractorName_Length" xml:space="preserve">
+    <value>供应商的长度必需在2到50之间！</value>
+  </data>
+  <data name="Contractor_Name_Exist" xml:space="preserve">
+    <value>供应商已经存在，请重新输入！</value>
+  </data>
+  <data name="DepartmentItem_Code_Exist" xml:space="preserve">
+    <value>组织架构编号已经存在，请重新输入！</value>
+  </data>
+  <data name="DepartmentItem_DepartmentCode" xml:space="preserve">
+    <value>成本中心是必需的！</value>
+  </data>
+  <data name="DepartmentItem_DepartmentName" xml:space="preserve">
+    <value>组织架构是必需的！</value>
+  </data>
+  <data name="DepartmentItem_Name_Exist" xml:space="preserve">
+    <value>组织架构已经存在，请重新输入！</value>
+  </data>
+  <data name="EmailTemplateItem_CreateSuccess" xml:space="preserve">
+    <value>创建成功！</value>
+  </data>
+  <data name="EmailTemplateItem_SelectCompany" xml:space="preserve">
+    <value>请选择公司！</value>
+  </data>
+  <data name="EquipItem_Contractor" xml:space="preserve">
+    <value>联系人是必需的！</value>
+  </data>
+  <data name="EquipItem_ControlCategory" xml:space="preserve">
+    <value>控制类型是必选的！</value>
+  </data>
+  <data name="EquipItem_Date_Format" xml:space="preserve">
+    <value>日期格式错误！</value>
+  </data>
+  <data name="EquipItem_Date_Required" xml:space="preserve">
+    <value>必需选择日期！</value>
+  </data>
+  <data name="EquipItem_Delete_ServiceOrder" xml:space="preserve">
+    <value>有工单在使用。</value>
+  </data>
+  <data name="EquipItem_Description_Length" xml:space="preserve">
+    <value>描述不能超过250！</value>
+  </data>
+  <data name="EquipItem_Location" xml:space="preserve">
+    <value>【其他】选项卡中，请选择['Location']！</value>
+  </data>
+  <data name="EquipItem_Name" xml:space="preserve">
+    <value>【基础信息】选项卡中，请输入名称！</value>
+  </data>
+  <data name="EquipItem_Name_Length" xml:space="preserve">
+    <value>['Item']名的长度不能超过50！</value>
+  </data>
+  <data name="EquipItem_NextWorkshopServiceDate_Format" xml:space="preserve">
+    <value>日期格式错误！</value>
+  </data>
+  <data name="EquipItem_No" xml:space="preserve">
+    <value>【基础信息】选项卡中，请输入['Item']编号！</value>
+  </data>
+  <data name="EquipItem_No_Exist" xml:space="preserve">
+    <value>['Item']编号已经存在于当前类型！</value>
+  </data>
+  <data name="EquipItem_OrgUnit" xml:space="preserve">
+    <value>【其他】选项卡中，请选择组织架构！</value>
+  </data>
+  <data name="EquipItem_OwnerDepartment" xml:space="preserve">
+    <value>拥有部门是必需的！</value>
+  </data>
+  <data name="EquipItem_ServiceBy" xml:space="preserve">
+    <value>维护人是必需的！</value>
+  </data>
+  <data name="EquipItem_ServiceBy2" xml:space="preserve">
+    <value>后备维护人是必需的！</value>
+  </data>
+  <data name="EquipItem_Status" xml:space="preserve">
+    <value>【基础信息】选项卡中，请选择状态！</value>
+  </data>
+  <data name="EquipItem_TypeId" xml:space="preserve">
+    <value>【基础信息】选项卡中，请选择['Item']模板！</value>
+  </data>
+  <data name="EquipItem_UnderISOControl" xml:space="preserve">
+    <value>ISO管理是必选的！</value>
+  </data>
+  <data name="EquipItem_UserInterval" xml:space="preserve">
+    <value>用户维护周期是必需的！</value>
+  </data>
+  <data name="EquipItem_UserTI" xml:space="preserve">
+    <value>用户技术说明是必需的！</value>
+  </data>
+  <data name="EquipItem_WorkshopInterval" xml:space="preserve">
+    <value>工场维护周期是必需的！</value>
+  </data>
+  <data name="EquipItem_WorkshopTI" xml:space="preserve">
+    <value>工场技术说明是必需的！</value>
+  </data>
+  <data name="EquipmentTypeItem_ControlId" xml:space="preserve">
+    <value>Control must select！</value>
+  </data>
+  <data name="EquipmentTypeItem_EquipmentTypeName" xml:space="preserve">
+    <value>['Item']模板名称是必需的！</value>
+  </data>
+  <data name="EquipmentTypeItem_EquipmentTypeName_Exist" xml:space="preserve">
+    <value>['Item']模板名称已经存在，请重新输入！</value>
+  </data>
+  <data name="EquipmentTypeItem_EquipmentTypeNo" xml:space="preserve">
+    <value>模板编号是必需的！</value>
+  </data>
+  <data name="EquipmentTypeItem_LabelSizeId" xml:space="preserve">
+    <value>Label Size must select！</value>
+  </data>
+  <data name="EquipmentTypeItem_Manftr" xml:space="preserve">
+    <value>Manftr is require！</value>
+  </data>
+  <data name="EquipmentTypeItem_Model" xml:space="preserve">
+    <value>Model is require！</value>
+  </data>
+  <data name="EquipmentTypeItem_NameExists" xml:space="preserve">
+    <value>['Item']模板名称与编号的组合已存在。</value>
+  </data>
+  <data name="EquipmentTypeItem_NatureId" xml:space="preserve">
+    <value>Nature must select !</value>
+  </data>
+  <data name="EquipmentTypeItem_UserIntervalId" xml:space="preserve">
+    <value>User Interval must select !</value>
+  </data>
+  <data name="EquipmentTypeItem_UserTIId" xml:space="preserve">
+    <value>User TI must select !</value>
+  </data>
+  <data name="EquipmentTypeItem_WorkshopIntervalId" xml:space="preserve">
+    <value>Workshop Interval must select !</value>
+  </data>
+  <data name="EquipmentTypeItem_WorkshopTIId" xml:space="preserve">
+    <value>Workshop TI must select !</value>
+  </data>
+  <data name="EquipPlanItem_AlarmingLevel" xml:space="preserve">
+    <value>【维护】或【调校工作】选项卡中，请填写提前通知（天）！</value>
+  </data>
+  <data name="EquipPlanItem_AlarmingLevelInterval" xml:space="preserve">
+    <value>警告级别周期是必需的！</value>
+  </data>
+  <data name="EquipPlanItem_Delete_ServiceOrder" xml:space="preserve">
+    <value>['Item']计划已经开始！</value>
+  </data>
+  <data name="EquipPlanItem_EquipmentId" xml:space="preserve">
+    <value>['Item']编号是必需的！</value>
+  </data>
+  <data name="EquipPlanItem_IsActive" xml:space="preserve">
+    <value>若要保存并启动计划，那么【周期】选项卡中的”第一次['Service']日期“，”周期值“，”周期值单位“不能为空！</value>
+    <comment>If you set the "IsActive" to 'true', then "[User] tab's "First Service Date", "Interval Value"</comment>
+  </data>
+  <data name="EquipPlanItem_MaintCheckById" xml:space="preserve">
+    <value>验收维修人编号是必需的！</value>
+  </data>
+  <data name="EquipPlanItem_MaintTeamId" xml:space="preserve">
+    <value>【维护】选项卡中，请选择['Team']！</value>
+  </data>
+  <data name="EquipPlanItem_Name" xml:space="preserve">
+    <value>【基础信息】选项卡中，请输入计划名称！</value>
+  </data>
+  <data name="EquipPlanItem_Name_Exist" xml:space="preserve">
+    <value>【基础信息】选项卡中，计划名称已经存在，请重新输入！</value>
+  </data>
+  <data name="EquipPlanItem_Other" xml:space="preserve">
+    <value>【基础信息】选项卡中，请输入其他！</value>
+  </data>
+  <data name="EquipPlanItem_RepairById" xml:space="preserve">
+    <value>修复人编号是必需的</value>
+  </data>
+  <data name="EquipPlanItem_RepairCheckById" xml:space="preserve">
+    <value>验收修复人是必需的！</value>
+  </data>
+  <data name="EquipPlanItem_RepairTeamId" xml:space="preserve">
+    <value>【维修】选项卡中，请选择['Team']！</value>
+  </data>
+  <data name="EquipPlanItem_ServiceById" xml:space="preserve">
+    <value>维修人编号是必需的！</value>
+  </data>
+  <data name="EquipPlanItem_UserIntervalTypeId" xml:space="preserve">
+    <value>【周期】选项卡中, 请选择周期值单位！</value>
+  </data>
+  <data name="EquipPlanItem_UserIntervalValue" xml:space="preserve">
+    <value>周期值是必需的！</value>
+  </data>
+  <data name="EquipTypePlan_AlarmLevel" xml:space="preserve">
+    <value>维护提前通知是必需的！</value>
+  </data>
+  <data name="EquipTypePlan_Name" xml:space="preserve">
+    <value>计划名称是必需的！</value>
+  </data>
+  <data name="EquipTypePlan_NameExists" xml:space="preserve">
+    <value>物件模板计划的名称已存在。</value>
+  </data>
+  <data name="EquipTypePlan_ServiceRequest" xml:space="preserve">
+    <value>物件要求是必需的！</value>
+  </data>
+  <data name="Export_Report_Fail" xml:space="preserve">
+    <value>导出失败</value>
+  </data>
+  <data name="Export_Report_Success" xml:space="preserve">
+    <value>导出成功</value>
+  </data>
+  <data name="FaultCodeItem_FaultCodeName" xml:space="preserve">
+    <value>故障代码是必需的！</value>
+  </data>
+  <data name="FaultCodeItem_FaultCodeName_Exist" xml:space="preserve">
+    <value>故障代码已经存在，请重新输入！</value>
+  </data>
+  <data name="FaultCodeItem_FaultCodeName_Length" xml:space="preserve">
+    <value>故障代码的长度必需在2到50之间！</value>
+  </data>
+  <data name="FaultCode_Name_Exist" xml:space="preserve">
+    <value>故障代码已经存在，请重新输入！</value>
+  </data>
+  <data name="GroupItem_Description_Length" xml:space="preserve">
+    <value>描述的长度不能大于250！</value>
+  </data>
+  <data name="GroupItem_GroupName" xml:space="preserve">
+    <value>组名称是必需的！</value>
+  </data>
+  <data name="GroupItem_GroupName_Length" xml:space="preserve">
+    <value>组名称的长度必须在2到50之间！</value>
+  </data>
+  <data name="GroupItem_Name_Exists" xml:space="preserve">
+    <value>输入的组名称已存在，请输入另一个组名称。</value>
+  </data>
+  <data name="IntervalItem_IntervalAlarmingLevel" xml:space="preserve">
+    <value>警告时间范围是必需的！</value>
+  </data>
+  <data name="IntervalItem_IntervalAlarmingLevelDay" xml:space="preserve">
+    <value>到期提醒天数不能超过9999天.</value>
+  </data>
+  <data name="IntervalItem_IntervalIndicator" xml:space="preserve">
+    <value>时间周期单位是必需的！</value>
+  </data>
+  <data name="IntervalItem_IntervalValue" xml:space="preserve">
+    <value>时间周期的值是必需的！</value>
+  </data>
+  <data name="LocationItem_LocationDelete" xml:space="preserve">
+    <value>该地点包含子位置，不能删除！</value>
+  </data>
+  <data name="LocationItem_LocationName" xml:space="preserve">
+    <value>位置是必需的！</value>
+  </data>
+  <data name="LocationItem_LocationName_Exist" xml:space="preserve">
+    <value>位置已经存在，请重新输入！</value>
+  </data>
+  <data name="LocationItem_LocationName_Length" xml:space="preserve">
+    <value>位置的长度必须在2到50之间！</value>
+  </data>
+  <data name="Location_Name_Exist" xml:space="preserve">
+    <value>位置已经存在，请重新输入！</value>
+  </data>
+  <data name="LogonName_isrequire" xml:space="preserve">
+    <value>用户名是必需的！</value>
+  </data>
+  <data name="LogonName_Password_Error" xml:space="preserve">
+    <value>无效的用户名或密码！</value>
+  </data>
+  <data name="MaintSummary_Year" xml:space="preserve">
+    <value>年份只能是4位数字。</value>
+  </data>
+  <data name="Message_CommonDeleteFail" xml:space="preserve">
+    <value>删除失败！</value>
+  </data>
+  <data name="Message_CommonDeleteSuccessful" xml:space="preserve">
+    <value>删除成功！</value>
+  </data>
+  <data name="Message_CommonError" xml:space="preserve">
+    <value>执行出错，请联系管理员。</value>
+  </data>
+  <data name="Message_CommonInsertFail" xml:space="preserve">
+    <value>添加失败！</value>
+  </data>
+  <data name="Message_CommonInsertSuccessful" xml:space="preserve">
+    <value>添加成功！</value>
+  </data>
+  <data name="Message_CommonLoadSuccessful" xml:space="preserve">
+    <value>加载成功！</value>
+  </data>
+  <data name="Message_CommonSuccessful" xml:space="preserve">
+    <value>执行成功。</value>
+  </data>
+  <data name="Message_CommonUpdateFail" xml:space="preserve">
+    <value>更新失败！</value>
+  </data>
+  <data name="Message_CommonUpdateSuccessful" xml:space="preserve">
+    <value>更新成功！</value>
+  </data>
+  <data name="Message_CommonValidFailure" xml:space="preserve">
+    <value>验证失败，请重新检查输入信息！</value>
+  </data>
+  <data name="Message_ConfirmDeletion" xml:space="preserve">
+    <value>确定要删除此记录？</value>
+  </data>
+  <data name="Message_ConfirmResetPassword" xml:space="preserve">
+    <value>你确定要重置密码?</value>
+  </data>
+  <data name="Message_DeleteTeam" xml:space="preserve">
+    <value>如果这个['Team']被删除，该组的成员也会从该['Team']删除。        </value>
+  </data>
+  <data name="Message_Department_CodeError" xml:space="preserve">
+    <value>部门号已存在，添加失败.</value>
+  </data>
+  <data name="Message_Department_NameError" xml:space="preserve">
+    <value>部门名称已存在，添加失败.</value>
+  </data>
+  <data name="Message_DueCalOrderPage_DepartmentRequired" xml:space="preserve">
+    <value>请选择部门！</value>
+  </data>
+  <data name="Message_DueCalOrderPage_SelectEquipment" xml:space="preserve">
+    <value>请先选择取消原因！</value>
+  </data>
+  <data name="Message_WaitProcessing" xml:space="preserve">
+    <value>正在执行，请稍候...</value>
+  </data>
+  <data name="NumberValidator" xml:space="preserve">
+    <value>只能输入数字</value>
+  </data>
+  <data name="Order_CheckBy_NotEmpty" xml:space="preserve">
+    <value>请输入验收人！</value>
+  </data>
+  <data name="Order_CheckInDateMustLarger_NotEmpty" xml:space="preserve">
+    <value>签入日期必须在完成日期之前！</value>
+  </data>
+  <data name="Order_CheckInDate_NotEmpty" xml:space="preserve">
+    <value>请输入签入日期！</value>
+  </data>
+  <data name="Order_MaintBy_NotEmpty" xml:space="preserve">
+    <value>请输入维修人！</value>
+  </data>
+  <data name="Order_ServiceCompletionDate_NotEmpty" xml:space="preserve">
+    <value>请输入完成日期！</value>
+  </data>
+  <data name="Order_ServiceDuration_NotEmpty" xml:space="preserve">
+    <value>请输入调校/维护/维修时间！</value>
+  </data>
+  <data name="OrgUnit_ParentID" xml:space="preserve">
+    <value>不能选着自己当作父组织架构。</value>
+  </data>
+  <data name="PasswordPolicy_MinLength" xml:space="preserve">
+    <value>密码最小长度是必需的！</value>
+  </data>
+  <data name="QualificaitonItem_QualificaitonName" xml:space="preserve">
+    <value>证书是必需的！</value>
+  </data>
+  <data name="QualificaitonItem_QualificaitonName_Exist" xml:space="preserve">
+    <value>证书已经存在，请重新输入！</value>
+  </data>
+  <data name="QualificaitonItem_QualificaitonName_Length" xml:space="preserve">
+    <value>证书的长度必需在2到50之间！</value>
+  </data>
+  <data name="Qualificaiton_Name_Exist" xml:space="preserve">
+    <value>证书已经存在，请重新输入！</value>
+  </data>
+  <data name="Report_ServiceDate" xml:space="preserve">
+    <value>服务时间是必需的！</value>
+  </data>
+  <data name="RoleItem_RoleName" xml:space="preserve">
+    <value>角色名是必需的！</value>
+  </data>
+  <data name="SystemCheck_Body" xml:space="preserve">
+    <value>内容不能为空</value>
+  </data>
+  <data name="SystemCheck_DBConnectionFail" xml:space="preserve">
+    <value>连接失败。</value>
+  </data>
+  <data name="SystemCheck_DBConnectionSuccess" xml:space="preserve">
+    <value>连接成功。</value>
+  </data>
+  <data name="SystemCheck_EmailThread_Abnormal" xml:space="preserve">
+    <value>邮件线程没有启动或者异常终止。</value>
+  </data>
+  <data name="SystemCheck_EmailThread_Running" xml:space="preserve">
+    <value>邮件线程存在且正在运行。</value>
+  </data>
+  <data name="SystemCheck_Receiver" xml:space="preserve">
+    <value>收件人不能为空</value>
+  </data>
+  <data name="SystemCheck_ReceiverEmailFormatVaild" xml:space="preserve">
+    <value>电子邮件格式错误</value>
+  </data>
+  <data name="SystemCheck_SendEmailFail" xml:space="preserve">
+    <value>连接到SMTP服务器失败。</value>
+  </data>
+  <data name="SystemCheck_SendEmailSuccess" xml:space="preserve">
+    <value>邮件发送成功。</value>
+  </data>
+  <data name="SystemCheck_Subject" xml:space="preserve">
+    <value>主题不能为空</value>
+  </data>
+  <data name="TeamItem_Department" xml:space="preserve">
+    <value>请选择一个部门！</value>
+  </data>
+  <data name="TeamItem_TeamName" xml:space="preserve">
+    <value>['Team']的名称是必需的！</value>
+  </data>
+  <data name="TeamItem_TeamName_Exist" xml:space="preserve">
+    <value>该小组已存在,请重新输入！</value>
+  </data>
+  <data name="TeamItem_TeamType" xml:space="preserve">
+    <value>小组类型是必需的，请选择一个小组类型！</value>
+  </data>
+  <data name="TeamPage_CheckLeader" xml:space="preserve">
+    <value>只能选择一个主管！</value>
+  </data>
+  <data name="TeamPage_CheckMember" xml:space="preserve">
+    <value>只能选择主管或副主管！</value>
+  </data>
+  <data name="TeamPage_CheckTeamLeader" xml:space="preserve">
+    <value>请指定一个主管！</value>
+  </data>
+  <data name="TeamPage_CheckTeamUser" xml:space="preserve">
+    <value>请至少添加一个成员！</value>
+  </data>
+  <data name="Tip_ClickToHide" xml:space="preserve">
+    <value>点这里。</value>
+  </data>
+  <data name="UserItem_ConfirmPassword" xml:space="preserve">
+    <value>请确认密码！</value>
+  </data>
+  <data name="UserItem_ConfirmPassword_Compare" xml:space="preserve">
+    <value>两次输入的密码不一样！</value>
+  </data>
+  <data name="UserItem_Email" xml:space="preserve">
+    <value>邮箱是必需的！</value>
+  </data>
+  <data name="UserItem_FullName" xml:space="preserve">
+    <value>全名是必需的！</value>
+  </data>
+  <data name="UserItem_LogonName" xml:space="preserve">
+    <value>登录名是必需的！</value>
+  </data>
+  <data name="UserItem_LogonName_Exist" xml:space="preserve">
+    <value>登录名已经存在，请重新输入！</value>
+  </data>
+  <data name="UserItem_MoreThanUser" xml:space="preserve">
+    <value>该公司用户已满,不能再注册新用户!</value>
+  </data>
+  <data name="UserItem_Password" xml:space="preserve">
+    <value>密码是必需的！</value>
+  </data>
+  <data name="UserItem_PasswordLength" xml:space="preserve">
+    <value>密码长度必需在{2}到{1}之间！</value>
+  </data>
+  <data name="UserItem_PasswordLetter" xml:space="preserve">
+    <value>密码必须包含字母！</value>
+  </data>
+  <data name="UserItem_PasswordNumber" xml:space="preserve">
+    <value>密码必须包含数字！</value>
+  </data>
+  <data name="UserItem_PasswordNumberAndLetter" xml:space="preserve">
+    <value>密码必须包含字母和数字！</value>
+  </data>
+  <data name="UserItem_Password_Lenght" xml:space="preserve">
+    <value>密码长度必需在6到12之间！</value>
+  </data>
+  <data name="UserItem_Roles" xml:space="preserve">
+    <value>至少要选择一个角色！</value>
+  </data>
+  <data name="User_Not_Exit" xml:space="preserve">
+    <value>用户不存在！</value>
+  </data>
+  <data name="Validation_Code" xml:space="preserve">
+    <value>验证码是必需的！</value>
+  </data>
+  <data name="Validation_Code_Error" xml:space="preserve">
+    <value>请输入正确的验证码！</value>
+  </data>
+  <data name="EquipItem_Delete_HasChild" xml:space="preserve">
+    <value>包含子['Item']，请先删除子['Item']！</value>
+  </data>
+  <data name="OrgUnit_MustSelectParent" xml:space="preserve">
+    <value>父节点不能为空！</value>
+  </data>
+  <data name="OrgUnit_ParentError" xml:space="preserve">
+    <value>不能选择此节点为父节点！</value>
+  </data>
+  <data name="Common_DataConflict" xml:space="preserve">
+    <value>数据冲突，原数据已被更改</value>
+  </data>
+  <data name="Common_LogonName" xml:space="preserve">
+    <value>登录名只能输入英文,数字,下划线!</value>
+  </data>
+  <data name="Common_Number_MoreThanZero" xml:space="preserve">
+    <value>该数值一定要大于零！</value>
+  </data>
+  <data name="EquipTypePlan_DurationType" xml:space="preserve">
+    <value>请选择预计服务时间单位</value>
+  </data>
+  <data name="EquipTypePlan_EstimServDura" xml:space="preserve">
+    <value>请输入预计{0}时间</value>
+  </data>
+  <data name="Validation_ExtendServiceDateMrorePlanDate_Error" xml:space="preserve">
+    <value>推迟时间不能在计划日期的{0}个月之后！</value>
+  </data>
+  <data name="Validation_ExtendServiceDate_Error" xml:space="preserve">
+    <value>请输入推迟时间！</value>
+  </data>
+  <data name="TechnicalInstruction_Name" xml:space="preserve">
+    <value>技术说明名称是必需的！</value>
+  </data>
+  <data name="Contractor_Empty_ErrorMessage" xml:space="preserve">
+    <value>承包商为空</value>
+  </data>
+  <data name="Contractor_Exists_ErrorMessage" xml:space="preserve">
+    <value>承包商不存在</value>
+  </data>
+  <data name="Data_model_ErrorMessage" xml:space="preserve">
+    <value>数据模型不能为空!</value>
+  </data>
+  <data name="EquipmentPlan_ExistsServiceOrder_Error1" xml:space="preserve">
+    <value>一些服务工单基于</value>
+  </data>
+  <data name="EquipmentPlan_ExistsServiceOrder_Error2" xml:space="preserve">
+    <value>计划,你不能删除它!</value>
+  </data>
+  <data name="FaultCode_Empty_ErrorMessage" xml:space="preserve">
+    <value>故障代码为空</value>
+  </data>
+  <data name="FaultCode_Exists_ErrorMessage" xml:space="preserve">
+    <value>故障代码不存在</value>
+  </data>
+  <data name="Location_Empty_ErrorMessage" xml:space="preserve">
+    <value>位置为空</value>
+  </data>
+  <data name="Location_Exists_ErrorMessage" xml:space="preserve">
+    <value>位置不存在</value>
+  </data>
+  <data name="Location_Select_ErrorMessage" xml:space="preserve">
+    <value>该位置不能搜索父位置</value>
+  </data>
+  <data name="QualificaitonPage_Empty_ErrorMessage" xml:space="preserve">
+    <value>证书没有数据</value>
+  </data>
+  <data name="QualificaitonPage_Exists_ErrorMessage" xml:space="preserve">
+    <value>证书不存在</value>
+  </data>
+  <data name="Role_Empty_ErrorMessage" xml:space="preserve">
+    <value>角色为空</value>
+  </data>
+  <data name="Role_Exits_ErrorMessage" xml:space="preserve">
+    <value>角色不存在</value>
+  </data>
+  <data name="Role_RemoveUser_ErrorMessage" xml:space="preserve">
+    <value>该角色下有用户,请先删除用户.</value>
+  </data>
+  <data name="View_model_ErrorMessage" xml:space="preserve">
+    <value>视图模型不能为空！</value>
+  </data>
+  <data name="CancelReason_Exists_ErrorMessage" xml:space="preserve">
+    <value>取消原因不存在!</value>
+  </data>
+  <data name="Company_Exists_ErrorMessage" xml:space="preserve">
+    <value>公司不存在!</value>
+  </data>
+  <data name="EquipmentPlan_Exists_ErrorMessage" xml:space="preserve">
+    <value>设备计划不存在!</value>
+  </data>
+  <data name="EquipmentType_Active_ErrorMessage" xml:space="preserve">
+    <value>该设备类型正在使用中!</value>
+  </data>
+  <data name="EquipmentType_Exists_ErrorMessage" xml:space="preserve">
+    <value>设备类型不存在!</value>
+  </data>
+  <data name="Equipment_Exists_ErrorMessage" xml:space="preserve">
+    <value>设备不存在!</value>
+  </data>
+  <data name="SearchModel" xml:space="preserve">
+    <value>搜索模型为空!</value>
+  </data>
+  <data name="Stage_Exists" xml:space="preserve">
+    <value>阶段不存在!</value>
+  </data>
+  <data name="TechnicalInstruction_IsActive" xml:space="preserve">
+    <value>技术说明正在被使用!</value>
+  </data>
+  <data name="TechnicalInstruction_Name_Exists" xml:space="preserve">
+    <value>技术说明名称已存在!</value>
+  </data>
+  <data name="User_logoning_error" xml:space="preserve">
+    <value>用戶在活动状态不能被删除</value>
+  </data>
+  <data name="NoUserData" xml:space="preserve">
+    <value>沒有用戶数据!</value>
+  </data>
+  <data name="Common_AttachLimited_Number" xml:space="preserve">
+    <value>单个附件大小限制必须输入正整数!</value>
+  </data>
+  <data name="Common_PassWordNumber" xml:space="preserve">
+    <value>密码最小长度必须输入数字！</value>
+  </data>
+  <data name="Common_UserLimited_Number" xml:space="preserve">
+    <value>用户数限制必须输入正整数!</value>
+  </data>
+  <data name="EquipPage_ServiceCheck" xml:space="preserve">
+    <value>计划工作完成时进行检查时需要注意的事项</value>
+  </data>
+  <data name="EquipPage_ServiceContentDescription" xml:space="preserve">
+    <value>执行计划工作时的详细要求</value>
+  </data>
+  <data name="EquipPage_ServiceUserRequirementDescription" xml:space="preserve">
+    <value>对执行计划工作的人员的要求</value>
+  </data>
+  <data name="PasswordPolicy_MaxLength_RegularNum" xml:space="preserve">
+    <value>密码最大长度必须是正整数！</value>
+  </data>
+  <data name="PasswordPolicy_MinEnLetterLength_RegularNum" xml:space="preserve">
+    <value>至少包含字母的个数必须是正整数！</value>
+  </data>
+  <data name="PasswordPolicy_MinLength_RegularNum" xml:space="preserve">
+    <value>密码最小长度必须是正整数！</value>
+  </data>
+  <data name="PasswordPolicy_MinLength_Required" xml:space="preserve">
+    <value>密码最小长度必需的！</value>
+  </data>
+  <data name="PasswordPolicy_UnlikePrePwdCount_RegularNum" xml:space="preserve">
+    <value>允许密码重复间隔次数必须是正整数！</value>
+  </data>
+  <data name="UserProfile_Fail" xml:space="preserve">
+    <value>修改档案失败!</value>
+  </data>
+  <data name="UserProfile_Success" xml:space="preserve">
+    <value>修改档案成功!</value>
+  </data>
+  <data name="PasswordPolicy_MaxLength_MinRange" xml:space="preserve">
+    <value>密码最大长度必须大于等于{1}！</value>
+  </data>
+  <data name="PasswordPolicy_MinEnLetterLength_MinRange" xml:space="preserve">
+    <value>至少包含字母的个数的最小长度必须大于等于{1}！</value>
+  </data>
+  <data name="PasswordPolicy_MinLength_MinRange" xml:space="preserve">
+    <value>密码最小长度必须大于等于{1}！</value>
+  </data>
+  <data name="PasswordPolicy_NeedLetter_Req" xml:space="preserve">
+    <value>必须包含字母！</value>
+  </data>
+  <data name="PasswordPolicy_NeedNumber_Req" xml:space="preserve">
+    <value>必须包含数字！</value>
+  </data>
+  <data name="PasswordPolicy_NeedSpecialChar_Req" xml:space="preserve">
+    <value>必须包含特殊字符！</value>
+  </data>
+  <data name="PasswordPolicy_NoBlankSpace_Req" xml:space="preserve">
+    <value>必须包含空格！</value>
+  </data>
+  <data name="PasswordPolicy_UnlikePrePwdCount_MinRange" xml:space="preserve">
+    <value>允许密码重复间隔次数必须大于等于{1}！</value>
+  </data>
+  <data name="EquipTypePlan_ServiceCheck_Icon" xml:space="preserve">
+    <value>计划工作完成时进行验收时需要注意的事项。</value>
+  </data>
+  <data name="EquipTypePlan_ServiceContentDesc_Icon" xml:space="preserve">
+    <value>执行计划工作时的详细要求。</value>
+  </data>
+  <data name="EquipTypePlan_ServiceUserRequirDesc_Icon" xml:space="preserve">
+    <value>对执行计划工作的人员的要求。</value>
+  </data>
+  <data name="PasswordPolicy_Max_MinLetter_Length_Compare" xml:space="preserve">
+    <value>至少包含字母的个数必须在{0}到{1}之间！</value>
+  </data>
+  <data name="PasswordPolicy_Max_Min_Length_Compare" xml:space="preserve">
+    <value>密码最大长度必须大于等于密码最小长度！</value>
+  </data>
+  <data name="EquipPlanItem_FirstServiceDate" xml:space="preserve">
+    <value>初始['Service']日期是必需的</value>
+  </data>
+  <data name="EquipPlanItem_IntervalValue" xml:space="preserve">
+    <value>维护周期是必需的</value>
+  </data>
+  <data name="Common_NotEnoughRight" xml:space="preserve">
+    <value>你没有足够的权限！</value>
+  </data>
+  <data name="UserItem_PasswordCount" xml:space="preserve">
+    <value>密码不能与最近{0}次相同！</value>
+  </data>
+  <data name="UserItem_PasswordMinEnLetter" xml:space="preserve">
+    <value>密码必须包含{0}个字母！</value>
+  </data>
+  <data name="UserItem_PasswordSpace" xml:space="preserve">
+    <value>密码必须包含空格！</value>
+  </data>
+  <data name="UserItem_PasswordSpecialChar" xml:space="preserve">
+    <value>密码必须包含特殊字符，像 [@#$*-+=] 等！</value>
+  </data>
+  <data name="UserItem_PasswordMinLength" xml:space="preserve">
+    <value>密码长度必需大于等于{1}！</value>
+  </data>
+  <data name="Common_ValidateDate" xml:space="preserve">
+    <value>{0} 不是一个有效的日期!</value>
+  </data>
+  <data name="EquipTypePlan_OrgUnit_Icon" xml:space="preserve">
+    <value>若选择某个组织架构，则此架构或子架构的人员都有权查看到此物件模板和物件模板下的物件；若此物件模板已经包含一个子的组织架构， 再选择一个此子的父级组织架构，则子组织架构自动被父组织架构替代。</value>
+  </data>
+  <data name="EquipPlanItem_CalibraManageTeamId" xml:space="preserve">
+    <value>【调校管理】选项卡中，请选择['Team']！</value>
+  </data>
+  <data name="EquipPlanItem_CalibraWorkTeamId" xml:space="preserve">
+    <value>【调校工作】选项卡中，请选择['Team']！</value>
+  </data>
+  <data name="EquipmentTypeItem_OrgUnit" xml:space="preserve">
+    <value>不能添加空值，请选择组织架构。</value>
+  </data>
+  <data name="Reg_MultiCompanyReserverWord_Code" xml:space="preserve">
+    <value>多公司前缀只能输入小写字母！</value>
+  </data>
+  <data name="Req_MultiCompanyReserverWord_Code" xml:space="preserve">
+    <value>多公司前缀不能为空！</value>
+  </data>
+  <data name="MultiCompanyReserverWord_Code_Exist" xml:space="preserve">
+    <value>该多公司保留字已存在！</value>
+  </data>
+  <data name="ChangePwd_AlertMessage" xml:space="preserve">
+    <value>您的密码不符合策略，请修改密码！</value>
+  </data>
+  <data name="Message_ConfirmEditOrgunit" xml:space="preserve">
+    <value>所选择的用户已属于其它组织架构,是否继续修改用户的组织架构?</value>
+  </data>
+  <data name="LocationItem_LocationBeenUsed" xml:space="preserve">
+    <value>位置正在被使用。</value>
+  </data>
+  <data name="MockLink_IsExist" xml:space="preserve">
+    <value>该网址已存在！</value>
+  </data>
+  <data name="MockLink_URL" xml:space="preserve">
+    <value>网址是必需的！</value>
+  </data>
+  <data name="MockLink_URL_Legal" xml:space="preserve">
+    <value>请输入一个合法的网址！</value>
+  </data>
+  <data name="EquipTypePlan_IntervalTypeId" xml:space="preserve">
+    <value>周期值的单位是必需的！</value>
+  </data>
+  <data name="EquipTypePlan_IntervalValue" xml:space="preserve">
+    <value>周期值是必需的！</value>
+  </data>
+  <data name="EquipItem_NoOrderExist" xml:space="preserve">
+    <value>没有相关的工单！</value>
+  </data>
+  <data name="UserItem_PasswordBlank" xml:space="preserve">
+    <value>密码的前后不能包含空格！</value>
+  </data>
+  <data name="UserItem_LogonName_MutiCompany" xml:space="preserve">
+    <value>该用户隶属于多个公司，所以多公司前缀不能为空！</value>
+  </data>
+  <data name="CompanyItem_OrderGenerateType" xml:space="preserve">
+    <value>请至少选择一种工单生成方法！</value>
+  </data>
+  <data name="EquipPlanItem_IsAutoGenOrder" xml:space="preserve">
+    <value>【基础信息】选项卡中，请选择生成方法！</value>
+  </data>
+  <data name="Company_NamingItemCN" xml:space="preserve">
+    <value>简体中文命名不能为空！</value>
+  </data>
+  <data name="Company_NamingItemEN" xml:space="preserve">
+    <value>英文命名不能为空！</value>
+  </data>
+  <data name="Company_NamingItemHK" xml:space="preserve">
+    <value>繁体中文命名不能为空！</value>
+  </data>
+  <data name="Company_NamingServiceCN" xml:space="preserve">
+    <value>服务简体中文命名不能为空！</value>
+  </data>
+  <data name="Company_NamingServiceEN" xml:space="preserve">
+    <value>服务英文命名不能为空！</value>
+  </data>
+  <data name="Company_NamingServiceHK" xml:space="preserve">
+    <value>服务繁体中文命名不能为空！</value>
+  </data>
+  <data name="Company_NamingItem" xml:space="preserve">
+    <value>命名不能为空！</value>
+  </data>
+  <data name="Order_CheckInBy_NotEmpty" xml:space="preserve">
+    <value>请输入签入人！</value>
+  </data>
+  <data name="Order_PlanTime_NotEmpty" xml:space="preserve">
+    <value>请输入计划时间！</value>
+  </data>
+  <data name="Order_ReviewBy_NotEmpty" xml:space="preserve">
+    <value>请输入审核人！</value>
+  </data>
+  <data name="EquipItem_MarkUnique" xml:space="preserve">
+    <value>【基础信息】选项卡中，请确保物件标示唯一，标示由“物件模板+物件编号+物件名称”构成！</value>
+  </data>
+  <data name="Order_ApproveBy_NotEmpty" xml:space="preserve">
+    <value>请输入审批人！</value>
+  </data>
+  <data name="Order_CalBy_NotEmpty" xml:space="preserve">
+    <value>请输入调校人！</value>
+  </data>
+  <data name="Order_InspectionBy_NotEmpty" xml:space="preserve">
+    <value>请输入维护人！</value>
+  </data>
+  <data name="Order_MaintRepairBy_NotEmpty" xml:space="preserve">
+    <value>请输入维护人（维修人）！</value>
+  </data>
+  <data name="UserItem_ConfirmDeletion" xml:space="preserve">
+    <value>确定要删除用户</value>
+  </data>
+  <data name="UserItem_ConfirmDelete" xml:space="preserve">
+    <value>确认要从列表中删除用户 {0} 吗？若选择是，则点击保存按钮后才会真正执行。</value>
+  </data>
+  <data name="PasswordPolicy_MinEnLetterLength_Required" xml:space="preserve">
+    <value>至少包含字母的个数是必需的！</value>
+  </data>
+  <data name="PasswordPolicy_UnlikePrePwdCount_Required" xml:space="preserve">
+    <value>允许密码重复间隔次数是必需的！</value>
+  </data>
+  <data name="CommonItem_DateGreater" xml:space="preserve">
+    <value>{0} 必需大于 {1} </value>
+  </data>
+  <data name="CommonItem_DateGreater_Equal" xml:space="preserve">
+    <value>{0} 必需大于等于 {1}</value>
+  </data>
+  <data name="CommonItem_DateLess" xml:space="preserve">
+    <value>{0} 必需小于 {1}</value>
+  </data>
+  <data name="CommonItem_DateLess_Equal" xml:space="preserve">
+    <value>{0} 必需小于或等于  {1}</value>
+  </data>
+  <data name="EquipPlanItem_MaintContentDescription" xml:space="preserve">
+    <value>【维护】选项卡中，请输入['Service']内容描述！</value>
+  </data>
+  <data name="EquipPlanItem_Worker_Required" xml:space="preserve">
+    <value>【基础信息】选项卡中，请至少勾选一种工作人员类型！</value>
+  </data>
+  <data name="Common_Item" xml:space="preserve">
+    <value>['Item']</value>
+  </data>
+  <data name="Common_Plan" xml:space="preserve">
+    <value>计划</value>
+  </data>
+  <data name="Message_ConfirmDeletionTemp" xml:space="preserve">
+    <value>确定要删除{0}？若需真正删除，则按【保存】按钮后才真正生效！</value>
+  </data>
+  <data name="EquipTypePlan_Worker" xml:space="preserve">
+    <value>工作人员类型至少要选择一个！</value>
+  </data>
+  <data name="EquipTypePlan_IsAutoGenOrder" xml:space="preserve">
+    <value>请选择生成方法！</value>
+  </data>
+  <data name="OrderPage_ExtendDateEnd" xml:space="preserve">
+    <value>延期不能超过三个月！</value>
+  </data>
+  <data name="EquipItem_ExitItemModalPrmopt" xml:space="preserve">
+    <value>['Item'] 已经被修改，但未保存，关闭弹窗会丢失修改的数据，是否要继续操作？</value>
+  </data>
+  <data name="CalOrderItem_CheckInDate" xml:space="preserve">
+    <value>签入日期必需大于同一计划中最后完成工单的完成日期！</value>
+  </data>
+  <data name="EquipPlanItem_ManualGenAlarmingLevel" xml:space="preserve">
+    <value>【维护】或【调校工作】选项卡中，请填写手动生成通知（天）！</value>
+  </data>
+  <data name="EquipPlanItem_ManualGenAlarmingLevelInterval" xml:space="preserve">
+    <value>【维护】或【调校工作】选项卡中，请填写手动生成通知周期（天）！</value>
+  </data>
+  <data name="EquipItem_Position" xml:space="preserve">
+    <value>所在位置长度不能超过100！</value>
+  </data>
+  <data name="Attachmentlimit_message" xml:space="preserve">
+    <value>附件大小限制不能小于当前已有附件大小.</value>
+  </data>
+  <data name="TaskItem_AlarmingLevel" xml:space="preserve">
+    <value>请输入通知(天)！</value>
+  </data>
+  <data name="TaskItem_Name" xml:space="preserve">
+    <value>请输入名称！</value>
+  </data>
+  <data name="TaskItem_OrgUint" xml:space="preserve">
+    <value>请选择组织架构！</value>
+  </data>
+  <data name="TaskItem_Team" xml:space="preserve">
+    <value>请选择['Team']！</value>
+  </data>
+  <data name="TaskItem_Type" xml:space="preserve">
+    <value>请选择任务模板！</value>
+  </data>
+  <data name="TaskItem_Delete_ServiceOrder" xml:space="preserve">
+    <value>有工单在使用该任务，无法删除！</value>
+  </data>
+  <data name="TaskTypePage_NameExists" xml:space="preserve">
+    <value>任务模板名称已经存在。</value>
+  </data>
+  <data name="TotalAttachmentlimitMessage" xml:space="preserve">
+    <value>超出总附件大小限制.</value>
+  </data>
+  <data name="TaskItem_Interval" xml:space="preserve">
+    <value>假如【任务基本信息】中 "可用" 为选中状态，那么【时间值】中的 "周期值" 和 它的单位不能为空！</value>
+  </data>
+  <data name="TaskItem_NameExist" xml:space="preserve">
+    <value>任务名称已经存在，请重新输入！</value>
+  </data>
+  <data name="TaskOrder_ServiceCompletionDate_NotEmpty" xml:space="preserve">
+    <value>完成日期不能为空！</value>
+  </data>
+  <data name="TaskType_NameRequire" xml:space="preserve">
+    <value>名称是必需的。</value>
+  </data>
+  <data name="TaskItem_IsActive" xml:space="preserve">
+    <value>要启用任务，【时间值 】中的”第一次['Service']日期“，”周期值“，“周期值“的单位不能为空！</value>
+  </data>
+  <data name="TaskOrder_MaintResult_NotEmpty" xml:space="preserve">
+    <value>请选择结果！</value>
+  </data>
+  <data name="TaskType_Active_ErrorMessage" xml:space="preserve">
+    <value>该任务正在使用中。</value>
+  </data>
+  <data name="CompanyItem_Area_Length" xml:space="preserve">
+    <value>区域的长度不能超过250.</value>
+  </data>
+  <data name="EquipPlanItem_ManualGen" xml:space="preserve">
+    <value>如果【基础信息】中“生成方法”为"手动"，【维护】或【调校工作】中的“生成工单提醒”和“生成工单提醒周期”不能为空！</value>
+  </data>
+  <data name="Area_NameExists" xml:space="preserve">
+    <value>区域名已经存在，请重新输入。</value>
+  </data>
+  <data name="Area_NameRequir" xml:space="preserve">
+    <value>区域名是必需的。</value>
+  </data>
+  <data name="Area_BeenUse" xml:space="preserve">
+    <value>区域正在被使用。</value>
+  </data>
+  <data name="Amount_Number_Check" xml:space="preserve">
+    <value>数量必须输入数字.</value>
+  </data>
+  <data name="FieldMustBeNumeric" xml:space="preserve">
+    <value>{0}必须输入数字.</value>
+  </data>
+  <data name="Language_NotSupport" xml:space="preserve">
+    <value>不支持这种语言！</value>
+  </data>
+  <data name="TeamPage_TeamCheckMember" xml:space="preserve">
+    <value>请指定一个验收人员.</value>
+  </data>
+  <data name="CompanyItem_ItemNumberLength" xml:space="preserve">
+    <value>物件编号长度是必需的！</value>
+  </data>
+  <data name="Equip_AutoNo_Length" xml:space="preserve">
+    <value>编号长度超过公司设置的最大长度。</value>
+  </data>
+  <data name="CompanyItem_ItemNumberLength_Range" xml:space="preserve">
+    <value>物件编号长度必需是1到50的整数！</value>
+  </data>
+  <data name="CompanyItem_ItemNoGenerateMethod" xml:space="preserve">
+    <value>物件编号生成方法是必需的！</value>
+  </data>
+  <data name="FaultCodeItem_FaultCodeCompany" xml:space="preserve">
+    <value>公司是必需的.</value>
+  </data>
+  <data name="Common_Day_Range" xml:space="preserve">
+    <value>天数范围必需在1到9999之间.</value>
+  </data>
+  <data name="EquipItem_FirstServiceDateCompareInitDate" xml:space="preserve">
+    <value>第一次['Service']日期不能小于['Item']投用时间</value>
+  </data>
+  <data name="DueOrder_NotSelectRow" xml:space="preserve">
+    <value>请选择至少一条记录。</value>
+  </data>
+  <data name="LoginPage_NotMutiplyCompanyUser" xml:space="preserve">
+    <value>单公司用户不能在该页面登录，请使用所属公司登录页面.</value>
+  </data>
+  <data name="UserItem_CompanyRequire" xml:space="preserve">
+    <value>用户并非只有系统管理员角色，请选择公司.</value>
+  </data>
+  <data name="Message_ItemDeletion" xml:space="preserve">
+    <value>确定要删除此记录？如果包含未完成工单，工单也将同时被取消。</value>
+  </data>
+  <data name="EquipmentType_DeleteUsingRecordConfirm" xml:space="preserve">
+    <value>该记录正在被使用，你确定要删除吗？若执行删除，该记录在被使用的地方会变成只读.</value>
+  </data>
+  <data name="Message_TaskDeletion" xml:space="preserve">
+    <value>确定要删除此记录？如果包含未完成工单，工单也将同时被取消。</value>
+  </data>
+  <data name="UserItem_CompanySuspend" xml:space="preserve">
+    <value>公司已经暂停使用.</value>
+  </data>
+  <data name="Company_Recover" xml:space="preserve">
+    <value>确定要恢复这家公司.</value>
+  </data>
+  <data name="Company_Suspend" xml:space="preserve">
+    <value>确定要暂停这家公司.</value>
+  </data>
+  <data name="Team_Used_ERROR" xml:space="preserve">
+    <value>这个{0}正在使用中.</value>
+  </data>
+  <data name="Negative_Error_AlarmingInterval" xml:space="preserve">
+    <value>通知周期必需是一個正整數！</value>
+  </data>
+  <data name="Negative_Error_AlarmingLevel" xml:space="preserve">
+    <value>提前通知必需是一個正整數！</value>
+  </data>
+  <data name="Negative_Error_Interval" xml:space="preserve">
+    <value>周期值必需是一個正整數！</value>
+  </data>
+  <data name="Bloc_BeenUse" xml:space="preserve">
+    <value>集团正在被使用。</value>
+  </data>
+  <data name="Bloc_NameRequir" xml:space="preserve">
+    <value>集团名称是必需的。</value>
+  </data>
+  <data name="Bloc_NameExists" xml:space="preserve">
+    <value>集团名已经存在，请重新输入。</value>
+  </data>
+  <data name="Common_PleaseSelectMessage" xml:space="preserve">
+    <value>请先选择{0}.</value>
+  </data>
+  <data name="Negative_Error_CompanyOnlineUserLimit" xml:space="preserve">
+    <value>在线用户数量必需是一个正整数.</value>
+  </data>
+  <data name="Negative_Error_EquipmentLimit" xml:space="preserve">
+    <value>物件数量必需是一個正整數.</value>
+  </data>
+  <data name="Negative_Error_EquipmentTypeLimit" xml:space="preserve">
+    <value>物件模板数量必需是一个正整数.</value>
+  </data>
+  <data name="Negative_Error_ItemplanCount" xml:space="preserve">
+    <value>物件计划数量必需是一个正整数.</value>
+  </data>
+  <data name="Negative_Error_LocationLimit" xml:space="preserve">
+    <value>位置数量必需是一个正整数.</value>
+  </data>
+  <data name="Negative_Error_OULimit" xml:space="preserve">
+    <value>组织架构数量必需是一个正整数.</value>
+  </data>
+  <data name="Negative_Error_TaskLimit" xml:space="preserve">
+    <value>任务数量必需是一个正整数.</value>
+  </data>
+  <data name="Negative_Error_TaskTypeLimit" xml:space="preserve">
+    <value>任务模板数量必需是一个正整数.</value>
+  </data>
+  <data name="Negative_Error_TeamLimit" xml:space="preserve">
+    <value>['Team']数量必需是一个正整数.</value>
+  </data>
+  <data name="EquipItem_EquipLimit" xml:space="preserve">
+    <value>超出系统允许的['Item']个数，请联系管理员。</value>
+  </data>
+  <data name="TaskItem_TaskLimit" xml:space="preserve">
+    <value>超出系统允许的任务个数，请联系管理员。</value>
+  </data>
+  <data name="LocationLimitErrorMessage" xml:space="preserve">
+    <value>超出公司位置数量限制.</value>
+  </data>
+  <data name="OrgUnitLimitErrorMessage" xml:space="preserve">
+    <value>超出公司组织架构数量限制.</value>
+  </data>
+  <data name="TeamLimitErrorMessage" xml:space="preserve">
+    <value>超出公司['Team']数量限制.</value>
+  </data>
+  <data name="EquipPlanItem_PlanLimit" xml:space="preserve">
+    <value>计划数超过系统允许的最大数，本系统允许最大计划数为{0}。</value>
+    <comment>Plan count exceed system's allowance, the max count in the system is {0}.</comment>
+  </data>
+  <data name="Negative_Error_EstimateServiceDuration" xml:space="preserve">
+    <value>预计['Service']时间必需是一個正整數！</value>
+  </data>
+  <data name="TaskTypeItem_TaskTypeLimit" xml:space="preserve">
+    <value>超出系统允许的任务模板个数，请联系管理员。</value>
+  </data>
+  <data name="LoginPage_UserOnlineLimitError" xml:space="preserve">
+    <value>当前公司只允许{0}个用户同时登录.</value>
+  </data>
+  <data name="EquipmentTypeItem_CountLimit" xml:space="preserve">
+    <value>超出系统允许的{0}模版个数，请联系管理员。</value>
+  </data>
+  <data name="EquipTypePlan_CountLimit" xml:space="preserve">
+    <value>超出系统允许的{0}模版的计划个数，请联系管理员。</value>
+  </data>
+  <data name="BulkModifyWorker_ActiveWorkerNull" xml:space="preserve">
+    <value>分配职责不能为空！</value>
+  </data>
+  <data name="BulkModifyWorker_EXWorkerNull" xml:space="preserve">
+    <value>解除职责不能为空！</value>
+  </data>
+  <data name="BulkModifyWorker_SaveError" xml:space="preserve">
+    <value>更新用户失败！</value>
+  </data>
+  <data name="BulkModifyWorker_SaveSuccess" xml:space="preserve">
+    <value>更新用户成功！</value>
+  </data>
+  <data name="BulkModifyWorker_TeamNull" xml:space="preserve">
+    <value>['Team']不能为空！</value>
+  </data>
+  <data name="Negative_Error_ServiceDuration" xml:space="preserve">
+    <value>维护(维修)时间必需是一個正整數。</value>
+  </data>
+  <data name="Negative_Error_EstimateServiceDurationCal" xml:space="preserve">
+    <value>计划时间必需是一個正整數。</value>
+  </data>
+  <data name="Negative_Error_EstimateServiceDurationIns" xml:space="preserve">
+    <value>计划时间必需是一個正整數。</value>
+  </data>
+  <data name="Negative_Error_ServiceDurationCal" xml:space="preserve">
+    <value>调校时间必需是一個正整數。</value>
+  </data>
+  <data name="BulkModifyStaff_SearchAlert" xml:space="preserve">
+    <value>没有数据或结果。</value>
+  </data>
+  <data name="FaultCodeItem_CompanyAlreadyHaveFaultCode" xml:space="preserve">
+    <value>已有这个故障代码.</value>
+  </data>
+  <data name="FaultCodeItem_SelectCompany" xml:space="preserve">
+    <value>请选择公司.</value>
+  </data>
+  <data name="CompanyPage_ErrorCusOffTime" xml:space="preserve">
+    <value>邮件截止时间单位“分钟",必需在0-59之间！</value>
+  </data>
+  <data name="CompanyPage_ErrorPostTime" xml:space="preserve">
+    <value>邮件发送时间单位“分钟",必需在0-59之间！</value>
+  </data>
+  <data name="FaultCode_IsUsingDeleteError" xml:space="preserve">
+    <value>故障代码正在被工单使用.</value>
+  </data>
+  <data name="Company_require_GenMasterWorkOrderTime" xml:space="preserve">
+    <value>如果自动生成工作工单功能打开， 生成工作工单时间不能为空。</value>
+    <comment>如果自动生成工作工单功能打开， 生成工作工单时间不能为空。</comment>
+  </data>
+  <data name="Company_require_MasterWorkEmail" xml:space="preserve">
+    <value>如果自动生成工作工单功能打开， 那么工作工单邮件发送开关为必选。</value>
+    <comment>如果自动生成工作工单功能打开， 那么工作工单邮件发送开关为必需。</comment>
+  </data>
+  <data name="CompanyPage_MasterWorkOrderMinute" xml:space="preserve">
+    <value>工作工单生成时间单位“分钟",必需在0-59之间！</value>
+  </data>
+  <data name="ConsolidateEmailList_Content_Required" xml:space="preserve">
+    <value>内容是必需的.</value>
+  </data>
+  <data name="ConsolidateEmailList_Title_Exists" xml:space="preserve">
+    <value>一个标题和内容相同的记录已经存在.</value>
+  </data>
+  <data name="ConsolidateEmailList_Title_Length" xml:space="preserve">
+    <value>标题的长度不能超过250.</value>
+  </data>
+  <data name="ConsolidateEmailList_Title_Required" xml:space="preserve">
+    <value>标题是必需的.</value>
+  </data>
+  <data name="CompanyItem_ConsolidateTime" xml:space="preserve">
+    <value>邮件发送时间不能大于或等于邮件截止时间。</value>
+  </data>
+  <data name="ValidationUploadFormat_ErrorMessage" xml:space="preserve">
+    <value>文件"{0}"上传失败，只允许上传"{1}"类型的文件。</value>
+  </data>
+  <data name="CompanyItem_UploadExtNameRestriction" xml:space="preserve">
+    <value>附件上传限制不能包含中文！</value>
+  </data>
+  <data name="Order_ServiceDuration_Inspection_NotEmpty" xml:space="preserve">
+    <value>请输入维护时间！</value>
+  </data>
+  <data name="Order_ServiceDuration_Maint_NotEmpty" xml:space="preserve">
+    <value>请输入维修时间！</value>
+  </data>
+  <data name="Common_UploadAttachLimited_Number" xml:space="preserve">
+    <value>附件数量限制必需输入正整数!</value>
+  </data>
+  <data name="UploadAttachmentLimit_Error" xml:space="preserve">
+    <value>超出附件数量限制！</value>
+  </data>
+  <data name="Order_MaintResult_CheckResult" xml:space="preserve">
+    <value>请选择维护结果</value>
+  </data>
+  <data name="TaskOrder_MaintResult_CheckResult" xml:space="preserve">
+    <value>请选择结果</value>
+  </data>
+  <data name="Negative_Error_LocationLevelsLimit" xml:space="preserve">
+    <value>位置层数限制必需是一个正整数.</value>
+  </data>
+  <data name="Negative_Error_OULevelsLimit" xml:space="preserve">
+    <value>组织架构层数限制必需是一个正整数.</value>
+  </data>
+  <data name="Location_LevelsLimit" xml:space="preserve">
+    <value>超出公司位置层数限制.</value>
+  </data>
+  <data name="OrgUnit_LevelsLimit" xml:space="preserve">
+    <value>超出公司组织架构层数限制.</value>
+  </data>
+  <data name="User_LogonName_Exists" xml:space="preserve">
+    <value>登录名已经存在.</value>
+  </data>
+  <data name="TaskType_AlarmLevel" xml:space="preserve">
+    <value>提前通知是必需的.</value>
+  </data>
+  <data name="DataHistory_RetainDays_int" xml:space="preserve">
+    <value>可保留时间必需输入非零正整数！</value>
+  </data>
+  <data name="DataHistory_RetainDays_Requset" xml:space="preserve">
+    <value>可保留时间是必需的！</value>
+  </data>
+  <data name="AjaxNoPermission" xml:space="preserve">
+    <value>AjaxNoPermissionMsgKey:你没有足够的权限或登录信息已过期。请点击&lt;a href="{0}" style="color:red" &gt;这里&lt;/a&gt;重新登录。AjaxNoPermissionMsgKey:</value>
+  </data>
+  <data name="EquipPlanItem_UserInterval" xml:space="preserve">
+    <value>【周期】选项卡中, 请输入周期值！</value>
+  </data>
+  <data name="TaskItem_UserIntervalTypeId" xml:space="preserve">
+    <value> 请选择周期值单位！</value>
+  </data>
+  <data name="PipeItem_Alarming_Require" xml:space="preserve">
+    <value>提前通知是必需的.</value>
+  </data>
+  <data name="PipeItem_Area_Require" xml:space="preserve">
+    <value>所在区域是必需的.</value>
+  </data>
+  <data name="PipeItem_Block_Require" xml:space="preserve">
+    <value>街区是必需的.</value>
+  </data>
+  <data name="PipeItem_Class_Require" xml:space="preserve">
+    <value>&lt;Class&gt;是必需的.</value>
+  </data>
+  <data name="PipeItem_Length_Require" xml:space="preserve">
+    <value>管网长度是必需的.</value>
+  </data>
+  <data name="PipeItem_PressureRating_Require" xml:space="preserve">
+    <value>压力等级是必需的.</value>
+  </data>
+  <data name="PipeItem_RiskLevelOfPipe_Require" xml:space="preserve">
+    <value>管网风险等级是必需的.</value>
+  </data>
+  <data name="PipeItem_Tubing_Require" xml:space="preserve">
+    <value>管材是必需的.</value>
+  </data>
+  <data name="PipeItem_WorkingTeam_Require" xml:space="preserve">
+    <value>['Team']是必需的.</value>
+  </data>
+  <data name="Bloc_Requir" xml:space="preserve">
+    <value>集团是必需的！</value>
+  </data>
+  <data name="PipeOrder_MeasureById_Required" xml:space="preserve">
+    <value>测量人员不能为空。</value>
+  </data>
+  <data name="PipeItem_Interval_InputComplete" xml:space="preserve">
+    <value>请输入完整的泄漏测量周期.</value>
+  </data>
+  <data name="PipeItem_Interval_Require" xml:space="preserve">
+    <value>如果第一次测量日期有值，泄漏测量周期是必需的.</value>
+  </data>
+  <data name="PipeItem_FirstUseServiceDate_LessThan_InitWorkDate" xml:space="preserve">
+    <value>第一次测量日期不能小于投用时间.</value>
+  </data>
+  <data name="PipeItem_DeleteConfirm" xml:space="preserve">
+    <value>管网正在被工单引用. 如果删除这条记录, 该记录下的工单的状态会被设置为取消. 你确定要删除这条记录吗?</value>
+  </data>
+  <data name="UserRole_ReportSiteUserError" xml:space="preserve">
+    <value>报表网站用户/报表网站管理员必需选择多公司前缀！</value>
+  </data>
+  <data name="PipeOrder_ResultId_Required" xml:space="preserve">
+    <value>请选择完成结果。</value>
+  </data>
+  <data name="PipeOrder_ServiceCompletionDate_Required" xml:space="preserve">
+    <value>请选择完成日期。</value>
+  </data>
+  <data name="Common_Description_MaxLength" xml:space="preserve">
+    <value>描述不能超过500个字符。</value>
+  </data>
+  <data name="PipePressureRatingItem_Name_MaxLength" xml:space="preserve">
+    <value>压力等级名长度不能超过50个字符。</value>
+  </data>
+  <data name="PipeRiskLevelItem_Name_MaxLength" xml:space="preserve">
+    <value>管网风险分级名长度不能超过50个字符。</value>
+  </data>
+  <data name="PipeTubingItem_Name_MaxLength" xml:space="preserve">
+    <value>管材名长度不能超过50个字符。</value>
+  </data>
+  <data name="PipePressureRatingItem_Name_Required" xml:space="preserve">
+    <value>请输入压力等级名。</value>
+  </data>
+  <data name="PipeRiskLevelItem_Name_Required" xml:space="preserve">
+    <value>请输入管网风险分级名。</value>
+  </data>
+  <data name="PipeTubingItem_Name_Required" xml:space="preserve">
+    <value>请输入管材名。</value>
+  </data>
+  <data name="Bloc_ManageUserError" xml:space="preserve">
+    <value>该集团下没有区域不能添加用户！</value>
+  </data>
+  <data name="ReportSite_AreaMgt_CompanyRedLightAlarmingRange" xml:space="preserve">
+    <value>红灯警告必需在1到100之间.</value>
+  </data>
+  <data name="UserItem_Roles_SysAdminLimit" xml:space="preserve">
+    <value>系统管理员角色不能跟其它角色并用。</value>
+  </data>
+  <data name="Common_NoEmpty" xml:space="preserve">
+    <value>不能为空。</value>
+    <comment>不能为空！</comment>
+  </data>
+  <data name="Common_RequiredBetween" xml:space="preserve">
+    <value>必需在{0}和{1}范围内。</value>
+    <comment>必需在{0}和{1}范围内！</comment>
+  </data>
+  <data name="EquipPage_CalPlanExtend" xml:space="preserve">
+    <value>推迟日期。</value>
+    <comment>推迟日期</comment>
+  </data>
+  <data name="UsePage_Sysadmin_CompanyLimit" xml:space="preserve">
+    <value>公司用户不能是系统管理员角色。</value>
+  </data>
+  <data name="ReportSite_AreaMgt_AreaRedLightAlarmingRange" xml:space="preserve">
+    <value>红灯警告必需大于0.</value>
+  </data>
+  <data name="CommonPositiveIntegerValidateMessage" xml:space="preserve">
+    <value>只能输入正整数.</value>
+  </data>
+  <data name="Common_NameExists" xml:space="preserve">
+    <value>{0}名已经存在，请重新输入。</value>
+  </data>
+  <data name="MaintSummary_Year_Required" xml:space="preserve">
+    <value>必须输入年份！</value>
+  </data>
+  <data name="Message_PleaseSelectFaultCode" xml:space="preserve">
+    <value>请选择故障代码。</value>
+  </data>
+  <data name="EquipPlanItem_Tel" xml:space="preserve">
+    <value>电话必须输入数字！</value>
+  </data>
+  <data name="SinglePlaceAttachmentFileSizeLimit" xml:space="preserve">
+    <value>超出单个地方附件大小限制！</value>
+  </data>
+  <data name="Common_SinglePlaceAttachLimited_Number" xml:space="preserve">
+    <value>(独立)附件大小必须输入正整数 !</value>
+  </data>
+  <data name="SystemCheck_ReRunSuccessfully" xml:space="preserve">
+    <value>重新运行成功.</value>
+  </data>
+  <data name="SinglePlaceAttachmentError" xml:space="preserve">
+    <value>独立地方的附件大小限制不能大于总的附件大小限制！</value>
+  </data>
+  <data name="Common_TotalAttachLimited_Number" xml:space="preserve">
+    <value>附件大小限制必需输入正整数!</value>
+  </data>
+  <data name="PipeItem_Alarming_Range" xml:space="preserve">
+    <value>提前通知必须在1到9999之间.</value>
+  </data>
+  <data name="PipeItem_Interval_PositiveInteger" xml:space="preserve">
+    <value>泄漏测量周期必需为正整数.</value>
+  </data>
+  <data name="UserItem_ADFSLogonName_Exist" xml:space="preserve">
+    <value>域登录名已存在！</value>
+  </data>
+  <data name="BulkModifyCompany_ErrorSelect" xml:space="preserve">
+    <value>请至少选择一个公司和公司设定！</value>
+  </data>
+  <data name="UserItem_ADLogonName_Exist" xml:space="preserve">
+    <value>内部域账户只能对应一个系统管理员和一个非系统管理员用户！</value>
+  </data>
+  <data name="ADDomain_LogonNameNotExit" xml:space="preserve">
+    <value>当前域用户没有对应的系统用户！</value>
+  </data>
+  <data name="SignOut_WindowClose" xml:space="preserve">
+    <value>是否关闭浏览器？</value>
+  </data>
+  <data name="UserPage_ADDomainNULL" xml:space="preserve">
+    <value>内部域账户不为空时，内部域是必需的！</value>
+  </data>
+  <data name="UserPage_ADLoginNameNULL" xml:space="preserve">
+    <value>内部域不为空时，内部域账户是必需的！</value>
+  </data>
+  <data name="LoginTimeOut" xml:space="preserve">
+    <value>登录信息已过期，请重新登录！</value>
+  </data>
+  <data name="EquipPage_Scrap" xml:space="preserve">
+    <value>确定要报废这个['Item']？</value>
+  </data>
+  <data name="UserItem_Roles_ViewerExclusion" xml:space="preserve">
+    <value>浏览用户角色不能和其它角色一起使用。</value>
+  </data>
+  <data name="EquipPlan_DurationTypeId" xml:space="preserve">
+    <value>【基础信息】选项卡中，预计['Service']时间及其单位不能只填一个。</value>
+  </data>
+  <data name="EquipItem_SCOScrap_EnterReason" xml:space="preserve">
+    <value>请输入报废理由。</value>
+  </data>
+  <data name="EquipItem_SCOScrap_HasOrder" xml:space="preserve">
+    <value>['Item'] 有一些正在运行中的工单，如果报废['Item']，这些工单都会被取消。是否确定报废['Item']?</value>
+  </data>
+  <data name="OrderPage_LastServiceCompleteDate" xml:space="preserve">
+    <value>上一次['Service']完成日期</value>
+  </data>
+  <data name="Order_ServiceCompletionDate_EarlierThanPlanServDate" xml:space="preserve">
+    <value>完成日期不能早于计划日期!</value>
+  </data>
+  <data name="Order_ServiceCompletionDate_EarlierThanLastDate" xml:space="preserve">
+    <value>完成日期不能早于上一次['Service']日期!</value>
+  </data>
+  <data name="UserPage_IsFormPasswordAndIsDomainUserAllNull" xml:space="preserve">
+    <value>至少选择一种登录方式.</value>
+  </data>
+  <data name="UserItem_ADLogonName_Validate" xml:space="preserve">
+    <value>内部域账号只能输入英文,数字,下划线!</value>
+  </data>
+  <data name="UserItem_ADDomainAndADLoginNameAllNull" xml:space="preserve">
+    <value>内部域和内部域账户是必需的！</value>
+  </data>
+  <data name="TechnicalInstruction_Name_MaxLength" xml:space="preserve">
+    <value>技术说明名称长度不能超过50。</value>
+  </data>
+  <data name="CompanyItem_EmailRestriction_Illegal" xml:space="preserve">
+    <value>邮箱域名限制不合法!</value>
+  </data>
+  <data name="UserItem_EmailRestrictionByCompany" xml:space="preserve">
+    <value>邮箱域名不符合公司设定. 公司设定的可用邮箱域名:{0}.</value>
+  </data>
+  <data name="Common_MaxLength" xml:space="preserve">
+    <value>{0}的长度不能超过{1}。</value>
+  </data>
+  <data name="Common_Range" xml:space="preserve">
+    <value>{0}的值必须在{1}到{2}之间。</value>
+  </data>
+  <data name="SystemError_MissingConfig" xml:space="preserve">
+    <value>缺少系统配置项或系统配置项配置错误，请联系管理员。</value>
+  </data>
+  <data name="SystemError_WebconfigCorrect" xml:space="preserve">
+    <value>系统配置正确。</value>
+  </data>
+  <data name="CompanyItem_Code_ReportSiteReserveName" xml:space="preserve">
+    <value>编号不能等于ReportSite的保留字.</value>
+  </data>
+</root>

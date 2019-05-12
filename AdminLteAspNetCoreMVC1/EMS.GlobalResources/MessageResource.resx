@@ -1,0 +1,1651 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CalOrderItem_CheckInDate" xml:space="preserve">
+    <value>Check in date must bigger than or equal to last order finish date in the same plan.</value>
+  </data>
+  <data name="CancelReasonItem_CancelReasonName" xml:space="preserve">
+    <value>Cancel Reason is required.</value>
+  </data>
+  <data name="CancelReasonItem_CancelReasonName_Exist" xml:space="preserve">
+    <value>This Cancel Reason is already existed, please use another Name.</value>
+  </data>
+  <data name="CancelReasonItem_CancelReasonName_Length" xml:space="preserve">
+    <value>Cancel Reason length must between 2 and 50.</value>
+  </data>
+  <data name="CancelReason_Exists_ErrorMessage" xml:space="preserve">
+    <value>Cancel Reason does not exist.</value>
+  </data>
+  <data name="CancelReason_Name_Exist" xml:space="preserve">
+    <value>Cancel Reason is already existed, please retry.</value>
+  </data>
+  <data name="ChangePwd_AlertMessage" xml:space="preserve">
+    <value>Your password does not conform to the policy, please key in again.</value>
+  </data>
+  <data name="ChangePwd_ConfirmNewPwd" xml:space="preserve">
+    <value>Confirm New Password cannot be empty.</value>
+  </data>
+  <data name="ChangePwd_Fail" xml:space="preserve">
+    <value>Change Password failed.</value>
+  </data>
+  <data name="ChangePwd_NewPwd" xml:space="preserve">
+    <value>New Password can not be empty.</value>
+  </data>
+  <data name="ChangePwd_NewPwdCompare" xml:space="preserve">
+    <value>New Password is not the same as the Confirm Password.</value>
+  </data>
+  <data name="ChangePwd_NewPwdLength" xml:space="preserve">
+    <value>Password's length must between 6 and 12.</value>
+  </data>
+  <data name="ChangePwd_OldPwd" xml:space="preserve">
+    <value>Old Password cannot be empty.</value>
+  </data>
+  <data name="ChangePwd_OldPwdExist" xml:space="preserve">
+    <value>Old Password is incorrect.</value>
+  </data>
+  <data name="ChangePwd_Success" xml:space="preserve">
+    <value>Change Password Successfully.</value>
+  </data>
+  <data name="CommonItem_DateGreater" xml:space="preserve">
+    <value>{0} must greater than the {1} </value>
+  </data>
+  <data name="CommonItem_DateGreater_Equal" xml:space="preserve">
+    <value>{0} must greater than or equal to the {1}</value>
+  </data>
+  <data name="CommonItem_DateLess" xml:space="preserve">
+    <value>{0} must less than {1}</value>
+  </data>
+  <data name="CommonItem_DateLess_Equal" xml:space="preserve">
+    <value>{0} must less than or equal to  {1}</value>
+  </data>
+  <data name="Common_AttachLimited_Number" xml:space="preserve">
+    <value>Single attachment size limit must enter positive integer.</value>
+  </data>
+  <data name="Common_CompanyCode" xml:space="preserve">
+    <value>Company Code only accepts English alphabet.</value>
+  </data>
+  <data name="Common_DataConflict" xml:space="preserve">
+    <value>Data conflicts - the original data has been changed.</value>
+  </data>
+  <data name="Common_DateFormat" xml:space="preserve">
+    <value>Date format is incorrect.  Please retry.</value>
+  </data>
+  <data name="Common_EmailExist" xml:space="preserve">
+    <value>Email address has been used.  Please retry.</value>
+  </data>
+  <data name="Common_EmailFomat" xml:space="preserve">
+    <value>Email Format is incorrect.  Please retry.</value>
+  </data>
+  <data name="Common_Item" xml:space="preserve">
+    <value>['Item']</value>
+  </data>
+  <data name="Common_LogonName" xml:space="preserve">
+    <value>Login name accepts  alphanumeric and underscores only.</value>
+  </data>
+  <data name="Common_NotEnoughRight" xml:space="preserve">
+    <value>You do not have sufficient privileges.</value>
+  </data>
+  <data name="Common_Number_MoreThanZero" xml:space="preserve">
+    <value>Number must more than 0.</value>
+  </data>
+  <data name="Common_PassWordNumber" xml:space="preserve">
+    <value>Minimum password length must be a number.</value>
+  </data>
+  <data name="Common_Plan" xml:space="preserve">
+    <value>Plan</value>
+  </data>
+  <data name="Common_ResetPasswordSuccess" xml:space="preserve">
+    <value>Password has been reset.</value>
+  </data>
+  <data name="Common_Upload_NoChoosePic" xml:space="preserve">
+    <value>You must choose at least a picture.</value>
+  </data>
+  <data name="Common_Upload_PicFormat" xml:space="preserve">
+    <value>Picture's format is not correct.</value>
+  </data>
+  <data name="Common_Upload_PicFormat_Col" xml:space="preserve">
+    <value>Picture format must be PJ, PNG or GIF</value>
+  </data>
+  <data name="Common_Upload_Pixel" xml:space="preserve">
+    <value>Pixel</value>
+  </data>
+  <data name="Common_UserLimited_Number" xml:space="preserve">
+    <value>Users limit must enter positive integer .</value>
+  </data>
+  <data name="Common_ValidateDate" xml:space="preserve">
+    <value>{0} is an invalid date format.</value>
+  </data>
+  <data name="CompanyItem_Code" xml:space="preserve">
+    <value>Code is required.</value>
+  </data>
+  <data name="CompanyItem_Code_Exist" xml:space="preserve">
+    <value>This Code has already existed, please use another Code.</value>
+  </data>
+  <data name="CompanyItem_Code_Length" xml:space="preserve">
+    <value>Code's length must between 2 and 50.</value>
+  </data>
+  <data name="CompanyItem_Description_Length" xml:space="preserve">
+    <value>Description's length must be less than 250.</value>
+  </data>
+  <data name="CompanyItem_Name" xml:space="preserve">
+    <value>Short Name is required.</value>
+  </data>
+  <data name="CompanyItem_Name_Exist" xml:space="preserve">
+    <value>Short Name has already existed, please use another Name.</value>
+  </data>
+  <data name="CompanyItem_Name_Length" xml:space="preserve">
+    <value>Short Name's length must between 2 and 50.</value>
+  </data>
+  <data name="CompanyItem_OrderGenerateType" xml:space="preserve">
+    <value>Must select at least one Order Generation Method.</value>
+  </data>
+  <data name="CompanyItem_ServictType" xml:space="preserve">
+    <value>Must select at least one Service Type(Fixed/Flow).</value>
+  </data>
+  <data name="CompanyItem_Users" xml:space="preserve">
+    <value>The company you want to delete has other users. If you delete this company, its users will be deleted at the same time. Are you sure to delete this company?</value>
+  </data>
+  <data name="CompanyItem_WebSiteType" xml:space="preserve">
+    <value>Must select at least one Opening Function.</value>
+  </data>
+  <data name="Company_Exists_ErrorMessage" xml:space="preserve">
+    <value>Company does not exist.</value>
+  </data>
+  <data name="Company_MoreThanUser" xml:space="preserve">
+    <value>Maximum number of users has been reached.</value>
+  </data>
+  <data name="Company_NamingItem" xml:space="preserve">
+    <value>Naming is required.</value>
+  </data>
+  <data name="Company_NamingItemCN" xml:space="preserve">
+    <value>Naming (Simplified Chinese) is required.</value>
+  </data>
+  <data name="Company_NamingItemEN" xml:space="preserve">
+    <value>Naming (English) is required.</value>
+  </data>
+  <data name="Company_NamingItemHK" xml:space="preserve">
+    <value>Naming (Traditional Chinese) is required.</value>
+  </data>
+  <data name="Company_NamingServiceCN" xml:space="preserve">
+    <value>Service naming (Simplified Chinese) is required.</value>
+  </data>
+  <data name="Company_NamingServiceEN" xml:space="preserve">
+    <value>Service naming (English) is required.</value>
+  </data>
+  <data name="Company_NamingServiceHK" xml:space="preserve">
+    <value>Service naming (Traditional Chinese) is required.</value>
+  </data>
+  <data name="ContractorItem_ContractorName" xml:space="preserve">
+    <value>Contractor is required.</value>
+  </data>
+  <data name="ContractorItem_ContractorName_Exist" xml:space="preserve">
+    <value>This Contractor has already existed, please use another Name.</value>
+  </data>
+  <data name="ContractorItem_ContractorName_Length" xml:space="preserve">
+    <value>Contractor's length must between 2 and 50.</value>
+  </data>
+  <data name="Contractor_Empty_ErrorMessage" xml:space="preserve">
+    <value>Contractor is empty.</value>
+  </data>
+  <data name="Contractor_Exists_ErrorMessage" xml:space="preserve">
+    <value>Contractor does not exist.</value>
+  </data>
+  <data name="Contractor_Name_Exist" xml:space="preserve">
+    <value>Contractor has already existed, please use another name.</value>
+  </data>
+  <data name="Data_model_ErrorMessage" xml:space="preserve">
+    <value>Data Model cannot be null.</value>
+  </data>
+  <data name="DepartmentItem_Code_Exist" xml:space="preserve">
+    <value>Org. Unit Code has already existed, please use another code.</value>
+  </data>
+  <data name="DepartmentItem_DepartmentCode" xml:space="preserve">
+    <value>Cost Center is required.</value>
+  </data>
+  <data name="DepartmentItem_DepartmentName" xml:space="preserve">
+    <value>Org. Unit is required.</value>
+  </data>
+  <data name="DepartmentItem_Name_Exist" xml:space="preserve">
+    <value>Organization Unit has already existed, please use another name.</value>
+  </data>
+  <data name="EmailTemplateItem_CreateSuccess" xml:space="preserve">
+    <value>Created Successfully.</value>
+  </data>
+  <data name="EmailTemplateItem_SelectCompany" xml:space="preserve">
+    <value>Please select a Company.</value>
+  </data>
+  <data name="EquipItem_Contractor" xml:space="preserve">
+    <value>Contractor is required.</value>
+  </data>
+  <data name="EquipItem_ControlCategory" xml:space="preserve">
+    <value>Control Category must be selected.</value>
+  </data>
+  <data name="EquipItem_Date_Format" xml:space="preserve">
+    <value>Date's format is incorrect.</value>
+  </data>
+  <data name="EquipItem_Date_Required" xml:space="preserve">
+    <value>You have to select a date.</value>
+  </data>
+  <data name="EquipItem_Delete_HasChild" xml:space="preserve">
+    <value>Contains child ['Item'], please delete child ['Item'] first.</value>
+  </data>
+  <data name="EquipItem_Delete_ServiceOrder" xml:space="preserve">
+    <value>Item is currently in use by the service/maintenance order.</value>
+  </data>
+  <data name="EquipItem_Description_Length" xml:space="preserve">
+    <value>Description's length must be less than 250.</value>
+  </data>
+  <data name="EquipItem_ExitItemModalPrmopt" xml:space="preserve">
+    <value>['Item'] is modifed but not save, exit the dialog will discard the change, do you want to continue?</value>
+  </data>
+  <data name="EquipItem_Location" xml:space="preserve">
+    <value>['Location'] is required.</value>
+  </data>
+  <data name="EquipItem_MarkUnique" xml:space="preserve">
+    <value>Please make sure the item mark is unique. The combination of item type, item number, and item name should be unique</value>
+  </data>
+  <data name="EquipItem_Name" xml:space="preserve">
+    <value>Name is required.</value>
+  </data>
+  <data name="EquipItem_Name_Length" xml:space="preserve">
+    <value>Name's length must be less than 50.</value>
+  </data>
+  <data name="EquipItem_NextWorkshopServiceDate_Format" xml:space="preserve">
+    <value>Date format error</value>
+  </data>
+  <data name="EquipItem_No" xml:space="preserve">
+    <value>['Item'] NO. is required.</value>
+  </data>
+  <data name="EquipItem_NoOrderExist" xml:space="preserve">
+    <value>No reference order exists.</value>
+  </data>
+  <data name="EquipItem_No_Exist" xml:space="preserve">
+    <value>['Item'] NO. has already existed.</value>
+  </data>
+  <data name="EquipItem_OrgUnit" xml:space="preserve">
+    <value>Please select Org. Unit.</value>
+  </data>
+  <data name="EquipItem_OwnerDepartment" xml:space="preserve">
+    <value>Owner Department is required.</value>
+  </data>
+  <data name="EquipItem_Position" xml:space="preserve">
+    <value>Position's length can not big than 100.</value>
+  </data>
+  <data name="EquipItem_ServiceBy" xml:space="preserve">
+    <value>['Service'] By is required.</value>
+  </data>
+  <data name="EquipItem_ServiceBy2" xml:space="preserve">
+    <value>Reserve ['Service'] By is required.</value>
+  </data>
+  <data name="EquipItem_Status" xml:space="preserve">
+    <value>Please select Status.</value>
+  </data>
+  <data name="EquipItem_TypeId" xml:space="preserve">
+    <value>Please select the ['Item'] Template.</value>
+  </data>
+  <data name="EquipItem_UnderISOControl" xml:space="preserve">
+    <value>Under ISO Control must be selected.</value>
+  </data>
+  <data name="EquipItem_UserInterval" xml:space="preserve">
+    <value>User's Interval is required.</value>
+  </data>
+  <data name="EquipItem_UserTI" xml:space="preserve">
+    <value>User TI is required.</value>
+  </data>
+  <data name="EquipItem_WorkshopInterval" xml:space="preserve">
+    <value>Workshop's Interval is required.</value>
+  </data>
+  <data name="EquipItem_WorkshopTI" xml:space="preserve">
+    <value>Workshop TI is required.</value>
+  </data>
+  <data name="EquipmentPlan_ExistsServiceOrder_Error1" xml:space="preserve">
+    <value>Active service order ['Service'] are created for this</value>
+  </data>
+  <data name="EquipmentPlan_ExistsServiceOrder_Error2" xml:space="preserve">
+    <value>plan, delete is not allowed.</value>
+  </data>
+  <data name="EquipmentPlan_Exists_ErrorMessage" xml:space="preserve">
+    <value>Equipment Plan does not exist.</value>
+  </data>
+  <data name="EquipmentTypeItem_ControlId" xml:space="preserve">
+    <value>Control must be selected.</value>
+  </data>
+  <data name="EquipmentTypeItem_EquipmentTypeName" xml:space="preserve">
+    <value>['Item'] Template Name is required.</value>
+  </data>
+  <data name="EquipmentTypeItem_EquipmentTypeName_Exist" xml:space="preserve">
+    <value>['Item'] Template Name has already existed, please use another Name.</value>
+  </data>
+  <data name="EquipmentTypeItem_EquipmentTypeNo" xml:space="preserve">
+    <value>Template No. is required.</value>
+  </data>
+  <data name="EquipmentTypeItem_LabelSizeId" xml:space="preserve">
+    <value>Label Size must be selected.</value>
+  </data>
+  <data name="EquipmentTypeItem_Manftr" xml:space="preserve">
+    <value>Manufacturer is required.</value>
+  </data>
+  <data name="EquipmentTypeItem_Model" xml:space="preserve">
+    <value>Model is required.</value>
+  </data>
+  <data name="EquipmentTypeItem_NameExists" xml:space="preserve">
+    <value>['Item'] Template name and No.'s combination has already existed.</value>
+  </data>
+  <data name="EquipmentTypeItem_NatureId" xml:space="preserve">
+    <value>Nature must be selected.</value>
+  </data>
+  <data name="EquipmentTypeItem_OrgUnit" xml:space="preserve">
+    <value>Before adding a new record, you must select a Org Unit first.</value>
+  </data>
+  <data name="EquipmentTypeItem_UserIntervalId" xml:space="preserve">
+    <value>User Interval must be selected.</value>
+  </data>
+  <data name="EquipmentTypeItem_UserTIId" xml:space="preserve">
+    <value>User TI must be selected.</value>
+  </data>
+  <data name="EquipmentTypeItem_WorkshopIntervalId" xml:space="preserve">
+    <value>Workshop Interval must be selected.</value>
+  </data>
+  <data name="EquipmentTypeItem_WorkshopTIId" xml:space="preserve">
+    <value>Workshop TI must be selected.</value>
+  </data>
+  <data name="EquipmentType_Active_ErrorMessage" xml:space="preserve">
+    <value>Equipment Template is active.</value>
+  </data>
+  <data name="EquipmentType_Exists_ErrorMessage" xml:space="preserve">
+    <value>Equipment Template does not exist.</value>
+  </data>
+  <data name="Equipment_Exists_ErrorMessage" xml:space="preserve">
+    <value>Equipment does not exist.</value>
+  </data>
+  <data name="EquipPage_ServiceCheck" xml:space="preserve">
+    <value>Operation failed. Please correct the errors and try again.</value>
+  </data>
+  <data name="EquipPage_ServiceContentDescription" xml:space="preserve">
+    <value>The steps/guidelines for maintaining the equipment.</value>
+  </data>
+  <data name="EquipPage_ServiceUserRequirementDescription" xml:space="preserve">
+    <value>Technician's' competency for carrying out the maintenance/service orders.</value>
+  </data>
+  <data name="EquipPlanItem_AlarmingLevel" xml:space="preserve">
+    <value>Alarming is required.</value>
+  </data>
+  <data name="EquipPlanItem_AlarmingLevelInterval" xml:space="preserve">
+    <value>Alarming Level Interval is required.</value>
+  </data>
+  <data name="EquipPlanItem_CalibraManageTeamId" xml:space="preserve">
+    <value>Please select a Calibration Manage  ['Team'].</value>
+  </data>
+  <data name="EquipPlanItem_CalibraWorkTeamId" xml:space="preserve">
+    <value>Please select a Calibration Work  ['Team'].</value>
+  </data>
+  <data name="EquipPlanItem_Delete_ServiceOrder" xml:space="preserve">
+    <value>Some ['Service'] order are based on this plan, you cannot delete it.</value>
+  </data>
+  <data name="EquipPlanItem_EquipmentId" xml:space="preserve">
+    <value>['Item'] Id is required.</value>
+  </data>
+  <data name="EquipPlanItem_FirstServiceDate" xml:space="preserve">
+    <value>First ['Service'] Date is required.</value>
+  </data>
+  <data name="EquipPlanItem_IntervalValue" xml:space="preserve">
+    <value>Interval Value is required</value>
+  </data>
+  <data name="EquipPlanItem_IsActive" xml:space="preserve">
+    <value>Please input "[Interval] tab's "First ['Service'] Date", "Interval Value" and "Interval Type" if you want to save and active the plan.</value>
+  </data>
+  <data name="EquipPlanItem_IsAutoGenOrder" xml:space="preserve">
+    <value>Generation Method is required.</value>
+  </data>
+  <data name="EquipPlanItem_MaintCheckById" xml:space="preserve">
+    <value>Maintenance Check By Id is required.</value>
+  </data>
+  <data name="EquipPlanItem_MaintContentDescription" xml:space="preserve">
+    <value>Please input ['Service'] Content Description.</value>
+  </data>
+  <data name="EquipPlanItem_MaintTeamId" xml:space="preserve">
+    <value>Please select a Inspection  ['Team'].</value>
+  </data>
+  <data name="EquipPlanItem_ManualGenAlarmingLevel" xml:space="preserve">
+    <value>In the [Inspection] or [Calibration Work] tab, please input Manual Alarming(Day).</value>
+  </data>
+  <data name="EquipPlanItem_ManualGenAlarmingLevelInterval" xml:space="preserve">
+    <value>In the [Inspection] or [Calibration Work] tab, please input Manual Alarming Interval(Day).</value>
+  </data>
+  <data name="EquipPlanItem_Name" xml:space="preserve">
+    <value>Plan Name is required.</value>
+  </data>
+  <data name="EquipPlanItem_Name_Exist" xml:space="preserve">
+    <value>Plan Name has already existed.</value>
+  </data>
+  <data name="EquipPlanItem_Other" xml:space="preserve">
+    <value>Other Request is required.</value>
+  </data>
+  <data name="EquipPlanItem_RepairById" xml:space="preserve">
+    <value>Repair By Id is required.</value>
+  </data>
+  <data name="EquipPlanItem_RepairCheckById" xml:space="preserve">
+    <value>Repair Check By Id is required.</value>
+  </data>
+  <data name="EquipPlanItem_RepairTeamId" xml:space="preserve">
+    <value>Please select a Maintenance  ['Team'].</value>
+  </data>
+  <data name="EquipPlanItem_ServiceById" xml:space="preserve">
+    <value>['Service'] By Id is required.</value>
+  </data>
+  <data name="EquipPlanItem_UserIntervalTypeId" xml:space="preserve">
+    <value>In the "[Interval] tab's, User Interval Type Id is required.</value>
+  </data>
+  <data name="EquipPlanItem_UserIntervalValue" xml:space="preserve">
+    <value>User Interval Value is required.</value>
+  </data>
+  <data name="EquipPlanItem_Worker_Required" xml:space="preserve">
+    <value>Please choose at least one worker type.</value>
+  </data>
+  <data name="EquipTypePlan_AlarmLevel" xml:space="preserve">
+    <value>Inspection Alarming is required.</value>
+  </data>
+  <data name="EquipTypePlan_DurationType" xml:space="preserve">
+    <value>Please choose a Duration Type.</value>
+  </data>
+  <data name="EquipTypePlan_EstimServDura" xml:space="preserve">
+    <value>Please input Estimate {0} Duration.</value>
+  </data>
+  <data name="EquipTypePlan_IntervalTypeId" xml:space="preserve">
+    <value>Interval Value's Unit is required.</value>
+  </data>
+  <data name="EquipTypePlan_IntervalValue" xml:space="preserve">
+    <value>Interval Value is required.</value>
+  </data>
+  <data name="EquipTypePlan_IsAutoGenOrder" xml:space="preserve">
+    <value>Please choose Generation Method.</value>
+  </data>
+  <data name="EquipTypePlan_Name" xml:space="preserve">
+    <value>Plan Name is required.</value>
+  </data>
+  <data name="EquipTypePlan_NameExists" xml:space="preserve">
+    <value>Item Template Plan Name has already existed.</value>
+  </data>
+  <data name="EquipTypePlan_OrgUnit_Icon" xml:space="preserve">
+    <value>If choose a Org.Unit, users will have access to this Item Template and its Item who are under Org.Unit. If this Item Template already contains a subset of Org.Unit, and then select a parent of this child Org.Unit, Org.Unit of
+parent will automatically substitute Org.Unit of child.</value>
+  </data>
+  <data name="EquipTypePlan_ServiceCheck_Icon" xml:space="preserve">
+    <value>Need to notice when checked work of plans which was finished.</value>
+  </data>
+  <data name="EquipTypePlan_ServiceContentDesc_Icon" xml:space="preserve">
+    <value>Requirement's detail for excuting work of plans.</value>
+  </data>
+  <data name="EquipTypePlan_ServiceRequest" xml:space="preserve">
+    <value>Service Request is required.</value>
+  </data>
+  <data name="EquipTypePlan_ServiceUserRequirDesc_Icon" xml:space="preserve">
+    <value>Technician's' competency for carrying out the maintenance/service orders.</value>
+  </data>
+  <data name="EquipTypePlan_Worker" xml:space="preserve">
+    <value>Must select at least one worker type.</value>
+  </data>
+  <data name="Export_Report_Fail" xml:space="preserve">
+    <value>Export failed.</value>
+  </data>
+  <data name="Export_Report_Success" xml:space="preserve">
+    <value>Export Succeed.</value>
+  </data>
+  <data name="FaultCodeItem_FaultCodeName" xml:space="preserve">
+    <value>Fault Code is required.</value>
+  </data>
+  <data name="FaultCodeItem_FaultCodeName_Exist" xml:space="preserve">
+    <value>This Fault Code has already existed, please use another Name.</value>
+  </data>
+  <data name="FaultCodeItem_FaultCodeName_Length" xml:space="preserve">
+    <value>Fault Code length must between 2 and 50.</value>
+  </data>
+  <data name="FaultCode_Empty_ErrorMessage" xml:space="preserve">
+    <value>Fault Code is empty.</value>
+  </data>
+  <data name="FaultCode_Exists_ErrorMessage" xml:space="preserve">
+    <value>Fault Code does not exist.</value>
+  </data>
+  <data name="FaultCode_Name_Exist" xml:space="preserve">
+    <value>Fault Code has already existed, please retry.</value>
+  </data>
+  <data name="GroupItem_Description_Length" xml:space="preserve">
+    <value>Description's length cannot be more than 250 characters.</value>
+  </data>
+  <data name="GroupItem_GroupName" xml:space="preserve">
+    <value>Group Name is required.</value>
+  </data>
+  <data name="GroupItem_GroupName_Length" xml:space="preserve">
+    <value>Group Name's length must between 2 and 50.</value>
+  </data>
+  <data name="GroupItem_Name_Exists" xml:space="preserve">
+    <value>This Group Name has already existed, please use another Group Name.</value>
+  </data>
+  <data name="IntervalItem_IntervalAlarmingLevel" xml:space="preserve">
+    <value>Alarming Level is required.</value>
+  </data>
+  <data name="IntervalItem_IntervalAlarmingLevelDay" xml:space="preserve">
+    <value>Maximum value cannot be more than 9999 days</value>
+  </data>
+  <data name="IntervalItem_IntervalIndicator" xml:space="preserve">
+    <value>Interval Indicator is required.</value>
+  </data>
+  <data name="IntervalItem_IntervalValue" xml:space="preserve">
+    <value>Interval Value is required.</value>
+  </data>
+  <data name="LocationItem_LocationBeenUsed" xml:space="preserve">
+    <value>Location is being used.</value>
+  </data>
+  <data name="LocationItem_LocationDelete" xml:space="preserve">
+    <value>This location has child locations, you can't delete it.</value>
+  </data>
+  <data name="LocationItem_LocationName" xml:space="preserve">
+    <value>Location is required.</value>
+  </data>
+  <data name="LocationItem_LocationName_Exist" xml:space="preserve">
+    <value>This Location has already existed, please use  another Name.</value>
+  </data>
+  <data name="LocationItem_LocationName_Length" xml:space="preserve">
+    <value>Location's length must between 2 and 50.</value>
+  </data>
+  <data name="Location_Empty_ErrorMessage" xml:space="preserve">
+    <value>Location is empty.</value>
+  </data>
+  <data name="Location_Exists_ErrorMessage" xml:space="preserve">
+    <value>Location does not exist.</value>
+  </data>
+  <data name="Location_Name_Exist" xml:space="preserve">
+    <value>Location has already existed, please retry.</value>
+  </data>
+  <data name="Location_Select_ErrorMessage" xml:space="preserve">
+    <value>Can't select this parent location.</value>
+  </data>
+  <data name="LogonName_isrequire" xml:space="preserve">
+    <value>User name is required.</value>
+  </data>
+  <data name="LogonName_Password_Error" xml:space="preserve">
+    <value>Invalid user name or password.</value>
+  </data>
+  <data name="MaintSummary_Year" xml:space="preserve">
+    <value>Year must be  4 numbers.</value>
+  </data>
+  <data name="Message_CommonDeleteFail" xml:space="preserve">
+    <value>Delete Failure.</value>
+  </data>
+  <data name="Message_CommonDeleteSuccessful" xml:space="preserve">
+    <value>Delete Successfully.</value>
+  </data>
+  <data name="Message_CommonError" xml:space="preserve">
+    <value>Process has encountered error, please contact the administrator.</value>
+  </data>
+  <data name="Message_CommonInsertFail" xml:space="preserve">
+    <value>Insert Failure.</value>
+  </data>
+  <data name="Message_CommonInsertSuccessful" xml:space="preserve">
+    <value>Insert Successfully.</value>
+  </data>
+  <data name="Message_CommonLoadSuccessful" xml:space="preserve">
+    <value>Load Successfully.</value>
+  </data>
+  <data name="Message_CommonSuccessful" xml:space="preserve">
+    <value>Process successful.</value>
+  </data>
+  <data name="Message_CommonUpdateFail" xml:space="preserve">
+    <value>Update Failure.</value>
+  </data>
+  <data name="Message_CommonUpdateSuccessful" xml:space="preserve">
+    <value>Update Successfully.</value>
+  </data>
+  <data name="Message_CommonValidFailure" xml:space="preserve">
+    <value>Validation failed, please make sure the value you enter is correct.</value>
+  </data>
+  <data name="Message_ConfirmDeletion" xml:space="preserve">
+    <value>Are you sure you want to delete this record?</value>
+  </data>
+  <data name="Message_ConfirmDeletionTemp" xml:space="preserve">
+    <value>Are you sure you want to delete {0}? Please be reminded to click [save] button to complete the whole process.</value>
+  </data>
+  <data name="Message_ConfirmEditOrgunit" xml:space="preserve">
+    <value>Selected users are now belonging to another Org. Unit, Are you sure you want to change the organization unit of these users?</value>
+  </data>
+  <data name="Message_ConfirmResetPassword" xml:space="preserve">
+    <value>Are you sure you want to reset your password?</value>
+  </data>
+  <data name="Message_DeleteTeam" xml:space="preserve">
+    <value>If this working  ['Team'] is deleted, the corresponding members will be removed from this  ['Team'].</value>
+  </data>
+  <data name="Message_Department_CodeError" xml:space="preserve">
+    <value>Department Code has already existed.  Insert failed.</value>
+  </data>
+  <data name="Message_Department_NameError" xml:space="preserve">
+    <value>Department Name has already existed.  Insert failed.</value>
+  </data>
+  <data name="Message_DueCalOrderPage_DepartmentRequired" xml:space="preserve">
+    <value>Please select a Department.</value>
+  </data>
+  <data name="Message_DueCalOrderPage_SelectEquipment" xml:space="preserve">
+    <value>Please select cancel reason.</value>
+  </data>
+  <data name="Message_WaitProcessing" xml:space="preserve">
+    <value>Processing, please wait...</value>
+  </data>
+  <data name="MockLink_IsExist" xml:space="preserve">
+    <value>The URL has already existed.</value>
+  </data>
+  <data name="MockLink_URL" xml:space="preserve">
+    <value>URL is required.</value>
+  </data>
+  <data name="MockLink_URL_Legal" xml:space="preserve">
+    <value>Please enter a valid URL.</value>
+  </data>
+  <data name="MultiCompanyReserverWord_Code_Exist" xml:space="preserve">
+    <value>Multi Company prefix has already existed.</value>
+  </data>
+  <data name="NoUserData" xml:space="preserve">
+    <value>No user data.</value>
+  </data>
+  <data name="NumberValidator" xml:space="preserve">
+    <value>Please enter numbers only.</value>
+  </data>
+  <data name="OrderPage_ExtendDateEnd" xml:space="preserve">
+    <value>You can only extend less than three month.</value>
+  </data>
+  <data name="Order_ApproveBy_NotEmpty" xml:space="preserve">
+    <value>Please input Approve By.</value>
+  </data>
+  <data name="Order_CalBy_NotEmpty" xml:space="preserve">
+    <value>Please input Cal By.</value>
+  </data>
+  <data name="Order_CheckBy_NotEmpty" xml:space="preserve">
+    <value>Please input Check By.</value>
+  </data>
+  <data name="Order_CheckInBy_NotEmpty" xml:space="preserve">
+    <value>Please input Check In By.</value>
+  </data>
+  <data name="Order_CheckInDateMustLarger_NotEmpty" xml:space="preserve">
+    <value>The Check In Date must be before the Service Completion Date.</value>
+  </data>
+  <data name="Order_CheckInDate_NotEmpty" xml:space="preserve">
+    <value>Please input Check In Date.</value>
+  </data>
+  <data name="Order_InspectionBy_NotEmpty" xml:space="preserve">
+    <value>Please input the Inspection By.</value>
+  </data>
+  <data name="Order_MaintBy_NotEmpty" xml:space="preserve">
+    <value>Please input the Maint By.</value>
+  </data>
+  <data name="Order_MaintRepairBy_NotEmpty" xml:space="preserve">
+    <value>Please input the Inspection(Maint) By.</value>
+  </data>
+  <data name="Order_PlanTime_NotEmpty" xml:space="preserve">
+    <value>Please input the Estimate Service Duration.</value>
+  </data>
+  <data name="Order_ReviewBy_NotEmpty" xml:space="preserve">
+    <value>Please input the Review By.</value>
+  </data>
+  <data name="Order_ServiceCompletionDate_NotEmpty" xml:space="preserve">
+    <value>Please input Completion Service Date.</value>
+  </data>
+  <data name="Order_ServiceDuration_NotEmpty" xml:space="preserve">
+    <value>Please input Calibration/Inspection/Repair Duration.</value>
+  </data>
+  <data name="OrgUnit_MustSelectParent" xml:space="preserve">
+    <value>Parent node can't be empty.</value>
+  </data>
+  <data name="OrgUnit_ParentError" xml:space="preserve">
+    <value>Cannot select this parent Org. Unit.</value>
+  </data>
+  <data name="OrgUnit_ParentID" xml:space="preserve">
+    <value>Cannot choose itself as parent Org Unit.</value>
+  </data>
+  <data name="PasswordPolicy_MaxLength_MinRange" xml:space="preserve">
+    <value>Password Max Length must be greater than or equal to {1}.</value>
+  </data>
+  <data name="PasswordPolicy_MaxLength_RegularNum" xml:space="preserve">
+    <value>Password Max Length must be a positive integer.</value>
+  </data>
+  <data name="PasswordPolicy_Max_MinLetter_Length_Compare" xml:space="preserve">
+    <value>Password Length must between {0} and {1}.</value>
+  </data>
+  <data name="PasswordPolicy_Max_Min_Length_Compare" xml:space="preserve">
+    <value>Password Max Length must be greater than or equal to Password Min Length.</value>
+  </data>
+  <data name="PasswordPolicy_MinEnLetterLength_MinRange" xml:space="preserve">
+    <value>Password Min Length must be greater than or equal to {1}.</value>
+  </data>
+  <data name="PasswordPolicy_MinEnLetterLength_RegularNum" xml:space="preserve">
+    <value>Minimum Number Of Characters In Password must be a positive integer.</value>
+  </data>
+  <data name="PasswordPolicy_MinEnLetterLength_Required" xml:space="preserve">
+    <value>Password Min Length is required.</value>
+  </data>
+  <data name="PasswordPolicy_MinLength" xml:space="preserve">
+    <value>Password Min Length is required.</value>
+  </data>
+  <data name="PasswordPolicy_MinLength_MinRange" xml:space="preserve">
+    <value>Password Min Length must be greater than or equal to {1}.</value>
+  </data>
+  <data name="PasswordPolicy_MinLength_RegularNum" xml:space="preserve">
+    <value>Minimum Number Of Characters In Password must be a positive integer.</value>
+  </data>
+  <data name="PasswordPolicy_MinLength_Required" xml:space="preserve">
+    <value>Password Min Length is required.</value>
+  </data>
+  <data name="PasswordPolicy_NeedLetter_Req" xml:space="preserve">
+    <value>Password must contain English letter.</value>
+  </data>
+  <data name="PasswordPolicy_NeedNumber_Req" xml:space="preserve">
+    <value>Password must contain a positive integer.</value>
+  </data>
+  <data name="PasswordPolicy_NeedSpecialChar_Req" xml:space="preserve">
+    <value>Password must contain a special character.</value>
+  </data>
+  <data name="PasswordPolicy_NoBlankSpace_Req" xml:space="preserve">
+    <value>Password must contain a space.</value>
+  </data>
+  <data name="PasswordPolicy_UnlikePrePwdCount_MinRange" xml:space="preserve">
+    <value>Password Repeat Interval Frequency must be greater than or equal to {1}.</value>
+  </data>
+  <data name="PasswordPolicy_UnlikePrePwdCount_RegularNum" xml:space="preserve">
+    <value>Password Repeat Interval Frequency must be a positive integer.</value>
+  </data>
+  <data name="PasswordPolicy_UnlikePrePwdCount_Required" xml:space="preserve">
+    <value>Password Repeat Interval Frequency is required.</value>
+  </data>
+  <data name="QualificaitonItem_QualificaitonName" xml:space="preserve">
+    <value>Qualification is required.</value>
+  </data>
+  <data name="QualificaitonItem_QualificaitonName_Exist" xml:space="preserve">
+    <value>This Qualification has already existed, please use another Name.</value>
+  </data>
+  <data name="QualificaitonItem_QualificaitonName_Length" xml:space="preserve">
+    <value>Qualification length must between 2 and 50.</value>
+  </data>
+  <data name="QualificaitonPage_Empty_ErrorMessage" xml:space="preserve">
+    <value>Qualification is empty.</value>
+  </data>
+  <data name="QualificaitonPage_Exists_ErrorMessage" xml:space="preserve">
+    <value>Qualification does not exist.</value>
+  </data>
+  <data name="Qualificaiton_Name_Exist" xml:space="preserve">
+    <value>Qualification has already existed, please use another name.</value>
+  </data>
+  <data name="Reg_MultiCompanyReserverWord_Code" xml:space="preserve">
+    <value>Multi Company prefix can only accept lowercase letters.</value>
+  </data>
+  <data name="Report_ServiceDate" xml:space="preserve">
+    <value>Service Date is required.</value>
+  </data>
+  <data name="Req_MultiCompanyReserverWord_Code" xml:space="preserve">
+    <value>Multi Company prefix is required.</value>
+  </data>
+  <data name="RoleItem_RoleName" xml:space="preserve">
+    <value>Role Name is required.</value>
+  </data>
+  <data name="Role_Empty_ErrorMessage" xml:space="preserve">
+    <value>Role is empty.</value>
+  </data>
+  <data name="Role_Exits_ErrorMessage" xml:space="preserve">
+    <value>Role does not exist.</value>
+  </data>
+  <data name="Role_RemoveUser_ErrorMessage" xml:space="preserve">
+    <value>This Role contains user, please remove the users first.</value>
+  </data>
+  <data name="SearchModel" xml:space="preserve">
+    <value>Search Model is empty.</value>
+  </data>
+  <data name="Stage_Exists" xml:space="preserve">
+    <value>Stage does not exist,</value>
+  </data>
+  <data name="SystemCheck_Body" xml:space="preserve">
+    <value>Message Body is required.</value>
+  </data>
+  <data name="SystemCheck_DBConnectionFail" xml:space="preserve">
+    <value>Connection failed.</value>
+  </data>
+  <data name="SystemCheck_DBConnectionSuccess" xml:space="preserve">
+    <value>Connected successfully.</value>
+  </data>
+  <data name="SystemCheck_EmailThread_Abnormal" xml:space="preserve">
+    <value>Email thread does not start or terminate abnormally.</value>
+  </data>
+  <data name="SystemCheck_EmailThread_Running" xml:space="preserve">
+    <value>Email thread is alive and running.</value>
+  </data>
+  <data name="SystemCheck_Receiver" xml:space="preserve">
+    <value>The Receiver is required.</value>
+  </data>
+  <data name="SystemCheck_ReceiverEmailFormatVaild" xml:space="preserve">
+    <value>The email format is not correct.</value>
+  </data>
+  <data name="SystemCheck_SendEmailFail" xml:space="preserve">
+    <value>Cannot connect to SMTP server.</value>
+  </data>
+  <data name="SystemCheck_SendEmailSuccess" xml:space="preserve">
+    <value>Send email successfully.</value>
+  </data>
+  <data name="SystemCheck_Subject" xml:space="preserve">
+    <value>The Subject is required.</value>
+  </data>
+  <data name="TeamItem_Department" xml:space="preserve">
+    <value>Please select a Department.</value>
+  </data>
+  <data name="TeamItem_TeamName" xml:space="preserve">
+    <value>['Team'] Name is required.</value>
+  </data>
+  <data name="TeamItem_TeamName_Exist" xml:space="preserve">
+    <value>['Team'] Name has already existed.</value>
+  </data>
+  <data name="TeamItem_TeamType" xml:space="preserve">
+    <value>['Team'] Type is required.</value>
+  </data>
+  <data name="TeamPage_CheckLeader" xml:space="preserve">
+    <value>Only one Supervisor is allow.</value>
+  </data>
+  <data name="TeamPage_CheckMember" xml:space="preserve">
+    <value>Please choose Supervisor or Deputy Supervisor only.</value>
+  </data>
+  <data name="TeamPage_CheckTeamLeader" xml:space="preserve">
+    <value>Please specify a Supervisor.</value>
+  </data>
+  <data name="TeamPage_CheckTeamUser" xml:space="preserve">
+    <value>Please add at least one member.</value>
+  </data>
+  <data name="TechnicalInstruction_IsActive" xml:space="preserve">
+    <value>Technical Instruction is active.</value>
+  </data>
+  <data name="TechnicalInstruction_Name" xml:space="preserve">
+    <value>Technical Instruction Name is required.</value>
+  </data>
+  <data name="TechnicalInstruction_Name_Exists" xml:space="preserve">
+    <value>Technical Instruction name has already existed.</value>
+  </data>
+  <data name="Tip_ClickToHide" xml:space="preserve">
+    <value>Click to hide.</value>
+  </data>
+  <data name="UserItem_ConfirmDelete" xml:space="preserve">
+    <value>Are you sure you want to delete this user {0}?</value>
+  </data>
+  <data name="UserItem_ConfirmDeletion" xml:space="preserve">
+    <value>Are you sure to delete user </value>
+  </data>
+  <data name="UserItem_ConfirmPassword" xml:space="preserve">
+    <value>Confirm New Password can not be empty.</value>
+  </data>
+  <data name="UserItem_ConfirmPassword_Compare" xml:space="preserve">
+    <value>New Password is not the same as the Confirm New Password.</value>
+  </data>
+  <data name="UserItem_Email" xml:space="preserve">
+    <value>Email is required.</value>
+  </data>
+  <data name="UserItem_FullName" xml:space="preserve">
+    <value>Display Name is required.</value>
+  </data>
+  <data name="UserItem_LogonName" xml:space="preserve">
+    <value>Logon Name is required.</value>
+  </data>
+  <data name="UserItem_LogonName_Exist" xml:space="preserve">
+    <value>Logon Name has already existed.</value>
+  </data>
+  <data name="UserItem_LogonName_MutiCompany" xml:space="preserve">
+    <value>This user belongs to a number of companies,  Multi Company prefix cannot be empty.</value>
+  </data>
+  <data name="UserItem_MoreThanUser" xml:space="preserve">
+    <value>The full corporate users can no longer register new users.</value>
+  </data>
+  <data name="UserItem_Password" xml:space="preserve">
+    <value>Password is required.</value>
+  </data>
+  <data name="UserItem_PasswordBlank" xml:space="preserve">
+    <value>The password should not contain any spaces at the beginning or at the end.</value>
+  </data>
+  <data name="UserItem_PasswordCount" xml:space="preserve">
+    <value>The password can't be the same with {0} previous passwords.</value>
+  </data>
+  <data name="UserItem_PasswordLength" xml:space="preserve">
+    <value>Password's length must between {2} and {1}.</value>
+  </data>
+  <data name="UserItem_PasswordLetter" xml:space="preserve">
+    <value>Password must contain a English character.</value>
+  </data>
+  <data name="UserItem_PasswordMinEnLetter" xml:space="preserve">
+    <value>Password must contain {0} English characters.</value>
+  </data>
+  <data name="UserItem_PasswordMinLength" xml:space="preserve">
+    <value>Password's length must be greater than or equal to {1}.</value>
+  </data>
+  <data name="UserItem_PasswordNumber" xml:space="preserve">
+    <value>Password must contain a number.</value>
+  </data>
+  <data name="UserItem_PasswordNumberAndLetter" xml:space="preserve">
+    <value>Password must contain both English letter and number.</value>
+  </data>
+  <data name="UserItem_PasswordSpace" xml:space="preserve">
+    <value>Password must contain a space.</value>
+  </data>
+  <data name="UserItem_PasswordSpecialChar" xml:space="preserve">
+    <value>Password must contain a special character, like [@#$*-+=] etc.</value>
+  </data>
+  <data name="UserItem_Password_Lenght" xml:space="preserve">
+    <value>Password's length must between 6 and 12.</value>
+  </data>
+  <data name="UserItem_Roles" xml:space="preserve">
+    <value>Must select at least one role.</value>
+  </data>
+  <data name="UserProfile_Fail" xml:space="preserve">
+    <value>Change User Profile failed.</value>
+  </data>
+  <data name="UserProfile_Success" xml:space="preserve">
+    <value>Change User Profile Successfully.</value>
+  </data>
+  <data name="User_logoning_error" xml:space="preserve">
+    <value>The user is active, cannot be deleted.</value>
+  </data>
+  <data name="User_Not_Exit" xml:space="preserve">
+    <value>User does not exist.</value>
+  </data>
+  <data name="Validation_Code" xml:space="preserve">
+    <value>Validation Code is required.</value>
+  </data>
+  <data name="Validation_Code_Error" xml:space="preserve">
+    <value>Please input the current validation code.</value>
+  </data>
+  <data name="Validation_ExtendServiceDateMrorePlanDate_Error" xml:space="preserve">
+    <value>The Extend Date can't  be more than {0} months after Planned Service Date.</value>
+  </data>
+  <data name="Validation_ExtendServiceDate_Error" xml:space="preserve">
+    <value>Please input the Extend Date.</value>
+  </data>
+  <data name="View_model_ErrorMessage" xml:space="preserve">
+    <value>View Model cannot be empty.</value>
+  </data>
+  <data name="Attachmentlimit_message" xml:space="preserve">
+    <value>Attachment limit size is less than the current company has been  the attachment size.</value>
+  </data>
+  <data name="TaskItem_AlarmingLevel" xml:space="preserve">
+    <value>Please input the Alarming.</value>
+  </data>
+  <data name="TaskItem_Name" xml:space="preserve">
+    <value>Please input the Name.</value>
+  </data>
+  <data name="TaskItem_OrgUint" xml:space="preserve">
+    <value>Please select the Org. Unit.</value>
+  </data>
+  <data name="TaskItem_Team" xml:space="preserve">
+    <value>Please select the  ['Team'].</value>
+  </data>
+  <data name="TaskItem_Type" xml:space="preserve">
+    <value>Please select the Task Template.</value>
+  </data>
+  <data name="TaskItem_Delete_ServiceOrder" xml:space="preserve">
+    <value>Task is currently in use by the task order.</value>
+  </data>
+  <data name="TaskTypePage_NameExists" xml:space="preserve">
+    <value>Task Template's Name is already exists.</value>
+  </data>
+  <data name="TotalAttachmentlimitMessage" xml:space="preserve">
+    <value>Beyond the total attachment size limit.</value>
+  </data>
+  <data name="TaskItem_Interval" xml:space="preserve">
+    <value>If "Active" in [Task Basic Message] is checked，then "Interval Value" in [Interval] and its unit can not be null.</value>
+  </data>
+  <data name="TaskItem_NameExist" xml:space="preserve">
+    <value>Task Name has exist, please change another name.</value>
+  </data>
+  <data name="TaskOrder_ServiceCompletionDate_NotEmpty" xml:space="preserve">
+    <value>Completion Date cannot be empty.</value>
+  </data>
+  <data name="TaskType_NameRequire" xml:space="preserve">
+    <value>Name is required.</value>
+  </data>
+  <data name="TaskItem_IsActive" xml:space="preserve">
+    <value>Please input "First ['Service'] Date", "Interval Value" and "Interval Type" if the task is actived.</value>
+  </data>
+  <data name="TaskOrder_MaintResult_NotEmpty" xml:space="preserve">
+    <value>Please select result.</value>
+  </data>
+  <data name="TaskType_Active_ErrorMessage" xml:space="preserve">
+    <value>Task is active.</value>
+  </data>
+  <data name="CompanyItem_Area_Length" xml:space="preserve">
+    <value>Area's length must be less than 250.</value>
+  </data>
+  <data name="EquipPlanItem_ManualGen" xml:space="preserve">
+    <value>If the value of "Generation Method" is "Manual" in [General], then "Gen Reminder" and "Gen Reminder Interval" in [Inspection] or [Calibration Work] can not be empty.</value>
+    <comment>Gen Reminder</comment>
+  </data>
+  <data name="Area_NameExists" xml:space="preserve">
+    <value>Area Name has already existed,please retry.</value>
+  </data>
+  <data name="Area_NameRequir" xml:space="preserve">
+    <value>Area Name is required.</value>
+  </data>
+  <data name="Area_BeenUse" xml:space="preserve">
+    <value>Area is been using.</value>
+  </data>
+  <data name="Amount_Number_Check" xml:space="preserve">
+    <value>Amount must enter the  number.</value>
+  </data>
+  <data name="FieldMustBeNumeric" xml:space="preserve">
+    <value>{0} must enter the  number.</value>
+  </data>
+  <data name="Language_NotSupport" xml:space="preserve">
+    <value>Do not Support this language.</value>
+  </data>
+  <data name="TeamPage_TeamCheckMember" xml:space="preserve">
+    <value>Please specify a Check Member.</value>
+  </data>
+  <data name="CompanyItem_ItemNumberLength" xml:space="preserve">
+    <value>Item Number Length is required.</value>
+  </data>
+  <data name="Equip_AutoNo_Length" xml:space="preserve">
+    <value>  No. length exceed this company's max length.</value>
+  </data>
+  <data name="CompanyItem_ItemNumberLength_Range" xml:space="preserve">
+    <value>Item No. length must a integer between 1 to 50.</value>
+  </data>
+  <data name="CompanyItem_ItemNoGenerateMethod" xml:space="preserve">
+    <value>Item No Generate Method is required.</value>
+  </data>
+  <data name="FaultCodeItem_FaultCodeCompany" xml:space="preserve">
+    <value>Company is required.</value>
+  </data>
+  <data name="Common_Day_Range" xml:space="preserve">
+    <value>Range of Day must between 1 to 9999.</value>
+  </data>
+  <data name="Common_NumbericValidator" xml:space="preserve">
+    <value>{0} must be a number.</value>
+  </data>
+  <data name="EquipItem_FirstServiceDateCompareInitDate" xml:space="preserve">
+    <value>First ['Service'] Date can not smaller than ['Item'] InitDate</value>
+  </data>
+  <data name="DueOrder_NotSelectRow" xml:space="preserve">
+    <value>Please select at least one row.</value>
+  </data>
+  <data name="LoginPage_NotMutiplyCompanyUser" xml:space="preserve">
+    <value>Single company user can not login at this page.Please login at your company's sign in page.</value>
+  </data>
+  <data name="UserItem_CompanyRequire" xml:space="preserve">
+    <value>User doesn‘t only have System Administrator role. Please select a company.</value>
+  </data>
+  <data name="Message_ItemDeletion" xml:space="preserve">
+    <value>Are you sure you want to delete this record? If it has unfinished orders, orders will be cancel and plan's IsActive will be set to \"false\" at the same time. </value>
+  </data>
+  <data name="EquipmentType_DeleteUsingRecordConfirm" xml:space="preserve">
+    <value>This record is in use, are you sure you want to delete? Deleting this record will change it to be read only status.</value>
+  </data>
+  <data name="Message_TaskDeletion" xml:space="preserve">
+    <value>Are you sure you want to delete this record? If it has orders, orders will be cancel at the same time. </value>
+  </data>
+  <data name="Company_Recover" xml:space="preserve">
+    <value>Are you sure recover this company.</value>
+  </data>
+  <data name="Company_Suspend" xml:space="preserve">
+    <value>Are you sure suspend this company.</value>
+  </data>
+  <data name="UserItem_CompanySuspend" xml:space="preserve">
+    <value>Company has been suspended.</value>
+  </data>
+  <data name="Team_Used_ERROR" xml:space="preserve">
+    <value>This {0} in use..</value>
+  </data>
+  <data name="Negative_Error_AlarmingInterval" xml:space="preserve">
+    <value>Alarming Interval must be a positive integer.</value>
+  </data>
+  <data name="Negative_Error_AlarmingLevel" xml:space="preserve">
+    <value>Alarming must be a positive integer.</value>
+  </data>
+  <data name="Negative_Error_Interval" xml:space="preserve">
+    <value>Interval Value must be a positive integer.</value>
+  </data>
+  <data name="Bloc_BeenUse" xml:space="preserve">
+    <value>Corporate is been using.</value>
+  </data>
+  <data name="Bloc_NameRequir" xml:space="preserve">
+    <value>Corporate Name is required.</value>
+  </data>
+  <data name="Bloc_NameExists" xml:space="preserve">
+    <value>Corporate Name has already existed,please retry.</value>
+  </data>
+  <data name="Common_PleaseSelectMessage" xml:space="preserve">
+    <value>Please select {0} first.</value>
+  </data>
+  <data name="Negative_Error_CompanyOnlineUserLimit" xml:space="preserve">
+    <value>Online User Number must be a positive integer.</value>
+  </data>
+  <data name="Negative_Error_EquipmentLimit" xml:space="preserve">
+    <value>Equipment Number must be a positive integer.</value>
+  </data>
+  <data name="Negative_Error_EquipmentTypeLimit" xml:space="preserve">
+    <value>Equipment Template Number must be a positive integer.</value>
+  </data>
+  <data name="Negative_Error_ItemplanCount" xml:space="preserve">
+    <value>Equipment Plan Number must be a positive integer.</value>
+  </data>
+  <data name="Negative_Error_LocationLimit" xml:space="preserve">
+    <value>Location Number must be a positive integer.</value>
+  </data>
+  <data name="Negative_Error_OULimit" xml:space="preserve">
+    <value>Org. Unit Number must be a positive integer.</value>
+  </data>
+  <data name="Negative_Error_TaskLimit" xml:space="preserve">
+    <value>Task Number must be a positive integer.</value>
+  </data>
+  <data name="Negative_Error_TaskTypeLimit" xml:space="preserve">
+    <value>Task Template Number must be a positive integer.</value>
+  </data>
+  <data name="Negative_Error_TeamLimit" xml:space="preserve">
+    <value>['Team'] Number must be a positive integer.</value>
+  </data>
+  <data name="EquipItem_EquipLimit" xml:space="preserve">
+    <value>Exceed max count of ['Item'] in this system, please contact the administrator.</value>
+  </data>
+  <data name="TaskItem_TaskLimit" xml:space="preserve">
+    <value>Exceed max count of Task in this system, please contact the administrator.</value>
+  </data>
+  <data name="LocationLimitErrorMessage" xml:space="preserve">
+    <value>Beyond company location number limit.</value>
+  </data>
+  <data name="OrgUnitLimitErrorMessage" xml:space="preserve">
+    <value>Beyond company org. unit number limit.</value>
+  </data>
+  <data name="TeamLimitErrorMessage" xml:space="preserve">
+    <value>Beyond company ['Team'] number limit.</value>
+  </data>
+  <data name="EquipPlanItem_PlanLimit" xml:space="preserve">
+    <value>Plan count exceed system's allowance, the max count in the system is {0}.</value>
+  </data>
+  <data name="Negative_Error_EstimateServiceDuration" xml:space="preserve">
+    <value>Estimate ['Service'] Duration must be a positive integer.</value>
+  </data>
+  <data name="TaskTypeItem_TaskTypeLimit" xml:space="preserve">
+    <value>Exceed max count of Task Template in this system, please contact the administrator.</value>
+  </data>
+  <data name="LoginPage_UserOnlineLimitError" xml:space="preserve">
+    <value>The current company only allow {0} users logon at the same time.</value>
+  </data>
+  <data name="EquipmentTypeItem_CountLimit" xml:space="preserve">
+    <value>Exceed max count of {0} Template in this system, please contact the administrator.</value>
+  </data>
+  <data name="EquipTypePlan_CountLimit" xml:space="preserve">
+    <value>Exceed max count of {0} Template's Plan in this system, please contact the administrator.</value>
+  </data>
+  <data name="BulkModifyWorker_ActiveWorkerNull" xml:space="preserve">
+    <value>Assign To cannot be empty.</value>
+  </data>
+  <data name="BulkModifyWorker_EXWorkerNull" xml:space="preserve">
+    <value>Release From cannot be empty.</value>
+  </data>
+  <data name="BulkModifyWorker_SaveError" xml:space="preserve">
+    <value>Update user failed.</value>
+  </data>
+  <data name="BulkModifyWorker_SaveSuccess" xml:space="preserve">
+    <value>Update user success.</value>
+  </data>
+  <data name="BulkModifyWorker_TeamNull" xml:space="preserve">
+    <value>['Team'] cannot be empty.</value>
+  </data>
+  <data name="Negative_Error_ServiceDuration" xml:space="preserve">
+    <value>['Service'] Duration must be a positive integer.</value>
+    <comment>维护(维修)时间必需是一個正整數</comment>
+  </data>
+  <data name="Negative_Error_EstimateServiceDurationCal" xml:space="preserve">
+    <value>Estimated ['Service'] Duration must be a positive integer.</value>
+  </data>
+  <data name="Negative_Error_EstimateServiceDurationIns" xml:space="preserve">
+    <value>Estimated ['Service'] Duration must be a positive integer.</value>
+  </data>
+  <data name="Negative_Error_ServiceDurationCal" xml:space="preserve">
+    <value>Cal Duration must be a positive integer.</value>
+    <comment>Cal Duration must be a positive integer.</comment>
+  </data>
+  <data name="BulkModifyStaff_SearchAlert" xml:space="preserve">
+    <value>No data/result.</value>
+  </data>
+  <data name="FaultCodeItem_CompanyAlreadyHaveFaultCode" xml:space="preserve">
+    <value> already have this fault code.</value>
+  </data>
+  <data name="FaultCodeItem_SelectCompany" xml:space="preserve">
+    <value>Please select company.</value>
+  </data>
+  <data name="CompanyPage_ErrorCusOffTime" xml:space="preserve">
+    <value>Minutes cut off time unit, must be between 0 to 59</value>
+  </data>
+  <data name="CompanyPage_ErrorPostTime" xml:space="preserve">
+    <value>Minutes post time unit, must be between 0 to 59</value>
+  </data>
+  <data name="FaultCode_IsUsingDeleteError" xml:space="preserve">
+    <value>Fault code is using by service order.</value>
+  </data>
+  <data name="Company_require_GenMasterWorkOrderTime" xml:space="preserve">
+    <value>if Master Work Order function is open, GenMasterWorkOrderTime is required.</value>
+  </data>
+  <data name="Company_require_MasterWorkEmail" xml:space="preserve">
+    <value>if Master Work Order function is open, Master Work Order Email must select a value.</value>
+  </data>
+  <data name="CompanyPage_MasterWorkOrderMinute" xml:space="preserve">
+    <value>Master Work Order generation time unit, must be between 0 to 59</value>
+  </data>
+  <data name="ConsolidateEmailList_Content_Required" xml:space="preserve">
+    <value>Content is required.</value>
+  </data>
+  <data name="ConsolidateEmailList_Title_Exists" xml:space="preserve">
+    <value>A record with same title and content has exists .</value>
+  </data>
+  <data name="ConsolidateEmailList_Title_Length" xml:space="preserve">
+    <value>Title's length can not more than 250.</value>
+  </data>
+  <data name="ConsolidateEmailList_Title_Required" xml:space="preserve">
+    <value>Title is required.</value>
+  </data>
+  <data name="CompanyItem_ConsolidateTime" xml:space="preserve">
+    <value>Post Time no more than or equal Cut Off Time.</value>
+  </data>
+  <data name="ValidationUploadFormat_ErrorMessage" xml:space="preserve">
+    <value>File "{0}" upload fail，Only allow upload "{1}" kind of file.</value>
+  </data>
+  <data name="CompanyItem_UploadExtNameRestriction" xml:space="preserve">
+    <value>Attachment Upload Limit cannot contain in Chinese.</value>
+  </data>
+  <data name="Order_ServiceDuration_Inspection_NotEmpty" xml:space="preserve">
+    <value>Please input Service Duration.</value>
+  </data>
+  <data name="Order_ServiceDuration_Maint_NotEmpty" xml:space="preserve">
+    <value>Please input Repair Duration.</value>
+  </data>
+  <data name="Common_UploadAttachLimited_Number" xml:space="preserve">
+    <value>Attachment Count Limit must enter positive integer .</value>
+  </data>
+  <data name="UploadAttachmentLimit_Error" xml:space="preserve">
+    <value>Exceed attachment upload count the limit.</value>
+  </data>
+  <data name="Order_MaintResult_CheckResult" xml:space="preserve">
+    <value>Please select Inspection Result</value>
+  </data>
+  <data name="TaskOrder_MaintResult_CheckResult" xml:space="preserve">
+    <value>Please select Result</value>
+  </data>
+  <data name="Negative_Error_LocationLevelsLimit" xml:space="preserve">
+    <value>Location Level Limited must be a positive integer.</value>
+  </data>
+  <data name="Negative_Error_OULevelsLimit" xml:space="preserve">
+    <value>Org. Unit Level Limited must be a positive integer.</value>
+  </data>
+  <data name="Location_LevelsLimit" xml:space="preserve">
+    <value>Beyond company location level limit.</value>
+  </data>
+  <data name="OrgUnit_LevelsLimit" xml:space="preserve">
+    <value>Beyond company org. unit level limit.</value>
+  </data>
+  <data name="User_LogonName_Exists" xml:space="preserve">
+    <value>Logon Name is already exists.</value>
+  </data>
+  <data name="TaskType_AlarmLevel" xml:space="preserve">
+    <value>Alarming is required.</value>
+  </data>
+  <data name="DataHistory_RetainDays_int" xml:space="preserve">
+    <value>Retain Days must be non-zero positive integer.</value>
+  </data>
+  <data name="DataHistory_RetainDays_Requset" xml:space="preserve">
+    <value>Retain Days is rquired.</value>
+  </data>
+  <data name="AjaxNoPermission" xml:space="preserve">
+    <value>AjaxNoPermissionMsgKey:
+You do not have sufficient privileges or your session has timed out. Please click &lt;a href="{0}" style="color:red" &gt;here&lt;/a&gt; to login again.AjaxNoPermissionMsgKey:</value>
+    <comment>You have no permission to operate this action or your logon message has timeout, please try logon again.</comment>
+  </data>
+  <data name="EquipPlanItem_UserInterval" xml:space="preserve">
+    <value>Please input Interval Value.</value>
+    <comment>【周期】选项卡中, 请选择输入周期值！</comment>
+  </data>
+  <data name="TaskItem_UserIntervalTypeId" xml:space="preserve">
+    <value>User Interval Type Id is required.</value>
+    <comment>请选择周期值单位！</comment>
+  </data>
+  <data name="PipeItem_Alarming_Require" xml:space="preserve">
+    <value>Alarming is required.</value>
+  </data>
+  <data name="PipeItem_Area_Require" xml:space="preserve">
+    <value>Area is required.</value>
+  </data>
+  <data name="PipeItem_Block_Require" xml:space="preserve">
+    <value>Block is required.</value>
+  </data>
+  <data name="PipeItem_Class_Require" xml:space="preserve">
+    <value>&lt;Class&gt; is required.</value>
+  </data>
+  <data name="PipeItem_Length_Require" xml:space="preserve">
+    <value>Pipe's Length is required.</value>
+  </data>
+  <data name="PipeItem_PressureRating_Require" xml:space="preserve">
+    <value>Pressure Rating is requried.</value>
+  </data>
+  <data name="PipeItem_RiskLevelOfPipe_Require" xml:space="preserve">
+    <value>Risk Level Of Pipe is required.</value>
+  </data>
+  <data name="PipeItem_Tubing_Require" xml:space="preserve">
+    <value>Tubing is required.</value>
+  </data>
+  <data name="PipeItem_WorkingTeam_Require" xml:space="preserve">
+    <value>Working  ['Team'] is required.</value>
+  </data>
+  <data name="Bloc_Requir" xml:space="preserve">
+    <value>Corporate is required.</value>
+  </data>
+  <data name="PipeOrder_MeasureById_Required" xml:space="preserve">
+    <value>MeasureBy cannot be empty.</value>
+  </data>
+  <data name="PipeItem_Interval_InputComplete" xml:space="preserve">
+    <value>Please enter the whole Leakage Measurement Interval.</value>
+  </data>
+  <data name="PipeItem_Interval_Require" xml:space="preserve">
+    <value>Leakage Measurement Interval is required if First Measurement Date has value.</value>
+  </data>
+  <data name="PipeItem_FirstUseServiceDate_LessThan_InitWorkDate" xml:space="preserve">
+    <value>First Measurement Date can not less than Initial Date.</value>
+  </data>
+  <data name="PipeItem_DeleteConfirm" xml:space="preserve">
+    <value>Pipe is using by order. If you delete this record, its order state will be set as cancel. Are you sure to delete this record?</value>
+  </data>
+  <data name="UserRole_ReportSiteUserError" xml:space="preserve">
+    <value>Report site user is required select  Multi Company Prefix.</value>
+  </data>
+  <data name="PipeOrder_ResultId_Required" xml:space="preserve">
+    <value>Please select the Result.</value>
+  </data>
+  <data name="PipeOrder_ServiceCompletionDate_Required" xml:space="preserve">
+    <value>Please select the ['Service'] Completion Data.</value>
+  </data>
+  <data name="Common_Description_MaxLength" xml:space="preserve">
+    <value>Description'length can not more than 500.</value>
+    <comment>描述不能超过500个字符。</comment>
+  </data>
+  <data name="PipePressureRatingItem_Name_MaxLength" xml:space="preserve">
+    <value>Pipe Pressure Rating Name's lengh can not more than 50.</value>
+    <comment>压力等级民长度不能超过50个字符。</comment>
+  </data>
+  <data name="PipeRiskLevelItem_Name_MaxLength" xml:space="preserve">
+    <value>Pipe Risk Level Name's lengh can not more than 50.</value>
+    <comment>管网风险分级名长度不能超过50个字符。</comment>
+  </data>
+  <data name="PipeTubingItem_Name_MaxLength" xml:space="preserve">
+    <value>Pipe Tubing Name's lengh can not more than 50. </value>
+    <comment>管材名长度不能超过50个字符。</comment>
+  </data>
+  <data name="PipePressureRatingItem_Name_Required" xml:space="preserve">
+    <value>Please input Pipe Pressure Rating Name.</value>
+    <comment>请输入压力等级名。</comment>
+  </data>
+  <data name="PipeRiskLevelItem_Name_Required" xml:space="preserve">
+    <value>Please input Pipe Risk Level Name.</value>
+    <comment>请输入管网风险分级名。</comment>
+  </data>
+  <data name="PipeTubingItem_Name_Required" xml:space="preserve">
+    <value>Please input Pipe Tubing Name.</value>
+    <comment>请输入管材名。</comment>
+  </data>
+  <data name="Bloc_ManageUserError" xml:space="preserve">
+    <value>No area under the bloc can not add user.</value>
+  </data>
+  <data name="ReportSite_AreaMgt_CompanyRedLightAlarmingRange" xml:space="preserve">
+    <value>Red Light Alarming Level must between 1 and 100.</value>
+  </data>
+  <data name="UserItem_Roles_SysAdminLimit" xml:space="preserve">
+    <value>Role System Administrator can not use with other role.</value>
+    <comment>系统管理员角色不能跟其它角色并用。</comment>
+  </data>
+  <data name="Common_NoEmpty" xml:space="preserve">
+    <value> can not be empty.</value>
+    <comment>不能为空！</comment>
+  </data>
+  <data name="Common_RequiredBetween" xml:space="preserve">
+    <value> must between {0} and {1}.</value>
+    <comment>必需在{0}和{1}范围内！</comment>
+  </data>
+  <data name="EquipPage_CalPlanExtend" xml:space="preserve">
+    <value>Extend date</value>
+    <comment>推迟日期</comment>
+  </data>
+  <data name="UsePage_Sysadmin_CompanyLimit" xml:space="preserve">
+    <value>Company user can't be assign to System Administrator Role.</value>
+    <comment>公司用户不能是系统管理员角色。</comment>
+  </data>
+  <data name="ReportSite_AreaMgt_AreaRedLightAlarmingRange" xml:space="preserve">
+    <value>Red Light Alarming Level must more than 0.</value>
+  </data>
+  <data name="CommonPositiveIntegerValidateMessage" xml:space="preserve">
+    <value>Please enter positive integers only.</value>
+  </data>
+  <data name="Common_NameExists" xml:space="preserve">
+    <value>{0} Name has already existed,please retry.</value>
+    <comment>{0}名已经存在，请重新输入。</comment>
+  </data>
+  <data name="MaintSummary_Year_Required" xml:space="preserve">
+    <value>The Year is requied.</value>
+  </data>
+  <data name="Message_PleaseSelectFaultCode" xml:space="preserve">
+    <value>Please select fault code.</value>
+  </data>
+  <data name="EquipPlanItem_Tel" xml:space="preserve">
+    <value>Tel must enter the  number.</value>
+  </data>
+  <data name="SinglePlaceAttachmentFileSizeLimit" xml:space="preserve">
+    <value>Beyond a single place attachment size limit.</value>
+  </data>
+  <data name="Common_SinglePlaceAttachLimited_Number" xml:space="preserve">
+    <value>(Independent)Attachment size limit must enter positive integer.</value>
+  </data>
+  <data name="SystemCheck_ReRunSuccessfully" xml:space="preserve">
+    <value>ReRun Successfully.</value>
+  </data>
+  <data name="SinglePlaceAttachmentError" xml:space="preserve">
+    <value>Independent of place attachment size limit is not greater than the total attachment size limit.</value>
+  </data>
+  <data name="Common_TotalAttachLimited_Number" xml:space="preserve">
+    <value>Total attachment size limit must enter positive integer.</value>
+  </data>
+  <data name="PipeItem_Alarming_Range" xml:space="preserve">
+    <value>Alarming must between 1 and 9999.</value>
+  </data>
+  <data name="PipeItem_Interval_PositiveInteger" xml:space="preserve">
+    <value>Leakage Measurement Interval must be a positive integer.</value>
+  </data>
+  <data name="UserItem_ADFSLogonName_Exist" xml:space="preserve">
+    <value>ADFS Logon Name is required.</value>
+  </data>
+  <data name="BulkModifyCompany_ErrorSelect" xml:space="preserve">
+    <value>Please select at least one company and company setting.</value>
+  </data>
+  <data name="UserItem_ADLogonName_Exist" xml:space="preserve">
+    <value>Internal domain account can only corresponds to a system administrator and  a normal user.</value>
+  </data>
+  <data name="ADDomain_LogonNameNotExit" xml:space="preserve">
+    <value>Current domain user does not have the corresponding system user.</value>
+  </data>
+  <data name="SignOut_WindowClose" xml:space="preserve">
+    <value>Close the browser, whether or not?</value>
+  </data>
+  <data name="UserPage_ADDomainNULL" xml:space="preserve">
+    <value>Internal Domain Account is not empty, the Internal Domain is required.</value>
+  </data>
+  <data name="UserPage_ADLoginNameNULL" xml:space="preserve">
+    <value>Internal Domain is not empty, the Internal Domain Account is required.</value>
+  </data>
+  <data name="LoginTimeOut" xml:space="preserve">
+    <value>The login information has expired, please login again.</value>
+  </data>
+  <data name="EquipPage_Scrap" xml:space="preserve">
+    <value>Are you sure you want to scrap the ['Item']?</value>
+  </data>
+  <data name="UserItem_Roles_ViewerExclusion" xml:space="preserve">
+    <value>Viewer Role is can not use with orther roles.</value>
+  </data>
+  <data name="EquipPlan_DurationTypeId" xml:space="preserve">
+    <value>Estimated ['Service'] Duration and it's unit can't just input one.</value>
+    <comment>【基础信息】选项卡中，预计['Service']时间及其单位不能只填一个。</comment>
+  </data>
+  <data name="EquipItem_SCOScrap_EnterReason" xml:space="preserve">
+    <value>Please input scrap reason.</value>
+  </data>
+  <data name="EquipItem_SCOScrap_HasOrder" xml:space="preserve">
+    <value>The ['Item'] has some running order, if you confirm to scrap, the orders will be cancel at the same time. Are you sure to scrap the ['Item']?</value>
+  </data>
+  <data name="OrderPage_LastServiceCompleteDate" xml:space="preserve">
+    <value>Last ['Service'] Complete Date</value>
+  </data>
+  <data name="Order_ServiceCompletionDate_EarlierThanPlanServDate" xml:space="preserve">
+    <value>Completion Service Date can not earlier than Estimate Service Duration.</value>
+  </data>
+  <data name="Order_ServiceCompletionDate_EarlierThanLastDate" xml:space="preserve">
+    <value>Completion Service Date can not earlier than the Last ['Service'] Date.</value>
+  </data>
+  <data name="UserPage_IsFormPasswordAndIsDomainUserAllNull" xml:space="preserve">
+    <value>Must choose at least one logon type.</value>
+  </data>
+  <data name="UserItem_ADLogonName_Validate" xml:space="preserve">
+    <value>Internal domain account accepts alphanumeric and underscores only.</value>
+  </data>
+  <data name="UserItem_ADDomainAndADLoginNameAllNull" xml:space="preserve">
+    <value>Internal Domain and Internal Domain Account are requried. </value>
+  </data>
+  <data name="TechnicalInstruction_Name_MaxLength" xml:space="preserve">
+    <value>Technical Instruction Name's max length can't more than 50.</value>
+  </data>
+  <data name="CompanyItem_EmailRestriction_Illegal" xml:space="preserve">
+    <value>Domain name Restriction of Email is illegal.</value>
+  </data>
+  <data name="UserItem_EmailRestrictionByCompany" xml:space="preserve">
+    <value>Email's Domain name doesn't match company's setting. Company setting's available domain name of  email : {0}.</value>
+  </data>
+  <data name="Common_MaxLength" xml:space="preserve">
+    <value>{0}'s length must be less than {1}.</value>
+  </data>
+  <data name="Common_Range" xml:space="preserve">
+    <value>{0}‘s value must between {1} and {2}.</value>
+  </data>
+  <data name="SystemError_MissingConfig" xml:space="preserve">
+    <value>Missing system configuration item or system configuration error, please contact the administrator.</value>
+  </data>
+  <data name="SystemError_WebconfigCorrect" xml:space="preserve">
+    <value>System configuration is correct.</value>
+  </data>
+  <data name="CompanyItem_Code_ReportSiteReserveName" xml:space="preserve">
+    <value>Code can not equal ReportSite's reserve name.</value>
+  </data>
+</root>
