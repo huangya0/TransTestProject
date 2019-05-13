@@ -76,3 +76,14 @@
 /TestAreasWebApp/packages
 /TestAreasWebApp/TestAreasWebApp/bin
 /TestAreasWebApp/TestAreasWebApp/obj/Debug
+/DockerProject/HelloDocker/.vs/HelloDocker/v15
+/DockerProject/MyWebAppCore/MyWebAppCore/bin
+/DockerProject/MyWebAppCore/.vs/MyWebAppCore/v15
+/DockerProject/HelloDocker/HelloDocker/bin/Debug
+/DockerProject/HelloDocker/HelloDocker/obj/Debug
+/DockerProject/MyWebAppCore/MyWebAppCore/obj
+/DockerProject/NetCoreConsole1/.vs/NetCoreConsole1/v15
+/DockerProject/NetCoreConsole1/NetCoreConsole1/bin
+/DockerProject/NetCoreConsole1/NetCoreConsole1/obj
+/DockerProject/NetCoreConsole1/obj/Docker
+/TestAreasWebApp/TestAreasWebApp/obj/Release

@@ -23,6 +23,7 @@ namespace AjaxCallRestWebApi1
 
         public override void Init()
         {
+            //;webapi如果要用session, 则需要这段代码
             this.PostAuthenticateRequest += (sender, e) => HttpContext.Current.SetSessionStateBehavior(SessionStateBehavior.Required);
             base.Init();
         }
