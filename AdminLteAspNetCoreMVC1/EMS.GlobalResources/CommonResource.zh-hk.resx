@@ -1,0 +1,4166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CancelReasonPage_Description" xml:space="preserve">
+    <value>備註</value>
+  </data>
+  <data name="CancelReasonPage_Title" xml:space="preserve">
+    <value>取消原因維護</value>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>公司</value>
+  </data>
+  <data name="CompanyPage_Code" xml:space="preserve">
+    <value>編號</value>
+  </data>
+  <data name="CompanyPage_Code_Colon" xml:space="preserve">
+    <value>編號</value>
+  </data>
+  <data name="CompanyPage_Name" xml:space="preserve">
+    <value>名稱</value>
+  </data>
+  <data name="CompanyPage_Name_Colon" xml:space="preserve">
+    <value>公司簡稱</value>
+  </data>
+  <data name="CompanyPage_Title" xml:space="preserve">
+    <value>公司維護</value>
+  </data>
+  <data name="ContractorPage_ContractorName" xml:space="preserve">
+    <value>供應商</value>
+  </data>
+  <data name="ContractorPage_Description" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="ContractorPage_Title" xml:space="preserve">
+    <value>供應商維護</value>
+  </data>
+  <data name="OrgUnitPage_DepartmentCode" xml:space="preserve">
+    <value>成本中心</value>
+  </data>
+  <data name="OrgUnitPage_DepartmentName" xml:space="preserve">
+    <value>組織架構</value>
+  </data>
+  <data name="OrgUnitPage_Description" xml:space="preserve">
+    <value>備註</value>
+  </data>
+  <data name="EquipmentTypePage_EquipmentTypeName" xml:space="preserve">
+    <value>['Item']範本名稱</value>
+  </data>
+  <data name="EquipmentTypePage_Title" xml:space="preserve">
+    <value>['Item']範本維護</value>
+  </data>
+  <data name="EquipPage_EquipType_Colon" xml:space="preserve">
+    <value>['Item']範本</value>
+  </data>
+  <data name="EquipPage_Name_Colon" xml:space="preserve">
+    <value>['Item']名稱</value>
+  </data>
+  <data name="EquipPage_NextWorkshopServiceDate_Colon" xml:space="preserve">
+    <value>下次護護日期</value>
+  </data>
+  <data name="EquipPage_Title" xml:space="preserve">
+    <value>['Item']維護</value>
+  </data>
+  <data name="FaultCodePage_Description" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="FaultCodePage_FaultCodeName" xml:space="preserve">
+    <value>故障代碼</value>
+  </data>
+  <data name="FaultCodePage_Title" xml:space="preserve">
+    <value>故障代碼維護</value>
+  </data>
+  <data name="GroupPage_GroupName" xml:space="preserve">
+    <value>組名稱</value>
+  </data>
+  <data name="GroupPage_GroupName_Colon" xml:space="preserve">
+    <value>組名稱</value>
+  </data>
+  <data name="LocationPage_Description" xml:space="preserve">
+    <value>備註</value>
+  </data>
+  <data name="LocationPage_LocationName" xml:space="preserve">
+    <value>['Location']</value>
+  </data>
+  <data name="LocationPage_Title" xml:space="preserve">
+    <value>['Location']維護</value>
+  </data>
+  <data name="Menu_About" xml:space="preserve">
+    <value>關於</value>
+  </data>
+  <data name="Menu_CancelReason" xml:space="preserve">
+    <value>取消原因</value>
+  </data>
+  <data name="Menu_Company" xml:space="preserve">
+    <value>公司列表</value>
+  </data>
+  <data name="Menu_Contact" xml:space="preserve">
+    <value>聯繫</value>
+  </data>
+  <data name="Menu_Contractor" xml:space="preserve">
+    <value>供應商</value>
+  </data>
+  <data name="Menu_OrgUnit" xml:space="preserve">
+    <value>組織架構</value>
+  </data>
+  <data name="Menu_DueCal" xml:space="preserve">
+    <value>生成調校單</value>
+  </data>
+  <data name="Menu_Equipment" xml:space="preserve">
+    <value>['Item']</value>
+  </data>
+  <data name="Menu_EquipmentList" xml:space="preserve">
+    <value>列表</value>
+  </data>
+  <data name="Menu_EquipmentType" xml:space="preserve">
+    <value>['Item']範本</value>
+  </data>
+  <data name="Menu_EquipmentTypeAdd" xml:space="preserve">
+    <value>新增</value>
+  </data>
+  <data name="Menu_EquipmentTypeEdit" xml:space="preserve">
+    <value>編輯</value>
+  </data>
+  <data name="Menu_EquipmentTypeList" xml:space="preserve">
+    <value>列表</value>
+  </data>
+  <data name="Menu_FaultCode_ForInspection" xml:space="preserve">
+    <value>故障代碼(維護/維修)</value>
+  </data>
+  <data name="Menu_Group" xml:space="preserve">
+    <value>組</value>
+  </data>
+  <data name="Menu_Home" xml:space="preserve">
+    <value>主頁</value>
+  </data>
+  <data name="Menu_Location" xml:space="preserve">
+    <value>['Location']</value>
+  </data>
+  <data name="Menu_Maintenance" xml:space="preserve">
+    <value>維護</value>
+  </data>
+  <data name="Menu_Print" xml:space="preserve">
+    <value>打印</value>
+  </data>
+  <data name="Menu_Role" xml:space="preserve">
+    <value>角色</value>
+  </data>
+  <data name="Menu_Service" xml:space="preserve">
+    <value>清單列表</value>
+  </data>
+  <data name="Menu_ServiceOrderList" xml:space="preserve">
+    <value>工單/任務列表</value>
+  </data>
+  <data name="Menu_SysAdmin" xml:space="preserve">
+    <value>系統維護</value>
+  </data>
+  <data name="Menu_System" xml:space="preserve">
+    <value>系統維護</value>
+  </data>
+  <data name="Menu_User" xml:space="preserve">
+    <value>用戶維護</value>
+  </data>
+  <data name="Page_Action" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="Page_Add" xml:space="preserve">
+    <value>新增</value>
+  </data>
+  <data name="Page_AddPage" xml:space="preserve">
+    <value>添加頁面</value>
+  </data>
+  <data name="Page_Back" xml:space="preserve">
+    <value>返回</value>
+  </data>
+  <data name="Page_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Page_Delete" xml:space="preserve">
+    <value>刪除</value>
+  </data>
+  <data name="Page_Description" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="Page_Description_Colon" xml:space="preserve">
+    <value>備註</value>
+  </data>
+  <data name="Page_Detail" xml:space="preserve">
+    <value>詳細</value>
+  </data>
+  <data name="Page_DetailDialogTitle" xml:space="preserve">
+    <value>詳細</value>
+  </data>
+  <data name="Page_Dialog" xml:space="preserve">
+    <value>窗口</value>
+  </data>
+  <data name="Page_Edit" xml:space="preserve">
+    <value>編輯</value>
+  </data>
+  <data name="Page_EditDialogTitle" xml:space="preserve">
+    <value>編輯</value>
+  </data>
+  <data name="Page_EditPage" xml:space="preserve">
+    <value>編輯頁面</value>
+  </data>
+  <data name="Page_List" xml:space="preserve">
+    <value>列表</value>
+  </data>
+  <data name="Page_Maintenance" xml:space="preserve">
+    <value>維護</value>
+  </data>
+  <data name="Page_Name" xml:space="preserve">
+    <value>名稱</value>
+  </data>
+  <data name="Page_NewDialogTitle" xml:space="preserve">
+    <value>新增</value>
+  </data>
+  <data name="Page_Pager_Next" xml:space="preserve">
+    <value>下一頁</value>
+  </data>
+  <data name="Page_Pager_Pre" xml:space="preserve">
+    <value>上一頁</value>
+  </data>
+  <data name="Page_Plan" xml:space="preserve">
+    <value>計劃</value>
+  </data>
+  <data name="Page_Print" xml:space="preserve">
+    <value>列印</value>
+  </data>
+  <data name="Page_Reset" xml:space="preserve">
+    <value>重置</value>
+  </data>
+  <data name="Page_Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Page_Search" xml:space="preserve">
+    <value>查詢</value>
+  </data>
+  <data name="Page_SearchCriteria" xml:space="preserve">
+    <value>查詢條件</value>
+  </data>
+  <data name="Page_Submit" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Page_UpdateBy" xml:space="preserve">
+    <value>更改人</value>
+  </data>
+  <data name="Page_UpdateBy_Colon" xml:space="preserve">
+    <value>更新人</value>
+  </data>
+  <data name="Page_UpdateDate" xml:space="preserve">
+    <value>更改日期</value>
+  </data>
+  <data name="Page_UpdateDate_Colon" xml:space="preserve">
+    <value>更新日期</value>
+  </data>
+  <data name="Page_Workshop" xml:space="preserve">
+    <value>工廠</value>
+  </data>
+  <data name="RolePage_Description" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="RolePage_Description_Colon" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="RolePage_RoleName" xml:space="preserve">
+    <value>角色</value>
+  </data>
+  <data name="RolePage_RoleName_Colon" xml:space="preserve">
+    <value>角色</value>
+  </data>
+  <data name="RolePage_Title" xml:space="preserve">
+    <value>角色維護</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>用戶</value>
+  </data>
+  <data name="UserListPullUp_Title" xml:space="preserve">
+    <value>選擇用戶</value>
+  </data>
+  <data name="UserListPullUp_UserList" xml:space="preserve">
+    <value>用戶列表</value>
+  </data>
+  <data name="UserListPullUp_UserName" xml:space="preserve">
+    <value>用戶名</value>
+  </data>
+  <data name="UserPage_ConfirmPwd_Colon" xml:space="preserve">
+    <value>確認密碼</value>
+  </data>
+  <data name="UserPage_FullName" xml:space="preserve">
+    <value>顯示名稱</value>
+  </data>
+  <data name="UserPage_FullName_Colon" xml:space="preserve">
+    <value>顯示名稱</value>
+  </data>
+  <data name="UserPage_LogonName" xml:space="preserve">
+    <value>登入名稱</value>
+  </data>
+  <data name="UserPage_LogonName_Colon" xml:space="preserve">
+    <value>登錄名稱</value>
+  </data>
+  <data name="UserPage_Password" xml:space="preserve">
+    <value>密碼</value>
+  </data>
+  <data name="UserPage_Password_Colon" xml:space="preserve">
+    <value>密碼</value>
+  </data>
+  <data name="UserPage_Roles_Colon" xml:space="preserve">
+    <value>角色</value>
+  </data>
+  <data name="UserPage_Title" xml:space="preserve">
+    <value>用戶維護</value>
+  </data>
+  <data name="CompanyPage_DisplayName" xml:space="preserve">
+    <value>顯示名稱</value>
+  </data>
+  <data name="CompanyPage_DisplayName_Colon" xml:space="preserve">
+    <value>公司名稱</value>
+  </data>
+  <data name="CompanyPage_FooterText" xml:space="preserve">
+    <value>頁腳文本</value>
+  </data>
+  <data name="CompanyPage_FooterText_Colon" xml:space="preserve">
+    <value>頁腳文本</value>
+  </data>
+  <data name="CompanyPage_Logo" xml:space="preserve">
+    <value>公司圖示</value>
+  </data>
+  <data name="CompanyPage_Logo_Colon" xml:space="preserve">
+    <value>公司圖示</value>
+  </data>
+  <data name="UserListPullUp_UserName_Colon" xml:space="preserve">
+    <value>用戶名</value>
+  </data>
+  <data name="IntervalPage_IntervalAlarmingLevel" xml:space="preserve">
+    <value>到期提醒</value>
+  </data>
+  <data name="IntervalPage_IntervalIndicator" xml:space="preserve">
+    <value>時間週期單位</value>
+  </data>
+  <data name="IntervalPage_IntervalValue" xml:space="preserve">
+    <value>時間週期值</value>
+  </data>
+  <data name="Menu_Interval" xml:space="preserve">
+    <value>時間週期維護</value>
+  </data>
+  <data name="Common_Please_Select" xml:space="preserve">
+    <value>請選擇</value>
+  </data>
+  <data name="Menu_SystemCheck" xml:space="preserve">
+    <value>系統檢查</value>
+  </data>
+  <data name="SystemCheckPage_Title" xml:space="preserve">
+    <value>系統檢查</value>
+  </data>
+  <data name="Interval_Title" xml:space="preserve">
+    <value>時間週期</value>
+  </data>
+  <data name="Date_AllTime" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="Date_Month" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="Date_Months" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="Date_Week" xml:space="preserve">
+    <value>周</value>
+  </data>
+  <data name="Date_Weeks" xml:space="preserve">
+    <value>周</value>
+  </data>
+  <data name="Date_Year" xml:space="preserve">
+    <value>年</value>
+  </data>
+  <data name="Date_Years" xml:space="preserve">
+    <value>年</value>
+  </data>
+  <data name="Date_Day" xml:space="preserve">
+    <value>天</value>
+  </data>
+  <data name="Page_From" xml:space="preserve">
+    <value>從</value>
+  </data>
+  <data name="Page_To" xml:space="preserve">
+    <value>到</value>
+  </data>
+  <data name="ControlCode_Calibration" xml:space="preserve">
+    <value>標度</value>
+  </data>
+  <data name="ControlCode_Checking" xml:space="preserve">
+    <value>校驗</value>
+  </data>
+  <data name="ControlCode_ForReference" xml:space="preserve">
+    <value>參照</value>
+  </data>
+  <data name="ControlCode_Maintenance" xml:space="preserve">
+    <value>維護</value>
+  </data>
+  <data name="LabelSizeCode_Large" xml:space="preserve">
+    <value>大</value>
+  </data>
+  <data name="LabelSizeCode_Medium" xml:space="preserve">
+    <value>中</value>
+  </data>
+  <data name="LabelSizeCode_Small" xml:space="preserve">
+    <value>小</value>
+  </data>
+  <data name="NatureCode_ForReference" xml:space="preserve">
+    <value>參照</value>
+  </data>
+  <data name="NatureCode_Normal" xml:space="preserve">
+    <value>普通</value>
+  </data>
+  <data name="NatureCode_NotApplicable" xml:space="preserve">
+    <value>不可用</value>
+  </data>
+  <data name="StatusCode_Active" xml:space="preserve">
+    <value>正在服務</value>
+  </data>
+  <data name="StatusCode_ExtendService" xml:space="preserve">
+    <value>延期服務</value>
+  </data>
+  <data name="StatusCode_Inactive" xml:space="preserve">
+    <value>未生效</value>
+  </data>
+  <data name="StatusCode_New" xml:space="preserve">
+    <value>新建</value>
+  </data>
+  <data name="StatusCode_OutOfService" xml:space="preserve">
+    <value>停止服務</value>
+  </data>
+  <data name="StatusCode_Scrapped" xml:space="preserve">
+    <value>已報廢</value>
+  </data>
+  <data name="EquipPage_BatchAdding" xml:space="preserve">
+    <value>批量新增</value>
+  </data>
+  <data name="EquipPage_Contractor_Colon" xml:space="preserve">
+    <value>連絡人</value>
+  </data>
+  <data name="EquipPage_ControlCategory" xml:space="preserve">
+    <value>控制類型</value>
+  </data>
+  <data name="EquipPage_HardwareSerialNo_Colon" xml:space="preserve">
+    <value>保修序號</value>
+  </data>
+  <data name="EquipPage_InitialCalibrationDate_Colon" xml:space="preserve">
+    <value>初始調校日期</value>
+  </data>
+  <data name="EquipPage_Interval" xml:space="preserve">
+    <value>維護週期（月）</value>
+  </data>
+  <data name="EquipPage_Last" xml:space="preserve">
+    <value>最近</value>
+  </data>
+  <data name="EquipPage_Location_Colon" xml:space="preserve">
+    <value>['Location']</value>
+  </data>
+  <data name="EquipPage_Next" xml:space="preserve">
+    <value>下一次</value>
+  </data>
+  <data name="EquipPage_OwnerDepartment_Colon" xml:space="preserve">
+    <value>擁有部門</value>
+  </data>
+  <data name="EquipPage_Planned" xml:space="preserve">
+    <value>原計劃</value>
+  </data>
+  <data name="EquipPage_ScrapDate_Colon" xml:space="preserve">
+    <value>報廢日期</value>
+  </data>
+  <data name="EquipPage_SequenceNo_Colon" xml:space="preserve">
+    <value>序號</value>
+  </data>
+  <data name="EquipPage_MaintDates" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="EquipPage_ServiceHistory" xml:space="preserve">
+    <value>['Service']歷史記錄</value>
+  </data>
+  <data name="EquipPage_Status" xml:space="preserve">
+    <value>狀態</value>
+  </data>
+  <data name="EquipPage_UnderISOControl" xml:space="preserve">
+    <value>ISO管理</value>
+  </data>
+  <data name="EquipPage_UserTI_Colon" xml:space="preserve">
+    <value>用戶技術說明</value>
+  </data>
+  <data name="EquipPage_User_Colon" xml:space="preserve">
+    <value>用戶</value>
+  </data>
+  <data name="EquipPage_WorkshopTI_Colon" xml:space="preserve">
+    <value>工廠技術說明</value>
+  </data>
+  <data name="EquipPage_Workshop_Colon" xml:space="preserve">
+    <value>工廠</value>
+  </data>
+  <data name="EquipmentTypePage_Matrf" xml:space="preserve">
+    <value>生產商</value>
+  </data>
+  <data name="EquipmentTypePage_NextSeqNo" xml:space="preserve">
+    <value>下個序號</value>
+  </data>
+  <data name="EquipmnetTypePage_Model" xml:space="preserve">
+    <value>型號</value>
+  </data>
+  <data name="Equip_Control" xml:space="preserve">
+    <value>控制</value>
+  </data>
+  <data name="Equip_IsFixServiceDate" xml:space="preserve">
+    <value>固定維護日期</value>
+  </data>
+  <data name="Equip_LabelSize" xml:space="preserve">
+    <value>標籤大小</value>
+  </data>
+  <data name="Equip_Nature" xml:space="preserve">
+    <value>性質</value>
+  </data>
+  <data name="Equip_ServerInterval" xml:space="preserve">
+    <value>調校間期</value>
+  </data>
+  <data name="Equip_TechnicalInstruction" xml:space="preserve">
+    <value>技術說明</value>
+  </data>
+  <data name="Equip_User" xml:space="preserve">
+    <value>用戶</value>
+  </data>
+  <data name="Equip_Workshop" xml:space="preserve">
+    <value>工廠</value>
+  </data>
+  <data name="Page_Connect" xml:space="preserve">
+    <value>連接</value>
+  </data>
+  <data name="Page_Send" xml:space="preserve">
+    <value>發送</value>
+  </data>
+  <data name="SystemCheckPage_Body" xml:space="preserve">
+    <value>電郵內容 *</value>
+  </data>
+  <data name="SystemCheckPage_DBConnection" xml:space="preserve">
+    <value>資料庫連接</value>
+  </data>
+  <data name="SystemCheckPage_DBConnection_Colon" xml:space="preserve">
+    <value>資料庫連接</value>
+  </data>
+  <data name="SystemCheckPage_EmailText" xml:space="preserve">
+    <value>電郵文本</value>
+  </data>
+  <data name="SystemCheckPage_EmailThread" xml:space="preserve">
+    <value>電郵執行緒</value>
+  </data>
+  <data name="SystemCheckPage_EmailThreadStatus" xml:space="preserve">
+    <value>電郵執行緒狀態</value>
+  </data>
+  <data name="SystemCheckPage_Receiver" xml:space="preserve">
+    <value>收件人 *</value>
+  </data>
+  <data name="SystemCheckPage_Subject" xml:space="preserve">
+    <value>電郵主題 *</value>
+  </data>
+  <data name="SystemCheckPage_ReceiverRemind" xml:space="preserve">
+    <value>注意：多個收件人之間請使用' ; '作為分隔符號</value>
+  </data>
+  <data name="SystemCheckPage_WaitConnect" xml:space="preserve">
+    <value>正在連接，請等待..</value>
+  </data>
+  <data name="SystemCheckPage_WaitReset" xml:space="preserve">
+    <value>正在重置，請等待..</value>
+  </data>
+  <data name="SystemCheckPage_WaitSend" xml:space="preserve">
+    <value>正在發送，請等待..</value>
+  </data>
+  <data name="EquipPage_IsFixServiceDate" xml:space="preserve">
+    <value>浮動維護日期</value>
+  </data>
+  <data name="EquipPage_ReserveServiceBy_Colon" xml:space="preserve">
+    <value>後備['Service']人</value>
+  </data>
+  <data name="EquipPage_ServiceBy_Colon" xml:space="preserve">
+    <value>維護人</value>
+  </data>
+  <data name="Menu_MaintSummary" xml:space="preserve">
+    <value>年度維護清單</value>
+  </data>
+  <data name="Menu_ServiceOrder" xml:space="preserve">
+    <value>Service Order</value>
+  </data>
+  <data name="ISOControlCode_No" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="ISOControlCode_Yes" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="ServiceOrderListPage_Title" xml:space="preserve">
+    <value>工單/任務列表</value>
+  </data>
+  <data name="Page_Load" xml:space="preserve">
+    <value>載入</value>
+  </data>
+  <data name="ServiceOrderListPage_CalResult" xml:space="preserve">
+    <value>調校結果</value>
+  </data>
+  <data name="ServiceOrderListPage_CheckInDate" xml:space="preserve">
+    <value>提交日期</value>
+  </data>
+  <data name="ServiceOrderListPage_Code" xml:space="preserve">
+    <value>工單編號</value>
+  </data>
+  <data name="ServiceOrderListPage_EquipmentID" xml:space="preserve">
+    <value>['Item']編號</value>
+  </data>
+  <data name="ServiceOrderListPage_IsInternal" xml:space="preserve">
+    <value>工作人員</value>
+  </data>
+  <data name="ServiceOrderListPage_LocationID" xml:space="preserve">
+    <value>['Location']</value>
+  </data>
+  <data name="ServiceOrderListPage_MaintResult" xml:space="preserve">
+    <value>維護結果</value>
+  </data>
+  <data name="ServiceOrderListPage_OrderTypeID" xml:space="preserve">
+    <value>工單類型</value>
+  </data>
+  <data name="ServiceOrderListPage_PlannedServiceDate" xml:space="preserve">
+    <value>['Service']計劃日期    </value>
+  </data>
+  <data name="ServiceOrderListPage_RequestByID" xml:space="preserve">
+    <value>創建人</value>
+  </data>
+  <data name="ServiceOrderListPage_RequestDate" xml:space="preserve">
+    <value>創建日期</value>
+  </data>
+  <data name="ServiceOrderListPage_ServiceTypeID" xml:space="preserve">
+    <value>['Service']類型</value>
+  </data>
+  <data name="DueCalOrderPage_Department" xml:space="preserve">
+    <value>部門</value>
+  </data>
+  <data name="DueCalOrderPage_EquipmentName" xml:space="preserve">
+    <value>['Item']名稱</value>
+  </data>
+  <data name="DueCalOrderPage_EquipmentType" xml:space="preserve">
+    <value>['Item']範本</value>
+  </data>
+  <data name="DueCalOrderPage_GenOrder" xml:space="preserve">
+    <value>生成調校單</value>
+  </data>
+  <data name="DueCalOrderPage_List" xml:space="preserve">
+    <value>['Item']列表</value>
+  </data>
+  <data name="DueCalOrderPage_Location" xml:space="preserve">
+    <value>位置</value>
+  </data>
+  <data name="DueCalOrderPage_ServiceDate" xml:space="preserve">
+    <value>維修日期</value>
+  </data>
+  <data name="DueCalOrderPage_Title" xml:space="preserve">
+    <value>生成維修單</value>
+  </data>
+  <data name="Menu_TechnicalInstruction" xml:space="preserve">
+    <value>技術說明</value>
+  </data>
+  <data name="TIPage_Description" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="TIPage_Description_Colon" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="TIPage_Name" xml:space="preserve">
+    <value>技術說明名稱</value>
+  </data>
+  <data name="TIPage_Name_Colon" xml:space="preserve">
+    <value>技術說明名稱</value>
+  </data>
+  <data name="TIPage_Tittle" xml:space="preserve">
+    <value>技術說明維護</value>
+  </data>
+  <data name="ServiceHistory_Title" xml:space="preserve">
+    <value>歷史工單</value>
+  </data>
+  <data name="MaintSummary_Depart" xml:space="preserve">
+    <value>部門</value>
+  </data>
+  <data name="MaintSummary_Equipment" xml:space="preserve">
+    <value>['Item']</value>
+  </data>
+  <data name="MaintSummary_List" xml:space="preserve">
+    <value>年度維護列表</value>
+  </data>
+  <data name="MaintSummary_StatusTip" xml:space="preserve">
+    <value>工單編號:{0}計劃名:{1}計劃日期:{2}維護日期:{3}['Location']:{4}組織架構:{5}</value>
+  </data>
+  <data name="MaintSummary_Title" xml:space="preserve">
+    <value>年度維護清單</value>
+  </data>
+  <data name="MaintSummary_Week" xml:space="preserve">
+    <value>第{0}周</value>
+  </data>
+  <data name="MaintSummary_Year" xml:space="preserve">
+    <value>年份</value>
+  </data>
+  <data name="Common_Calibration" xml:space="preserve">
+    <value>調校</value>
+  </data>
+  <data name="Common_Maintenance" xml:space="preserve">
+    <value>維護</value>
+  </data>
+  <data name="Common_All" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="EquipPage_CalDates" xml:space="preserve">
+    <value>調校日期</value>
+  </data>
+  <data name="Common_Eamil" xml:space="preserve">
+    <value>電郵</value>
+  </data>
+  <data name="Common_NotData" xml:space="preserve">
+    <value>沒有資料</value>
+  </data>
+  <data name="Menu_Qualificaiton" xml:space="preserve">
+    <value>證書</value>
+  </data>
+  <data name="QualificaitonPage_QualificaitonName" xml:space="preserve">
+    <value>證書</value>
+  </data>
+  <data name="QualificaitonPage_Description" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="QualificaitonPage_Title" xml:space="preserve">
+    <value>證書維護</value>
+  </data>
+  <data name="Common_Day" xml:space="preserve">
+    <value>天</value>
+  </data>
+  <data name="Common_Month" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="Common_Week" xml:space="preserve">
+    <value>周</value>
+  </data>
+  <data name="Common_Year" xml:space="preserve">
+    <value>年</value>
+  </data>
+  <data name="IntervalTypeCode_Day" xml:space="preserve">
+    <value>天</value>
+  </data>
+  <data name="IntervalTypeCode_Month" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="IntervalTypeCode_Week" xml:space="preserve">
+    <value>周</value>
+  </data>
+  <data name="IntervalTypeCode_Year" xml:space="preserve">
+    <value>年</value>
+  </data>
+  <data name="ServiceRequestType_Immediate" xml:space="preserve">
+    <value>立即</value>
+  </data>
+  <data name="ServiceRequestType_Other" xml:space="preserve">
+    <value>其他</value>
+  </data>
+  <data name="ServiceRequestType_Recent" xml:space="preserve">
+    <value>最近</value>
+  </data>
+  <data name="ServiceRequestType_Shutdown" xml:space="preserve">
+    <value>關閉</value>
+  </data>
+  <data name="EquipmentTypePage_OrgUnit" xml:space="preserve">
+    <value>組織架構</value>
+  </data>
+  <data name="OrderPage_Base" xml:space="preserve">
+    <value>['Item']</value>
+  </data>
+  <data name="OrderPage_Check" xml:space="preserve">
+    <value>驗收</value>
+  </data>
+  <data name="OrderPage_CheckBy" xml:space="preserve">
+    <value>驗收人</value>
+  </data>
+  <data name="OrderPage_CheckResult" xml:space="preserve">
+    <value>驗收結果</value>
+  </data>
+  <data name="OrderPage_CheckResultRemark" xml:space="preserve">
+    <value>驗收結果記錄</value>
+  </data>
+  <data name="OrderPage_CompletionServiceDate" xml:space="preserve">
+    <value>完成日期</value>
+  </data>
+  <data name="OrderPage_EquipmentName" xml:space="preserve">
+    <value>['Item']名稱</value>
+  </data>
+  <data name="OrderPage_EquipmentType" xml:space="preserve">
+    <value>['Item']範本</value>
+  </data>
+  <data name="OrderPage_Estimate" xml:space="preserve">
+    <value>其他資訊</value>
+  </data>
+  <data name="OrderPage_EstimateServiceDate" xml:space="preserve">
+    <value>計劃日期</value>
+  </data>
+  <data name="OrderPage_EstimateServiceDuration" xml:space="preserve">
+    <value>計劃時間</value>
+  </data>
+  <data name="OrderPage_InternalExternal" xml:space="preserve">
+    <value>工作人員</value>
+  </data>
+  <data name="OrderPage_IsPriority" xml:space="preserve">
+    <value>優先</value>
+  </data>
+  <data name="OrderPage_Inspection" xml:space="preserve">
+    <value>維護</value>
+  </data>
+  <data name="OrderPage_InspectionResult" xml:space="preserve">
+    <value>維護結果</value>
+  </data>
+  <data name="OrderPage_InspectionResultRemark" xml:space="preserve">
+    <value>維護結果記錄</value>
+  </data>
+  <data name="OrderPage_OrderNo" xml:space="preserve">
+    <value>工單編號</value>
+  </data>
+  <data name="OrderPage_OrderType" xml:space="preserve">
+    <value>工單類型</value>
+  </data>
+  <data name="OrderPage_OwnerLocation" xml:space="preserve">
+    <value>['Location']</value>
+  </data>
+  <data name="OrderPage_PermissionTips" xml:space="preserve">
+    <value>抱歉，你不具有當前操作的許可權！</value>
+  </data>
+  <data name="OrderPage_Remark" xml:space="preserve">
+    <value>備註</value>
+  </data>
+  <data name="OrderPage_ServiceDuration" xml:space="preserve">
+    <value>維護時間</value>
+  </data>
+  <data name="OrderPage_StandardDeviation" xml:space="preserve">
+    <value>偏差值</value>
+  </data>
+  <data name="OrderPage_Title" xml:space="preserve">
+    <value>工單</value>
+  </data>
+  <data name="OrderPage_GenRepair" xml:space="preserve">
+    <value>生成維修單</value>
+  </data>
+  <data name="OrderPage_InspectionBy" xml:space="preserve">
+    <value>維護人</value>
+  </data>
+  <data name="OrderPage_Maint" xml:space="preserve">
+    <value>維修</value>
+  </data>
+  <data name="OrderPage_MaintBy" xml:space="preserve">
+    <value>維修人</value>
+  </data>
+  <data name="OrderPage_MaintResult" xml:space="preserve">
+    <value>維修結果</value>
+  </data>
+  <data name="OrderPage_MaintResultRemark" xml:space="preserve">
+    <value>維修結果記錄</value>
+  </data>
+  <data name="OrderPage_MaintDuration" xml:space="preserve">
+    <value>維修時間</value>
+  </data>
+  <data name="Common_EquipmentName" xml:space="preserve">
+    <value>['Item']名稱</value>
+  </data>
+  <data name="Common_EquipmentType" xml:space="preserve">
+    <value>['Item']範本</value>
+  </data>
+  <data name="Common_Status" xml:space="preserve">
+    <value>狀態</value>
+  </data>
+  <data name="LocationPage_ParentLocationName" xml:space="preserve">
+    <value>上層['Location']</value>
+  </data>
+  <data name="LocationPage_ParentLocationSelect" xml:space="preserve">
+    <value>--- 請選擇 ---</value>
+  </data>
+  <data name="ServiceOrderListPage_CheckResult" xml:space="preserve">
+    <value>驗收結果</value>
+  </data>
+  <data name="ServiceOrderListPage_ServiceCompletionDate" xml:space="preserve">
+    <value>完成日期    </value>
+  </data>
+  <data name="Menu_Team" xml:space="preserve">
+    <value>['Team']</value>
+  </data>
+  <data name="TeamPage_TeamDetail" xml:space="preserve">
+    <value>小組資訊</value>
+  </data>
+  <data name="TeamPage_TeamList" xml:space="preserve">
+    <value>工作組列表</value>
+  </data>
+  <data name="TeamPage_TeamName" xml:space="preserve">
+    <value>名稱</value>
+  </data>
+  <data name="TeamPage_TeamType" xml:space="preserve">
+    <value>組別</value>
+  </data>
+  <data name="TeamPage_TeamUserList" xml:space="preserve">
+    <value>成員列表</value>
+  </data>
+  <data name="TeamPage_TeamUserName" xml:space="preserve">
+    <value>工作組成員</value>
+  </data>
+  <data name="TeamType_Maint" xml:space="preserve">
+    <value>維護</value>
+  </data>
+  <data name="TeamType_Repair" xml:space="preserve">
+    <value>維修</value>
+  </data>
+  <data name="TeamPage_TeamCheck" xml:space="preserve">
+    <value>驗收人員</value>
+  </data>
+  <data name="TeamPage_TeamLeader" xml:space="preserve">
+    <value>主管</value>
+  </data>
+  <data name="TeamPage_TeamSLeader" xml:space="preserve">
+    <value>副主管</value>
+  </data>
+  <data name="Order_UseCode_Calibration" xml:space="preserve">
+    <value>調校</value>
+  </data>
+  <data name="Order_UseCode_Day" xml:space="preserve">
+    <value>天</value>
+  </data>
+  <data name="Order_UseCode_External" xml:space="preserve">
+    <value>外委</value>
+  </data>
+  <data name="Order_UseCode_Fail" xml:space="preserve">
+    <value>不合格</value>
+  </data>
+  <data name="Order_UseCode_FailNeedFollow" xml:space="preserve">
+    <value>不合格 (要跟進)</value>
+  </data>
+  <data name="Order_UseCode_FailNoFollow" xml:space="preserve">
+    <value>不合格 (無跟進)</value>
+  </data>
+  <data name="Order_UseCode_False" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="Order_UseCode_Hour" xml:space="preserve">
+    <value>小時</value>
+  </data>
+  <data name="Order_UseCode_Internal" xml:space="preserve">
+    <value>內部</value>
+  </data>
+  <data name="Order_UseCode_Inspection" xml:space="preserve">
+    <value>維護</value>
+  </data>
+  <data name="Order_UseCode_NA" xml:space="preserve">
+    <value>NA</value>
+  </data>
+  <data name="Order_UseCode_Pass" xml:space="preserve">
+    <value>合格</value>
+  </data>
+  <data name="Order_UseCode_PassNeedFollow" xml:space="preserve">
+    <value>合格 (要跟進)</value>
+  </data>
+  <data name="Order_UseCode_PassNoFollow" xml:space="preserve">
+    <value>合格 (無跟進)</value>
+  </data>
+  <data name="Order_UseCode_Maint" xml:space="preserve">
+    <value>維修</value>
+  </data>
+  <data name="Order_UseCode_True" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="Order_UseCode_User" xml:space="preserve">
+    <value>員工</value>
+  </data>
+  <data name="Order_UseCode_Workshop" xml:space="preserve">
+    <value>工廠</value>
+  </data>
+  <data name="OrderTypeCode_Cal" xml:space="preserve">
+    <value>調校</value>
+  </data>
+  <data name="OrderTypeCode_Inspection" xml:space="preserve">
+    <value>維護</value>
+  </data>
+  <data name="OrderTypeCode_Repair" xml:space="preserve">
+    <value>維修</value>
+  </data>
+  <data name="EquipmentTree_Title" xml:space="preserve">
+    <value>['Item']樹</value>
+  </data>
+  <data name="Menu_EquipmentTree" xml:space="preserve">
+    <value>['Item']樹</value>
+  </data>
+  <data name="EquipPage_AlarmingLevel" xml:space="preserve">
+    <value>提前通知</value>
+  </data>
+  <data name="EquipPage_AlarmingLevelInterval" xml:space="preserve">
+    <value>通知週期</value>
+  </data>
+  <data name="EquipPage_Day" xml:space="preserve">
+    <value>天</value>
+  </data>
+  <data name="EquipPage_EstimateServiceDuration" xml:space="preserve">
+    <value>預計['Service']時間</value>
+  </data>
+  <data name="EquipPage_FirstServiceDate" xml:space="preserve">
+    <value>第一次['Service']日期</value>
+  </data>
+  <data name="EquipPage_IntervalValue" xml:space="preserve">
+    <value>週期值</value>
+  </data>
+  <data name="EquipPage_IsAutoGenOrder" xml:space="preserve">
+    <value>自動生成工單</value>
+  </data>
+  <data name="EquipPage_IsCalibration" xml:space="preserve">
+    <value>調校</value>
+  </data>
+  <data name="EquipPage_IsFixService" xml:space="preserve">
+    <value>固定['Service']日期</value>
+  </data>
+  <data name="EquipPage_IsInternal" xml:space="preserve">
+    <value>內部</value>
+  </data>
+  <data name="EquipPage_IsNeedNotify" xml:space="preserve">
+    <value>需要通知</value>
+  </data>
+  <data name="EquipPage_LastServiceDate" xml:space="preserve">
+    <value>上一次['Service']日期</value>
+  </data>
+  <data name="EquipPage_MaintBy" xml:space="preserve">
+    <value>['Service']人員</value>
+  </data>
+  <data name="EquipPage_MaintCheckBy" xml:space="preserve">
+    <value>驗收人</value>
+  </data>
+  <data name="EquipPage_MaintTeam" xml:space="preserve">
+    <value>['Team']</value>
+  </data>
+  <data name="EquipPage_NextServiceDate" xml:space="preserve">
+    <value>['Service']計劃日期</value>
+  </data>
+  <data name="EquipPage_No" xml:space="preserve">
+    <value>編號</value>
+  </data>
+  <data name="EquipPage_OtherRequest" xml:space="preserve">
+    <value>其它要求</value>
+  </data>
+  <data name="EquipPage_PlanName" xml:space="preserve">
+    <value>計劃名稱</value>
+  </data>
+  <data name="EquipPage_Qualification" xml:space="preserve">
+    <value>證書</value>
+  </data>
+  <data name="EquipPage_RepairAlarmingLevel" xml:space="preserve">
+    <value>提前通知</value>
+  </data>
+  <data name="EquipPage_RepairAlarmingLevelInterval" xml:space="preserve">
+    <value>通知週期</value>
+  </data>
+  <data name="EquipPage_RepairBy" xml:space="preserve">
+    <value>['Service']人</value>
+  </data>
+  <data name="EquipPage_RepairCheckBy" xml:space="preserve">
+    <value>驗收人</value>
+  </data>
+  <data name="EquipPage_RepairTeam" xml:space="preserve">
+    <value>工作組</value>
+  </data>
+  <data name="EquipPage_Satus" xml:space="preserve">
+    <value>狀態</value>
+  </data>
+  <data name="EquipPage_ServiceBy" xml:space="preserve">
+    <value>負責人</value>
+  </data>
+  <data name="EquipPage_ServiceBy2" xml:space="preserve">
+    <value>負責人2</value>
+  </data>
+  <data name="EquipPage_ServiceRequestType" xml:space="preserve">
+    <value>額外要求</value>
+  </data>
+  <data name="EquipPage_TI" xml:space="preserve">
+    <value>技術說明</value>
+  </data>
+  <data name="EquipPage_UserInterval" xml:space="preserve">
+    <value>週期值</value>
+  </data>
+  <data name="EquipPage_General" xml:space="preserve">
+    <value>基礎資訊</value>
+  </data>
+  <data name="EquipPage_Other" xml:space="preserve">
+    <value>其他</value>
+  </data>
+  <data name="EquipPage_User" xml:space="preserve">
+    <value>週期</value>
+  </data>
+  <data name="EquipPage_Name" xml:space="preserve">
+    <value>['Item']名稱</value>
+  </data>
+  <data name="CheckResultCode_Fail" xml:space="preserve">
+    <value>驗收/審批/審核結果-不合格</value>
+  </data>
+  <data name="CheckResultCode_Pass" xml:space="preserve">
+    <value>驗收/審批/審核結果-合格</value>
+  </data>
+  <data name="MaintResultCode_FailNeedFollow" xml:space="preserve">
+    <value>維護結果-不合格 (要跟進)</value>
+  </data>
+  <data name="MaintResultCode_FailNoFollow" xml:space="preserve">
+    <value>維護結果-不合格 (無跟進)</value>
+  </data>
+  <data name="MaintResultCode_NA" xml:space="preserve">
+    <value>維護/管網結果-空值</value>
+  </data>
+  <data name="MaintResultCode_PassNeedFollow" xml:space="preserve">
+    <value>維護結果-合格 (要跟進)</value>
+  </data>
+  <data name="MaintResultCode_PassNoFollow" xml:space="preserve">
+    <value>維護結果-合格 (無跟進)</value>
+  </data>
+  <data name="RepairResultCode_Fail" xml:space="preserve">
+    <value>維修結果-不合格</value>
+  </data>
+  <data name="RepairResultCode_NA" xml:space="preserve">
+    <value>維修結果-空值</value>
+  </data>
+  <data name="RepairResultCode_Pass" xml:space="preserve">
+    <value>維修結果-合格</value>
+  </data>
+  <data name="ServiceOrderListPage_OrderResult" xml:space="preserve">
+    <value>['Service']結果</value>
+  </data>
+  <data name="DurationType_Day" xml:space="preserve">
+    <value>天</value>
+  </data>
+  <data name="DurationType_Hour" xml:space="preserve">
+    <value>小時</value>
+  </data>
+  <data name="OrderPage_ChildOrder" xml:space="preserve">
+    <value>子工單</value>
+  </data>
+  <data name="OrderPage_ParentOrder" xml:space="preserve">
+    <value>父工單</value>
+  </data>
+  <data name="EquipPage_Basic" xml:space="preserve">
+    <value>基礎資訊</value>
+  </data>
+  <data name="EquipPage_Category" xml:space="preserve">
+    <value>['Item']類型</value>
+  </data>
+  <data name="EquipPage_InitInspectionDate" xml:space="preserve">
+    <value>投用時間</value>
+  </data>
+  <data name="EquipPage_Manftr" xml:space="preserve">
+    <value>生產商</value>
+  </data>
+  <data name="EquipPage_Model" xml:space="preserve">
+    <value>型號</value>
+  </data>
+  <data name="EquipPage_OrgUnit" xml:space="preserve">
+    <value>組織架構</value>
+  </data>
+  <data name="CompanyPage_ServiceType_IsFix" xml:space="preserve">
+    <value>固定服務日期</value>
+  </data>
+  <data name="CompanyPage_ServiceType_IsFlow" xml:space="preserve">
+    <value>浮動服務日期</value>
+  </data>
+  <data name="EquipmentTypePage_No" xml:space="preserve">
+    <value>['Item']範本編號</value>
+  </data>
+  <data name="EquipmentType_PredefineName" xml:space="preserve">
+    <value>['Item']預定義名稱</value>
+  </data>
+  <data name="EquipmentType_Remark" xml:space="preserve">
+    <value>備註</value>
+  </data>
+  <data name="EquipType_Plan" xml:space="preserve">
+    <value>計劃</value>
+  </data>
+  <data name="EquipType_Plan_AlarmingLevel" xml:space="preserve">
+    <value>提前通知</value>
+  </data>
+  <data name="EquipType_Plan_AlarmingLevelInterval" xml:space="preserve">
+    <value>通知週期</value>
+  </data>
+  <data name="EquipType_Plan_IsAutoGenOrder" xml:space="preserve">
+    <value>自動生成工單</value>
+  </data>
+  <data name="EquipType_Plan_IsFixServiceDate" xml:space="preserve">
+    <value>固定['Service']日期</value>
+  </data>
+  <data name="EquipType_Plan_IsInternal" xml:space="preserve">
+    <value>內部</value>
+  </data>
+  <data name="EquipType_Plan_MaintTeam" xml:space="preserve">
+    <value>維護['Team']</value>
+  </data>
+  <data name="EquipType_Plan_Name" xml:space="preserve">
+    <value>計劃名稱</value>
+  </data>
+  <data name="EquipType_Plan_OtherRequest" xml:space="preserve">
+    <value>其他要求</value>
+  </data>
+  <data name="EquipType_Plan_RepAlarmingLevel" xml:space="preserve">
+    <value>維修到期後通知</value>
+  </data>
+  <data name="EquipType_Plan_RepAlarmingLevelInterval" xml:space="preserve">
+    <value>維修到期後通知週期</value>
+  </data>
+  <data name="EquipType_Plan_RepTeam" xml:space="preserve">
+    <value>維修['Team']</value>
+  </data>
+  <data name="EquipType_Plan_ServiceRequest" xml:space="preserve">
+    <value>維護要求</value>
+  </data>
+  <data name="EquipmentTree_Information" xml:space="preserve">
+    <value>['Item']信息</value>
+  </data>
+  <data name="EquipPage_Plan" xml:space="preserve">
+    <value>計劃</value>
+  </data>
+  <data name="Common_Repair" xml:space="preserve">
+    <value>維修</value>
+  </data>
+  <data name="EmailTemplatePage_EmailTemplateContent" xml:space="preserve">
+    <value>電郵內容</value>
+  </data>
+  <data name="EmailTemplatePage_EmailTemplateName" xml:space="preserve">
+    <value>電郵範本名稱</value>
+  </data>
+  <data name="EmailTemplatePage_EmailTemplateSubject" xml:space="preserve">
+    <value>電郵主題</value>
+  </data>
+  <data name="EmailTemplatePage_Title" xml:space="preserve">
+    <value>電郵範本維護</value>
+  </data>
+  <data name="Menu_EmailTemplate" xml:space="preserve">
+    <value>電郵範本</value>
+  </data>
+  <data name="EquipPage_Maint" xml:space="preserve">
+    <value>維護</value>
+  </data>
+  <data name="EquipPage_Repair" xml:space="preserve">
+    <value>維修</value>
+  </data>
+  <data name="OrderPage_Other" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="OrderPage_MaintRemarks" xml:space="preserve">
+    <value>維修備註</value>
+  </data>
+  <data name="EquipPage_MaintContentDescription" xml:space="preserve">
+    <value>['Service']內容描述</value>
+  </data>
+  <data name="EquipPage_MaintUserRequirementDesciption" xml:space="preserve">
+    <value>人員要求</value>
+  </data>
+  <data name="Common_Attachment" xml:space="preserve">
+    <value>附件</value>
+  </data>
+  <data name="Common_FileName" xml:space="preserve">
+    <value>檔案名</value>
+  </data>
+  <data name="Common_FileSize" xml:space="preserve">
+    <value>文件大小（kb）</value>
+  </data>
+  <data name="CompanyPage_WebSiteType" xml:space="preserve">
+    <value>開放功能</value>
+  </data>
+  <data name="CompanyPage_WebSiteType_IsEquipCal" xml:space="preserve">
+    <value>調校</value>
+  </data>
+  <data name="CompanyPage_WebSiteType_IsMEIE" xml:space="preserve">
+    <value>維護</value>
+  </data>
+  <data name="EquipType_Plan_EstimateDuration" xml:space="preserve">
+    <value>預計['Service']時間</value>
+  </data>
+  <data name="EquipType_Plan_IsNeedNotify" xml:space="preserve">
+    <value>需要提醒</value>
+  </data>
+  <data name="EquipType_Plan_MaintCheck" xml:space="preserve">
+    <value>檢查列表</value>
+  </data>
+  <data name="EquipType_Plan_MaintContentDescrption" xml:space="preserve">
+    <value>['Service']內容描述</value>
+  </data>
+  <data name="EquipType_Plan_MaintUserRequirDescription" xml:space="preserve">
+    <value>人員要求</value>
+  </data>
+  <data name="EquipPage_IsActive" xml:space="preserve">
+    <value>生效</value>
+  </data>
+  <data name="Common_OrgUnit" xml:space="preserve">
+    <value>組織架構</value>
+  </data>
+  <data name="MaintSummary_ViewAnnual" xml:space="preserve">
+    <value>年度</value>
+  </data>
+  <data name="MaintSummary_ViewServiceOrder" xml:space="preserve">
+    <value>工單</value>
+  </data>
+  <data name="MaintSummary_ViewSwitch" xml:space="preserve">
+    <value>查看類別</value>
+  </data>
+  <data name="Common_No" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="Common_Yes" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="EquipPage_CancelAcitveServiceOrder" xml:space="preserve">
+    <value>是否同時取消正在運行的工單？</value>
+  </data>
+  <data name="ChangePwdPage_LogonName" xml:space="preserve">
+    <value>用戶名</value>
+  </data>
+  <data name="ChangePwdPage_NewPwd" xml:space="preserve">
+    <value>新密碼</value>
+  </data>
+  <data name="ChangePwdPage_NewPwdConfirm" xml:space="preserve">
+    <value>新密碼確認</value>
+  </data>
+  <data name="ChangePwdPage_OldPwd" xml:space="preserve">
+    <value>舊密碼</value>
+  </data>
+  <data name="ChangePwdPage_Title" xml:space="preserve">
+    <value>修改密碼</value>
+  </data>
+  <data name="Menu_ChangePwd" xml:space="preserve">
+    <value>修改密碼</value>
+  </data>
+  <data name="Page_Confirm" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="Common_ResetPassword" xml:space="preserve">
+    <value>重置密碼</value>
+  </data>
+  <data name="GenMaintOrder_EquipmentName" xml:space="preserve">
+    <value>['Item']</value>
+  </data>
+  <data name="GenMaintOrder_EquipmentType" xml:space="preserve">
+    <value>['Item']類型</value>
+  </data>
+  <data name="GenMaintOrder_GenOrder" xml:space="preserve">
+    <value>生成工單</value>
+  </data>
+  <data name="GenMaintOrder_List" xml:space="preserve">
+    <value>維護工單列表</value>
+  </data>
+  <data name="GenMaintOrder_Location" xml:space="preserve">
+    <value>['Location']</value>
+  </data>
+  <data name="GenMaintOrder_MaintContentDescription" xml:space="preserve">
+    <value>維護內容描述</value>
+  </data>
+  <data name="GenMaintOrder_MaintTeam" xml:space="preserve">
+    <value>維護['Item']</value>
+  </data>
+  <data name="GenMaintOrder_PlanName" xml:space="preserve">
+    <value>計劃名稱</value>
+  </data>
+  <data name="GenMaintOrder_RepairTeam" xml:space="preserve">
+    <value>維修['Item']</value>
+  </data>
+  <data name="GenMaintOrder_SelectedItem" xml:space="preserve">
+    <value>選擇的['Item']</value>
+  </data>
+  <data name="GenMaintOrder_Title" xml:space="preserve">
+    <value>生成維護單</value>
+  </data>
+  <data name="Menu_DueMaintOrder" xml:space="preserve">
+    <value>生成維護單</value>
+  </data>
+  <data name="Common_Upload" xml:space="preserve">
+    <value>上傳</value>
+  </data>
+  <data name="EquipPage_MaintCheck" xml:space="preserve">
+    <value>檢查列表</value>
+  </data>
+  <data name="Common_ParentNode" xml:space="preserve">
+    <value>父節點</value>
+  </data>
+  <data name="Common_Admin" xml:space="preserve">
+    <value>管理員</value>
+  </data>
+  <data name="CompanyPage_AttachLimited" xml:space="preserve">
+    <value>附件大小限制</value>
+  </data>
+  <data name="CompanyPage_AttachLimited_Size" xml:space="preserve">
+    <value>MB</value>
+  </data>
+  <data name="CompanyPage_EmailSender" xml:space="preserve">
+    <value>電郵發送人</value>
+  </data>
+  <data name="CompanyPage_Member" xml:space="preserve">
+    <value>人</value>
+  </data>
+  <data name="CompanyPage_UserLimited" xml:space="preserve">
+    <value>用戶數限制</value>
+  </data>
+  <data name="EmailTemplatePage_EmailTemplateCompanyList" xml:space="preserve">
+    <value>未創建範本公司</value>
+  </data>
+  <data name="Page_Add_Dialog" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="Page_Edit_Dialog" xml:space="preserve">
+    <value>編輯</value>
+  </data>
+  <data name="Sign_In" xml:space="preserve">
+    <value>登錄</value>
+  </data>
+  <data name="CompanyPage_PasswordPolicy" xml:space="preserve">
+    <value>密碼策略</value>
+  </data>
+  <data name="PasswordPolicy_MinLength" xml:space="preserve">
+    <value>密碼最小長度</value>
+  </data>
+  <data name="PasswordPolicy_NeedLetter" xml:space="preserve">
+    <value>包含字母</value>
+  </data>
+  <data name="PasswordPolicy_NeedNumber" xml:space="preserve">
+    <value>包含數位</value>
+  </data>
+  <data name="Page_Create" xml:space="preserve">
+    <value>創建</value>
+  </data>
+  <data name="EmailTemplatePage_CompanyListTitle" xml:space="preserve">
+    <value>公司列表</value>
+  </data>
+  <data name="Sign_Out" xml:space="preserve">
+    <value>登出</value>
+  </data>
+  <data name="LoginPage_ValidationCode" xml:space="preserve">
+    <value>驗證碼</value>
+  </data>
+  <data name="Common_Welcome" xml:space="preserve">
+    <value>歡迎來到</value>
+  </data>
+  <data name="OrderPage_Attachment" xml:space="preserve">
+    <value>附件</value>
+  </data>
+  <data name="OrderPage_CheckInDate" xml:space="preserve">
+    <value>簽入時間</value>
+  </data>
+  <data name="OrderPage_FaultCodeDesc" xml:space="preserve">
+    <value>故障代碼描述</value>
+  </data>
+  <data name="OrderPage_FaultCodeName" xml:space="preserve">
+    <value>故障代碼</value>
+  </data>
+  <data name="OrderPage_IsNeedRepair" xml:space="preserve">
+    <value>需要維修</value>
+  </data>
+  <data name="Excel_Key" xml:space="preserve">
+    <value>EXCEL</value>
+  </data>
+  <data name="Pdf_Key" xml:space="preserve">
+    <value>PDF</value>
+  </data>
+  <data name="FaultAnalysisReportPage_ByEquipment" xml:space="preserve">
+    <value>['Item']</value>
+  </data>
+  <data name="FaultAnalysisReportPage_ByEquipmentType" xml:space="preserve">
+    <value>['Item']範本</value>
+  </data>
+  <data name="FaultAnalysisReportPage_ByFaultCode" xml:space="preserve">
+    <value>故障代碼</value>
+  </data>
+  <data name="FaultAnalysisReportPage_EquipmentType" xml:space="preserve">
+    <value>['Item']範本</value>
+  </data>
+  <data name="FaultAnalysisReportPage_ExportBy" xml:space="preserve">
+    <value>匯出類型</value>
+  </data>
+  <data name="FaultAnalysisReportPage_ReportType" xml:space="preserve">
+    <value>報表類型</value>
+  </data>
+  <data name="FaultAnalysisReportPage_Title" xml:space="preserve">
+    <value>故障分析報表</value>
+  </data>
+  <data name="OrderPage_CancelConfirm" xml:space="preserve">
+    <value>確定取消此工單?</value>
+  </data>
+  <data name="OrderPage_CancelReason" xml:space="preserve">
+    <value>取消原因</value>
+  </data>
+  <data name="Page_Return" xml:space="preserve">
+    <value>返回</value>
+  </data>
+  <data name="Menu_AnalysisReport" xml:space="preserve">
+    <value>分析報表</value>
+  </data>
+  <data name="Menu_FaultAnalysisReport" xml:space="preserve">
+    <value>故障分析報表</value>
+  </data>
+  <data name="Menu_TurnaroundTimeAnalysisReport" xml:space="preserve">
+    <value>工作服務時間分析報表</value>
+  </data>
+  <data name="Report_Service_Month" xml:space="preserve">
+    <value>服務月份</value>
+  </data>
+  <data name="Report_TurnaroundTimeAnalysis" xml:space="preserve">
+    <value>工作服務時間分析報表</value>
+  </data>
+  <data name="Report_Type" xml:space="preserve">
+    <value>報表格式</value>
+  </data>
+  <data name="LoginHistoryPage_IPAddress" xml:space="preserve">
+    <value>IP地址</value>
+  </data>
+  <data name="LoginHistoryPage_LogonName" xml:space="preserve">
+    <value>登錄名</value>
+  </data>
+  <data name="LoginHistoryPage_LogonTime" xml:space="preserve">
+    <value>登錄時間</value>
+  </data>
+  <data name="LoginHistoryPage_LogonTimes" xml:space="preserve">
+    <value>登錄失敗次數</value>
+  </data>
+  <data name="LoginHistoryPage_Password" xml:space="preserve">
+    <value>密碼</value>
+  </data>
+  <data name="Menu_LoginHistory" xml:space="preserve">
+    <value>登錄歷史</value>
+  </data>
+  <data name="LoginHistoryPage_IsSuccess" xml:space="preserve">
+    <value>是否登錄成功</value>
+  </data>
+  <data name="Menu_SiteCompany" xml:space="preserve">
+    <value>公司</value>
+  </data>
+  <data name="Page_Crate" xml:space="preserve">
+    <value>新建用戶</value>
+  </data>
+  <data name="LoginHistoryPage_Title" xml:space="preserve">
+    <value>登錄歷史</value>
+  </data>
+  <data name="CssTheme_Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="CssTheme_Youthful" xml:space="preserve">
+    <value>Youthful</value>
+  </data>
+  <data name="CssTheme_MetropolisBlue" xml:space="preserve">
+    <value>Metropolis Blue</value>
+  </data>
+  <data name="Company_CssTheme" xml:space="preserve">
+    <value>主題</value>
+  </data>
+  <data name="Company_Language" xml:space="preserve">
+    <value>語言</value>
+  </data>
+  <data name="EquipPage_ParentType" xml:space="preserve">
+    <value>父['Item']範本</value>
+  </data>
+  <data name="EquipPage_ParentItem" xml:space="preserve">
+    <value>父['Item']</value>
+  </data>
+  <data name="OrgUnitPage_CantDelete" xml:space="preserve">
+    <value>如果該組織架構下存在子架構或者用戶,請先刪除子架構或者用戶，否則該架構不能被刪除.</value>
+  </data>
+  <data name="TeamPage_Consignee" xml:space="preserve">
+    <value>收貨人員</value>
+  </data>
+  <data name="TeamPage_SCO" xml:space="preserve">
+    <value>高級調校主管</value>
+  </data>
+  <data name="TeamPage_SE" xml:space="preserve">
+    <value>高級工程師</value>
+  </data>
+  <data name="TeamType_CalManagement" xml:space="preserve">
+    <value>調校管理</value>
+  </data>
+  <data name="TeamType_CalWork" xml:space="preserve">
+    <value>調校工作</value>
+  </data>
+  <data name="Menu_DataMaintenance" xml:space="preserve">
+    <value>資料維護</value>
+  </data>
+  <data name="Menu_ItemMaintenance" xml:space="preserve">
+    <value>['Item']</value>
+  </data>
+  <data name="Menu_Report" xml:space="preserve">
+    <value>報表</value>
+  </data>
+  <data name="Menu_UserMaintenance" xml:space="preserve">
+    <value>設置</value>
+  </data>
+  <data name="Common_Cal" xml:space="preserve">
+    <value>調校</value>
+  </data>
+  <data name="Common_MEIE" xml:space="preserve">
+    <value>維護</value>
+  </data>
+  <data name="Common_Station" xml:space="preserve">
+    <value>目的地</value>
+  </data>
+  <data name="Common_User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="Common_Workshop" xml:space="preserve">
+    <value>工廠</value>
+  </data>
+  <data name="TIPage_EditExcel" xml:space="preserve">
+    <value>技術檔</value>
+  </data>
+  <data name="TIPage_Excel" xml:space="preserve">
+    <value>技術說明Excel文件</value>
+  </data>
+  <data name="TIPage_Word" xml:space="preserve">
+    <value>技術說明</value>
+  </data>
+  <data name="Menu_DataHistory" xml:space="preserve">
+    <value>歷史資料</value>
+  </data>
+  <data name="Equip_Children" xml:space="preserve">
+    <value>組件</value>
+  </data>
+  <data name="Equip_WorkingRange" xml:space="preserve">
+    <value>工作範圍</value>
+  </data>
+  <data name="Common_Destination_User" xml:space="preserve">
+    <value>現場</value>
+  </data>
+  <data name="Common_Destination_Workshop" xml:space="preserve">
+    <value>工廠</value>
+  </data>
+  <data name="Equip_CalManagement" xml:space="preserve">
+    <value>調校管理</value>
+  </data>
+  <data name="Equip_CalWork" xml:space="preserve">
+    <value>調校工作</value>
+  </data>
+  <data name="EquipType_Plan_CalManageTeam" xml:space="preserve">
+    <value>調校管理['Team']</value>
+  </data>
+  <data name="EquipType_Plan_CalWorkTeam" xml:space="preserve">
+    <value>調校工作['Team']</value>
+  </data>
+  <data name="EquipType_Plan_InspectionTeam" xml:space="preserve">
+    <value>維護['Team']</value>
+  </data>
+  <data name="EquipType_Plan_MaintenanceTeam" xml:space="preserve">
+    <value>維修['Team']</value>
+  </data>
+  <data name="DataHistoryPage_NewContent" xml:space="preserve">
+    <value>新內容</value>
+  </data>
+  <data name="DataHistoryPage_OldContent" xml:space="preserve">
+    <value>舊內容</value>
+  </data>
+  <data name="DataHistoryPage_OpereationType" xml:space="preserve">
+    <value>操作類型</value>
+  </data>
+  <data name="DataHistoryPage_Title" xml:space="preserve">
+    <value>資料歷史</value>
+  </data>
+  <data name="DataHistoryPage_UpdateArea" xml:space="preserve">
+    <value>操作域</value>
+  </data>
+  <data name="DataHistoryPage_UpdatedBy" xml:space="preserve">
+    <value>操作用戶</value>
+  </data>
+  <data name="DataHistoryPage_UpdatedDate" xml:space="preserve">
+    <value>操作日期</value>
+  </data>
+  <data name="PersonalPage_Nologin_Click" xml:space="preserve">
+    <value>點此</value>
+  </data>
+  <data name="PersonalPage_Nologin_Title1" xml:space="preserve">
+    <value>您未登錄,請</value>
+  </data>
+  <data name="PersonalPage_Nologin_Title2" xml:space="preserve">
+    <value>登錄系統!</value>
+  </data>
+  <data name="PersonalPage_Title" xml:space="preserve">
+    <value>歡迎</value>
+  </data>
+  <data name="PersonalPage_Welcome_Title1" xml:space="preserve">
+    <value>歡迎</value>
+  </data>
+  <data name="PersonalPage_Welcome_Title2" xml:space="preserve">
+    <value>登錄系統!</value>
+  </data>
+  <data name="Common_Delete" xml:space="preserve">
+    <value>刪除</value>
+  </data>
+  <data name="Common_Edit" xml:space="preserve">
+    <value>編輯</value>
+  </data>
+  <data name="OrderPage_LastServiceDate" xml:space="preserve">
+    <value>上次['Service']日期</value>
+  </data>
+  <data name="OrderPage_NextCalDate" xml:space="preserve">
+    <value>下次調校日期</value>
+  </data>
+  <data name="OrderPage_MaintFollowUpDate" xml:space="preserve">
+    <value>維修跟進日期</value>
+  </data>
+  <data name="GenMaintOrder_CalManageTeam" xml:space="preserve">
+    <value>調校管理['Team']</value>
+  </data>
+  <data name="GenMaintOrder_CalTeam" xml:space="preserve">
+    <value>調校工作['Team']</value>
+  </data>
+  <data name="OrderPage_Approve" xml:space="preserve">
+    <value>審批</value>
+  </data>
+  <data name="OrderPage_ApproveBy" xml:space="preserve">
+    <value>審批人</value>
+  </data>
+  <data name="OrderPage_ApproveResult" xml:space="preserve">
+    <value>審批結果</value>
+  </data>
+  <data name="OrderPage_ApproveResultRemark" xml:space="preserve">
+    <value>審批結果記錄</value>
+  </data>
+  <data name="OrderPage_CalBy" xml:space="preserve">
+    <value>調校人</value>
+  </data>
+  <data name="OrderPage_Calibrate" xml:space="preserve">
+    <value>調校</value>
+  </data>
+  <data name="OrderPage_CalRemarkTitle" xml:space="preserve">
+    <value>調校結果記錄</value>
+  </data>
+  <data name="OrderPage_CalResult" xml:space="preserve">
+    <value>調校結果</value>
+  </data>
+  <data name="OrderPage_CalServiceDuration" xml:space="preserve">
+    <value>調校時間</value>
+  </data>
+  <data name="OrderPage_CheckInBy" xml:space="preserve">
+    <value>簽入人</value>
+  </data>
+  <data name="OrderPage_Control" xml:space="preserve">
+    <value>控制</value>
+  </data>
+  <data name="OrderPage_Extend" xml:space="preserve">
+    <value>推遲</value>
+  </data>
+  <data name="OrderPage_ExtendDate" xml:space="preserve">
+    <value>推遲時間</value>
+  </data>
+  <data name="OrderPage_NoPromission" xml:space="preserve">
+    <value>抱歉,你不具有當前操作的許可權！</value>
+  </data>
+  <data name="OrderPage_ReviewBy" xml:space="preserve">
+    <value>審核人</value>
+  </data>
+  <data name="OrderPage_TI" xml:space="preserve">
+    <value>技術說明</value>
+  </data>
+  <data name="OrderPage_TIDescription" xml:space="preserve">
+    <value>技術說明描述</value>
+  </data>
+  <data name="OrderPage_TIName" xml:space="preserve">
+    <value>技術說明名稱</value>
+  </data>
+  <data name="OrderPage_WordContent" xml:space="preserve">
+    <value>技術說明</value>
+  </data>
+  <data name="Page_CheckIn" xml:space="preserve">
+    <value>簽入</value>
+  </data>
+  <data name="OrderPage_ReviewResult" xml:space="preserve">
+    <value>審核結果</value>
+  </data>
+  <data name="LocationPage_Location" xml:space="preserve">
+    <value>['Location']</value>
+  </data>
+  <data name="CssTheme_Office2010Blue" xml:space="preserve">
+    <value>Office 2010 Blue</value>
+  </data>
+  <data name="OrderPage_Review" xml:space="preserve">
+    <value>審核</value>
+  </data>
+  <data name="CompanyPage_Positon" xml:space="preserve">
+    <value>必填標識位置</value>
+  </data>
+  <data name="CompanyPage_Prefix" xml:space="preserve">
+    <value>前置</value>
+  </data>
+  <data name="CompanyPage_Surfix" xml:space="preserve">
+    <value>後置</value>
+  </data>
+  <data name="TeamPage_Member" xml:space="preserve">
+    <value>成員</value>
+  </data>
+  <data name="UserPage_Title_Colon" xml:space="preserve">
+    <value>職位</value>
+  </data>
+  <data name="Page_OK" xml:space="preserve">
+    <value>確定</value>
+  </data>
+  <data name="Common_Role_Admin" xml:space="preserve">
+    <value>網站管理員</value>
+  </data>
+  <data name="Common_Role_Calibration" xml:space="preserve">
+    <value>調校人員</value>
+  </data>
+  <data name="Common_Role_General" xml:space="preserve">
+    <value>普通人員</value>
+  </data>
+  <data name="Common_Role_Inspection" xml:space="preserve">
+    <value>工作人員</value>
+  </data>
+  <data name="Common_Role_SysAdmin" xml:space="preserve">
+    <value>系統管理員</value>
+  </data>
+  <data name="Common_OK" xml:space="preserve">
+    <value>確定</value>
+  </data>
+  <data name="OrderTypeCode_Maint" xml:space="preserve">
+    <value>維護</value>
+  </data>
+  <data name="EquipPage_Item" xml:space="preserve">
+    <value>['Item']</value>
+  </data>
+  <data name="Page_CopyDialogTitle" xml:space="preserve">
+    <value>複製</value>
+  </data>
+  <data name="Common_Inspection" xml:space="preserve">
+    <value>維護</value>
+  </data>
+  <data name="Common_Service" xml:space="preserve">
+    <value>['Service']</value>
+  </data>
+  <data name="Company_DateFormat" xml:space="preserve">
+    <value>日期格式</value>
+  </data>
+  <data name="Common_ToolTipTitle" xml:space="preserve">
+    <value>說明</value>
+  </data>
+  <data name="PasswordPolicy_MaxLength" xml:space="preserve">
+    <value>密碼最大長度</value>
+  </data>
+  <data name="PasswordPolicy_MinEnLetterLength" xml:space="preserve">
+    <value>至少包含字母的個數</value>
+  </data>
+  <data name="PasswordPolicy_NeedSpecialChar" xml:space="preserve">
+    <value>包含特殊字元</value>
+  </data>
+  <data name="PasswordPolicy_NoBlankSpace" xml:space="preserve">
+    <value>包含空格</value>
+  </data>
+  <data name="PasswordPolicy_UnlikePrePwdCount" xml:space="preserve">
+    <value>允許密碼重複間隔次數</value>
+  </data>
+  <data name="HomePage_ContentEdit" xml:space="preserve">
+    <value>內容編輯</value>
+  </data>
+  <data name="Menu_HomeInfoMaint" xml:space="preserve">
+    <value>歡迎頁面定制</value>
+  </data>
+  <data name="Company_Remark" xml:space="preserve">
+    <value>系統管理備註</value>
+  </data>
+  <data name="UserProfilePage_Title" xml:space="preserve">
+    <value>使用者檔案</value>
+  </data>
+  <data name="Menu_UserProfile" xml:space="preserve">
+    <value>使用者檔案</value>
+  </data>
+  <data name="Common_Copy" xml:space="preserve">
+    <value>複製</value>
+  </data>
+  <data name="Menu_PasswordPolicy" xml:space="preserve">
+    <value>密碼策略</value>
+  </data>
+  <data name="Page_Attachment" xml:space="preserve">
+    <value>附件</value>
+  </data>
+  <data name="Menu_PasswordPolicyBasic" xml:space="preserve">
+    <value>基礎密碼策略</value>
+  </data>
+  <data name="CompanyPage_PasswordPolicyBasic" xml:space="preserve">
+    <value>基礎密碼策略</value>
+  </data>
+  <data name="MaintSummary_ItemName" xml:space="preserve">
+    <value>['Item']名稱</value>
+  </data>
+  <data name="CancelReasonPage_CancelReasonName" xml:space="preserve">
+    <value>取消原因</value>
+  </data>
+  <data name="EquipmentTreePlan_Information" xml:space="preserve">
+    <value>['Item']計劃資訊</value>
+  </data>
+  <data name="Common_Remove" xml:space="preserve">
+    <value>刪除</value>
+  </data>
+  <data name="MaintSummary_FullView" xml:space="preserve">
+    <value>全屏預覽</value>
+  </data>
+  <data name="Menu_MultiCompanyReserverWord" xml:space="preserve">
+    <value>多公司保留字</value>
+  </data>
+  <data name="MultiCompanyReserverWordPage_Code" xml:space="preserve">
+    <value>多公司保留字</value>
+  </data>
+  <data name="Multi_Company_prefix" xml:space="preserve">
+    <value>多公司首碼</value>
+  </data>
+  <data name="DataHistoryPage_Detail" xml:space="preserve">
+    <value>歷史資料詳情</value>
+  </data>
+  <data name="Menu_MockLink" xml:space="preserve">
+    <value>類比連結</value>
+  </data>
+  <data name="MockLink_URL" xml:space="preserve">
+    <value>網址</value>
+  </data>
+  <data name="Report_FaultAnalysisEquopmentList" xml:space="preserve">
+    <value>故障分析-['Item']列表</value>
+  </data>
+  <data name="Report_FaultAnalysisEquopmentTypeList" xml:space="preserve">
+    <value>故障分析-['Item']範本列表</value>
+  </data>
+  <data name="Report_FaultAnalysisFaultCodeList" xml:space="preserve">
+    <value>故障分析-故障代碼清單</value>
+  </data>
+  <data name="Report_TurnaroundTimeAnalysisList" xml:space="preserve">
+    <value>工作服務時間分析列表</value>
+  </data>
+  <data name="CheckResultCode_NA" xml:space="preserve">
+    <value>驗收/審批/審核結果-空值</value>
+  </data>
+  <data name="CompanyPage_Preview_Image" xml:space="preserve">
+    <value>預覽圖片</value>
+  </data>
+  <data name="Page_CreateBy" xml:space="preserve">
+    <value>建立人</value>
+  </data>
+  <data name="Page_CreateDate" xml:space="preserve">
+    <value>建立日期</value>
+  </data>
+  <data name="CompanyPage_OrderGenerateType_IsNeedAuto" xml:space="preserve">
+    <value>自動</value>
+  </data>
+  <data name="CompanyPage_OrderGenerateType_IsNeedManual" xml:space="preserve">
+    <value>手動</value>
+  </data>
+  <data name="Company_OrderGenerated" xml:space="preserve">
+    <value>工單生成方法</value>
+  </data>
+  <data name="CompanyPage_Component" xml:space="preserve">
+    <value>組件功能</value>
+  </data>
+  <data name="CompanyPage_OFF" xml:space="preserve">
+    <value>關</value>
+  </data>
+  <data name="CompanyPage_ON" xml:space="preserve">
+    <value>開</value>
+  </data>
+  <data name="EquipPage_Generation_Method" xml:space="preserve">
+    <value>生成方法</value>
+  </data>
+  <data name="EquipPage_IsNeedAuto" xml:space="preserve">
+    <value>自動</value>
+  </data>
+  <data name="EquipPage_IsNeedManual" xml:space="preserve">
+    <value>手動</value>
+  </data>
+  <data name="Company_ItemNamingCustomization" xml:space="preserve">
+    <value>物件命名</value>
+  </data>
+  <data name="Company_NamingCustomization" xml:space="preserve">
+    <value>命名定制</value>
+  </data>
+  <data name="Company_NamingCustomization_CN" xml:space="preserve">
+    <value>中文簡體</value>
+  </data>
+  <data name="Company_NamingCustomization_EN" xml:space="preserve">
+    <value>英文</value>
+  </data>
+  <data name="Company_NamingCustomization_HK" xml:space="preserve">
+    <value>中文繁體</value>
+  </data>
+  <data name="Company_ServiceNamingCustomization" xml:space="preserve">
+    <value>服務命名</value>
+  </data>
+  <data name="CompanyPage_ShowUserSingleMulti" xml:space="preserve">
+    <value>顯示單/多重公司</value>
+  </data>
+  <data name="CompanyCount" xml:space="preserve">
+    <value>單/多公司</value>
+  </data>
+  <data name="CompanyCount_Multi" xml:space="preserve">
+    <value>多</value>
+  </data>
+  <data name="CompanyCount_Single" xml:space="preserve">
+    <value>單</value>
+  </data>
+  <data name="Equip_External" xml:space="preserve">
+    <value>外委</value>
+  </data>
+  <data name="Equip_Internal" xml:space="preserve">
+    <value>內部</value>
+  </data>
+  <data name="EquipType_ItemType" xml:space="preserve">
+    <value>['Item']範本</value>
+  </data>
+  <data name="CompanyPage_ServiceType" xml:space="preserve">
+    <value>['Service']類型</value>
+  </data>
+  <data name="OrderPage_MailHistory" xml:space="preserve">
+    <value>電郵歷史</value>
+  </data>
+  <data name="OrderPage_CreateTime" xml:space="preserve">
+    <value>創建時間</value>
+  </data>
+  <data name="OrderPage_IsSuccess" xml:space="preserve">
+    <value>是否成功</value>
+  </data>
+  <data name="OrderPage_MailBcc" xml:space="preserve">
+    <value>電郵密送</value>
+  </data>
+  <data name="OrderPage_MailBody" xml:space="preserve">
+    <value>電郵內容</value>
+  </data>
+  <data name="OrderPage_MailCc" xml:space="preserve">
+    <value>電郵抄送</value>
+  </data>
+  <data name="OrderPage_MailFrom" xml:space="preserve">
+    <value>寄件者</value>
+  </data>
+  <data name="OrderPage_MailSubject" xml:space="preserve">
+    <value>電郵主題</value>
+  </data>
+  <data name="OrderPage_MailTo" xml:space="preserve">
+    <value>收件人</value>
+  </data>
+  <data name="Common_Sending" xml:space="preserve">
+    <value>發送中</value>
+  </data>
+  <data name="Common_Check" xml:space="preserve">
+    <value>查看</value>
+  </data>
+  <data name="Common_Failue" xml:space="preserve">
+    <value>失敗</value>
+  </data>
+  <data name="Common_Success" xml:space="preserve">
+    <value>成功</value>
+  </data>
+  <data name="OrderPage_MailStatusFailue" xml:space="preserve">
+    <value>發送失敗</value>
+  </data>
+  <data name="OrderPage_MailStatusSending" xml:space="preserve">
+    <value>發送中</value>
+  </data>
+  <data name="OrderPage_MailStatusSuccess" xml:space="preserve">
+    <value>發送成功</value>
+  </data>
+  <data name="OrderPage_MailStatus" xml:space="preserve">
+    <value>電郵狀態</value>
+  </data>
+  <data name="Common_Light_Green" xml:space="preserve">
+    <value>綠燈</value>
+  </data>
+  <data name="Common_Light_Red" xml:space="preserve">
+    <value>紅燈</value>
+  </data>
+  <data name="Common_Light_Yellow" xml:space="preserve">
+    <value>黃燈</value>
+  </data>
+  <data name="EquipPage_ServiceType" xml:space="preserve">
+    <value>['Service']類型</value>
+  </data>
+  <data name="Common_SendEmail_Method" xml:space="preserve">
+    <value>IIS發送電郵功能</value>
+  </data>
+  <data name="Common_DisplayCreateOrUpdate" xml:space="preserve">
+    <value>顯示創建人</value>
+  </data>
+  <data name="CalOrderStatus_Approving" xml:space="preserve">
+    <value>調校工單狀態 (審批中)</value>
+  </data>
+  <data name="CalOrderStatus_Cancelled" xml:space="preserve">
+    <value>調校工單狀態 (已取消)</value>
+  </data>
+  <data name="CalOrderStatus_Completed" xml:space="preserve">
+    <value>調校工單狀態 (已完成)</value>
+  </data>
+  <data name="CalOrderStatus_NotAssigned" xml:space="preserve">
+    <value>調校工單狀態 (未分配)</value>
+  </data>
+  <data name="CalOrderStatus_NotCheckIn" xml:space="preserve">
+    <value>調校工單狀態 (未簽入)</value>
+  </data>
+  <data name="CalOrderStatus_Reviewing" xml:space="preserve">
+    <value>調校工單狀態 (審核中)</value>
+  </data>
+  <data name="CalOrderStatus_UnderCal" xml:space="preserve">
+    <value>調校工單狀態 (調校中)</value>
+  </data>
+  <data name="CalOrderStatus_UnderCal_Extended" xml:space="preserve">
+    <value>調校工單狀態 (調校中(延期))</value>
+  </data>
+  <data name="MaintOrderStatus_Acceptance" xml:space="preserve">
+    <value>維護工單狀態 (驗收中)</value>
+  </data>
+  <data name="MaintOrderStatus_Cancelled" xml:space="preserve">
+    <value>維護工單狀態 (已取消)</value>
+  </data>
+  <data name="MaintOrderStatus_Completed" xml:space="preserve">
+    <value>維護工單狀態 (已完成)</value>
+  </data>
+  <data name="MaintOrderStatus_NotAssigned" xml:space="preserve">
+    <value>維護工單狀態 (未分配)</value>
+  </data>
+  <data name="MaintOrderStatus_UnderMaint" xml:space="preserve">
+    <value>維護工單狀態 (維護中)</value>
+  </data>
+  <data name="RepairOrderStatus_Acceptance" xml:space="preserve">
+    <value>維修工單狀態 (驗收中)</value>
+  </data>
+  <data name="RepairOrderStatus_Cancelled" xml:space="preserve">
+    <value>維修工單狀態 (已取消)</value>
+  </data>
+  <data name="RepairOrderStatus_Completed" xml:space="preserve">
+    <value>維修工單狀態 (已完成)</value>
+  </data>
+  <data name="RepairOrderStatus_NotAssigned" xml:space="preserve">
+    <value>維修工單狀態 (未分配)</value>
+  </data>
+  <data name="RepairOrderStatus_UnderRepair" xml:space="preserve">
+    <value>維修工單狀態 (維修中)</value>
+  </data>
+  <data name="UserPage_ADFSLogonName" xml:space="preserve">
+    <value>域登錄名</value>
+  </data>
+  <data name="OrderPage_Maintenance" xml:space="preserve">
+    <value>維修</value>
+  </data>
+  <data name="ServiceOrderListPage_OrderStatus" xml:space="preserve">
+    <value>工單狀態</value>
+  </data>
+  <data name="EquipType_Plan_CalibrationManagementTeam" xml:space="preserve">
+    <value>調校管理['Team']</value>
+  </data>
+  <data name="EquipType_Plan_CalibrationWorkTeam" xml:space="preserve">
+    <value>調校工作['Team']</value>
+  </data>
+  <data name="CompanyPage_ADFS_Switch" xml:space="preserve">
+    <value>顯示ADFS登錄名</value>
+  </data>
+  <data name="CompanyPage_CompanyPrefix_Switch" xml:space="preserve">
+    <value>顯示多公司首碼</value>
+  </data>
+  <data name="Company_LocationNamingCustomization" xml:space="preserve">
+    <value>位置命名</value>
+  </data>
+  <data name="Company_TeamNamingCustomization" xml:space="preserve">
+    <value>工作組命名</value>
+  </data>
+  <data name="Common_Role_View" xml:space="preserve">
+    <value>瀏覽用戶</value>
+  </data>
+  <data name="CompanyPage_ItemShowWay" xml:space="preserve">
+    <value>['Item']顯示方式</value>
+  </data>
+  <data name="Common_Horizontal" xml:space="preserve">
+    <value>水準</value>
+  </data>
+  <data name="Common_Vertical" xml:space="preserve">
+    <value>垂直</value>
+  </data>
+  <data name="CompanyPage_ShowOrderGenerateMethod" xml:space="preserve">
+    <value>顯示工單成生方法</value>
+  </data>
+  <data name="CompanyPage_ShowServiceBy" xml:space="preserve">
+    <value>顯示負責人</value>
+  </data>
+  <data name="CompanyPage_ShowServiceRequestType" xml:space="preserve">
+    <value>顯示額外要求</value>
+  </data>
+  <data name="CompanyPage_ShowServiceType" xml:space="preserve">
+    <value>顯示服務類型</value>
+  </data>
+  <data name="EquipPage_WorkerType" xml:space="preserve">
+    <value>工作人員</value>
+  </data>
+  <data name="EquipPage_ExternalParty" xml:space="preserve">
+    <value>外委單位名稱和人員</value>
+  </data>
+  <data name="OrderPage_ExternalParty" xml:space="preserve">
+    <value>外委單位名稱和人員</value>
+  </data>
+  <data name="OrderPage_FollowUp" xml:space="preserve">
+    <value>需跟進事項</value>
+  </data>
+  <data name="OrderPage_FollowUpDate" xml:space="preserve">
+    <value>存在問題整改時間</value>
+  </data>
+  <data name="DueCalOrderPage_EquipmentModel" xml:space="preserve">
+    <value>['Item']型號</value>
+  </data>
+  <data name="DueCalOrderPage_EquipmentNo" xml:space="preserve">
+    <value>['Item']編號</value>
+  </data>
+  <data name="OrderPage_MaintContentDescription" xml:space="preserve">
+    <value>維護要求</value>
+  </data>
+  <data name="OrderPage_UserIntervalValue" xml:space="preserve">
+    <value>維護週期</value>
+  </data>
+  <data name="Order_Log" xml:space="preserve">
+    <value>日誌</value>
+  </data>
+  <data name="CompanyPage_ShowScrapped" xml:space="preserve">
+    <value>顯示報廢日期</value>
+  </data>
+  <data name="OrderPage_NoChildOrder" xml:space="preserve">
+    <value>沒有子工單。</value>
+  </data>
+  <data name="Common_Role_BrowseUser" xml:space="preserve">
+    <value>瀏覽用戶</value>
+  </data>
+  <data name="Common_Role_ReportUser" xml:space="preserve">
+    <value>報表用戶</value>
+  </data>
+  <data name="CompanyPage_ADFS_URL" xml:space="preserve">
+    <value>ADFS連結位址</value>
+  </data>
+  <data name="Sign_In_DomainUser" xml:space="preserve">
+    <value>域帳戶登錄</value>
+  </data>
+  <data name="DataHistoryPage_Field" xml:space="preserve">
+    <value>欄位</value>
+  </data>
+  <data name="MaintSummary_PlanType" xml:space="preserve">
+    <value>固定/浮動</value>
+  </data>
+  <data name="MaintSummary_PlanTypeAll" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="MaintSummary_PlanTypeFix" xml:space="preserve">
+    <value>固定</value>
+  </data>
+  <data name="MaintSummary_PlanTypeFlow" xml:space="preserve">
+    <value>浮動</value>
+  </data>
+  <data name="CompanyPage_fixedOrflow" xml:space="preserve">
+    <value>固定/浮動</value>
+  </data>
+  <data name="DataHistoryPage_EntryID" xml:space="preserve">
+    <value>主鍵ID</value>
+  </data>
+  <data name="GenCalOrder_List" xml:space="preserve">
+    <value>調校工單列表</value>
+  </data>
+  <data name="DataHistory_DateDelete" xml:space="preserve">
+    <value>記錄已被刪除！</value>
+  </data>
+  <data name="OrderPage_ActualApproveDate" xml:space="preserve">
+    <value>審批時間</value>
+  </data>
+  <data name="OrderPage_ActualReviewDate" xml:space="preserve">
+    <value>審核時間</value>
+  </data>
+  <data name="OrderPage_CreationDate" xml:space="preserve">
+    <value>創建日期</value>
+  </data>
+  <data name="OrderPage_CancelBy" xml:space="preserve">
+    <value>取消人</value>
+  </data>
+  <data name="OrderPage_CancelDate" xml:space="preserve">
+    <value>取消時間</value>
+  </data>
+  <data name="Prompt_VersonCheck_Body" xml:space="preserve">
+    <value>系統正在更新中……</value>
+  </data>
+  <data name="Prompt_VersonCorrect" xml:space="preserve">
+    <value>系統版本正確！</value>
+  </data>
+  <data name="Prompt_VersonCheck_Title" xml:space="preserve">
+    <value>版本核對</value>
+  </data>
+  <data name="Comon_Index" xml:space="preserve">
+    <value>序號</value>
+    <comment>Index</comment>
+  </data>
+  <data name="OrderPage_AutoSendEmailFlag" xml:space="preserve">
+    <value>自動發送電郵</value>
+    <comment>AutoSendEmailFlag</comment>
+  </data>
+  <data name="OrderPage_DayMaxSeq" xml:space="preserve">
+    <value>最大編號</value>
+    <comment>DayMaxSeq</comment>
+  </data>
+  <data name="OrderPage_DurationTypeID" xml:space="preserve">
+    <value>時間單位</value>
+    <comment>DurationTypeID</comment>
+  </data>
+  <data name="OrderPage_EstimateDurationTypeID" xml:space="preserve">
+    <value>計劃時間單位</value>
+    <comment>EstimateDurationTypeID</comment>
+  </data>
+  <data name="OrderPage_IsCreateRepairOrder" xml:space="preserve">
+    <value>創建維修工單</value>
+    <comment>CreateRepairOrder</comment>
+  </data>
+  <data name="OrderPage_ActualCheckBy" xml:space="preserve">
+    <value>實際驗收人</value>
+    <comment>Actual Check By</comment>
+  </data>
+  <data name="OrderPage_ActualCheckDate" xml:space="preserve">
+    <value>實際驗收時間</value>
+    <comment>Actual Check Date</comment>
+  </data>
+  <data name="OrderPage_ActualMaintBy" xml:space="preserve">
+    <value>實際維護人</value>
+    <comment>Actual Maint By</comment>
+  </data>
+  <data name="OrderPage_ActualMaintDate" xml:space="preserve">
+    <value>實際維護時間</value>
+    <comment>Actual Maint Date</comment>
+  </data>
+  <data name="OrderPage_ActualReviewBy" xml:space="preserve">
+    <value>實際審核人</value>
+    <comment>Actual Review By</comment>
+  </data>
+  <data name="DataHistroy_Legend" xml:space="preserve">
+    <value>圖例</value>
+  </data>
+  <data name="DataHistroy_Legend_Create" xml:space="preserve">
+    <value>欄位第一次賦值</value>
+  </data>
+  <data name="DataHistroy_Legend_Update" xml:space="preserve">
+    <value>欄位更新，非第一次賦值</value>
+  </data>
+  <data name="GenMaintOrder_Schedule_Cal_Date" xml:space="preserve">
+    <value>['Service']計劃日期</value>
+  </data>
+  <data name="GenMaintOrder_Schedule_Insp_Date" xml:space="preserve">
+    <value>預計維護日期</value>
+  </data>
+  <data name="EquipPage_ManualGenAlarmingLevel" xml:space="preserve">
+    <value>生成工單提醒</value>
+  </data>
+  <data name="EquipPage_ManualGenAlarmingLevelInterval" xml:space="preserve">
+    <value>生成工單提醒週期</value>
+  </data>
+  <data name="CompanyPage_ReportLogo" xml:space="preserve">
+    <value>報表圖示</value>
+  </data>
+  <data name="Menu_EquipmentTypeSimple" xml:space="preserve">
+    <value>簡單['Item']範本</value>
+  </data>
+  <data name="Menu_ServiceOrderListSimple" xml:space="preserve">
+    <value>簡化版工單列表</value>
+  </data>
+  <data name="ServiceOrderListPage_IsNotSimple" xml:space="preserve">
+    <value>非簡化</value>
+  </data>
+  <data name="ServiceOrderListPage_IsSimple" xml:space="preserve">
+    <value>簡化</value>
+  </data>
+  <data name="CompanyPage_ShowOnePage" xml:space="preserve">
+    <value>顯示為一版頁</value>
+  </data>
+  <data name="EquipPage_Position" xml:space="preserve">
+    <value>所在位置</value>
+  </data>
+  <data name="Menu_EquipmentSimple" xml:space="preserve">
+    <value>['Item']</value>
+  </data>
+  <data name="AttachmentRemain" xml:space="preserve">
+    <value>可用,共</value>
+  </data>
+  <data name="SingleAttachmentLimitSize" xml:space="preserve">
+    <value>單個附件大小限制</value>
+  </data>
+  <data name="Common_Naming" xml:space="preserve">
+    <value>命名</value>
+  </data>
+  <data name="TeamType_Task" xml:space="preserve">
+    <value>任務</value>
+  </data>
+  <data name="Menu_DueTaskOrder" xml:space="preserve">
+    <value>生成任務單</value>
+  </data>
+  <data name="GeneratedTaskOrder_Title" xml:space="preserve">
+    <value>生成任務單</value>
+  </data>
+  <data name="TaskOrderDescription" xml:space="preserve">
+    <value>任務單描述</value>
+  </data>
+  <data name="TaskOrderList" xml:space="preserve">
+    <value>任務單列表</value>
+  </data>
+  <data name="TaskOrderLocation" xml:space="preserve">
+    <value>任務單['Item']</value>
+  </data>
+  <data name="TaskOrderName" xml:space="preserve">
+    <value>任務單名稱</value>
+  </data>
+  <data name="TaskOrderPlan_Name" xml:space="preserve">
+    <value>任務單計劃名稱</value>
+  </data>
+  <data name="TaskOrderType" xml:space="preserve">
+    <value>任務單類型</value>
+  </data>
+  <data name="TaskOrdeTeam" xml:space="preserve">
+    <value>任務['Item']</value>
+  </data>
+  <data name="TaskTypePage_TaskType" xml:space="preserve">
+    <value>任務範本</value>
+  </data>
+  <data name="TaskPage_Content" xml:space="preserve">
+    <value>內容</value>
+  </data>
+  <data name="TaskPage_ManagementItem" xml:space="preserve">
+    <value>管理項</value>
+  </data>
+  <data name="TaskPage_NeedCheck" xml:space="preserve">
+    <value>需要驗收</value>
+  </data>
+  <data name="TaskPage_NeedNotify" xml:space="preserve">
+    <value>需要提醒</value>
+  </data>
+  <data name="TaskPage_Project" xml:space="preserve">
+    <value>項目</value>
+  </data>
+  <data name="TaskPage_RiskLevel" xml:space="preserve">
+    <value>風險等級</value>
+  </data>
+  <data name="TaskPage_TaskType" xml:space="preserve">
+    <value>任務範本</value>
+  </data>
+  <data name="TaskPage_Team" xml:space="preserve">
+    <value>工作組</value>
+  </data>
+  <data name="TaskPage_Title" xml:space="preserve">
+    <value>任務</value>
+  </data>
+  <data name="OrderTypeCode_Task" xml:space="preserve">
+    <value>任務</value>
+  </data>
+  <data name="TaskOrderStatus_Acceptance" xml:space="preserve">
+    <value>任務工單狀態(驗收中)</value>
+  </data>
+  <data name="TaskOrderStatus_Completed" xml:space="preserve">
+    <value>任務工單狀態(已完成)</value>
+  </data>
+  <data name="TaskOrderStatus_InProgress" xml:space="preserve">
+    <value>任務工單狀態(進行中)</value>
+  </data>
+  <data name="TaskTypePage_ManagentItem" xml:space="preserve">
+    <value>管理項</value>
+  </data>
+  <data name="TaskTypePage_OtherInformation" xml:space="preserve">
+    <value>其他資訊</value>
+  </data>
+  <data name="TaskTypePage_Project" xml:space="preserve">
+    <value>項目</value>
+  </data>
+  <data name="TaskTypePage_Remark" xml:space="preserve">
+    <value>備註</value>
+  </data>
+  <data name="TaskTypePage_RiskLevel" xml:space="preserve">
+    <value>風險等級</value>
+  </data>
+  <data name="TaskTypePage_State" xml:space="preserve">
+    <value>狀態</value>
+  </data>
+  <data name="TaskTypePage_TaskNeedCheck" xml:space="preserve">
+    <value>任務需要驗收</value>
+  </data>
+  <data name="TaskTypePage_TaskTypeName" xml:space="preserve">
+    <value>名稱</value>
+  </data>
+  <data name="TaskTypePage_TimeValue" xml:space="preserve">
+    <value>時間值</value>
+  </data>
+  <data name="TaskPage_UploadAttachment" xml:space="preserve">
+    <value>上傳附件</value>
+  </data>
+  <data name="TaskPage_Interval" xml:space="preserve">
+    <value>時間值</value>
+  </data>
+  <data name="TaskPage_Other" xml:space="preserve">
+    <value>其他資訊</value>
+  </data>
+  <data name="TaskPage_TaskBasicMessage" xml:space="preserve">
+    <value>任務基本資訊</value>
+  </data>
+  <data name="TaskPage_Fix" xml:space="preserve">
+    <value>固定</value>
+  </data>
+  <data name="TaskPage_Flow" xml:space="preserve">
+    <value>浮動</value>
+  </data>
+  <data name="TaskPage_IsActive" xml:space="preserve">
+    <value>可用</value>
+  </data>
+  <data name="TaskPage_IsNeedCheck" xml:space="preserve">
+    <value>需驗收</value>
+  </data>
+  <data name="TaskPage_IsNeedNotify" xml:space="preserve">
+    <value>需提醒</value>
+  </data>
+  <data name="TaskPage_IsNotActive" xml:space="preserve">
+    <value>不可用</value>
+  </data>
+  <data name="TaskPage_IsNotNeedCheck" xml:space="preserve">
+    <value>無需驗收</value>
+  </data>
+  <data name="TaskPage_IsNotNeedNotify" xml:space="preserve">
+    <value>無需提醒</value>
+  </data>
+  <data name="TaskPage_List_IsFixServiceDate" xml:space="preserve">
+    <value>固定/浮動</value>
+  </data>
+  <data name="Menu_Task" xml:space="preserve">
+    <value>任務</value>
+  </data>
+  <data name="Menu_TaskType" xml:space="preserve">
+    <value>任務範本</value>
+  </data>
+  <data name="Page_Close" xml:space="preserve">
+    <value>關閉</value>
+  </data>
+  <data name="TaskOrder_BasicInfo" xml:space="preserve">
+    <value>任務基礎信息</value>
+  </data>
+  <data name="TaskOrder_CancelReason" xml:space="preserve">
+    <value>取消原因</value>
+  </data>
+  <data name="TaskOrder_Check" xml:space="preserve">
+    <value>驗收</value>
+  </data>
+  <data name="TaskOrder_CheckBy" xml:space="preserve">
+    <value>任務驗收人</value>
+  </data>
+  <data name="TaskOrder_CheckResult" xml:space="preserve">
+    <value>驗收結果</value>
+  </data>
+  <data name="TaskOrder_CheckResultRecord" xml:space="preserve">
+    <value>驗收結果記錄</value>
+  </data>
+  <data name="TaskOrder_CompletionDate" xml:space="preserve">
+    <value>完成日期</value>
+  </data>
+  <data name="TaskOrder_Content" xml:space="preserve">
+    <value>內容</value>
+  </data>
+  <data name="TaskOrder_FollowUp" xml:space="preserve">
+    <value>跟進事項</value>
+  </data>
+  <data name="TaskOrder_IntervalValue" xml:space="preserve">
+    <value>週期值</value>
+  </data>
+  <data name="TaskOrder_LastServiceDate" xml:space="preserve">
+    <value>上次任務日期</value>
+  </data>
+  <data name="TaskOrder_MaintBy" xml:space="preserve">
+    <value>任務工作人</value>
+  </data>
+  <data name="TaskOrder_MgtItem" xml:space="preserve">
+    <value>管理項</value>
+  </data>
+  <data name="TaskOrder_Name" xml:space="preserve">
+    <value>名稱</value>
+  </data>
+  <data name="TaskOrder_PlanServiceDate" xml:space="preserve">
+    <value>計劃完成日期</value>
+  </data>
+  <data name="TaskOrder_Project" xml:space="preserve">
+    <value>項目</value>
+  </data>
+  <data name="TaskOrder_Remark" xml:space="preserve">
+    <value>備註</value>
+  </data>
+  <data name="TaskOrder_Result" xml:space="preserve">
+    <value>結果</value>
+  </data>
+  <data name="TaskOrder_ResultRecord" xml:space="preserve">
+    <value>結果錄入</value>
+  </data>
+  <data name="TaskOrder_RiskLevel" xml:space="preserve">
+    <value>風險等級</value>
+  </data>
+  <data name="TaskOrder_Type" xml:space="preserve">
+    <value>類別</value>
+  </data>
+  <data name="Common_New" xml:space="preserve">
+    <value>新建</value>
+  </data>
+  <data name="Common_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Common_Update" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="EquipPage_Amount" xml:space="preserve">
+    <value>數量</value>
+  </data>
+  <data name="EquipPlanPage_IsSecurityMonitoring" xml:space="preserve">
+    <value>重點安全監護</value>
+  </data>
+  <data name="EquipPlanPage_SecurityMonitoring" xml:space="preserve">
+    <value>重點安全監護說明</value>
+  </data>
+  <data name="Menu_RegularlyCheckProjectReport" xml:space="preserve">
+    <value>['Item']台賬</value>
+  </data>
+  <data name="RegularlyCheckProjectReport_Class" xml:space="preserve">
+    <value>類別</value>
+  </data>
+  <data name="RegularlyCheckProjectReport_MaintFirstTime" xml:space="preserve">
+    <value>首次維護時間</value>
+  </data>
+  <data name="RegularlyCheckProjectReport_MaintNextTime" xml:space="preserve">
+    <value>下次維護時間</value>
+  </data>
+  <data name="RegularlyCheckProjectReport_MaintThisTime" xml:space="preserve">
+    <value>本次維護時間</value>
+  </data>
+  <data name="RegularlyCheckProjectReport_MasterCategory" xml:space="preserve">
+    <value>總類別</value>
+  </data>
+  <data name="RegularlyCheckProjectReport_Model" xml:space="preserve">
+    <value>型號規格</value>
+  </data>
+  <data name="RegularlyCheckProjectReport_SecurityMonitoring" xml:space="preserve">
+    <value>安全監控</value>
+  </data>
+  <data name="Company_ClassNamingCustomization" xml:space="preserve">
+    <value>類別命名</value>
+  </data>
+  <data name="Company_MasterCategoryNamingCustomization" xml:space="preserve">
+    <value>總類別命名</value>
+  </data>
+  <data name="Common_FileName_Log" xml:space="preserve">
+    <value>文件名稱</value>
+  </data>
+  <data name="TaskOrderStatus_Cancell" xml:space="preserve">
+    <value>已取消</value>
+  </data>
+  <data name="TaskOrderStatus_Cancelled" xml:space="preserve">
+    <value>任務工單狀態(已取消)</value>
+  </data>
+  <data name="OrderPage_SendEmailDate" xml:space="preserve">
+    <value>電郵發送日期</value>
+  </data>
+  <data name="CompanyPage_Area" xml:space="preserve">
+    <value>區域</value>
+  </data>
+  <data name="CompanyPage_ShowAmount" xml:space="preserve">
+    <value>顯示數量</value>
+  </data>
+  <data name="CompanyItemSumanryReport_Title" xml:space="preserve">
+    <value>公司['Item']匯總表</value>
+  </data>
+  <data name="Common_Quarter" xml:space="preserve">
+    <value>季度</value>
+  </data>
+  <data name="Report_CompanyItemSecurityTitle" xml:space="preserve">
+    <value>安全設施情況一覽表</value>
+  </data>
+  <data name="Report_CompleteMaintOrder" xml:space="preserve">
+    <value>到期完成子設備數量</value>
+  </data>
+  <data name="Report_EquipmentPerfectness" xml:space="preserve">
+    <value>設備完好率(%)</value>
+  </data>
+  <data name="Report_MaintOrderNumber" xml:space="preserve">
+    <value>需維護子設備總數</value>
+  </data>
+  <data name="Report_NotCompleteMaintOrder" xml:space="preserve">
+    <value>到期未維護子設備數量</value>
+  </data>
+  <data name="Report_NotMaintPrecentage" xml:space="preserve">
+    <value>到期維護報警百分率</value>
+  </data>
+  <data name="Report_NotRepairItemNumber" xml:space="preserve">
+    <value>未完成維修子設備數量</value>
+  </data>
+  <data name="Report_RegularMaint" xml:space="preserve">
+    <value>定期檢查維護到期完成率</value>
+  </data>
+  <data name="Report_RepairItemNumber" xml:space="preserve">
+    <value>需維修子設備數量</value>
+  </data>
+  <data name="Report_Month" xml:space="preserve">
+    <value>{0}月份</value>
+  </data>
+  <data name="Report_Quarter" xml:space="preserve">
+    <value>第{0}季度</value>
+  </data>
+  <data name="Menu_CompanyItemSecuritySummaryReport" xml:space="preserve">
+    <value>['Item']情況一覽表</value>
+  </data>
+  <data name="Menu_CompanyItemSummary" xml:space="preserve">
+    <value>公司['Item']匯總報表</value>
+  </data>
+  <data name="Menu_TaskOrderCheckingResultSummary" xml:space="preserve">
+    <value>任務檢測結果匯總報表</value>
+  </data>
+  <data name="Report_TaskOrderCheckResult_ReportName" xml:space="preserve">
+    <value>['Item']公司[['Service']]檢測結果匯總表</value>
+  </data>
+  <data name="Menu_Area" xml:space="preserve">
+    <value>區域</value>
+  </data>
+  <data name="AreaPage_Desciption" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="AreaPage_Name" xml:space="preserve">
+    <value>區域名稱</value>
+  </data>
+  <data name="TaskOrderCheckingResultReport_CheckCount" xml:space="preserve">
+    <value>檢測點數</value>
+  </data>
+  <data name="TaskOrderCheckingResultReport_CheckInterval" xml:space="preserve">
+    <value>檢測週期</value>
+  </data>
+  <data name="TaskOrderCheckingResultReport_NeedFollowUp" xml:space="preserve">
+    <value>需跟進事項</value>
+  </data>
+  <data name="TaskOrderCheckingResultReport_PrecentOfUnqualified" xml:space="preserve">
+    <value>檢測合格率</value>
+  </data>
+  <data name="TaskOrderCheckingResultReport_QualifiedCount" xml:space="preserve">
+    <value>合格點數</value>
+  </data>
+  <data name="TaskOrderCheckingResultReport_UnqualifiedCount" xml:space="preserve">
+    <value>不合格點數</value>
+  </data>
+  <data name="TaskOrderCheckingResultReport_Task_Class" xml:space="preserve">
+    <value>任務['Class']</value>
+  </data>
+  <data name="TaskResultCode_FailNeedFollow" xml:space="preserve">
+    <value>任務結果-不合格 (要跟進)</value>
+  </data>
+  <data name="TaskResultCode_FailNoFollow" xml:space="preserve">
+    <value>任務結果-不合格 (無跟進)</value>
+  </data>
+  <data name="TaskResultCode_NA" xml:space="preserve">
+    <value>任務結果-空值</value>
+  </data>
+  <data name="TaskResultCode_PassNeedFollow" xml:space="preserve">
+    <value>任務結果-合格 (要跟進)</value>
+  </data>
+  <data name="TaskResultCode_PassNoFollow" xml:space="preserve">
+    <value>任務結果-合格 (無跟進)</value>
+  </data>
+  <data name="Common_Every" xml:space="preserve">
+    <value>每{0}</value>
+  </data>
+  <data name="Common_ScreeningCondition" xml:space="preserve">
+    <value>範圍</value>
+  </data>
+  <data name="Order_CancelOrder" xml:space="preserve">
+    <value>取消工單</value>
+  </data>
+  <data name="Common_ReportResult" xml:space="preserve">
+    <value>報表結果</value>
+  </data>
+  <data name="CompanyPage_IsCalNeedFault" xml:space="preserve">
+    <value>調校故障相關</value>
+  </data>
+  <data name="CompanyPage_IsMaintNeedFault" xml:space="preserve">
+    <value>維護故障相關</value>
+  </data>
+  <data name="CompanyPage_IsRepairNeedFault" xml:space="preserve">
+    <value>維修故障相關</value>
+  </data>
+  <data name="ShowSecurityMonitoring" xml:space="preserve">
+    <value>安全監控</value>
+  </data>
+  <data name="Common_Page_Size" xml:space="preserve">
+    <value>顯示結果的條數 :</value>
+  </data>
+  <data name="NeedTask" xml:space="preserve">
+    <value>任務開關</value>
+  </data>
+  <data name="CompanyPage_ItemNumberLength" xml:space="preserve">
+    <value>物件編號長度</value>
+  </data>
+  <data name="CompanyPage_ShowCalDate" xml:space="preserve">
+    <value>計算工單日期方法</value>
+  </data>
+  <data name="CompanyPage_ItemNoCompanyUnique" xml:space="preserve">
+    <value>全公司編號唯一</value>
+  </data>
+  <data name="CompanyPage_ItemNoGenerate" xml:space="preserve">
+    <value>物件編號生成方法</value>
+  </data>
+  <data name="CompanyPage_ItemNoItemNameUnique" xml:space="preserve">
+    <value>相同物件名稱編號唯一</value>
+  </data>
+  <data name="EquipPage_Day1" xml:space="preserve">
+    <value>天</value>
+  </data>
+  <data name="Menu_FaultCode_ForCalibration" xml:space="preserve">
+    <value>故障代碼(調校)</value>
+  </data>
+  <data name="EquipTypePlan_Repeat_Every" xml:space="preserve">
+    <value>每隔</value>
+  </data>
+  <data name="EquipAlarming_RepeatEvery" xml:space="preserve">
+    <value>每隔</value>
+  </data>
+  <data name="EquipPage_No_AutoGeneration" xml:space="preserve">
+    <value>編號為自動生成</value>
+  </data>
+  <data name="OrderTile_Str" xml:space="preserve">
+    <value>工單</value>
+  </data>
+  <data name="CompanyPage_digit" xml:space="preserve">
+    <value>位</value>
+  </data>
+  <data name="EquipPage_Uncategorized" xml:space="preserve">
+    <value>未分類</value>
+  </data>
+  <data name="MaintSummary_Category" xml:space="preserve">
+    <value>['MasterCategory']</value>
+  </data>
+  <data name="EquipPage_ShowDelete" xml:space="preserve">
+    <value>顯示已刪除</value>
+  </data>
+  <data name="Common_Deleted" xml:space="preserve">
+    <value>已刪除</value>
+  </data>
+  <data name="CompanySuspend_Content" xml:space="preserve">
+    <value>您訪問的公司已經暫停使用.</value>
+  </data>
+  <data name="CompanySuspend_Title" xml:space="preserve">
+    <value>注意</value>
+  </data>
+  <data name="Common_Suspend" xml:space="preserve">
+    <value>已暫停</value>
+  </data>
+  <data name="Unit_Day" xml:space="preserve">
+    <value>(天)</value>
+  </data>
+  <data name="CalibrationLabelReport" xml:space="preserve">
+    <value>調校標籤報表</value>
+  </data>
+  <data name="Menu_CalibrationLabelReport" xml:space="preserve">
+    <value>調校標籤報表</value>
+  </data>
+  <data name="ServiceOrderActionDetail_Approval" xml:space="preserve">
+    <value>審批</value>
+  </data>
+  <data name="ServiceOrderActionDetail_CheckIn" xml:space="preserve">
+    <value>簽入</value>
+  </data>
+  <data name="ServiceOrderActionDetail_Excute" xml:space="preserve">
+    <value>執行</value>
+  </data>
+  <data name="ServiceOrderActionDetail_Extend" xml:space="preserve">
+    <value>延期(推遲)</value>
+  </data>
+  <data name="ServiceOrderActionDetail_Review" xml:space="preserve">
+    <value>審核</value>
+  </data>
+  <data name="ServiceOrderActionDetail_CheckOrder" xml:space="preserve">
+    <value>驗收</value>
+  </data>
+  <data name="StatusCode_Deleted" xml:space="preserve">
+    <value>已取消</value>
+  </data>
+  <data name="ServiceOrderActionDetail_Title" xml:space="preserve">
+    <value>操作者詳情</value>
+  </data>
+  <data name="Generate_Task_Order" xml:space="preserve">
+    <value>生成任務單</value>
+  </data>
+  <data name="BlocPage_Desciption" xml:space="preserve">
+    <value>集團描述</value>
+  </data>
+  <data name="BlocPage_Name" xml:space="preserve">
+    <value>集團名稱</value>
+  </data>
+  <data name="Menu_Bloc" xml:space="preserve">
+    <value>集團</value>
+  </data>
+  <data name="CompanyPage_Bloc" xml:space="preserve">
+    <value>集團</value>
+  </data>
+  <data name="Common_ContainsAttachment" xml:space="preserve">
+    <value>含附件</value>
+  </data>
+  <data name="TaskPage_Name" xml:space="preserve">
+    <value>名稱</value>
+  </data>
+  <data name="Common_Restore" xml:space="preserve">
+    <value>恢復</value>
+  </data>
+  <data name="Common_Scrap" xml:space="preserve">
+    <value>報廢</value>
+  </data>
+  <data name="CompanyPage_EquipmentLimit" xml:space="preserve">
+    <value>物件數量</value>
+  </data>
+  <data name="CompanyPage_EquipmentPlanLimit" xml:space="preserve">
+    <value>物件計劃數量</value>
+  </data>
+  <data name="CompanyPage_EquipmentTypeLimit" xml:space="preserve">
+    <value>物件模板數量</value>
+  </data>
+  <data name="CompanyPage_LocationLimit" xml:space="preserve">
+    <value>位置數量</value>
+  </data>
+  <data name="CompanyPage_OnlineUserLimit" xml:space="preserve">
+    <value>在線用戶數量</value>
+  </data>
+  <data name="CompanyPage_OrgUnitLimit" xml:space="preserve">
+    <value>組織架構數量</value>
+  </data>
+  <data name="CompanyPage_TaskLimit" xml:space="preserve">
+    <value>任務數量</value>
+  </data>
+  <data name="CompanyPage_TaskTypeLimit" xml:space="preserve">
+    <value>任務模板數量</value>
+  </data>
+  <data name="CompanyPage_TeamLimit" xml:space="preserve">
+    <value>工作組數量</value>
+  </data>
+  <data name="CompanyPage_TabBasicSetting" xml:space="preserve">
+    <value>基本設置</value>
+  </data>
+  <data name="CompanyPage_ShowClass" xml:space="preserve">
+    <value>顯示類別</value>
+  </data>
+  <data name="CompanyPage_ShowMasterCatergory" xml:space="preserve">
+    <value>顯示總類別</value>
+  </data>
+  <data name="Common_Name" xml:space="preserve">
+    <value>名稱</value>
+  </data>
+  <data name="FaultListReport_FaultCategory" xml:space="preserve">
+    <value>故障類別</value>
+  </data>
+  <data name="FaultListReport_FaultList" xml:space="preserve">
+    <value>故障列表</value>
+  </data>
+  <data name="FaultListReport_Number" xml:space="preserve">
+    <value>編號</value>
+  </data>
+  <data name="Menu_FaultListReport" xml:space="preserve">
+    <value>公司['Item']故障情況一覽表</value>
+  </data>
+  <data name="Common_Order_UpdateMember" xml:space="preserve">
+    <value>更新人員</value>
+  </data>
+  <data name="BulkModifuWorker_ActiveWorker" xml:space="preserve">
+    <value>分配職責</value>
+  </data>
+  <data name="BulkModifuWorker_EXWorker" xml:space="preserve">
+    <value>解除職責</value>
+  </data>
+  <data name="Menu_BulkModifyWorker" xml:space="preserve">
+    <value>['Team']成員重新整理</value>
+  </data>
+  <data name="FaultConditionStatisticReport_Class" xml:space="preserve">
+    <value>['Class']</value>
+  </data>
+  <data name="FaultConditionStatisticReport_Fault_Category" xml:space="preserve">
+    <value>故障類別</value>
+  </data>
+  <data name="FaultConditionStatisticReport_Fault_Equipment_Count" xml:space="preserve">
+    <value>故障設備數量</value>
+  </data>
+  <data name="FaultConditionStatisticReport_Position" xml:space="preserve">
+    <value>場所</value>
+  </data>
+  <data name="FaultConditionStatisticReport_Remark" xml:space="preserve">
+    <value>備註</value>
+  </data>
+  <data name="FaultConditionStatisticReport_Serial_Number" xml:space="preserve">
+    <value>序號</value>
+  </data>
+  <data name="Menu_FaultConditionStatisticReport" xml:space="preserve">
+    <value>故障情況統計表</value>
+  </data>
+  <data name="Common_Batch" xml:space="preserve">
+    <value>批量</value>
+  </data>
+  <data name="Common_SelectAll" xml:space="preserve">
+    <value>全選</value>
+  </data>
+  <data name="FaultCodePage_AddCompany" xml:space="preserve">
+    <value>加入公司</value>
+  </data>
+  <data name="FaultCodePage_EditTo" xml:space="preserve">
+    <value>修改为</value>
+  </data>
+  <data name="FaultCodePage_UpdateCompany" xml:space="preserve">
+    <value>从公司修改</value>
+  </data>
+  <data name="CompanyPage_EmailSenderTip" xml:space="preserve">
+    <value>留空則使用預設值</value>
+  </data>
+  <data name="CompanyPage_ConsolidatedEmail" xml:space="preserve">
+    <value>整合電郵</value>
+  </data>
+  <data name="CompanyPage_CutOffTime" xml:space="preserve">
+    <value>電郵截止時間</value>
+  </data>
+  <data name="CompanyPage_Minutes" xml:space="preserve">
+    <value>分</value>
+  </data>
+  <data name="CompanyPage_PostTime" xml:space="preserve">
+    <value>電郵發送時間</value>
+  </data>
+  <data name="Common_PleaseClick" xml:space="preserve">
+    <value>請點擊{0}</value>
+  </data>
+  <data name="ConsolidateListingContent_CompanyName" xml:space="preserve">
+    <value>公司簡稱</value>
+  </data>
+  <data name="ConsolidateListingContent_EquipmentName" xml:space="preserve">
+    <value>物件名稱</value>
+  </data>
+  <data name="ConsolidateListingContent_Location" xml:space="preserve">
+    <value>位置</value>
+  </data>
+  <data name="ConsolidateListingContent_OrderNumber" xml:space="preserve">
+    <value>工單號</value>
+  </data>
+  <data name="ConsolidateListingContent_PlanServiceDate" xml:space="preserve">
+    <value>計劃服務日期</value>
+  </data>
+  <data name="ConsolidateListingContent_SystemName" xml:space="preserve">
+    <value>系統名稱</value>
+  </data>
+  <data name="ConsolidateListingContent_TeamName" xml:space="preserve">
+    <value>工作組名稱</value>
+  </data>
+  <data name="ConsolidateListingContent_TemplateName" xml:space="preserve">
+    <value>模板名稱</value>
+  </data>
+  <data name="ConsolidateListingContent_URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="ConsolidateListingContent_UserDisplayName" xml:space="preserve">
+    <value>用戶名稱</value>
+  </data>
+  <data name="Company_GenMasterWorkOrderTime" xml:space="preserve">
+    <value>生成工作工單時間</value>
+  </data>
+  <data name="Company_NeedMasterWorkOrder" xml:space="preserve">
+    <value>自動生成工作工單功能</value>
+  </data>
+  <data name="Company_NeedMasterWorkOrderEmail" xml:space="preserve">
+    <value>工作工單電郵發送開關</value>
+  </data>
+  <data name="EmailTemplate_Consolidate" xml:space="preserve">
+    <value>整合電郵</value>
+  </data>
+  <data name="EmailTemplate_ConsolidateName" xml:space="preserve">
+    <value>整合名稱</value>
+  </data>
+  <data name="EmailTemplate_JoinConsolidateEmail" xml:space="preserve">
+    <value>加入整合電郵</value>
+  </data>
+  <data name="ConsolidateEmailListPage_AddAtFirstSeq" xml:space="preserve">
+    <value>添加到第一個序列</value>
+  </data>
+  <data name="ConsolidateEmailListPage_Content_Colon" xml:space="preserve">
+    <value>内容</value>
+  </data>
+  <data name="ConsolidateEmailListPage_Seq_Colon" xml:space="preserve">
+    <value>序列</value>
+  </data>
+  <data name="ConsolidateEmailListPage_Title" xml:space="preserve">
+    <value>整合電郵範本</value>
+  </data>
+  <data name="ConsolidateEmailListPage_Title_Colon" xml:space="preserve">
+    <value>標題</value>
+  </data>
+  <data name="Menu_ConsolidateEmailList" xml:space="preserve">
+    <value>整合電郵範本</value>
+  </data>
+  <data name="OrderTypeCode_MasterWorkOrder_Calibration" xml:space="preserve">
+    <value>調校工作工單</value>
+  </data>
+  <data name="OrderTypeCode_MasterWorkOrder_Maintenance" xml:space="preserve">
+    <value>維護工作工單</value>
+  </data>
+  <data name="OrderTypeCode_MasterWorkOrder_Repair" xml:space="preserve">
+    <value>維修工作工單</value>
+  </data>
+  <data name="OrderTypeCode_MasterWorkOrder_Task" xml:space="preserve">
+    <value>任務工作工單</value>
+  </data>
+  <data name="OrderPage_MailStatusConsolidate" xml:space="preserve">
+    <value>已整合</value>
+  </data>
+  <data name="MasterWorkOrderStatus_Completed" xml:space="preserve">
+    <value>完結</value>
+  </data>
+  <data name="MasterWorkOrderStatus_InProgress" xml:space="preserve">
+    <value>進行中</value>
+  </data>
+  <data name="MasterWorkOrderStatus_New" xml:space="preserve">
+    <value>新建</value>
+  </data>
+  <data name="MaintWorkOrderPage_CompleteDate" xml:space="preserve">
+    <value>預計完成日期</value>
+  </data>
+  <data name="MasterWorkOrderPage_Tab_Basic" xml:space="preserve">
+    <value>基礎資訊</value>
+  </data>
+  <data name="MasterWorkOrder_Maintenance_ReportTitle" xml:space="preserve">
+    <value>維護記錄單</value>
+  </data>
+  <data name="MasterWorkOrder_Maintenance_WorkResultTitle" xml:space="preserve">
+    <value>維護結果清單(共{0}項{1})</value>
+  </data>
+  <data name="Common_MasterWorkOrder" xml:space="preserve">
+    <value>工作工單</value>
+  </data>
+  <data name="MasterWorkOrder_Task_ReportTitle" xml:space="preserve">
+    <value>任務記錄單</value>
+  </data>
+  <data name="MasterWorkOrder_Task_WorkResultTitle" xml:space="preserve">
+    <value>任務結果清單(共{0}項{1})</value>
+  </data>
+  <data name="CompanyPage_UploadExtNameRestriction" xml:space="preserve">
+    <value>附件上傳格式限制</value>
+  </data>
+  <data name="CompanyPage_UploadExtNameRestrictionLable" xml:space="preserve">
+    <value>(用逗號“，”作為分隔符)</value>
+  </data>
+  <data name="CompanyPage_Number" xml:space="preserve">
+    <value>個</value>
+  </data>
+  <data name="CompanyPage_UploadFileNumberLimit" xml:space="preserve">
+    <value>附件數量限制</value>
+  </data>
+  <data name="ServiceOrderList_IsShowFinishOrder" xml:space="preserve">
+    <value>顯示隱藏的工單</value>
+  </data>
+  <data name="Menu_SystemRunningVersion" xml:space="preserve">
+    <value>系統資訊</value>
+  </data>
+  <data name="SystemRunningVersion_AssemblyVersion" xml:space="preserve">
+    <value>{0}的程式集版本</value>
+  </data>
+  <data name="SystemRunningVersion_DataBaseAssemblyVersion" xml:space="preserve">
+    <value>保存在資料庫的程式集版本</value>
+  </data>
+  <data name="SystemRunningVersion_DataBaseCodeVersion" xml:space="preserve">
+    <value>資料庫代碼版本</value>
+  </data>
+  <data name="SystemRunningVersion_WebConfigCodeVersion" xml:space="preserve">
+    <value>Web.config代碼版本</value>
+  </data>
+  <data name="SystemRunningVersion_AssemblyVersion_Header" xml:space="preserve">
+    <value>程式集版本</value>
+  </data>
+  <data name="SystemRunningVersion_CodeVersion_Header" xml:space="preserve">
+    <value>代碼版本</value>
+  </data>
+  <data name="SystemRunningVersion_Title" xml:space="preserve">
+    <value>系統資訊</value>
+  </data>
+  <data name="CompanySelectPage" xml:space="preserve">
+    <value>選擇公司</value>
+  </data>
+  <data name="ServiceOrderList_SearchOrderType" xml:space="preserve">
+    <value>請先選擇工單類型</value>
+  </data>
+  <data name="CompanyPage_LocationLevels" xml:space="preserve">
+    <value>位置層數限制</value>
+  </data>
+  <data name="CompanyPage_OULevels" xml:space="preserve">
+    <value>組織架構層數限制</value>
+  </data>
+  <data name="RegularlyCheckProjectReport_Page_InitialTime" xml:space="preserve">
+    <value>投用時間</value>
+  </data>
+  <data name="RegularlyCheckProjectReport_Page_Manufacturer" xml:space="preserve">
+    <value>供應商名稱</value>
+  </data>
+  <data name="RegularlyCheckProjectReport_Page_Model" xml:space="preserve">
+    <value>型號規格</value>
+  </data>
+  <data name="RegularlyCheckProjectReport_Page_Position" xml:space="preserve">
+    <value>安裝位置</value>
+  </data>
+  <data name="RegularlyCheckProjectReport_Page_Title" xml:space="preserve">
+    <value>['Item']台賬</value>
+  </data>
+  <data name="RegularlyCheckProjectReport_ReportTitle" xml:space="preserve">
+    <value>['Item']['Service']台賬</value>
+  </data>
+  <data name="LoginHistoryPage_Failure" xml:space="preserve">
+    <value>失敗</value>
+  </data>
+  <data name="LoginHistoryPage_Success" xml:space="preserve">
+    <value>成功</value>
+  </data>
+  <data name="EquipPage_Supplier" xml:space="preserve">
+    <value>供應商</value>
+  </data>
+  <data name="f" xml:space="preserve">
+    <value>已完成、已取消的工單</value>
+  </data>
+  <data name="OrderPage_MasterWorkOrderID" xml:space="preserve">
+    <value>工作工單序號</value>
+  </data>
+  <data name="ServiceOrderList_FinishOrder" xml:space="preserve">
+    <value>已完成、已取消的工單</value>
+  </data>
+  <data name="Common_ActiveConfirm" xml:space="preserve">
+    <value>確定可用</value>
+  </data>
+  <data name="Common_ActiveSave" xml:space="preserve">
+    <value>保存及啟動</value>
+  </data>
+  <data name="Common_InActiveConfirm" xml:space="preserve">
+    <value>確定停用</value>
+  </data>
+  <data name="Common_InActiveSave" xml:space="preserve">
+    <value>保存及停用</value>
+  </data>
+  <data name="Common_JustSave" xml:space="preserve">
+    <value>僅保存</value>
+  </data>
+  <data name="CompanyPage_IsShowItemMenu" xml:space="preserve">
+    <value>顯示物件頁</value>
+  </data>
+  <data name="CompanyPage_IsShowItemTreeMenu" xml:space="preserve">
+    <value>顯示物件樹頁</value>
+  </data>
+  <data name="CompanyPage_ShowProgressBar" xml:space="preserve">
+    <value>顯示附件上傳總容量</value>
+  </data>
+  <data name="DataHistory_RetainDays" xml:space="preserve">
+    <value>可保留時間</value>
+  </data>
+  <data name="TeamType_Pipe" xml:space="preserve">
+    <value>管網</value>
+  </data>
+  <data name="CompanyPage_Pipe" xml:space="preserve">
+    <value>管網功能</value>
+  </data>
+  <data name="Menu_Pipe" xml:space="preserve">
+    <value>管網</value>
+  </data>
+  <data name="PipePage_Alarming" xml:space="preserve">
+    <value>提前通知</value>
+  </data>
+  <data name="PipePage_AlarmingInterval" xml:space="preserve">
+    <value>通知週期</value>
+  </data>
+  <data name="PipePage_Area" xml:space="preserve">
+    <value>所在區域</value>
+  </data>
+  <data name="PipePage_Block" xml:space="preserve">
+    <value>街區</value>
+  </data>
+  <data name="PipePage_FirstMeasurementDate" xml:space="preserve">
+    <value>第一次測量日期</value>
+  </data>
+  <data name="PipePage_InitialDate" xml:space="preserve">
+    <value>投用時間</value>
+  </data>
+  <data name="PipePage_IntervalText" xml:space="preserve">
+    <value>洩漏測量週期</value>
+  </data>
+  <data name="PipePage_Length" xml:space="preserve">
+    <value>管網長度(m)</value>
+  </data>
+  <data name="PipePage_PressureRating" xml:space="preserve">
+    <value>壓力等級</value>
+  </data>
+  <data name="PipePage_Remarks" xml:space="preserve">
+    <value>備註</value>
+  </data>
+  <data name="PipePage_RiskLevelOfPipe" xml:space="preserve">
+    <value>管網風險等級</value>
+  </data>
+  <data name="PipePage_Status" xml:space="preserve">
+    <value>狀態</value>
+  </data>
+  <data name="PipePage_Tubing" xml:space="preserve">
+    <value>管材</value>
+  </data>
+  <data name="PipePage_WorkingTeam" xml:space="preserve">
+    <value>工作組</value>
+  </data>
+  <data name="PipeStatusCode_Active" xml:space="preserve">
+    <value>正在服務</value>
+  </data>
+  <data name="PipeStatusCode_Deleted" xml:space="preserve">
+    <value>已刪除</value>
+  </data>
+  <data name="PipeStatusCode_Inactive" xml:space="preserve">
+    <value>未生效</value>
+  </data>
+  <data name="Menu_GasPipeRiskSummaryReport" xml:space="preserve">
+    <value>燃氣管網風險分級情況匯總表</value>
+  </data>
+  <data name="Report_Block" xml:space="preserve">
+    <value>街區</value>
+  </data>
+  <data name="Report_GasPepeRisk" xml:space="preserve">
+    <value>管網風險分級</value>
+  </data>
+  <data name="Report_MeasurementComplate" xml:space="preserve">
+    <value>管網洩漏測量完成率(%)</value>
+  </data>
+  <data name="Report_MeasurementCycle" xml:space="preserve">
+    <value>洩漏測量週期</value>
+  </data>
+  <data name="Report_Measurementlength" xml:space="preserve">
+    <value>未按期進行管網洩漏測量長度(m)</value>
+  </data>
+  <data name="Report_MerchantArea" xml:space="preserve">
+    <value>所在區域</value>
+  </data>
+  <data name="Report_PipeLength" xml:space="preserve">
+    <value>管網長度(m)</value>
+  </data>
+  <data name="Report_PressureRating" xml:space="preserve">
+    <value>壓力等級</value>
+  </data>
+  <data name="Report_Tubing" xml:space="preserve">
+    <value>管材</value>
+  </data>
+  <data name="PipeOrderModel" xml:space="preserve">
+    <value>管網工單</value>
+  </data>
+  <data name="PipeOrderModel_MeasureBy" xml:space="preserve">
+    <value>測量人員</value>
+  </data>
+  <data name="PipeOrderModel_MeasureData" xml:space="preserve">
+    <value>測量資料</value>
+  </data>
+  <data name="CalLabelReport_LabelSize" xml:space="preserve">
+    <value>標籤類型</value>
+  </data>
+  <data name="CalLabelReport_StatusTitle" xml:space="preserve">
+    <value>標籤標題</value>
+  </data>
+  <data name="OrderTypeCode_Pipe" xml:space="preserve">
+    <value>管網</value>
+  </data>
+  <data name="PipeOrderStatus_Measuring" xml:space="preserve">
+    <value>管網工單狀態(測量中)</value>
+  </data>
+  <data name="ReportSiteMenu_Area" xml:space="preserve">
+    <value>區域</value>
+  </data>
+  <data name="ReportSiteMenu_AreaMgt" xml:space="preserve">
+    <value>管理區域及公司</value>
+  </data>
+  <data name="ReportSiteMenu_Bloc" xml:space="preserve">
+    <value>集團</value>
+  </data>
+  <data name="ReportSiteMenu_BlocMgt" xml:space="preserve">
+    <value>管理集團</value>
+  </data>
+  <data name="ReportSiteMenu_Company" xml:space="preserve">
+    <value>公司</value>
+  </data>
+  <data name="Common_Role_ReportSiteAdmin" xml:space="preserve">
+    <value>報表網站管理員</value>
+  </data>
+  <data name="Common_Role_ReportSiteUser" xml:space="preserve">
+    <value>報表網站用戶</value>
+  </data>
+  <data name="Common_SelectPage" xml:space="preserve">
+    <value>選擇頁面</value>
+  </data>
+  <data name="ReportSite_AreaMgt_AreaName" xml:space="preserve">
+    <value>區域名稱</value>
+  </data>
+  <data name="ReportSite_AreaMgt_AreaRedLightAlarmingLevel" xml:space="preserve">
+    <value>紅燈警告</value>
+  </data>
+  <data name="ReportSite_AreaMgt_BlocName" xml:space="preserve">
+    <value>集團名稱</value>
+  </data>
+  <data name="ReportSite_AreaMgt_SettingCompany" xml:space="preserve">
+    <value>公司設置</value>
+  </data>
+  <data name="ReportSite_AreaMgt_TurnRedLightText" xml:space="preserve">
+    <value>間公司變紅燈</value>
+  </data>
+  <data name="ReportSite_AreaMgt_UpdateAreaUser" xml:space="preserve">
+    <value>修改區域使用者</value>
+  </data>
+  <data name="ReportSite_AreaReport" xml:space="preserve">
+    <value>區域報表</value>
+  </data>
+  <data name="ReportSite_BlocReport" xml:space="preserve">
+    <value>集團報表</value>
+  </data>
+  <data name="ReportSite_Common_Class" xml:space="preserve">
+    <value>['Class']</value>
+  </data>
+  <data name="ReportSite_CompanyReport" xml:space="preserve">
+    <value>公司報表</value>
+  </data>
+  <data name="ReportSite_ReportType" xml:space="preserve">
+    <value>報表類型</value>
+  </data>
+  <data name="ReportSite_SingleCompanyReport" xml:space="preserve">
+    <value>單公司報表</value>
+  </data>
+  <data name="ReportSite_AreaMgt_AreaRedLightDetail" xml:space="preserve">
+    <value>區域紅燈情況</value>
+  </data>
+  <data name="ReportSite_AreaMgt_CompanyRedLightAlarmText" xml:space="preserve">
+    <value>%過期工單未完成百分比</value>
+  </data>
+  <data name="ReportSite_AreaMgt_CompanyRedLightDetail" xml:space="preserve">
+    <value>過期未完成工單百分比</value>
+  </data>
+  <data name="Common_DefaultPage" xml:space="preserve">
+    <value>主頁</value>
+  </data>
+  <data name="EquipPlanItem_Cal_Plan" xml:space="preserve">
+    <value>調校計劃</value>
+  </data>
+  <data name="EquipPlanItem_Check_Plan" xml:space="preserve">
+    <value>檢查計劃</value>
+  </data>
+  <data name="EquipPlan_CalOrCheck" xml:space="preserve">
+    <value>調校或檢查</value>
+  </data>
+  <data name="Common_Name2" xml:space="preserve">
+    <value>名</value>
+    <comment>名</comment>
+  </data>
+  <data name="Menu_PipeLeakMeasurement" xml:space="preserve">
+    <value>管網洩漏測量</value>
+    <comment>管网泄漏测量</comment>
+  </data>
+  <data name="Menu_PipePressureRating" xml:space="preserve">
+    <value>壓力等級</value>
+    <comment>压力等级</comment>
+  </data>
+  <data name="Menu_PipeRiskLevel" xml:space="preserve">
+    <value>管網風險等級</value>
+    <comment>管网风险分级</comment>
+  </data>
+  <data name="Menu_PipeTubing" xml:space="preserve">
+    <value>管材</value>
+    <comment>管材</comment>
+  </data>
+  <data name="TIPage_UploadedExcel" xml:space="preserve">
+    <value>上傳的Excel</value>
+  </data>
+  <data name="TIPage_UploadExcel" xml:space="preserve">
+    <value>上傳Excel</value>
+  </data>
+  <data name="Common_Serial_Number" xml:space="preserve">
+    <value>序號</value>
+  </data>
+  <data name="CompanyPage_GenInspectionMasterOrderOn" xml:space="preserve">
+    <value>維護工作工單</value>
+  </data>
+  <data name="CompanyPage_GenTaskMasterOrderOn" xml:space="preserve">
+    <value>任務工作工單</value>
+  </data>
+  <data name="CompanyPage_ItemTreeGridView" xml:space="preserve">
+    <value>物件樹列表</value>
+  </data>
+  <data name="TableList_TownGas_Inspection" xml:space="preserve">
+    <value>港華維護</value>
+  </data>
+  <data name="TableList_Headquarter_Cal" xml:space="preserve">
+    <value>總部調校</value>
+  </data>
+  <data name="TableList_Headquarter_Inpection" xml:space="preserve">
+    <value>總部維護</value>
+  </data>
+  <data name="TableList_ECO_Inpection" xml:space="preserve">
+    <value>易高維護</value>
+  </data>
+  <data name="CorpoateCompanyNotInializedReport_CompanyDisplayName" xml:space="preserve">
+    <value>公司名稱</value>
+  </data>
+  <data name="ReportSiteMenu_CorpoateCompanyNotInializedReport" xml:space="preserve">
+    <value>未建立['Item']公司列表</value>
+  </data>
+  <data name="ReportSiteMenu_CorpoateIdleCompanyReport" xml:space="preserve">
+    <value>不活躍公司列表</value>
+  </data>
+  <data name="Bloc_Name" xml:space="preserve">
+    <value>集團名稱</value>
+  </data>
+  <data name="Bloc_UserManager" xml:space="preserve">
+    <value>集團用戶管理</value>
+  </data>
+  <data name="Common_Basic" xml:space="preserve">
+    <value>基礎信息</value>
+  </data>
+  <data name="Menu_ElmahError" xml:space="preserve">
+    <value>異常記錄</value>
+  </data>
+  <data name="TI_CalrationFormula" xml:space="preserve">
+    <value>計算公式</value>
+  </data>
+  <data name="TI_Objective" xml:space="preserve">
+    <value>目標</value>
+  </data>
+  <data name="TI_Refrence" xml:space="preserve">
+    <value>引用</value>
+  </data>
+  <data name="TI_Remark" xml:space="preserve">
+    <value>備註</value>
+  </data>
+  <data name="TI_Title" xml:space="preserve">
+    <value>標題</value>
+  </data>
+  <data name="EquipPage_SerialNo" xml:space="preserve">
+    <value>序號</value>
+  </data>
+  <data name="CalOrder_CalMaintDoneCode" xml:space="preserve">
+    <value>維護結果</value>
+  </data>
+  <data name="CalOrder_CalMaintRemarks" xml:space="preserve">
+    <value>維護結果記錄</value>
+  </data>
+  <data name="CalOrder_RelativeHumidity" xml:space="preserve">
+    <value>相對濕度</value>
+  </data>
+  <data name="CalOrder_Temperature" xml:space="preserve">
+    <value>溫度</value>
+  </data>
+  <data name="CalPlanType_Calibration" xml:space="preserve">
+    <value>調校計劃</value>
+  </data>
+  <data name="CalPlanType_Checking" xml:space="preserve">
+    <value>檢查計劃</value>
+  </data>
+  <data name="CalPlanType_Maintenance" xml:space="preserve">
+    <value>維修計劃</value>
+  </data>
+  <data name="EquipPlan_CalPlanType" xml:space="preserve">
+    <value>計劃類型</value>
+    <comment>調校/維修/檢查</comment>
+  </data>
+  <data name="CalOrder_CheckingResult" xml:space="preserve">
+    <value>檢查結果</value>
+  </data>
+  <data name="Common_Remark" xml:space="preserve">
+    <value>记录</value>
+  </data>
+  <data name="Common_Result" xml:space="preserve">
+    <value>結果</value>
+  </data>
+  <data name="EquipPage_EquipType_Empty" xml:space="preserve">
+    <value>空模板</value>
+  </data>
+  <data name="Common_NextStep" xml:space="preserve">
+    <value>下一步</value>
+  </data>
+  <data name="EquipPage_CalPlanExtendTip" xml:space="preserve">
+    <value>推遲日期必需大於下一次['Service']日期，但不能超過下次['Service']日期{0}個月。</value>
+  </data>
+  <data name="CalMaintDoneCode_NA" xml:space="preserve">
+    <value>調校維護結果-空</value>
+  </data>
+  <data name="CalMaintDoneCode_No" xml:space="preserve">
+    <value>調校維護結果-否</value>
+  </data>
+  <data name="CalMaintDoneCode_Yes" xml:space="preserve">
+    <value>調校維護結果-是</value>
+  </data>
+  <data name="CalResultCode_Fail" xml:space="preserve">
+    <value>調校結果-不合格</value>
+  </data>
+  <data name="CalResultCode_NA" xml:space="preserve">
+    <value>調校結果-空值</value>
+  </data>
+  <data name="CalResultCode_Pass" xml:space="preserve">
+    <value>調校結果-合格</value>
+  </data>
+  <data name="PipeOrderStatus_Cancelled" xml:space="preserve">
+    <value>管網工單狀態(已取消)</value>
+  </data>
+  <data name="PipeOrderStatus_Completed" xml:space="preserve">
+    <value>管網工單狀態(已完成)</value>
+  </data>
+  <data name="Area_Report_Title" xml:space="preserve">
+    <value>區域檢視情況</value>
+  </data>
+  <data name="Bloc_Report_Title" xml:space="preserve">
+    <value>集團檢視情況</value>
+  </data>
+  <data name="Company_Report_Title" xml:space="preserve">
+    <value>公司檢視情況</value>
+  </data>
+  <data name="Menu_Area_Report" xml:space="preserve">
+    <value>檢視所有區域報表</value>
+  </data>
+  <data name="Menu_Bloc_Report" xml:space="preserve">
+    <value>檢視所有集團報表</value>
+  </data>
+  <data name="Menu_Company_Report" xml:space="preserve">
+    <value>檢視所有公司報表</value>
+  </data>
+  <data name="Common_Download" xml:space="preserve">
+    <value>下載</value>
+  </data>
+  <data name="OrderStatus_Acceptance" xml:space="preserve">
+    <value>驗收中</value>
+  </data>
+  <data name="OrderStatus_Approving" xml:space="preserve">
+    <value>審批中</value>
+  </data>
+  <data name="OrderStatus_Cancelled" xml:space="preserve">
+    <value>已取消</value>
+  </data>
+  <data name="OrderStatus_Completed" xml:space="preserve">
+    <value>已完成</value>
+  </data>
+  <data name="OrderStatus_InProgress" xml:space="preserve">
+    <value>進行中</value>
+  </data>
+  <data name="OrderStatus_Measuring" xml:space="preserve">
+    <value>測量中</value>
+  </data>
+  <data name="OrderStatus_NotAssigned" xml:space="preserve">
+    <value>未分配</value>
+  </data>
+  <data name="OrderStatus_NotCheckIn" xml:space="preserve">
+    <value>未簽入</value>
+  </data>
+  <data name="OrderStatus_Reviewing" xml:space="preserve">
+    <value>審核中</value>
+  </data>
+  <data name="OrderStatus_UnderCalibration" xml:space="preserve">
+    <value>調校中</value>
+  </data>
+  <data name="OrderStatus_UnderCalibrationExtended" xml:space="preserve">
+    <value>調校中(延遲)</value>
+  </data>
+  <data name="OrderStatus_UnderInspection" xml:space="preserve">
+    <value>維護中</value>
+  </data>
+  <data name="OrderStatus_UnderMaintenance" xml:space="preserve">
+    <value>維修中</value>
+  </data>
+  <data name="OrderResult_Fail" xml:space="preserve">
+    <value>不合格</value>
+  </data>
+  <data name="OrderResult_FailNeedFollow" xml:space="preserve">
+    <value>不合格(要跟進)</value>
+  </data>
+  <data name="OrderResult_FailNoFollow" xml:space="preserve">
+    <value>不合格(沒跟進)</value>
+  </data>
+  <data name="OrderResult_NA" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="OrderResult_No" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="OrderResult_Pass" xml:space="preserve">
+    <value>合格</value>
+  </data>
+  <data name="OrderResult_PassNeedFollow" xml:space="preserve">
+    <value>合格(要跟進)</value>
+  </data>
+  <data name="OrderResult_PassNoFollow" xml:space="preserve">
+    <value>合格(沒跟進)</value>
+  </data>
+  <data name="OrderResult_Yes" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="Menu_PastDueOrderReport" xml:space="preserve">
+    <value>['Item']檢查統計報表</value>
+  </data>
+  <data name="Common_CompanyName" xml:space="preserve">
+    <value>公司名稱</value>
+  </data>
+  <data name="Menu_BadMail" xml:space="preserve">
+    <value>發送失敗的郵件</value>
+  </data>
+  <data name="Common_ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Mail_ExceptionMsg" xml:space="preserve">
+    <value>失敗原因</value>
+  </data>
+  <data name="Mail_FaliedTime" xml:space="preserve">
+    <value>失敗時間</value>
+  </data>
+  <data name="Mail_IsBodyHtml" xml:space="preserve">
+    <value>郵件正文是否Html格式</value>
+  </data>
+  <data name="Common_UploadSuccessful" xml:space="preserve">
+    <value>上傳成功.</value>
+  </data>
+  <data name="ReportSiteMenu_ReportSiteSetting" xml:space="preserve">
+    <value>報表網站設置</value>
+  </data>
+  <data name="ReportSiteMenu_SystemUsed" xml:space="preserve">
+    <value>系統使用</value>
+  </data>
+  <data name="DashboardPage_LegengTitle" xml:space="preserve">
+    <value>情况圖</value>
+  </data>
+  <data name="DashboardPage_SafeCompany" xml:space="preserve">
+    <value>達標公司</value>
+  </data>
+  <data name="DashboardPage_Title" xml:space="preserve">
+    <value>控制台</value>
+  </data>
+  <data name="DashboardPage_UnsafeCompany" xml:space="preserve">
+    <value>未達標公司</value>
+  </data>
+  <data name="HomePage_ContentPreview" xml:space="preserve">
+    <value>內容預覽</value>
+  </data>
+  <data name="ElmahErrorPage_RecordingMode" xml:space="preserve">
+    <value>記錄方式</value>
+  </data>
+  <data name="ReportSiteMenu_Dashboard" xml:space="preserve">
+    <value>控制台</value>
+  </data>
+  <data name="Menu_AreaSecurityReport" xml:space="preserve">
+    <value>設備設施檢查統計報表</value>
+  </data>
+  <data name="Common_ReportPrint" xml:space="preserve">
+    <value>報表打印</value>
+  </data>
+  <data name="ReportSite_SelectEmptyTip" xml:space="preserve">
+    <value>此{0}沒有{1}記錄</value>
+  </data>
+  <data name="ReportSiteMenu_CustomizationEditor" xml:space="preserve">
+    <value>命名定制</value>
+  </data>
+  <data name="OrgUnitAdmin" xml:space="preserve">
+    <value>組織架構管理員</value>
+  </data>
+  <data name="ControllerDetailList" xml:space="preserve">
+    <value>可執行個別功能的人員列表</value>
+  </data>
+  <data name="ServiceOrderActionDetail_PrefixCan" xml:space="preserve">
+    <value>可{0}</value>
+  </data>
+  <data name="EquipPage_Liaisons" xml:space="preserve">
+    <value>聯絡人</value>
+  </data>
+  <data name="EquipPage_MainTechnicalParameters" xml:space="preserve">
+    <value>主要技術參數</value>
+  </data>
+  <data name="EquipPage_Tel" xml:space="preserve">
+    <value>電話</value>
+  </data>
+  <data name="TIPage_Department" xml:space="preserve">
+    <value>部門</value>
+  </data>
+  <data name="Common_UploadComplete" xml:space="preserve">
+    <value>上載己完成.</value>
+  </data>
+  <data name="LimitAttachmentSizeSingle" xml:space="preserve">
+    <value>(獨立)</value>
+  </data>
+  <data name="LimitUploadCapacity" xml:space="preserve">
+    <value>限制上傳容量</value>
+  </data>
+  <data name="LimitUploadNumber" xml:space="preserve">
+    <value>限制上傳數量</value>
+  </data>
+  <data name="UploadMethodSelect" xml:space="preserve">
+    <value>上傳方法</value>
+  </data>
+  <data name="PipePage_AdditionalData" xml:space="preserve">
+    <value>管材附加資料</value>
+  </data>
+  <data name="PipePage_IsNeedAdditional" xml:space="preserve">
+    <value>可輸入管材附加資料</value>
+  </data>
+  <data name="SystemCheckPage_MasterWorkOrder_ExecuteResult" xml:space="preserve">
+    <value>執行結果</value>
+  </data>
+  <data name="SystemCheckPage_MasterWorkOrder_LastExecuteTime" xml:space="preserve">
+    <value>上次執行時間</value>
+  </data>
+  <data name="SystemCheckPage_MasterWorkOrder_NextExecuteTime" xml:space="preserve">
+    <value>下次執行時間</value>
+  </data>
+  <data name="SystemCheckPage_MasterWorkOrder_ReRun" xml:space="preserve">
+    <value>重新運行</value>
+  </data>
+  <data name="SystemCheckPage_MasterWorkOrder_ReRunNow" xml:space="preserve">
+    <value>立即重新運行</value>
+  </data>
+  <data name="SystemCheckPage_MasterWorkOrder_SettingTitle" xml:space="preserve">
+    <value>工作工單設定</value>
+  </data>
+  <data name="EmailTemplate_EmailTemplateType" xml:space="preserve">
+    <value>郵件類型</value>
+  </data>
+  <data name="EmailTemplate_EmailTemplateType_Basic" xml:space="preserve">
+    <value>基本</value>
+  </data>
+  <data name="EmailTemplate_EmailTemplateType_Cosolidate" xml:space="preserve">
+    <value>整合郵件</value>
+  </data>
+  <data name="EmailTemplate_EmailTemplateType_EquipCal" xml:space="preserve">
+    <value>調校</value>
+  </data>
+  <data name="EmailTemplate_EmailTemplateType_MasterOrder" xml:space="preserve">
+    <value>工作工單</value>
+  </data>
+  <data name="EmailTemplate_EmailTemplateType_MEIE" xml:space="preserve">
+    <value>維護</value>
+  </data>
+  <data name="EmailTemplate_EmailTemplateType_Pipe" xml:space="preserve">
+    <value>管網</value>
+  </data>
+  <data name="EmailTemplate_EmailTemplateType_Task" xml:space="preserve">
+    <value>任務</value>
+  </data>
+  <data name="SystemCheckPage_ConsolidatedEmailCount" xml:space="preserve">
+    <value>整合郵件數量</value>
+  </data>
+  <data name="SystemCheckPage_IsConsolidatedEmail" xml:space="preserve">
+    <value>是否開啟整合郵件</value>
+    <comment>是否开启整合邮件</comment>
+  </data>
+  <data name="CompanyPage_GridView" xml:space="preserve">
+    <value>自定義列表</value>
+  </data>
+  <data name="EquipPlan_CalManagerTeam" xml:space="preserve">
+    <value>管理['Team']</value>
+  </data>
+  <data name="EquipPlan_CalWorkTeam" xml:space="preserve">
+    <value>工作['Team']</value>
+  </data>
+  <data name="EquipPlan_MaintTeam" xml:space="preserve">
+    <value>維護['Team']</value>
+  </data>
+  <data name="EquipPlan_RepairTeam" xml:space="preserve">
+    <value>维修['Team']</value>
+  </data>
+  <data name="Common_ParentOUNode" xml:space="preserve">
+    <value>上層組織架構</value>
+  </data>
+  <data name="EquipTree_InitialDate" xml:space="preserve">
+    <value>投用時間</value>
+  </data>
+  <data name="EquipmentTree_Location" xml:space="preserve">
+    <value>['Location']</value>
+  </data>
+  <data name="EquipmentTree_NextServiceDate" xml:space="preserve">
+    <value>下一次['Service']日期</value>
+  </data>
+  <data name="TaskPage_NextServiceDate" xml:space="preserve">
+    <value>下一次['Service']日期</value>
+    <comment>下一次(服務)日期</comment>
+  </data>
+  <data name="EquipmentTypePage_AvailableOrgUnit" xml:space="preserve">
+    <value>可用組織架構</value>
+  </data>
+  <data name="ReportSiteMenu_CorpoateCompanyInializedReport" xml:space="preserve">
+    <value>已建立['Item']公司列表</value>
+  </data>
+  <data name="ReportSiteMenu_ActiveCompanyReport" xml:space="preserve">
+    <value>活躍公司列表</value>
+  </data>
+  <data name="ReportSiteMenu_CompanyStatusReport" xml:space="preserve">
+    <value>公司狀態列表</value>
+  </data>
+  <data name="BulkModifyCompany_PageClearSelectCompanys" xml:space="preserve">
+    <value>清空已選擇公司</value>
+  </data>
+  <data name="BulkModifyCompany_PageCompanysSetting" xml:space="preserve">
+    <value>公司設定</value>
+  </data>
+  <data name="BulkModifyCompany_PageSelectCompanys" xml:space="preserve">
+    <value>選擇公司</value>
+  </data>
+  <data name="BulkModifyCompany_PageSelectCompanysSetting" xml:space="preserve">
+    <value>選擇設定</value>
+  </data>
+  <data name="BulkModifyCompany_PageTitle" xml:space="preserve">
+    <value>批量修改公司設定</value>
+  </data>
+  <data name="BulkModifyCompany_PageSelect" xml:space="preserve">
+    <value>選擇</value>
+  </data>
+  <data name="BulkModifyCompany_PageSettingName" xml:space="preserve">
+    <value>名稱</value>
+  </data>
+  <data name="LogonPage_LogonName" xml:space="preserve">
+    <value>用戶名稱/域用戶名稱</value>
+  </data>
+  <data name="Common_CreateTime" xml:space="preserve">
+    <value>創建時間</value>
+  </data>
+  <data name="LogForNetPage_HighLevel" xml:space="preserve">
+    <value>只查高級別的日誌</value>
+  </data>
+  <data name="UserPage_ADDomain" xml:space="preserve">
+    <value>網域</value>
+  </data>
+  <data name="UserPage_ADLogonName" xml:space="preserve">
+    <value>網域賬戶</value>
+  </data>
+  <data name="CalOrder_BackToCal" xml:space="preserve">
+    <value>回退調校</value>
+  </data>
+  <data name="DueCalOrder_SerialNumber" xml:space="preserve">
+    <value>序號</value>
+  </data>
+  <data name="CompanyPage_LastLoginDate" xml:space="preserve">
+    <value>最近登入日期</value>
+  </data>
+  <data name="CompanyPage_NumberOfItem" xml:space="preserve">
+    <value>物件數量</value>
+  </data>
+  <data name="UserProfilePage_SwitchUser" xml:space="preserve">
+    <value>切換</value>
+  </data>
+  <data name="SerialNumber" xml:space="preserve">
+    <value>序號</value>
+  </data>
+  <data name="UserProfilePage_SwitchToNormalUser" xml:space="preserve">
+    <value>切換到一般用戶</value>
+  </data>
+  <data name="UserProfilePage_SwitchToSystemAdmin" xml:space="preserve">
+    <value>切換到系統管理員</value>
+  </data>
+  <data name="EquipPage_Owner" xml:space="preserve">
+    <value>擁有者</value>
+  </data>
+  <data name="EquipPage_ForReference" xml:space="preserve">
+    <value>無計劃</value>
+  </data>
+  <data name="OrderPage_ActualCalDate" xml:space="preserve">
+    <value>調校時間</value>
+  </data>
+  <data name="DueCalPage_TotalSelectedRows" xml:space="preserve">
+    <value>總共選了{0}行。</value>
+  </data>
+  <data name="EquipmentTree_Owner" xml:space="preserve">
+    <value>持有人</value>
+  </data>
+  <data name="EquipmentTree_Reference" xml:space="preserve">
+    <value>參考['Item']</value>
+  </data>
+  <data name="ServiceOrderActionDetail_Assign" xml:space="preserve">
+    <value>分配</value>
+  </data>
+  <data name="CompanyPage_IsShowPlanDetailContent" xml:space="preserve">
+    <value>計劃詳細要求顯示</value>
+    <comment>计划详细要求显示</comment>
+  </data>
+  <data name="ReportSiteMenu_CompanyLoginHistoryReport" xml:space="preserve">
+    <value>公司首次登錄列表</value>
+  </data>
+  <data name="LoginHistoryPage_AccessTime" xml:space="preserve">
+    <value>存取時間</value>
+  </data>
+  <data name="LoginHistoryPage_AccessHistory" xml:space="preserve">
+    <value>訪問歷史</value>
+  </data>
+  <data name="SystemCheckPage_Start" xml:space="preserve">
+    <value>開啟</value>
+  </data>
+  <data name="SystemCheckPage_Stop" xml:space="preserve">
+    <value>停止</value>
+  </data>
+  <data name="EquipPage_LocationHistory" xml:space="preserve">
+    <value>['Location']歷史</value>
+  </data>
+  <data name="EquipPage_OrgUnitHistory" xml:space="preserve">
+    <value>組織架構歷史</value>
+  </data>
+  <data name="EquipPage_ScrapReason" xml:space="preserve">
+    <value>報廢理由</value>
+  </data>
+  <data name="Common_OldNew_New" xml:space="preserve">
+    <value>新</value>
+  </data>
+  <data name="Common_OldNew_Old" xml:space="preserve">
+    <value>舊</value>
+  </data>
+  <data name="EquipHistory_ChangeTime" xml:space="preserve">
+    <value>變更時間</value>
+  </data>
+  <data name="EquipHistory_OperateBy" xml:space="preserve">
+    <value>操作人</value>
+  </data>
+  <data name="UserPage_IsDomainUser_Colon" xml:space="preserve">
+    <value>域驗證</value>
+  </data>
+  <data name="UserPage_IsFormPassword_Colon" xml:space="preserve">
+    <value>窗口驗證</value>
+  </data>
+  <data name="CompanyPage_IsShowSearchCriteria" xml:space="preserve">
+    <value>顯示查詢條件</value>
+  </data>
+  <data name="CompanyPage_EmailRestriction" xml:space="preserve">
+    <value>郵箱域名限制</value>
+  </data>
+  <data name="TIPage_CalculationFormulaWord" xml:space="preserve">
+    <value>計算公式的Word文檔</value>
+  </data>
+  <data name="TIPage_UploadCalculationFormulaWord" xml:space="preserve">
+    <value>上傳計算公式的Word文檔</value>
+  </data>
+  <data name="TIPage_UploadedWord" xml:space="preserve">
+    <value>上傳的Word文檔</value>
+  </data>
+  <data name="OrderPage_ApproveButton" xml:space="preserve">
+    <value>審批</value>
+  </data>
+  <data name="OrderPage_AssignedButton" xml:space="preserve">
+    <value>分配人員</value>
+  </data>
+  <data name="OrderPage_ReviewButton" xml:space="preserve">
+    <value>審核</value>
+  </data>
+  <data name="OrderPage_UnderCalButton" xml:space="preserve">
+    <value>調校</value>
+  </data>
+  <data name="OrderPage_IsoReport" xml:space="preserve">
+    <value>ISO報表</value>
+  </data>
+  <data name="Common_Report" xml:space="preserve">
+    <value>報表</value>
+  </data>
+  <data name="DueCalPage_EquipmentNo" xml:space="preserve">
+    <value>['Item']編號</value>
+  </data>
+  <data name="ServiceHistory_ApproveBy" xml:space="preserve">
+    <value>核准人</value>
+  </data>
+  <data name="ServiceHistory_CompletionServiceDate" xml:space="preserve">
+    <value>['Service']完成日期</value>
+  </data>
+  <data name="ServiceHistory_ReviewBy" xml:space="preserve">
+    <value>檢查人</value>
+  </data>
+  <data name="OrgUnitPage_Code" xml:space="preserve">
+    <value>組織架構編號</value>
+  </data>
+  <data name="Prompt_WebConfigCheck_Title" xml:space="preserve">
+    <value>WebConfig配置文件檢查</value>
+  </data>
+  <data name="CompanyPage_NeedNotifyCheck" xml:space="preserve">
+    <value>需要通知的預設值</value>
+  </data>
+</root>
