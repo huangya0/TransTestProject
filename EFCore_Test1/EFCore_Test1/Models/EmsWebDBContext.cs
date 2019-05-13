@@ -13,6 +13,7 @@ namespace EFCore_Test1.Models
         public EmsWebDBContext(DbContextOptions<EmsWebDBContext> options)
             : base(options)
         {
+            
         }
 
         public virtual DbSet<CommonAuthenControllerActions> CommonAuthenControllerActions { get; set; }

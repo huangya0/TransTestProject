@@ -2,11 +2,12 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+//using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting.Internal;
 
 namespace EMS.DataProvider.Common
 {
@@ -22,22 +23,27 @@ namespace EMS.DataProvider.Common
         /// <param name="sp">the sp entity</param>
         /// <returns></returns>
         /// <remarks></remarks>
-        public List<TResult> InvokeStoredProcedure<TParam, TResult>(TParam sp) where TParam : SPBase
-        {
-            string spName = DBMethod.GetSPName<TParam>();
-            SqlParameter[] paras = DBMethod.GetSPParameters(sp);
-            Database.CommandTimeout = 999;
-            List<TResult> list = Database.SqlQuery<TResult>(ParseSql(spName, paras), paras).ToList();
-            return list;
-        }
+        //public List<TResult> InvokeStoredProcedure<TParam, TResult>(TParam sp) where TParam : SPBase
+        //{
+        //    string spName = DBMethod.GetSPName<TParam>();
+        //    SqlParameter[] paras = DBMethod.GetSPParameters(sp);
+        //    //Database.CommandTimeout = 999;
+        //    Database.SetCommandTimeout(999);
+        //    //EF core不再支持单独执行sql并返回数据集，在这里将usp改成用linq或lambda表达式
+        //    List<TResult> list = Database.SqlQuery<TResult>(ParseSql(spName, paras), paras).ToList();
+            
+        //    return list;
+        //}
 
-        public List<TResult> InvokeStoredProcedure<TParam, TResult>() where TParam : SPBase
-        {
-            string spName = DBMethod.GetSPName<TParam>();
+        //public List<TResult> InvokeStoredProcedure<TParam, TResult>() where TParam : SPBase
+        //{
+        //    string spName = DBMethod.GetSPName<TParam>();
 
-            List<TResult> list = Database.SqlQuery<TResult>(ParseSql(spName, null)).ToList();
-            return list;
-        }
+        //    //EF core不再支持单独执行sql并返回数据集，在这里将usp改成用linq或lambda表达式
+            
+        //    List<TResult> list = Database.SqlQuery<TResult>(ParseSql(spName, null)).ToList();
+        //    return list;
+        //}
 
         /// <summary>
         /// Exec a SP without return
@@ -61,7 +67,7 @@ namespace EMS.DataProvider.Common
         /// <param name="spName"></param>
         /// <param name="paras"></param>
         /// <returns></returns>
-        private string ParseSql(string spName, SqlParameter[] paras)
+        protected string ParseSql(string spName, SqlParameter[] paras)
         {
             int length = 1;
             if (paras != null)
