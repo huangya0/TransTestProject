@@ -7,6 +7,7 @@ using System.Linq;
 using System.Configuration;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 
 namespace EMS.Utility.Web
 {
@@ -43,6 +44,8 @@ namespace EMS.Utility.Web
             {
                 //strConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings[name].ConnectionString;
                 strConnectionString = ConfigurationHelper.GetConnectionString(name);
+                //strConnectionString = ConfigurationExtensions.GetConnectionString(this.configuration, "Sqlserver");
+
             }
             catch
             {
