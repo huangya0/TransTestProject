@@ -4,4 +4,11 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EMS.DataProvider\EMS.DataProvider.csproj" />
+    <ProjectReference Include="..\EMS.GlobalResources\EMS.GlobalResources.csproj" />
+    <ProjectReference Include="..\EMS.Model\EMS.Model.csproj" />
+    <ProjectReference Include="..\EMS.Utility\EMS.Utility.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -16,6 +16,8 @@ namespace EMS.DataProvider.Contexts
 
     /// <summary>
     /// 注意ChildrenMenug与ParentMenu需在EF自动生成后手动改
+    /// https://www.cnblogs.com/chongyao/p/9068007.html
+    /// https://docs.microsoft.com/en-us/ef/core/
     /// </summary>
     public partial class EmsWebDB : BaseContext
     {
@@ -24,19 +26,9 @@ namespace EMS.DataProvider.Contexts
         {
         }
 
-        //TODO: 此方法还有问题，调用处要将Common_Authen_FunctionPermissionLevel转成VM.Common.PermissionLevel
-        public List<Common_Authen_FunctionPermissionLevel> InvokeStoredProcedure<TParam>(TParam sp) where TParam : SPBase
+        public EmsWebDB()
+            : base(new DbContextOptions<BaseContext>())
         {
-            string spName = DBMethod.GetSPName<TParam>();
-            SqlParameter[] paras = DBMethod.GetSPParameters(sp);
-            //Database.CommandTimeout = 999;
-            Database.SetCommandTimeout(999);
-            //EF core不再支持单独执行sql并返回数据集，在这里将usp改成用linq或lambda表达式
-            //List<TResult> list = Database.SqlQuery<TResult>(ParseSql(spName, paras), paras).ToList();
-            var list = Common_Authen_FunctionPermissionLevel.FromSql(ParseSql(spName, paras), paras).ToList();
-            
-
-            return list;
         }
 
         public virtual DbSet<Common_Authen_ControllerActions> Common_Authen_ControllerActions { get; set; }
@@ -55,14 +47,20 @@ namespace EMS.DataProvider.Contexts
         public virtual DbSet<tbl_Sample> tbl_Sample { get; set; }
         public virtual DbSet<vw_Authen_RolePermissions> vw_Authen_RolePermissions { get; set; }
 
+        public static string ConnectionString { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 //optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=EmsWebDB;Integrated Security=True");
-                string connectionStr = ConfigurationHelper.GetConnectionString("EmsWebDB");
-                optionsBuilder.UseSqlServer(connectionStr);
+                //"ConnectionStrings": {
+                //    "TestNetCoreEF": "Data Source={your sql server host address};Initial Catalog=TestNetCoreEF;user id={your username};password={your password};"
+                //},
+                //string connectionStr = ConfigurationHelper.GetConnectionString("EmsWebDB");
+                //optionsBuilder.UseSqlServer(connectionStr);
+                optionsBuilder.UseSqlServer(ConnectionString);
             }
         }
 

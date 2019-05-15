@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EMS.DataProvider.Contexts;
+using EMS.Model.Common;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -31,6 +34,15 @@ namespace AdminLteAspNetCoreMVC1
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            //方法1 ---- https://www.jb51.net/article/98948.htm
+            //EmsWebDB.ConnectionString = Configuration.GetConnectionString("EmsWebDB");
+            //方法2--https://stackoverflow.com/questions/39083372/how-to-read-connection-string-in-net-core
+            services.AddDbContext<EmsWebDB>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("EmsWebDB")));
+            //smtp读取--
+            //services.Configure<SmtpConfig>(Configuration.GetSection("Smtp"));
+            //Microsoft.Extensions.Options.IOptions<SmtpConfig> smtpConfig)
+            Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure<SmtpConfig>(services, Configuration.GetSection("Smtp"));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

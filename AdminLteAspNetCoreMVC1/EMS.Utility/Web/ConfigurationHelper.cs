@@ -22,13 +22,13 @@ namespace EMS.Utility.Web
         //    return netSmtpMailSection;
         //}
 
-        public static string GetAppSetting(string name)
+        public static string GetAppSetting(IConfiguration configuration, string name)
         {
             string strSetting = string.Empty;
-            if ( !string.IsNullOrEmpty(ConfigurationHelper.GetAppSetting(name)))
+            if ( !string.IsNullOrEmpty(configuration.GetValue<string>(name)))
             {
                 //ConfigurationHelper.GetAppSetting.
-                strSetting = ConfigurationHelper.GetAppSetting(name);
+                strSetting = configuration.GetValue<string>(name);
             }
             else
             {
@@ -37,13 +37,13 @@ namespace EMS.Utility.Web
             return strSetting;
         }
 
-        public static string GetConnectionString(string name)
+        public static string GetConnectionString(IConfiguration configuration, string name)
         {
             string strConnectionString = string.Empty;
             try
             {
                 //strConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings[name].ConnectionString;
-                strConnectionString = ConfigurationHelper.GetConnectionString(name);
+                strConnectionString = configuration.GetConnectionString(name);
                 //strConnectionString = ConfigurationExtensions.GetConnectionString(this.configuration, "Sqlserver");
 
             }
