@@ -13,6 +13,7 @@
 
 
   <ItemGroup>
+    <ProjectReference Include="..\EMS.BL\EMS.BL.csproj" />
     <ProjectReference Include="..\EMS.DataProvider\EMS.DataProvider.csproj" />
     <ProjectReference Include="..\EMS.Model\EMS.Model.csproj" />
   </ItemGroup>

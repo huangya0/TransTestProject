@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using EMS.DataProvider.Contexts;
@@ -17,9 +18,20 @@ namespace AdminLteAspNetCoreMVC1
 {
     public class Startup
     {
+        public const string Default_ConnectionName = "EmsWebDB";
+        public string ConnectionString = string.Empty;
+
+        public static bool IsApplicationStarted = false;
+
         public Startup(IConfiguration configuration)
         {
+            IsApplicationStarted = false;
+
             Configuration = configuration;
+
+            ConnectionString = Configuration.GetConnectionString(Default_ConnectionName);
+            //SqlDependency.Start(ConnectionString);
+            IsApplicationStarted = true;
         }
 
         public IConfiguration Configuration { get; }
@@ -35,14 +47,17 @@ namespace AdminLteAspNetCoreMVC1
             });
 
             //方法1 ---- https://www.jb51.net/article/98948.htm
-            //EmsWebDB.ConnectionString = Configuration.GetConnectionString("EmsWebDB");
+            EmsWebDB.ConnectionString = ConnectionString; // Configuration.GetConnectionString(ConnectionString);
             //方法2--https://stackoverflow.com/questions/39083372/how-to-read-connection-string-in-net-core
-            services.AddDbContext<EmsWebDB>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("EmsWebDB")));
+            //DbContext只用在BL层,若UI层要用,用以下注入方式,再在BaseController中GetService
+            //services.AddDbContext<EmsWebDB>(options => options.UseSqlServer(ConnectionString));
+            //services.AddSingleton<EmsWebDB>(new EmsWebDB(可以用构造传connection string));
+
             //smtp读取--
             //services.Configure<SmtpConfig>(Configuration.GetSection("Smtp"));
             //Microsoft.Extensions.Options.IOptions<SmtpConfig> smtpConfig)
             Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure<SmtpConfig>(services, Configuration.GetSection("Smtp"));
+
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -71,6 +86,8 @@ namespace AdminLteAspNetCoreMVC1
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
         }
+
     }
 }

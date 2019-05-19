@@ -47,7 +47,7 @@ namespace EMS.DataProvider.Contexts
         public virtual DbSet<tbl_Sample> tbl_Sample { get; set; }
         public virtual DbSet<vw_Authen_RolePermissions> vw_Authen_RolePermissions { get; set; }
 
-        public static string ConnectionString { get; set; }
+        public static string ConnectionString; // { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -399,6 +399,9 @@ namespace EMS.DataProvider.Contexts
 
                 entity.Property(e => e.UpdatedDate).HasColumnType("datetime");
             });
+
+            modelBuilder.Entity<vw_Authen_RolePermissions>()
+                .HasKey(p => new { p.RoleID, p.RoleName, p.Controller, p.ActionName, p.HasActionPermission });
 
             modelBuilder.Entity<vw_Authen_RolePermissions>()
                 .Property(e => e.Area)

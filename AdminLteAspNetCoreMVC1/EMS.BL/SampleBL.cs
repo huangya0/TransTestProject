@@ -21,6 +21,11 @@ namespace EMS.BL
         //public event MessageEventHandler SetMessage;
 
         private readonly EmsWebDB context;
+        public SampleBL(EmsWebDB emsWebDB)
+        {
+            context = emsWebDB;
+        }
+
         public SampleBL()
         {
             context = new EmsWebDB();
