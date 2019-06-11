@@ -14,8 +14,11 @@ namespace AdminLteAspNetCoreMVC1
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            host = CreateWebHostBuilder(args).Build();
+            host.Run();
         }
+
+        public static IWebHost host;
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)

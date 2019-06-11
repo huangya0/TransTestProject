@@ -5,11 +5,30 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AdminLteAspNetCoreMVC1.Models;
+using EMS.Model;
+using EMS.BL;
+using AdminLteAspNetCoreMVC1.Common;
+using EMS.DataProvider.Contexts;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore;
 
 namespace AdminLteAspNetCoreMVC1.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
+        //protected readonly EmsWebDB _emsWebDB;
+
+        //public HomeController(EmsWebDB emsWebDB)
+        //{
+        //    //this.HttpContext.Request.Host
+        //    IWebHost host = Program.host; //Program.BuildWebHost(null);
+        //    IServiceScope scope = host.Services.CreateScope();
+        //    var _dataContext = scope.ServiceProvider.GetService<EmsWebDB>();
+
+        //    _emsWebDB = _dataContext;
+        //}
+
         public IActionResult Index()
         {
             return View();
@@ -17,7 +36,15 @@ namespace AdminLteAspNetCoreMVC1.Controllers
 
         public IActionResult Privacy()
         {
-            return View();
+            //SampleItemModel sampleItemModel = (new SampleBL()).GetSampleList().Where(i => i.Id == 3).First();
+            SampleItemModel sampleItemModel = (new SampleBL()).GetSampleList().Where(i => i.Id == 3).First();
+            if (sampleItemModel == null)
+            {
+                //return HttpNotFound();
+            }
+            return View(sampleItemModel);
+
+            //return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
