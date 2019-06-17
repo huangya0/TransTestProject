@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -252,36 +253,194 @@ namespace ThreadConsole1
 
         //-----------------------------------------------------------
 
+        //static void Main(string[] args)
+        //{
+        //    Func<string, int> t = Go;
+        //    IAsyncResult result = t.BeginInvoke("test by zack", null, null);
+        //    //
+        //    // ... 这里可以执行其他并行的任务
+        //    //
+        //    Console.WriteLine(Caculate());
+
+        //    int len = t.EndInvoke(result);
+        //    Console.WriteLine("String lenth is： " + len);
+
+
+        //}
+
+        //static int Go(string messsage)
+        //{
+        //    Thread.Sleep(2000);
+        //    return messsage.Length;
+        //}
+
+        //static int Caculate()
+        //{
+        //    for (int i = 0; i < ushort.MaxValue; i++)
+        //    { }
+
+        //    Thread.Sleep(1000);
+        //    return ushort.MaxValue;
+        //}
+        //-------------------------------------------------------------
+
+        //static void Main(string[] args)
+        //{
+        //    Console.WriteLine("starting Main function---------------");
+        //    Thread.CurrentThread.Name = "Main Thread";
+        //    int result = Add(2);
+        //    Console.WriteLine($"Result is : {result.ToString()}");
+
+        //    for (int i = 1; i < 4; i++)
+        //    {
+        //        Thread.Sleep(TimeSpan.FromSeconds(1));
+        //        Console.WriteLine($"{Thread.CurrentThread.Name} started {i} seconds");
+
+        //    }
+        //    Console.WriteLine("end Main function-----readkey----------");
+        //    Console.ReadKey();
+        //}
+
+        //private static int Add(int num)
+        //{
+        //    if (Thread.CurrentThread.IsThreadPoolThread)
+        //    {
+        //        Thread.CurrentThread.Name = "Pool Thread";
+        //    }
+
+        //    Console.WriteLine("--------starting add function---------------");
+        //    int sum = 0;
+        //    for (int i = 1; i < num + 1; i++)
+        //    {
+        //        sum += i;
+        //        Thread.Sleep(TimeSpan.FromSeconds(1));
+        //        Console.WriteLine($"--------{Thread.CurrentThread.Name} started {i} seconds");
+        //    }
+
+        //    Console.WriteLine("--------end add function---------------");
+        //    return sum;
+
+        //}
+
+        //----------------------------------------------------
+        //static void Main(string[] args)
+        //{
+        //    Console.WriteLine("starting Main function---------------");
+        //    Thread.CurrentThread.Name = "Main Thread";
+        //    //方式一， 直执行
+        //    //int result = Add(2);
+
+        //    //方式二
+        //    //Task<int> task = Task.Factory.StartNew<int>(()=> {
+        //    //    return Add(2);
+        //    //});
+
+        //    ////方式三
+        //    Thread t = new Thread(() =>
+        //    {
+        //        int result = Add(2);
+        //        Console.WriteLine($"Result is : {result.ToString()}");
+        //    });
+
+        //    t.Start();
+
+
+        //    for (int i = 1; i < 4; i++)
+        //    {
+        //        Thread.Sleep(TimeSpan.FromSeconds(1));
+        //        Console.WriteLine($"{Thread.CurrentThread.Name} started {i} seconds");
+
+        //    }
+
+        //    //方式二
+        //    //int result = task.Result;
+        //    //Console.WriteLine($"Result is : {result.ToString()}");
+
+        //    Console.WriteLine("end Main function-----readkey----------");
+        //    Console.ReadKey();
+        //}
+
+        //private static int Add(int num)
+        //{
+        //    if (Thread.CurrentThread.IsThreadPoolThread)
+        //    {
+        //        Thread.CurrentThread.Name = "Pool Thread";
+        //    }
+
+        //    Console.WriteLine("--------starting add function---------------");
+        //    int sum = 0;
+        //    for (int i = 1; i < num + 1; i++)
+        //    {
+        //        sum += i;
+        //        Thread.Sleep(TimeSpan.FromSeconds(1));
+        //        Console.WriteLine($"--------{Thread.CurrentThread.Name} started {i} seconds");
+        //    }
+
+        //    Console.WriteLine("--------end add function---------------");
+        //    return sum;
+
+        //}
+
+        //--------------------------------------------------------------------------------------------------
+
         static void Main(string[] args)
         {
-            Func<string, int> t = Go;
-            IAsyncResult result = t.BeginInvoke("test by zack", null, null);
-            //
-            // ... 这里可以执行其他并行的任务
-            //
-            Console.WriteLine(Caculate());
 
-            int len = t.EndInvoke(result);
-            Console.WriteLine("String lenth is： " + len);
+            Func<int, int> addDelegate = Add;
 
-            
+            Console.WriteLine("starting Main function---------------");
+            Thread.CurrentThread.Name = "Main Thread";
+            string msg = "I am here";
+            //方法一，
+            //addDelegate.BeginInvoke(2, AddCallback, msg);
+            //方法二，
+            IAsyncResult result = addDelegate.BeginInvoke(2, null, msg);
+
+            for (int i = 1; i < 4; i++)
+            {
+                Thread.Sleep(TimeSpan.FromSeconds(1));
+                Console.WriteLine($"{Thread.CurrentThread.Name} started {i} seconds");
+
+            }
+
+            ////方法二，
+            int sum = addDelegate.EndInvoke(result);
+            Console.WriteLine($"Result is : {sum.ToString()}");
+
+            Console.WriteLine("end Main function-----readkey----------");
+            Console.ReadKey();
         }
 
-        static int Go(string messsage)
+        ////方法一，
+        //private static void AddCallback(IAsyncResult ar)
+        //{
+        //    var msg = ar.AsyncState;
+        //    var result = (AsyncResult)ar;
+        //    Func<int, int> myDelegate = (Func<int, int>)result.AsyncDelegate;
+        //    int sum = myDelegate.EndInvoke(ar);
+        //    Console.WriteLine($"Result is : {sum.ToString()}");
+        //}
+
+        private static int Add(int num)
         {
-            Thread.Sleep(2000);
-            return messsage.Length;
+            if (Thread.CurrentThread.IsThreadPoolThread)
+            {
+                Thread.CurrentThread.Name = "Pool Thread";
+            }
+
+            Console.WriteLine("--------starting add function---------------");
+            int sum = 0;
+            for (int i = 1; i < num + 1; i++)
+            {
+                sum += i;
+                Thread.Sleep(TimeSpan.FromSeconds(1));
+                Console.WriteLine($"--------{Thread.CurrentThread.Name} started {i} seconds");
+            }
+
+            Console.WriteLine("--------end add function---------------");
+            return sum;
+
         }
-
-        static int Caculate()
-        {
-            for (int i = 0; i < ushort.MaxValue; i++)
-            { }
-
-            Thread.Sleep(1000);
-            return ushort.MaxValue;
-        }
-
 
 
     }
