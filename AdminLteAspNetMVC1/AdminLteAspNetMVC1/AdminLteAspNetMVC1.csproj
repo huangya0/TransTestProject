@@ -689,6 +689,8 @@
     <Content Include="AdminLTE241\bower_components\chart.js\bower.json" />
     <Content Include="AdminLTE241\bower_components\chart.js\Chart.js" />
     <Content Include="AdminLTE241\bower_components\chart.js\Chart.min.js" />
+    <Content Include="AdminLTE241\bower_components\chart.js\Chart.roundedBarCharts.js" />
+    <Content Include="AdminLTE241\bower_components\chart.js\Chart.roundedBarCharts.min.js" />
     <Content Include="AdminLTE241\bower_components\chart.js\CONTRIBUTING.md" />
     <Content Include="AdminLTE241\bower_components\chart.js\docs\00-Getting-Started.md" />
     <Content Include="AdminLTE241\bower_components\chart.js\docs\01-Line-Chart.md" />
@@ -7132,6 +7134,7 @@
     <Content Include="AdminLTE241\package-lock.json" />
     <Content Include="AdminLTE241\package.json" />
     <Content Include="AdminLTE241\pages\calendar.html" />
+    <Content Include="AdminLTE241\pages\charts\ems1.html" />
     <Content Include="AdminLTE241\pages\charts\chartjs.html" />
     <Content Include="AdminLTE241\pages\charts\flot.html" />
     <Content Include="AdminLTE241\pages\charts\inline.html" />
