@@ -907,7 +907,7 @@
     <!-- Bootstrap 3.3.7 -->
     <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- ChartJS -->
-<script src="../../bower_components/chart.js/Chart.js"></script>
+<script src="../../bower_components/chart.js/Chart_2Y.js"></script>
     <!-- FastClick -->
     <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
     <!-- AdminLTE App -->
@@ -947,32 +947,7 @@
                 ]
             }
 
-            var areaChartData2 = {
-                labels: ['大港站', '五峰山站', '北山站', '建山站', '丹巴站', '三联站', '长旺站', '断坝站'],
-                datasets: [
-                    {
-                        label: '压差',
-                        fillColor: 'rgba(22, 43, 255, 1)',
-                        strokeColor: 'rgba(22, 43, 255, 1)',
-                        pointColor: 'rgba(22, 43, 255, 1)',
-                        pointStrokeColor: '#c1c7d1',
-                        pointHighlightFill: '#fff',
-                        pointHighlightStroke: 'rgba(220,220,220,1)',
-                        data: [65, 59, 80, 81, 56, 55, 40, 50]
-                    },
-                    {
-                        label: '温差',
-                        fillColor: 'rgba(223,90,173,0.9)',
-                        strokeColor: 'rgba(223,90,173,0.9)',
-                        pointColor: 'rgba(223,90,173,0.9)',
-                        pointStrokeColor: 'rgba(60,141,188,1)',
-                        pointHighlightFill: '#fff',
-                        pointHighlightStroke: 'rgba(60,141,188,1)',
-                        data: [28, 48, 40, 19, 86, 27, 90, 80]
-                    }
-                ]
-            }
-
+            
             var areaChartOptions = {
                 //Boolean - If we should show the scale at all
                 showScale: true,
@@ -1020,21 +995,21 @@
             //--------------
             //var lineChartCanvas          = $('#lineChart').get(0).getContext('2d')
             //var lineChart                = new Chart(lineChartCanvas)
-            var lineChartOptions = areaChartOptions
-            lineChartOptions.datasetFill = false
+            var lineChartOptions = areaChartOptions;
+            lineChartOptions.datasetFill = false;
             //lineChart.Line(areaChartData, lineChartOptions)
 
             
             //-------------
             //- BAR CHART -
             //-------------
-            var barChartCanvas = $('#barChart').get(0).getContext('2d')
-            var barChart = new Chart(barChartCanvas)
-            var barChartData = areaChartData
-            barChartData.datasets[0].fillColor = 'rgba(0, 128, 253, 1)'
-            barChartData.datasets[0].strokeColor = 'rgba(0, 128, 253, 1)'
-                barChartData.datasets[0].pointColor = 'rgba(0, 128, 253, 1)'
-            var barChartOptions = {
+            var barChartCanvas = $('#barChart').get(0).getContext('2d');
+            var barChart = new Chart(barChartCanvas);
+            var barChartData = areaChartData;
+            barChartData.datasets[0].fillColor = 'rgba(0, 128, 253, 1)';
+            barChartData.datasets[0].strokeColor = 'rgba(0, 128, 253, 1)';
+            barChartData.datasets[0].pointColor = 'rgba(0, 128, 253, 1)';
+            var barChartOptions = { 
                 //Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
                 scaleBeginAtZero: true,
                 //Boolean - Whether grid lines are shown across the chart
@@ -1062,17 +1037,44 @@
                 maintainAspectRatio: true
             }
 
-            barChartOptions.datasetFill = false
-            var bara = barChart.Bar(barChartData, barChartOptions)
+            barChartOptions.datasetFill = false;
+            var bara = barChart.Bar(barChartData, barChartOptions);
             var legend1 = document.getElementById('legend1');
             legend1.innerHTML = bara.generateLegend();
+
+            var areaChartData2 = {
+                labels: ['大港站', '五峰山站', '北山站', '建山站', '丹巴站', '三联站', '长旺站', '断坝站'],
+                scaleUse2Y: true,
+                datasets: [
+                    {
+                        label: '压差',
+                        fillColor: 'rgba(22, 43, 255, 1)',
+                        strokeColor: 'rgba(22, 43, 255, 1)',
+                        pointColor: 'rgba(22, 43, 255, 1)',
+                        pointStrokeColor: '#c1c7d1',
+                        pointHighlightFill: '#fff',
+                        pointHighlightStroke: 'rgba(220,220,220,1)',
+                        data: [65, 59, 80, 81, 56, 55, 40, 50]
+                    },
+                    {
+                        label: '温差',
+                        fillColor: 'rgba(223,90,173,0.9)',
+                        strokeColor: 'rgba(223,90,173,0.9)',
+                        pointColor: 'rgba(223,90,173,0.9)',
+                        pointStrokeColor: 'rgba(60,141,188,1)',
+                        pointHighlightFill: '#fff',
+                        pointHighlightStroke: 'rgba(60,141,188,1)',
+                        data: [28, 48, 40, 19, 86, 27, 90, 150]
+                    }
+                ]
+            }
 
             //-------------
             //- BAR CHART2 -
             //-------------
-            var barChartCanvas2 = $('#barChart2').get(0).getContext('2d')
-            var barChart2 = new Chart(barChartCanvas2)
-            var barChartData2 = areaChartData2
+            var barChartCanvas2 = $('#barChart2').get(0).getContext('2d');
+            var barChart2 = new Chart(barChartCanvas2);
+            var barChartData2 = areaChartData2;
             //barChartData2.datasets[1].fillColor = 'rgba(187,48,4,0.9)'
             //barChartData2.datasets[1].strokeColor = 'rgba(187,48,4,0.9)'
             //barChartData2.datasets[1].pointColor = 'rgba(187,48,4,0.9)'
@@ -1110,6 +1112,16 @@
             legend2.innerHTML = barb.generateLegend();
             //双Y轴--https://github.com/chartjs/Chart.js/pull/1355
             //zack 20190626: 各电站单体电大差值--柱状图要双Y轴需升级到2.7的ChartJS
+
+            //现在采用的方案是 https://github.com/brvier/Chart.js/tree/9edcc71f97361bb45c8fe93d07acb1917c2b4807
+
+
+
+            //var ctx = document.getElementById("barChart2").getContext("2d");
+            //var barb = new Chart(ctx).Bar(barChartData, barChartOptions2);
+            //var legend2 = document.getElementById('legend2');
+            //legend2.innerHTML = barb.generateLegend();
+
         })
     </script>
 </body>

@@ -691,6 +691,8 @@
     <Content Include="AdminLTE241\bower_components\chart.js\Chart.min.js" />
     <Content Include="AdminLTE241\bower_components\chart.js\Chart.roundedBarCharts.js" />
     <Content Include="AdminLTE241\bower_components\chart.js\Chart.roundedBarCharts.min.js" />
+    <Content Include="AdminLTE241\bower_components\chart.js\Chart_2Y.js" />
+    <Content Include="AdminLTE241\bower_components\chart.js\Chart_2Y.min.js" />
     <Content Include="AdminLTE241\bower_components\chart.js\CONTRIBUTING.md" />
     <Content Include="AdminLTE241\bower_components\chart.js\docs\00-Getting-Started.md" />
     <Content Include="AdminLTE241\bower_components\chart.js\docs\01-Line-Chart.md" />
