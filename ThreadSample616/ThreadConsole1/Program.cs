@@ -383,65 +383,349 @@ namespace ThreadConsole1
 
         //--------------------------------------------------------------------------------------------------
 
-        static void Main(string[] args)
-        {
-
-            Func<int, int> addDelegate = Add;
-
-            Console.WriteLine("starting Main function---------------");
-            Thread.CurrentThread.Name = "Main Thread";
-            string msg = "I am here";
-            //方法一，
-            //addDelegate.BeginInvoke(2, AddCallback, msg);
-            //方法二，
-            IAsyncResult result = addDelegate.BeginInvoke(2, null, msg);
-
-            for (int i = 1; i < 4; i++)
-            {
-                Thread.Sleep(TimeSpan.FromSeconds(1));
-                Console.WriteLine($"{Thread.CurrentThread.Name} started {i} seconds");
-
-            }
-
-            ////方法二，
-            int sum = addDelegate.EndInvoke(result);
-            Console.WriteLine($"Result is : {sum.ToString()}");
-
-            Console.WriteLine("end Main function-----readkey----------");
-            Console.ReadKey();
-        }
-
-        ////方法一，
-        //private static void AddCallback(IAsyncResult ar)
+        //static void Main(string[] args)
         //{
-        //    var msg = ar.AsyncState;
-        //    var result = (AsyncResult)ar;
-        //    Func<int, int> myDelegate = (Func<int, int>)result.AsyncDelegate;
-        //    int sum = myDelegate.EndInvoke(ar);
+
+        //    Func<int, int> addDelegate = Add;
+
+        //    Console.WriteLine("starting Main function---------------");
+        //    Thread.CurrentThread.Name = "Main Thread";
+        //    string msg = "I am here";
+        //    //方法一，
+        //    //addDelegate.BeginInvoke(2, AddCallback, msg);
+        //    //方法二，
+        //    IAsyncResult result = addDelegate.BeginInvoke(2, null, msg);
+
+        //    for (int i = 1; i < 4; i++)
+        //    {
+        //        Thread.Sleep(TimeSpan.FromSeconds(1));
+        //        Console.WriteLine($"{Thread.CurrentThread.Name} started {i} seconds");
+
+        //    }
+
+        //    ////方法二，
+        //    int sum = addDelegate.EndInvoke(result);
         //    Console.WriteLine($"Result is : {sum.ToString()}");
+
+        //    Console.WriteLine("end Main function-----readkey----------");
+        //    Console.ReadKey();
         //}
 
-        private static int Add(int num)
-        {
-            if (Thread.CurrentThread.IsThreadPoolThread)
-            {
-                Thread.CurrentThread.Name = "Pool Thread";
-            }
+        //////方法一，
+        ////private static void AddCallback(IAsyncResult ar)
+        ////{
+        ////    var msg = ar.AsyncState;
+        ////    var result = (AsyncResult)ar;
+        ////    Func<int, int> myDelegate = (Func<int, int>)result.AsyncDelegate;
+        ////    int sum = myDelegate.EndInvoke(ar);
+        ////    Console.WriteLine($"Result is : {sum.ToString()}");
+        ////}
 
-            Console.WriteLine("--------starting add function---------------");
-            int sum = 0;
-            for (int i = 1; i < num + 1; i++)
-            {
-                sum += i;
-                Thread.Sleep(TimeSpan.FromSeconds(1));
-                Console.WriteLine($"--------{Thread.CurrentThread.Name} started {i} seconds");
-            }
+        //private static int Add(int num)
+        //{
+        //    if (Thread.CurrentThread.IsThreadPoolThread)
+        //    {
+        //        Thread.CurrentThread.Name = "Pool Thread";
+        //    }
 
-            Console.WriteLine("--------end add function---------------");
-            return sum;
+        //    Console.WriteLine("--------starting add function---------------");
+        //    int sum = 0;
+        //    for (int i = 1; i < num + 1; i++)
+        //    {
+        //        sum += i;
+        //        Thread.Sleep(TimeSpan.FromSeconds(1));
+        //        Console.WriteLine($"--------{Thread.CurrentThread.Name} started {i} seconds");
+        //    }
 
-        }
+        //    Console.WriteLine("--------end add function---------------");
+        //    return sum;
 
+        //}
+
+        //==================================================================
+
+        //static void Main(string[] args)
+        //{
+        //    Task task1 = new Task(() =>
+        //    {
+        //        Thread.Sleep(500);
+        //        Console.WriteLine("线程1执行完毕！");
+        //    });
+        //    task1.Start();
+        //    Task task2 = new Task(() =>
+        //    {
+        //        Thread.Sleep(1000);
+        //        Console.WriteLine("线程2执行完毕！");
+        //    });
+        //    task2.Start();
+        //    ////task1，task2执行完了后执行后续操作
+        //    //Task.WhenAll(task1, task2).ContinueWith((t) =>
+        //    //{
+        //    //    Thread.Sleep(100);
+        //    //    Console.WriteLine("执行后续操作完毕！");
+        //    //});
+
+        //    Task.Factory.ContinueWhenAll(new Task[] { task1, task2 }, (t)=> {
+        //        Thread.Sleep(1000);
+        //        Console.WriteLine("执行后续操作完毕！");
+        //    });
+
+        //    Console.WriteLine("主线程执行完毕！");
+        //    Console.ReadKey();
+        //}
+        //----------------------------------------------------------------------
+
+        //static void Main(string[] args)
+        //{
+        //    bool isStop = false;
+        //    int index = 0;
+        //    Thread t = new Thread(()=> {
+        //        while (!isStop)
+        //        {
+        //            Thread.Sleep(1000);
+        //            Console.WriteLine($"第{++index}次执行，线程运行中。。。。");
+        //        }
+        //        Console.WriteLine("停止执行");
+        //    });
+        //    t.Start();
+
+        //    Thread.Sleep(6000);
+        //    isStop = true;
+        //    Console.WriteLine("主线程完毕");
+        //    Console.ReadKey();
+        //}
+        //------------------------------------------------------------------
+
+        //static void Main(string[] args)
+        //{
+        //    //CancellationTokenSource source = new CancellationTokenSource();
+        //    bool isStop = false;
+        //    int index = 0;
+        //    //开启一个task执行任务
+        //    Task task1 = new Task(() =>
+        //    {
+        //        //while (!source.IsCancellationRequested)
+        //        while(!isStop)
+        //        {
+        //            Thread.Sleep(1000);
+        //            Console.WriteLine($"第{++index}次执行，线程运行中...");
+        //        }
+        //        Console.WriteLine("停止执行");
+        //    });
+        //    task1.Start();
+        //    //五秒后取消任务执行
+        //    Thread.Sleep(5000);
+        //    //source.Cancel()方法请求取消任务，IsCancellationRequested会变成true
+        //    //source.Cancel();
+        //    isStop = true;
+        //    Console.WriteLine("主线程完毕");
+        //    Console.ReadKey();
+        //}
+
+        //-----------------------------------------------------
+        //static void Main(string[] args)
+        //{
+        //    CancellationTokenSource source = new CancellationTokenSource();
+        //    //注册任务取消的事件
+        //    source.Token.Register(() =>
+        //    {
+        //        Console.WriteLine("任务被取消后执行xx操作！");
+        //    });
+
+        //    int index = 0;
+        //    //开启一个task执行任务
+        //    Task task1 = new Task(() =>
+        //    {
+        //        while (!source.IsCancellationRequested)
+        //        {
+        //            Thread.Sleep(1000);
+        //            Console.WriteLine($"第{++index}次执行，线程运行中...");
+        //        }
+        //    });
+        //    task1.Start();
+        //    //延时取消，效果等同于Thread.Sleep(5000);source.Cancel();
+        //    source.CancelAfter(5000);
+        //    Console.ReadKey();
+        //}
+        //------------------------------------------------------
+
+        //static void Main(string[] args)
+        //{
+        //    for (int i = 1; i <= 10; i++)
+        //    {
+        //        //ThreadPool执行任务
+        //        ThreadPool.QueueUserWorkItem(new WaitCallback((obj) => {
+        //            Console.WriteLine($"第{obj}个执行任务");
+        //        }), i);
+        //    }
+        //    Console.ReadKey();
+        //}
+        //-------------------------------------------------------------
+
+        //static void Main(string[] args)
+        //{
+        //    //1.new方式实例化一个Task，需要通过Start方法启动
+        //    Task task = new Task(() =>
+        //    {
+        //        Thread.Sleep(100);
+        //        Console.WriteLine($"hello, task1的线程ID为{Thread.CurrentThread.ManagedThreadId}");
+        //    });
+        //    task.Start();
+
+        //    //2.Task.Factory.StartNew(Action action)创建和启动一个Task
+        //    Task task2 = Task.Factory.StartNew(() =>
+        //    {
+        //        Thread.Sleep(100);
+        //        Console.WriteLine($"hello, task2的线程ID为{ Thread.CurrentThread.ManagedThreadId}");
+        //    });
+
+        //    //3.Task.Run(Action action)将任务放在线程池队列，返回并启动一个Task
+        //    Task task3 = Task.Run(() =>
+        //    {
+        //        Thread.Sleep(100);
+        //        Console.WriteLine($"hello, task3的线程ID为{ Thread.CurrentThread.ManagedThreadId}");
+        //    });
+        //    Console.WriteLine("执行主线程！");
+        //    Console.ReadKey();
+        //}
+
+        //-----------------------------------------
+
+        //static void Main(string[] args)
+        //{
+        //    ////1.new方式实例化一个Task，需要通过Start方法启动
+        //    Task<string> task = new Task<string>(() =>
+        //    {
+        //        return $"hello, task1的ID为{Thread.CurrentThread.ManagedThreadId}";
+        //    });
+        //    task.Start();
+
+        //    ////2.Task.Factory.StartNew(Func func)创建和启动一个Task
+        //    Task<string> task2 = Task.Factory.StartNew<string>(() =>
+        //    {
+        //        return $"hello, task2的ID为{ Thread.CurrentThread.ManagedThreadId}";
+        //    });
+
+        //    ////3.Task.Run(Func func)将任务放在线程池队列，返回并启动一个Task
+        //    Task<string> task3 = Task.Run<string>(() =>
+        //    {
+        //        return $"hello, task3的ID为{ Thread.CurrentThread.ManagedThreadId}";
+        //    });
+
+        //    Console.WriteLine("执行主线程！");
+        //    Console.WriteLine(task.Result);
+
+        //    Console.WriteLine(task3.Result);
+        //    Console.WriteLine(task2.Result);
+        //    Console.ReadKey();
+        //}
+        //-----------------------------------------------------
+
+        //static void Main(string[] args)
+        //{
+        //    Task task = new Task(() =>
+        //    {
+        //        Thread.Sleep(100);
+        //        Console.WriteLine("执行Task结束!");
+        //    });
+        //    //同步执行，task会阻塞主线程
+        //    task.RunSynchronously();
+        //    Console.WriteLine("执行主线程结束！");
+        //    Console.ReadKey();
+        //}
+        //-----------------------------------------------------
+
+        //static void Main(string[] args)
+        //{
+        //    Thread th1 = new Thread(() => {
+        //        Thread.Sleep(500);
+        //        Console.WriteLine("线程1执行完毕！");
+        //    });
+        //    th1.Start();
+        //    Thread th2 = new Thread(() => {
+        //        Thread.Sleep(1000);
+        //        Console.WriteLine("线程2执行完毕！");
+        //    });
+        //    th2.Start();
+        //    //阻塞主线程
+        //    th1.Join();
+        //    th2.Join();
+        //    Console.WriteLine("主线程执行完毕！");
+        //    Console.ReadKey();
+        //}
+
+        //-----------------------------------------------------
+
+        //static void Main(string[] args)
+        //{
+        //    Task task1 = new Task(() => {
+        //        Thread.Sleep(500);
+        //        Console.WriteLine("线程1执行完毕！");
+        //    });
+        //    task1.Start();
+        //    Task task2 = new Task(() => {
+        //        Thread.Sleep(1000);
+        //        Console.WriteLine("线程2执行完毕！");
+        //    });
+        //    task2.Start();
+        //    //阻塞主线程。task1,task2都执行完毕再执行主线程
+        //    //执行【task1.Wait();task2.Wait();】可以实现相同功能
+        //    Task.WaitAll(new Task[] { task1, task2 });
+        //    Console.WriteLine("主线程执行完毕！");
+        //    Console.ReadKey();
+        //}
+        //-----------------------------------------------------
+
+        //static void Main(string[] args)
+        //{
+        //    Task task1 = new Task(() => {
+        //        Thread.Sleep(500);
+        //        Console.WriteLine("线程1执行完毕！");
+        //    });
+        //    task1.Start();
+        //    Task task2 = new Task(() => {
+        //        Thread.Sleep(1000);
+        //        Console.WriteLine("线程2执行完毕！");
+        //    });
+        //    task2.Start();
+        //    //task1，task2执行完了后执行后续操作
+        //    Task.WhenAll(task1, task2).ContinueWith((t) => {
+        //        Thread.Sleep(100);
+        //        Console.WriteLine("执行后续操作完毕！");
+        //    });
+
+        //    Console.WriteLine("主线程执行完毕！");
+        //    Console.ReadKey();
+        //}
+
+        //-----------------------------------------------------
+
+        //static void Main(string[] args)
+        //{
+        //    CancellationTokenSource source = new CancellationTokenSource();
+        //    //注册任务取消的事件
+        //    source.Token.Register(() =>
+        //    {
+        //        Console.WriteLine("任务被取消后执行xx操作！");
+        //    });
+
+        //    int index = 0;
+        //    //开启一个task执行任务
+        //    Task task1 = new Task(() =>
+        //    {
+        //        while (!source.IsCancellationRequested)
+        //        {
+        //            Thread.Sleep(1000);
+        //            Console.WriteLine($"第{++index}次执行，线程运行中...");
+        //        }
+        //    });
+        //    task1.Start();
+        //    //延时取消，效果等同于Thread.Sleep(5000);source.Cancel();
+        //    source.CancelAfter(5000);
+        //    Console.ReadKey();
+        //}
+
+        //-----------------------------------------------------
 
     }
 }
