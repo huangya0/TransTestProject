@@ -13,6 +13,7 @@ namespace EMS.DataProvider.Contexts
     using EMS.DataProvider.Models.Common;
     using Microsoft.EntityFrameworkCore;
     using EMS.Utility.Web;
+    using Microsoft.Extensions.Configuration;
 
     /// <summary>
     /// 注意ChildrenMenug与ParentMenu需在EF自动生成后手动改
