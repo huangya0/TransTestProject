@@ -127,3 +127,7 @@
 /ThreadSample616/DeadLoopConsoleApp1/obj/Debug
 /ThreadSample616/ParallelConsoleApp1/bin/Debug
 /ThreadSample616/ParallelConsoleApp1/obj/Debug
+/VueSample1/.vs
+/VueSample1/VueSample1/bin/Debug/netcoreapp2.2
+/VueSample1/VueSample1/obj
+/VueSample1/VueSample1/node_modules
