@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        li {
+            list-style: none;
+            border-color:black;
+            border: outset;
+            
+        }
+
+        .tabbox {
+            display: -webkit-flex;
+            display: flex;
+        }
+
+        .tabli {
+            width: 200px;
+            background: lightblue;
+            height: 34px;
+            line-height: 34px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .indexKouwieSpan {
+            width: 200px;
+            background: red;
+            height: 34px;
+            line-height: 34px;
+            align-items: center;
+            text-align: center;
+        }
+
+        img {
+            transform: scale(1); /*图片原始大小1倍*/
+            transition: all ease 0.5s;
+        }
+        /*图片放大所用时间*/
+        img.scale {
+            transform: scale(2); /*图片需要放大2倍*/
+            position: relative; /*相对定位，是相对于前面的容器定位的*/
+            z-index: 100;
+        }
+        /*属性设置元素的堆叠顺序,保证图片放大后处于最上层*/
+
+        
+    </style>
+</head>
+<body>
+    <div id="app">
+        <ul v-bind:class='{tabbox:ulName}'>
+            <li v-for='(item,index) in items'
+                v-bind::key="item.id"
+                v-bind:class='{act:index==num,tabli:liName}'
+                v-on:click='tab(index)'>{{item.message}}</li>
+        </ul>
+        <ul>
+            <li v-for='(tab,index) in tabBox'
+                v-bind::key="tab.id"
+                v-show='index==num'>{{tab.message1}}</li>
+        </ul>
+
+        <div class="weui-mask">
+            <div class="guigeBox">
+                <p class="guigeTitle">{{guigeName}}</p>
+                <p class="guigeP guigeP01">规格</p>
+                <div class="indexGuiGe">
+                    <span v-for="value,index in guigeList" v-on:click="guige(index)" v-bind:class="{indexKouwieSpan:index==guigeSpan}">{{value.guige_name}}</span>
+                </div>
+                <p class="guigeP">口味</p>
+                <div class="indexKouwie">
+                    <span v-for="value,index in kouweiList" v-on:click="kouwei(index)" v-bind:class="{indexKouwieSpan:index==kouweiSpan}">{{value.guige_name}}</span>
+                </div>
+            </div>
+        </div>
+
+        <img :class="{scale:imgIstrue[0]}" src="http://www.baidu.com/img/bd_logo.png" style="width: 150px" @click="imgScale(0)">
+
+       
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                items: [
+                    { message: 1 },
+                    { message: 2 },
+                    { message: 3 }
+                ],
+                num: 0,
+                liName: true,
+                ulName: true,
+                tabBox: [
+                    { message1: '让我一个人' },
+                    { message1: '我们是同类' },
+                    { message1: '让我几个人醉' },
+                ],
+                guigeName: "test2",
+                guigeSpan: "-1", //控制点亮状态 -1为默认不点亮
+                kouweiSpan: "-1", //控制点亮状态 
+                guigeList: [{ guige_name: "2兩" }, { guige_name: "3兩" }],
+                kouweiList: [{ guige_name: "麻la" }, { guige_name: "清汤" }],
+                imgIstrue: []           /*定义数组*/
+
+            },
+            methods: {
+                tab: function (index) {
+                    console.log(index)
+                    this.num = index;
+                },
+                guige: function (index) { //当点击时候点亮，同级的span标签删除Class
+                    this.guigeSpan = index;
+                },
+                kouwei: function (index) {
+                    this.kouweiSpan = index;
+                },
+
+                getData: function () {   /*这个方法是我自己定义的，作用：为了拿到后台数据*/
+                    var row = 10;      /*这个是后台拿到的数据条数，可以根据length获取*/
+                    for (var i = 0; i < row; i++) {
+                        vm.imgIstrue[i] = false;    /*初始化为false*/
+                    }
+                },
+                imgScale: function (index) {                     /*这个方法是为了标识改变被点击图片的状态*/
+                    var isTrue = this.imgIstrue[index];           /*获取被点击元素当前的值  false或true*/
+                    this.imgIstrue.forEach(function (val, row) {
+                        vm.imgIstrue.splice(row, 1, false)        /*刷新数组，将数组所有值设置为false，即图片原始状态*/
+                    })
+                    this.imgIstrue.splice(index, 1, !isTrue)         /*将被点击数组元素的值反转   用于记录状态的改变*/
+                }
+
+            },
+            mounted: function () {
+                this.getData();
+            },
+        });
+
+    </script>
+</body>
+</html>

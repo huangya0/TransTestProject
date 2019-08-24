@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style type="text/css">
+
+    table {
+        width: 1200px;
+    }
+
+        table th {
+            width: 100px
+        }
+
+        table td {
+            width: 200px;
+            text-align: center;
+        }
+
+    a {
+        text-decoration: none;
+        color: black
+    }
+
+    span {
+        font-size: 20px;
+        margin: 10px 10px
+    }
+
+    strong {
+        border: 1px solid;
+    }
+
+    .checkPro {
+        background-color: gray;
+    }
+
+    .leftConent {
+        float: left;
+    }
+
+    .rightConent {
+        float: right;
+    }
+</style>
+<script src="vue.js"></script>
+<body>
+    <div id="test">
+        
+    </div>
+</body>
+<script>
+    
+    Vue.component('example', {
+        template: '<span>{{ message }}</span>',
+        data: function () {
+            return {
+                message: '没有更新'
+            }
+        },
+        methods: {
+            updateMessage: function () {
+                this.message = '更新完成'
+                console.log(this.$el.textContent) // => '没有更新'
+                this.$nextTick(function () {
+                    console.log(this.$el.textContent) // => '更新完成'
+                })
+            }
+        }
+    })
+
+</script>
+</html>
