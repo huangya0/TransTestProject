@@ -75,6 +75,7 @@ namespace TestAdoDotNetConsole1
                     }
                     Stopwatch stopwatch2 = new Stopwatch();
                     stopwatch2.Start(); //  开
+                    var ds = new DataSet();
                     DataTable dt = new DataTable();
                     var selectComtText = "select * from [dbo].[Cube]";
                     using (var adapter = new SqlDataAdapter(selectComtText, con))
@@ -95,7 +96,9 @@ namespace TestAdoDotNetConsole1
                         SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
                         adapter.InsertCommand = builder.GetInsertCommand();
 
-                        adapter.Fill(dt);
+                        //adapter.Fill(dt);
+                        adapter.Fill(ds);
+                        dt = ds.Tables[0]; //测试dataset在dot net core下是否可用
 
                         DataRow newRow;
                         for (int h = 0; h < 10000; h++)

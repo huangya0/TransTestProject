@@ -78,5 +78,11 @@ namespace DevExpressControlsSample1
             string fileName = ((KeyValuePair<string, string>) this.gridViewFiles.GetFocusedRow()).Key;
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 frm = new Form2();
+            frm.ShowDialog();
+        }
     }
 }

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Centos7 mosquitto test</title>
+    <script src="Js/jquery-3.3.1.js"></script>
+    <script src="Js/mqttws31.js"></script>
+
+    <script>
+
+        //debugger; //订阅多个主题
+        var topicArray = [];
+        var topic = '/World2';
+        topicArray.push(topic);
+        topicArray.push('/World3');
+
+        function onMessageArrived(message) {
+            //不同主题用message.destinationName区分
+            s = "{time:" + new Date().Format("yyyy-MM-dd hh:mm:ss") + ", onMessageArrived()}";
+            console.log(s);
+            console.log("收到消息:" + message.payloadString);
+            //处理解释数据，例如json
+            //------------
+        }
+
+        function send() {
+            //mqttClient.isConnected.length > 0
+            if (mqttClient.isConnected.call()) {
+                var s = document.getElementById("msg").value;
+                if (s) {
+                    //debugger;
+                    var message = new Paho.MQTT.Message(s);
+                    message.destinationName = topicArray[0];
+                    mqttClient.send(message);
+                    console.log("发送消息:" + message.payloadString);
+                }
+            } else {
+                console.log("客户端未连接");
+            }
+        }
+
+        var count = 0;
+        //循环发送
+        function start() {
+            window.tester = window.setInterval(function () {
+                if (mqttClient.isConnected) {
+                    var s = "{time:" + new Date().Format("yyyy-MM-dd hh:mm:ss") + ", content:" + (count++) +
+                        ", from: web console}";
+                    var message = new Paho.MQTT.Message(s);
+                    message.destinationName = topicArray[0];
+                    mqttClient.send(message);
+                }
+            }, 1000);
+        }
+
+        function stop() {
+            window.clearInterval(window.tester);
+        }
+
+
+
+        /**/
+    </script>
+
+    <script src="Js/ems-mqtt.js"></script>
+</head>
+
+<body>
+    <input type="text" id="msg" />
+    <input type="button" value="Send" onclick="send()" />
+    <input type="button" value="Start" onclick="start()" />
+    <input type="button" value="Stop" onclick="stop()" />
+</body>
+</html>
