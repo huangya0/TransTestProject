@@ -58,7 +58,7 @@ namespace AdminLteAspNetMVC1.Controllers
                     else
                     {
                         UserHelper.WriteLoginCookie(userItem);
-                        returnUrl = string.IsNullOrEmpty(returnUrl) ? "/" : returnUrl;
+                        returnUrl = string.IsNullOrEmpty(returnUrl) ? request.ApplicationPath : returnUrl;
                         return Redirect(returnUrl);
                     }
                 }
