@@ -58,7 +58,6 @@ namespace AdminLteAspNetCoreMVC1
             //Microsoft.Extensions.Options.IOptions<SmtpConfig> smtpConfig)
             Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure<SmtpConfig>(services, Configuration.GetSection("Smtp"));
 
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

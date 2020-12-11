@@ -32,7 +32,7 @@
 
         let _self=this;
 
-        axios.get('https://localhost:44392/api/login/login/user1/pwd1')
+        axios.get('http://192.168.2.31:5000/api/login/login/user1/pwd1')
 
              .then(function (response) {
 
