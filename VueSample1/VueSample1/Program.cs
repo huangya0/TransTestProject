@@ -20,6 +20,6 @@ namespace VueSample1
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-            .UseUrls("http://*:5000");
+            .UseUrls("http://*:8089");
     }
 }
