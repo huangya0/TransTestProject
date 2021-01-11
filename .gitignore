@@ -138,3 +138,15 @@
 /EmqttdSample1/.vs/config
 /BatteryTester_20190902.zip
 /VueSample1/VueSample1/bin/Release/netcoreapp2.2
+/AsyncAwaitDemo/.vs/AsyncAwaitDemo/v16
+/AsyncAwaitDemo/AsyncAwaitDemo/bin/Debug
+/AsyncAwaitDemo/AsyncAwaitDemo/obj/Debug
+/TensorflowDemo/.vs/TensorflowDemo/v16
+/TensorflowDemo/ExampleInceptionInference/bin/Debug
+/TensorflowDemo/ExampleInceptionInference/obj/Debug
+/TensorflowDemo/MicrosoftMLDemo/bin/Debug
+/TensorflowDemo/MicrosoftMLDemo/obj/Debug
+/TensorflowDemo/packages
+/TensorflowDemo/TensorflowDemo/bin/Debug/libtensorflow.dll
+/TensorflowDemo/TensorflowDemo/bin/Debug
+/TensorflowDemo/TensorflowDemo/obj/Debug
