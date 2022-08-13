@@ -1,0 +1,52 @@
+﻿syntax = "proto3"; //指定版本
+// 定义命名空间
+option csharp_namespace = "StockServer";
+// 指定包名，避免冲突
+package StockServer;
+// 定义Stock 的 message类型
+message Stock {
+  string StockCode = 1;
+  string StockName = 2;
+  float BuyingPrice= 3;
+  float CurrentPrice = 4;
+}
+
+
+// 查询股票时传递的类型
+message QueryStockRequest
+{
+	string StockCode = 1;
+}
+// 查询全部自选，没有条件，但也需要一个空的message
+message QueryAllOptionalStockRequest
+{
+}
+
+// 购买多只股票
+message BuyStocksRequest{
+	string StockCode = 1;
+}
+// 公共返回类型
+message CommonResponse{
+	int32 code =1;
+	string msg=2;
+}
+// 刷新多只股票时传递的类型
+message FreshStockRequest{
+	string StockCode = 1;
+}
+//股票信息返回类型
+message StockResponse {
+  Stock stock =1;
+}
+// 约定需要提供的服务方法
+service StockService{
+	// 简单模式，查询一支股票
+	rpc GetStockByCode(QueryStockRequest) returns (StockResponse);
+	// 服务端流模式
+	rpc GetAllOptionalStock(QueryAllOptionalStockRequest) returns (stream StockResponse);
+	// 客户端流模式
+	rpc BuyManyStocks(stream BuyStocksRequest) returns (CommonResponse);
+	// 双向流模式
+	rpc FreshStocks(stream FreshStockRequest) returns (stream StockResponse);
+}
