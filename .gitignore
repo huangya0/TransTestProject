@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 # 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
 ################################################################################
 
@@ -150,3 +150,7 @@
 /TensorflowDemo/TensorflowDemo/bin/Debug/libtensorflow.dll
 /TensorflowDemo/TensorflowDemo/bin/Debug
 /TensorflowDemo/TensorflowDemo/obj/Debug
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+.vs/TransTestProject/v16/.suo
+.vs/ProjectSettings.json

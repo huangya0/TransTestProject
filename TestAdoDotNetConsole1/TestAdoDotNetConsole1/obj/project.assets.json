@@ -3837,8 +3837,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\huangyao.ZHCHUANGSI\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\huangyao\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
@@ -3846,14 +3846,15 @@
       "projectUniqueName": "E:\\Trans\\Git_Code\\TransTestProject\\TestAdoDotNetConsole1\\TestAdoDotNetConsole1\\TestAdoDotNetConsole1.csproj",
       "projectName": "TestAdoDotNetConsole1",
       "projectPath": "E:\\Trans\\Git_Code\\TransTestProject\\TestAdoDotNetConsole1\\TestAdoDotNetConsole1\\TestAdoDotNetConsole1.csproj",
-      "packagesPath": "C:\\Users\\huangyao.ZHCHUANGSI\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\huangyao\\.nuget\\packages\\",
       "outputPath": "E:\\Trans\\Git_Code\\TransTestProject\\TestAdoDotNetConsole1\\TestAdoDotNetConsole1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\huangyao.ZHCHUANGSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\huangyao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3861,11 +3862,12 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "E:\\Trans\\Git_Code\\CS.EmsWebPre\\AdminLteAspNetMVC1\\packages": {},
+        "http://192.168.2.189:5555/v3/index.json": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
           "projectReferences": {}
         }
       },
@@ -3877,6 +3879,7 @@
     },
     "frameworks": {
       "netcoreapp2.2": {
+        "targetAlias": "netcoreapp2.2",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
@@ -3908,10 +3911,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

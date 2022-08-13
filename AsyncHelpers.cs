@@ -17,7 +17,7 @@ namespace CS.EMS.Base
         {
             var oldContext = SynchronizationContext.Current;
             var synch = new ExclusiveSynchronizationContext();
-            SynchronizationContext.SetSynchronizationContext(synch);
+            SynchronizationContext.SetSynchronizationContext(synch); 
             synch.Post(async _ =>
             {
                 try
