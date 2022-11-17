@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockServer", "StockServer\StockServer.csproj", "{7C33DB24-DA6A-41D9-BA63-F2631D0E8882}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormStockClientDemo", "WinFormStockClientDemo\WinFormStockClientDemo.csproj", "{14289CF4-8A96-46F8-83D3-6364A1DD95EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C33DB24-DA6A-41D9-BA63-F2631D0E8882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C33DB24-DA6A-41D9-BA63-F2631D0E8882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C33DB24-DA6A-41D9-BA63-F2631D0E8882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C33DB24-DA6A-41D9-BA63-F2631D0E8882}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14289CF4-8A96-46F8-83D3-6364A1DD95EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14289CF4-8A96-46F8-83D3-6364A1DD95EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14289CF4-8A96-46F8-83D3-6364A1DD95EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14289CF4-8A96-46F8-83D3-6364A1DD95EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8AB2DD9-5539-4CDF-BBB0-895EB59F43E3}
+	EndGlobalSection
+EndGlobal
